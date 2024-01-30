@@ -1,1 +1,0 @@
-import n from"./fonts.js";const o=new URL(".",import.meta.url).pathname;for(const t in n){const e=n[t];document.fonts.add(new FontFace(e[0],e[1].replace(/url\(/g,"url("+o),e[2]))}

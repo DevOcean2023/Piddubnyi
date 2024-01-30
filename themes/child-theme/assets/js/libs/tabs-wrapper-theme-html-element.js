@@ -1,1 +1,0 @@
-import{ThemeHTMLElement as e}from"./theme-html-element.js";export class TabsWrapperThemeHtmlElement extends e{static slug="theme-tabs-wrapper";runAfterChildrenComplete(){this.className=this.getElementClassName()}}

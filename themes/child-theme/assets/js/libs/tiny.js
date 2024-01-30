@@ -1,1 +1,0 @@
-import"tiny-slider/dist/tiny-slider.css";import{tns as i}from"tiny-slider";export default i;
