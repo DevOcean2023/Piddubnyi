@@ -1,0 +1,13 @@
+.acf-dov-title {
+	display: flex;
+}
+
+.acf-dov-title div:first-child {
+	width: 100%;
+}
+
+.acf-dov-title div:nth-child(2) {
+	width: 65px;
+	padding-left: 12px;
+	margin-top: -1px;
+}

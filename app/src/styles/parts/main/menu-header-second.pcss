@@ -1,0 +1,64 @@
+@import "../../variables-and-mixins.pcss";
+
+.menu-header-second {
+	display: none;
+
+	@media (--lg) {
+		display: flex;
+		justify-content: flex-end;
+		margin: 10px 0 14px;
+
+		&__items {
+			display: flex;
+			gap: 33px;
+		}
+
+		&__item {
+			display: flex;
+
+			&.menu-cart-link {
+				align-items: center;
+			}
+
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			color: $color-colors-white;
+
+			&_phone {
+				font-size: 18px;
+				font-weight: 700;
+			}
+
+			&_btn {
+				@include btn;
+			}
+
+			&_mini_cart {
+				padding: 10px;
+				position: relative;
+
+				&::before {
+					content: url(../../../images/cart.svg);
+				}
+
+				&_counter {
+					color: $white;
+					position: absolute;
+					top: 0;
+					right: -4px;
+					font-size: 12px;
+					font-weight: 700;
+					height: 18px;
+					width: 18px;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}

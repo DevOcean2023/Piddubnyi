@@ -1,0 +1,85 @@
+@import "../../variables-and-mixins.pcss";
+
+.menu-header-main {
+	display: none;
+
+	@media (--lg) {
+		display: flex;
+		justify-content: flex-end;
+
+		&__items {
+			display: flex;
+			gap: 40px;
+
+			@media (--xxl) {
+				gap: 60px;
+			}
+		}
+
+		&__item {
+			display: flex;
+			position: relative;
+
+			&_level_top&_has_sub-menu {
+				margin-right: -14px;
+			}
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			font-weight: 600;
+			color: $color-colors-white;
+
+			&_level_sub {
+				width: 100%;
+				padding: 8px 29px;
+			}
+
+			&_current {
+				color: $color-colors-main;
+			}
+
+			&_no-clickable:--enter {
+				text-decoration: none;
+			}
+		}
+
+		&__expend-button {
+			background: transparent;
+			border: none;
+
+			/* Minimum size 44x44 https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+			width: 44px;
+			height: 44px;
+			flex-shrink: 0;
+		}
+
+		&__sub-menu {
+			width: 250px;
+			position: absolute;
+			background-color: $color-bg-custom;
+			box-shadow: 0 5px 4px rgb(0 0 0 / 10%);
+			padding: 20px 0;
+
+			&_level_top {
+				top: 35px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&_level_sub {
+				left: 100%;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -20px;
+				bottom: 100%;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+}

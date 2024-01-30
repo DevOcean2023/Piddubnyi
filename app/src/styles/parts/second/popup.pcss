@@ -1,0 +1,74 @@
+@import "../../variables-and-mixins.pcss";
+
+.popup {
+	width: calc(100% - 30px);
+	max-width: 1000px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+	padding: 44px 15px 15px;
+	background: $color-colors-white;
+	border-radius: 4px;
+	position: relative;
+	margin: 15px;
+
+	&__title {
+		text-align: center;
+
+		@include text-style-text-headline-1;
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		line-height: 20px;
+		padding: 0;
+		background: none;
+		border: none;
+		cursor: pointer;
+		transition: 0.3s opacity;
+
+		/* Minimum size 44x44 https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+		width: 44px;
+		height: 44px;
+
+		&:--enter {
+			opacity: 0.8;
+		}
+
+		span {
+			@include screen-reader-text;
+		}
+	}
+
+	&__close-icon {
+		color: $color-text-main;
+		width: 18px;
+		height: 18px;
+	}
+
+	&__clode-text {
+		@include screen-reader-text;
+	}
+
+	@modifier (iframe) {
+		&__iframe {
+			width: 100%;
+		}
+	}
+
+	@modifier (video) {
+		padding: 44px 0 0;
+		background: transparent;
+		border-radius: 0;
+		box-shadow: none;
+
+		&__iframe {
+			aspect-ratio: 16/9;
+			background: #000;
+		}
+
+		&__close-icon {
+			color: #000;
+		}
+	}
+}

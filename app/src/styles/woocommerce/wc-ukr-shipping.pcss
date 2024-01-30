@@ -1,0 +1,49 @@
+@import "../variables-and-mixins.pcss";
+
+.zen-ui-select {
+	&__value {
+		border: none;
+		border-bottom: 1px solid $woo-btn-color;
+		padding: 12px 16px !important;
+
+		&.disabled {
+			&::after {
+				transform: rotate(-135deg) translateY(-50%);
+				top: 50%;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 40%;
+			right: 23px;
+			transform: rotate(45deg) translateY(-50%);
+			transform-origin: top;
+			height: 10px;
+			width: 10px;
+			border-width: 0 2px 2px 0;
+			border-style: solid;
+			transition: all 0.3s ease;
+		}
+
+		&-text {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.2;
+		}
+
+		> svg {
+			display: none;
+		}
+	}
+
+	&__search-input {
+		border-color: $woo-btn-color !important;
+	}
+
+	&__search,
+	&__options {
+		border-color: $woo-btn-color;
+	}
+}

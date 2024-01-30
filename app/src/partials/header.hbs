@@ -1,0 +1,52 @@
+<div class="page-header__content">
+	{{>logo logo1='assets/images/logo.svg' logo2=''}}
+
+	<div class="nav-menu">
+		{{#>menu
+			class="menu-header-second"
+			label="Header Second"
+			expend="auto-close"
+			keyboard="auto-close"
+			hover=true
+		}}
+			{{>menu-item title="(123) 456-7890" modifier="phone" href="tel:+1234567890"}}
+			{{>menu-item title="Get A Quote" modifier="btn"}}
+			{{>menu-item mini-cart="mini-cart" popup-id="mini-cart" href="#mini-cart"}}
+		{{/menu}}
+		{{#>menu
+			class="menu-header-main"
+			label="Header Main"
+			expend="auto-close"
+			keyboard="auto-close"
+			hover=true
+		}}
+			{{>menu-item title="Home"}}
+			{{#>menu-item title="About Us" modifier="current"}}
+				{{#>sub-menu}}
+					{{>menu-item title="Sub menu item II"}}
+					{{>menu-item title="Sub menu item II"}}
+					{{#>menu-item title="Sub menu item II"}}
+						{{#>sub-menu}}
+							{{>menu-item title="Sub menu item III"}}
+							{{>menu-item title="Sub menu item III"}}
+							{{>menu-item title="Sub menu item III"}}
+						{{/sub-menu}}
+					{{/menu-item}}
+				{{/sub-menu}}
+			{{/menu-item}}
+			{{>menu-item title="Services"}}
+			{{>menu-item title="Technology"}}
+			{{>menu-item title="Careers"}}
+			{{#>menu-item title="Contact" modifier="no-clickable"}}
+				{{#>sub-menu}}
+					{{>menu-item title="Sub menu item II"}}
+					{{>menu-item title="Sub menu item II"}}
+					{{>menu-item title="Sub menu item II"}}
+				{{/sub-menu}}
+			{{/menu-item}}
+		{{/menu}}
+	</div>
+</div>
+
+
+

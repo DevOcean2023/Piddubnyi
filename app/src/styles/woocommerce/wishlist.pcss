@@ -1,0 +1,514 @@
+@import "../variables-and-mixins.pcss";
+
+.tinv-wishlist .tinv-modal .tinv-modal-inner {
+	background-color: #fff;
+
+	.tinv-wishlist-clear {
+		button {
+			border: 1px solid #015f45;
+			background: #015f45;
+			padding: 10px;
+			color: #fff;
+			text-align: center;
+			font-family: $font-family-global;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+	}
+}
+
+.wishlist-page {
+
+	.default-page {
+		.inner {
+			padding: 0 35px;
+			max-width: 1440px;
+
+			@media (min-width: 1024px) {
+				padding: 0 78px;
+				max-width: 1440px;
+			}
+		}
+	}
+
+	.tinv-wishlist-clear {
+
+		.tinv-header {
+			display: none;
+		}
+
+		tbody {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 24px;
+			max-width: 302px;
+			margin: 0 auto;
+			align-items: center;
+
+			@media (min-width: 700px) {
+				max-width: 636px;
+			}
+
+			@media (min-width: 1024px) {
+				max-width: 954px;
+			}
+
+			@media (min-width: 1114px) {
+				max-width: 954px;
+			}
+
+			@media (min-width: 1440px) {
+				max-width: 100%;
+			}
+		}
+
+		.return-to-shop {
+			width: 100%;
+
+			.wc-backward {
+				width: 100%;
+				padding: 16px 24px;
+				font-family: $font-family-raleway;
+				height: 53px;
+				color: #171a19;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				text-transform: uppercase;
+				margin: 0 auto;
+				background: #fff;
+				border-radius: 0;
+				border: 1px solid #171a19;
+				justify-content: center;
+				display: flex;
+
+				@media (--sm) {
+					width: 374px;
+					margin: 0 auto;
+				}
+
+				&:hover {
+					color: #fff;
+					background: #171a19;
+				}
+			}
+		}
+
+		.woocommerce-info {
+			display: flex;
+			flex-direction: column;
+			background-color: transparent;
+			border-top: none;
+			border-top-color: unset;
+			padding: 180px 0 32px 0;
+			font-family: $font-family-raleway;
+			font-style: normal;
+			align-items: center;
+			color: #171a19;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 31.2px;
+			margin-top: 0 !important;
+		}
+
+		.woocommerce-info::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url(../../images/wish-empty.svg) no-repeat;
+			width: 160px;
+			height: 160px;
+		}
+
+		.woocommerce-info::after {
+			content: "Додавайте сюди засоби, які подобаються, або які хочете придбати пізніше";
+			display: block;
+			color: #171a19;
+			font-family: $font-family-raleway;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 23.4px;
+			margin-top: 24px;
+		}
+	}
+}
+
+.tinv-wishlist-clear {
+	flex-wrap: wrap;
+
+	.tinv-lists-nav {
+		width: 100%;
+		max-width: 250px;
+		margin: 50px auto 0;
+
+		@media (min-width: 1024px) {
+			max-width: 700px;
+		}
+
+		span {
+			font-family: $font-family-raleway;
+			font-weight: 500;
+		}
+
+		button {
+			border-radius: 2px;
+			border: 1px solid #fff;
+			background: #fff;
+			padding: 10px;
+			color: #171a19;
+			text-align: center;
+			font-family: $font-family-raleway;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+
+		.button {
+			height: 100%;
+			padding: 13px 35px;
+			max-width: 86px;
+			border-radius: 2px;
+			border: 1px solid #171a19;
+			background: #171a19;
+			color: #fff;
+			text-align: center;
+			font-family: $font-family-raleway;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+
+			@media (min-width: 1024px) {
+				padding: 13px 50px;
+				height: 100%;
+				max-width: 100%;
+			}
+		}
+
+		.tinv-prev {
+			margin-right: 0;
+		}
+	}
+
+	.tinv-header {
+		h2 {
+			color: #171a19;
+			font-family: $font-family-raleway;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 31.2px;
+			text-align: center;
+
+			@media (--lg) {
+				text-align: start;
+			}
+		}
+	}
+
+	.return-to-shop {
+		.wc-backward {
+			width: 100%;
+			padding: 16px 24px;
+			font-family: $font-family-raleway;
+			height: 53px;
+			color: #171a19;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			text-transform: uppercase;
+			margin: 0 auto;
+			background: #fff;
+			border-radius: 0;
+			border: 1px solid #171a19;
+			justify-content: center;
+			display: flex;
+
+			@media (--sm) {
+				width: 374px;
+				margin: 0 auto;
+			}
+
+			&:hover {
+				color: #fff;
+				background: #171a19;
+			}
+		}
+	}
+
+	.woocommerce-info {
+		display: flex;
+		flex-direction: column;
+		background-color: transparent;
+		color: #000;
+		border-top: none;
+		border-top-color: unset;
+		padding: 0 0 32px 0;
+		font-family: $font-family-raleway;
+		font-size: 16px !important;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20.8px !important;
+		letter-spacing: 0.32px;
+		align-items: flex-start;
+		margin-top: -32px;
+	}
+
+	.cart-empty {
+		width: 100%;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	tbody {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 32px;
+		max-width: 302px;
+		margin: 0 auto;
+		align-items: center;
+
+		@media (min-width: 700px) {
+			max-width: 636px;
+		}
+
+		@media (min-width: 1024px) {
+			max-width: 636px;
+		}
+
+		@media (min-width: 1114px) {
+			max-width: 636px;
+		}
+	}
+
+	.tinvwl-table-manage-list {
+		thead {
+			display: none;
+
+			th {
+				color: #000;
+			}
+		}
+
+		tfoot {
+			display: none;
+		}
+
+		.wishlist {
+			&_item {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				max-width: 302px;
+				position: relative;
+				padding: 12px;
+				border-radius: 0;
+				background: #fff;
+				height: 100%;
+				max-height: max-content;
+				border: 1px solid #fff;
+
+				&:hover {
+					border: 1px solid #015f45;
+
+					.product-action {
+						display: block;
+					}
+				}
+
+				.sales {
+					position: absolute;
+					top: 20px;
+					right: 10px;
+					color: #fff;
+					text-align: center;
+					font-family: $font-family-raleway;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 18.2px;
+					border-radius: 20px;
+					background: #171a19;
+					padding: 8px 12px;
+				}
+
+				.product-thumbnail {
+					max-width: 100%;
+					width: 100%;
+					padding: 0;
+
+					a {
+						display: flex;
+						height: 100%;
+					}
+
+					img {
+						width: 100%;
+						height: 100%;
+						max-width: 278px;
+						min-width: 278px;
+						min-height: 290px;
+						max-height: 290px;
+						margin-bottom: auto;
+						object-fit: cover;
+					}
+				}
+
+				.product-cb {
+					display: none;
+				}
+
+				.product-remove {
+					position: absolute;
+					top: 0;
+					left: 0;
+					max-width: 36px;
+
+					button {
+						background: transparent;
+					}
+
+					.ftinvwl-times::before {
+						content: "\e905";
+						font-size: 0;
+						background: url(../images/wish-remove.svg) no-repeat center;
+						position: absolute;
+						width: 40px;
+						height: 40px;
+					}
+				}
+
+				.product-name {
+					color: #171a19;
+					text-align: center;
+					font-family: $font-family-raleway;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 20.8px;
+					text-transform: capitalize;
+					width: 100%;
+					max-width: 278px;
+					margin-top: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					min-height: 63px;
+
+					@media (--md) {
+						font-size: 16px;
+					}
+
+					a {
+						color: #171a19;
+					}
+				}
+
+				.product-price {
+					display: flex;
+					flex-direction: row-reverse;
+					gap: 18px;
+					justify-content: center;
+					padding-bottom: 8px;
+
+					del {
+						color: #bcbcbc;
+						text-align: center;
+						font-family: $font-family-raleway;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 20.8px;
+
+						bdi {
+							color: #bcbcbc;
+							text-align: center;
+							font-family: $font-family-raleway;
+							font-size: 14px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 20.8px;
+
+							@media (--md) {
+								font-size: 16px;
+								line-height: 20.8px;
+							}
+						}
+					}
+
+					bdi,
+					ins {
+						color: #171a19;
+						text-align: center;
+						font-family: $font-family-raleway;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 23.4px;
+						text-decoration: none;
+
+						@media (--md) {
+							font-size: 18px;
+							line-height: 23.4px;
+						}
+					}
+				}
+
+				.product-action {
+					width: 100%;
+					max-width: max-content;
+					margin: 0 auto;
+					padding: 0;
+					display: none;
+				}
+
+				.alt {
+					color: #fff;
+					text-align: center;
+					font-family: $font-family-raleway;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 20.8px;
+					display: flex;
+					padding: 12px 16px;
+					align-items: center;
+					background: #015f45;
+					text-transform: uppercase;
+					border-radius: 0;
+					border: 1px solid #015f45;
+
+					&:hover {
+						text-decoration: none;
+						color: #015f45;
+						background: #fff;
+					}
+
+					.tinvwl-txt {
+						display: block;
+					}
+				}
+
+				.product-date {
+					display: none;
+				}
+
+				.product-stock {
+					display: none;
+				}
+			}
+		}
+	}
+}
