@@ -1,92 +1,62 @@
 <footer class="page-footer">
 	<div class="inner">
 		<div class="page-footer__top">
+			<div class="page-footer__content">
+				<div class="logo">
+					<img src="assets/images/logo-footer.png" alt="">
+				</div>
+				<div class="page-footer__contacts">
+					<p class="page-footer__phone">
+						<a href="tel:+380735533505" class="page-footer__link-phone">+38 (073) 553-35-05</a>
+					</p>
+					<p class="page-footer__address">
+						<a href="#" class="page-footer__a">м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве крило, 2 поверх)</a></p>
+					<div class="page-footer__time">
+						<p class="page-footer__time-item">10:00-19:00</p>
+						<p class="page-footer__time-item">Без вихідних</p>
+					</div>
+				</div>
+			</div>
 			{{#>menu
-				class="menu-footer-main"
-				label="Footer Main"
-				keyboard=true
+					class="menu-footer-main"
+					label="Footer Main"
+					keyboard=true
 			}}
-				{{#>menu-item title="Lorem ipsum"}}
+				{{#>menu-item title="Каталог"}}
 					{{#>sub-menu}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
+						{{>menu-item title="Новинкиг"}}
+						{{>menu-item title="SALE"}}
+						{{>menu-item title="Бренди"}}
+						{{>menu-item title="Обличчя"}}
+						{{>menu-item title="Волосся"}}
+						{{>menu-item title="Тіло"}}
+						{{>menu-item title="Набори"}}
 					{{/sub-menu}}
 				{{/menu-item}}
-				{{#>menu-item title="Lorem ipsum"}}
+				{{#>menu-item title="Для клієнтів"}}
 					{{#>sub-menu}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{#>menu-item title="Lorem ipsum dolor"}}
-							{{#>sub-menu}}
-								{{>menu-item title="Lorem ipsum dolor"}}
-								{{>menu-item title="Lorem ipsum dolor"}}
-								{{>menu-item title="Lorem ipsum dolor"}}
-							{{/sub-menu}}
-						{{/menu-item}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-					{{/sub-menu}}
-				{{/menu-item}}
-				{{#>menu-item title="Lorem ipsum"}}
-					{{#>sub-menu}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-					{{/sub-menu}}
-				{{/menu-item}}
-				{{#>menu-item title="Lorem ipsum"}}
-					{{#>sub-menu}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
-						{{>menu-item title="Lorem ipsum dolor"}}
+						{{>menu-item title="Блог"}}
+						{{>menu-item title="Доставка та оплата"}}
+						{{>menu-item title="Послуги"}}
+						{{>menu-item title="Про нас"}}
 					{{/sub-menu}}
 				{{/menu-item}}
 			{{/menu}}
-			<div class="page-footer__content">
-				<div class="page-footer__contacts">
-					<h3 class="page-footer__h3">Lorem ipsum dolor sit</h3>
-					<p class="page-footer__p">
-						Telephone:
-						<a href="tel:+11111111111" class="page-footer__a">(111) 111-1111</a>
-					</p>
-					<p class="page-footer__p">
-						Email:
-						<a href="mailto:123456@site.com" class="page-footer__a">123456@site.com</a>
-					</p>
-					<p class="page-footer__p">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-					<p class="page-footer__p">Dallas, TX 75247</p>
-				</div>
+			<div class="page-footer__social">
+				<h2>Ми у соцмережах</h2>
 				{{>social-links class="social-links_toggle"}}
 			</div>
 		</div>
 		<div class="page-footer__bottom">
 			<div class="page-footer__wrapper">
-				<p class="page-footer__copyright">© Lorem ipsum. All Rights Reserved</p>
-				{{#>menu
-					class="menu-footer-links"
-					label="Footer Links"
-					keyboard=true
-				}}
-					{{>menu-item title="Site Map"}}
-					{{>menu-item title="Privacy"}}
-					{{>menu-item title="Terms"}}
-				{{/menu}}
+				<p class="page-footer__copyright">© 2023 Relume. All rights reserved.</p>
 			</div>
 			<div class="page-footer__by">
-				{{>by title="Dallas Web Design Agency:" href="https://www.webloftdesigns.com/" name="Web Loft Designs"}}
+				{{>by title="Made by" href="https://devocean.pro" name="DevOcean"}}
+			</div>
+			<div class="page-footer__pay">
+				<img src="{{root}}assets/images/image-pay.png" alt="">
 			</div>
 		</div>
 	</div>
 </footer>
-
-{{#>popup id="mini-cart"}}
-	<h2 class="popup__title">Mini Cart</h2>
-{{/popup}}

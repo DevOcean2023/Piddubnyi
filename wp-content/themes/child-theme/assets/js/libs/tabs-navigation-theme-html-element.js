@@ -1,1 +1,1 @@
-import{ThemeHTMLElement as t}from "./theme-html-element.js";export class TabsNavigationThemeHtmlElement extends t{static slug="theme-tabs-navigation";runAfterChildrenComplete(){this.className=this.getElementClassName(),this.setAttribute("role","tablist")}}
+import{ThemeHTMLElement as t}from"./theme-html-element.js";export class TabsNavigationThemeHtmlElement extends t{static slug="theme-tabs-navigation";runAfterChildrenComplete(){this.className=this.getElementClassName(),this.setAttribute("role","tablist")}}

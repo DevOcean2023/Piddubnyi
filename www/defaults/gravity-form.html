@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/second.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/gravity-forms.css">
     <link rel="stylesheet" href="../assets/css/breadcrumb.css">
     <link rel="stylesheet" href="../assets/css/section-form.css">
-    <link rel="stylesheet" href="../assets/css/gravity-forms.css">
 </head>
 
 <body class="">
@@ -22,425 +22,550 @@
     <header class="page-header">
         <div class="page-header__wrapper">
             <div class="page-header__content">
-                <div class="logo">
-                    <a href="../">
-                        <img src="../assets/images/logo.svg" alt="">
-                    </a>
+                <div class="page-header__top">
+                    <div class="inner">
+                        <div class="social-links social-links_toggle">
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Instagram</span>
+                            </a>
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Facebook</span>
+                            </a>
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Tiktok</span>
+                            </a>
+                        </div>
+                        <a href="tel:+380735533505" class="page-header__top-phone">+38 (073) 553-35-05</a>
+                        <div class="page-header__time">
+                            <p class="page-header__time-item">10:00-19:00</p>
+                            <p class="page-header__time-item">Без вихідних</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="page-header__middle">
+                    <div class="inner">
+                        <div class="wrap__search">
+                            <button class="button__search"></button>
+                            <div class="wrap-search">
+                                <form class="search-form__form" role="search" method="get" action="/">
+                                    <label class="search-form__label">
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input class="search-form__input" type="search" placeholder="Шукати" value=""
+                                            name="s">
+                                    </label>
+                                    <input class="search-form__submit" type="submit" value="Search">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <a href="../">
+                                <img src="../assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="menu-header-second" aria-label="Header Second">
+                            <ul class="menu-header-second__items" data-role="menubar" data-accessibility-menu>
+                                <li class="menu-header-second__item account">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                                <li class="menu-header-second__item cart menu-cart-link">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                                <li class="menu-header-second__item wish-list">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="page-header__bottom">
+                    <div class="inner">
+                        <div class="nav-menu">
+                            <nav class="menu-header-main" aria-label="Header Main">
+                                <ul class="menu-header-main__items" data-expend-menu="auto-close"
+                                    data-keyboard-menu="auto-close" data-hover-menu>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_current
+												menu-header-main__item_has_sub-menu
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_current
+				
+												">
 
-                <div class="nav-menu">
-                    <nav class="menu-header-second" aria-label="Header Second">
-                        <ul class="menu-header-second__items" data-expend-menu="auto-close"
-                            data-keyboard-menu="auto-close" data-hover-menu>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										menu-header-second__item_phone
-										
-									">
-                                <a href="tel:+1234567890" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   menu-header-second__link_phone
-											   
-										">
+                                            Послуги
+                                        </a>
+                                        <button aria-expanded="false" class="
+																	menu-header-main__expend-button
+																	menu-header-main__expend-button_level_1
+																	menu-header-main__expend-button_level_top
+															">
+                                            <svg class="[object Object]" aria-hidden="true" width="14" height="9"
+                                                viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                                    fill="#171A19" />
+                                            </svg>
 
-                                    (123) 456-7890
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										menu-header-second__item_btn
-										
-									">
-                                <a href="#" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   menu-header-second__link_btn
-											   
-										">
-
-                                    Get A Quote
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										
-										
-									">
-                                <a href="#mini-cart" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   
-											   menu-header-second__link_mini_cart
-										" data-popup-id="mini-cart">
-                                    <span class="menu-header-second__link_mini_cart_counter">2</span>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="menu-header-main" aria-label="Header Main">
-                        <ul class="menu-header-main__items" data-expend-menu="auto-close"
-                            data-keyboard-menu="auto-close" data-hover-menu>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Home
-                                </a>
-                            </li>
-                            <li class="
-							menu-header-main__item
-							menu-header-main__item_level_1
-							menu-header-main__item_level_top
-							menu-header-main__item_current
-							menu-header-main__item_has_sub-menu
-						">
-                                <a href="#" class="
-								menu-header-main__link
-								menu-header-main__link_level_1
-								   menu-header-main__link_level_top
-								   menu-header-main__link_current
-								   
-							">
-
-                                    About Us
-                                </a>
-                                <button aria-expanded="false" class="
-												menu-header-main__expend-button
-												menu-header-main__expend-button_level_1
-												menu-header-main__expend-button_level_top
-										">
-                                    <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        width="11" height="6">
-                                        <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                            fill="#BFBFBF" />
-                                    </svg>
-
-                                    <span class="screen-reader-text">Submenu for "About Us"</span>
-                                </button>
-                                <div class="
-									menu-header-main__sub-menu
-									menu-header-main__sub-menu_level_1
-									menu-header-main__sub-menu_level_top
-								" hidden>
-                                    <ul class="
-										menu-header-main__sub-items
-										menu-header-main__sub-items_level_1
-										menu-header-main__sub-items_level_top
-									">
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-														menu-header-main__item
-														menu-header-main__item_level_2
-														menu-header-main__item_level_sub
-														
-														menu-header-main__item_has_sub-menu
-													">
-                                            <a href="#" class="
-															menu-header-main__link
-															menu-header-main__link_level_2
-															   menu-header-main__link_level_sub
-															   
-															   
+                                            <span class="screen-reader-text">Submenu for "Послуги"</span>
+                                        </button>
+                                        <div class="
+														menu-header-main__sub-menu
+														menu-header-main__sub-menu_level_1
+														menu-header-main__sub-menu_level_top
+													" hidden>
+                                            <ul class="
+															menu-header-main__sub-items
+															menu-header-main__sub-items_level_1
+															menu-header-main__sub-items_level_top
 														">
+                                                <li class="
+																										menu-header-main__item
+																										menu-header-main__item_level_2
+																										menu-header-main__item_level_sub
+				
+				
+																									">
+                                                    <a href="#popup-menu" class="
+																											menu-header-main__link
+																											menu-header-main__link_level_2
+																											   menu-header-main__link_level_sub btn-services
+				
+				
+																										">
 
-                                                Sub menu item II
-                                            </a>
-                                            <button aria-expanded="false" class="
-																			menu-header-main__expend-button
-																			menu-header-main__expend-button_level_2
-																			menu-header-main__expend-button_level_sub
-																	">
-                                                <svg class="[object Object]" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" width="11" height="6">
-                                                    <path
-                                                        d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                                        fill="#BFBFBF" />
-                                                </svg>
-
-                                                <span class="screen-reader-text">Submenu for "Sub menu item II"</span>
-                                            </button>
-                                            <div class="
-																menu-header-main__sub-menu
-																menu-header-main__sub-menu_level_2
-																menu-header-main__sub-menu_level_sub
-															" hidden>
-                                                <ul class="
-																	menu-header-main__sub-items
-																	menu-header-main__sub-items_level_2
-																	menu-header-main__sub-items_level_sub
+                                                        Записатись на прийом
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
 																">
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                        <a href="#" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                            Бренди
+                                        </a>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
+																">
+                                        <a href="/product-category/sale/" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                            SALE
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu face-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable face-category
+				
+												">
+                                            Обличчя
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu hair-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable hair-category
+				
+												">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            Волосся
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu body-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable body-category
+				
+												">
+
+                                            Тіло
+                                        </a>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
+																">
+                                        <a href="#" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
+
+                                            Набори
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu about-company
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable about-company
+				
+												">
+
+                                            Про компанію
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="face-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-1.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для очищення</a>
                                 </div>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Services
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Technology
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Careers
-                                </a>
-                            </li>
-                            <li class="
-							menu-header-main__item
-							menu-header-main__item_level_1
-							menu-header-main__item_level_top
-							menu-header-main__item_no-clickable
-							menu-header-main__item_has_sub-menu
-						">
-                                <a href="#" class="
-								menu-header-main__link
-								menu-header-main__link_level_1
-								   menu-header-main__link_level_top
-								   menu-header-main__link_no-clickable
-								   
-							">
-
-                                    Contact
-                                </a>
-                                <button aria-expanded="false" class="
-												menu-header-main__expend-button
-												menu-header-main__expend-button_level_1
-												menu-header-main__expend-button_level_top
-										">
-                                    <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        width="11" height="6">
-                                        <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                            fill="#BFBFBF" />
-                                    </svg>
-
-                                    <span class="screen-reader-text">Submenu for "Contact"</span>
-                                </button>
-                                <div class="
-									menu-header-main__sub-menu
-									menu-header-main__sub-menu_level_1
-									menu-header-main__sub-menu_level_top
-								" hidden>
-                                    <ul class="
-										menu-header-main__sub-items
-										menu-header-main__sub-items_level_1
-										menu-header-main__sub-items_level_top
-									">
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-2.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для тонізації обличчя</a>
                                 </div>
-                            </li>
-                        </ul>
-                    </nav>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-3.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для ексфоліації обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-4.svg" alt="">
+                                    </div>
+                                    <a href="#">Сироватки для обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-5.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-6.svg" alt="">
+                                    </div>
+                                    <a href="#">Креми для обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-7.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для шкіри навколо очей</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-8.svg" alt="">
+                                    </div>
+                                    <a href="#">Захист від сонця</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-9.svg" alt="">
+                                    </div>
+                                    <a href="#">Маски для обличчя</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hair-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-10.svg" alt="">
+                                    </div>
+                                    <a href="#">Шампуні</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-11.svg" alt="">
+                                    </div>
+                                    <a href="#">Кондиціонери</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-12.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-13.svg" alt="">
+                                    </div>
+                                    <a href="#">Маски для волосся</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-14.svg" alt="">
+                                    </div>
+                                    <a href="#">Незмивні засоби для волосся</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-15.svg" alt="">
+                                    </div>
+                                    <a href="#">Очищення</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-16.svg" alt="">
+                                    </div>
+                                    <a href="#">Зволоження</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-17.svg" alt="">
+                                    </div>
+                                    <a href="#">Скраби та пілінги</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-18.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-company-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-19.svg" alt="">
+                                    </div>
+                                    <a href="#">Про нас</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-22.svg" alt="">
+                                    </div>
+                                    <a href="#">Доставка та оплата</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-20.svg" alt="">
+                                    </div>
+                                    <a href="#">Блог</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-23.svg" alt="">
+                                    </div>
+                                    <a href="#">Правила користування сайтом</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-21.svg" alt="">
+                                    </div>
+                                    <a href="#">FAQ</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-24.svg" alt="">
+                                    </div>
+                                    <a href="#">Контакти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <dialog id="popup-menu">
+                <div class="popup">
+                    <div class="popup__content">
+                        <img src="../assets/images/contact-bg.png" alt="" class="object-fit-cover object-fit">
+                        <div class="popup__item">
+                            <h2 class="popup__item_title-popup">Lorem ipsum</h2>
+                            <p class="popup__item_p">Lorem ipsum dolor sit amet consectetur. Euismod gravida risus
+                                molestie
+                                sapien. </p>
+
+                            <!-- ../assets/css/gravity-forms.css -->
+
+                            <div class="gf_browser_chrome gform_wrapper " id="gform_wrapper_9">
+                                <form method="post" enctype="multipart/form-data" id="gform_9" class="" action="/">
+
+                                    <div class="gform_body">
+                                        <div class="gform_fields top_label form_sublabel_below description_below">
+
+                                            <div id="field_9_29"
+                                                class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_9_29">
+                                                    First name
+                                                </label>
+                                                <div class="ginput_container ginput_container_text">
+                                                    <input name="input_29" id="input_9_29" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div id="field_9_30"
+                                                class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_9_30">
+                                                    Last name
+                                                </label>
+                                                <div class="ginput_container ginput_container_text">
+                                                    <input name="input_30" id="input_9_30" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_phone     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_9_31">
+                                                    Phone
+                                                </label>
+                                                <div class="ginput_container ginput_container_phone">
+                                                    <input name="input_31" id="input_9_31" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_email     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_9_32">
+                                                    Email
+                                                </label>
+                                                <div class="ginput_container ginput_container_email">
+                                                    <input name="input_32" id="input_9_32" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_paragraph_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_9_33">
+                                                    Message
+                                                </label>
+                                                <div class="ginput_container ginput_container_textarea">
+                                                    <textarea name="input_33" id="input_9_33" class="textarea "
+                                                        placeholder="" aria-required="false" aria-invalid="false"
+                                                        rows="10" cols="50"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="gform_footer top_label">
+
+                                                <input type='submit' class='gform_button button'
+                                                    value='Send booking request'
+                                                    onclick='if(window["gf_submitting_9"]){return false;}  window["gf_submitting_9"]=true;  '
+                                                    onkeypress='if( event.keyCode === 13 ){ if(window["gf_submitting_9"]){return false;} window["gf_submitting_9"]=true;  jQuery("#gform_9").trigger("submit",[true]); }'>
+
+                                                <input type='hidden' class='gform_hidden' name='is_submit_9' value='1'>
+                                                <input type='hidden' class='gform_hidden' name='gform_submit' value='9'>
+                                                <input type='hidden' class='gform_hidden' name='gform_unique_id'
+                                                    value=''>
+                                                <input type='hidden' class='gform_hidden' name='state_9'
+                                                    value='WyJbXSIsIjI4ZTYyMGI3NzdjMzJjM2JkN2YyNzZkNzZlMWNhNWIzIl0='>
+                                                <input type='hidden' class='gform_hidden'
+                                                    name='gform_target_page_number_9' id='gform_target_page_number_9'
+                                                    value='0'>
+                                                <input type='hidden' class='gform_hidden'
+                                                    name='gform_source_page_number_9' id='gform_source_page_number_9'
+                                                    value='1'>
+                                                <input type='hidden' name='gform_field_values' value=''>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup__close-btn" type="button">
+                        <svg class="popup__close-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M.93 18a.926.926 0 0 1-.654-1.581L16.422.27a.926.926 0 1 1 1.31 1.31L1.584 17.728A.929.929 0 0 1 .929 18Z" />
+                            <path
+                                d="M17.078 18a.919.919 0 0 1-.654-.272L.275 1.581a.926.926 0 0 1 1.31-1.31L17.732 16.42A.926.926 0 0 1 17.078 18Z" />
+                        </svg>
+                        <span class="popup__close-text">Close</span>
+                    </button>
+                </div>
+            </dialog>
 
             <button class="open-mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
                 <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-1'></span>
@@ -472,20 +597,20 @@
 
                 <!-- ../assets/css/gravity-forms.css -->
 
-                <div class="gf_browser_chrome gform_wrapper " id="gform_wrapper_4">
-                    <form method="post" enctype="multipart/form-data" id="gform_4" class="" action="/">
+                <div class="gf_browser_chrome gform_wrapper " id="gform_wrapper_10">
+                    <form method="post" enctype="multipart/form-data" id="gform_10" class="" action="/">
 
                         <div class="gform_body">
                             <div class="gform_fields top_label form_sublabel_below description_below">
                                 <!-- Custom class: gfield_single_line_text -->
 
-                                <div id="field_4_4"
+                                <div id="field_10_34"
                                     class="gfield gfield_single_line_text   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_4">
+                                    <label class="gfield_label" for="input_10_34">
                                         Single Line Text<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_4" id="input_4_4" type="text" value="" class="medium"
+                                        <input name="input_34" id="input_10_34" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                     <div class="gfield_description">Description text</div>
@@ -495,12 +620,13 @@
 
                                 <div
                                     class="gfield gfield_paragraph_text   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_5">
+                                    <label class="gfield_label" for="input_10_35">
                                         Paragraph Text<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_textarea">
-                                        <textarea name="input_5" id="input_4_5" class="textarea medium" placeholder=""
-                                            aria-required="true" aria-invalid="false" rows="10" cols="50"></textarea>
+                                        <textarea name="input_35" id="input_10_35" class="textarea medium"
+                                            placeholder="" aria-required="true" aria-invalid="false" rows="10"
+                                            cols="50"></textarea>
                                         <div class="charleft ginput_counter warningTextareaInfo">1 of max characters
                                         </div>
                                     </div>
@@ -511,11 +637,11 @@
 
                                 <div
                                     class="gfield  gfield_dropdown gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_6">
+                                    <label class="gfield_label" for="input_10_36">
                                         Dropdown<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_select">
-                                        <select name="input_6" id="input_4_6" class="medium gfield_select"
+                                        <select name="input_36" id="input_10_36" class="medium gfield_select"
                                             aria-required="true" aria-invalid="false">
                                             <option value="First Choice">First Choice</option>
                                             <option value="Second Choice">Second Choice</option>
@@ -529,12 +655,12 @@
 
                                 <div
                                     class="gfield   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_7">
+                                    <label class="gfield_label" for="input_10_37">
                                         Number<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_number">
-                                        <input name="input_7" id="input_4_7" type="number" step="any" min="1" max="100"
-                                            value="" class="medium" placeholder="" aria-required="true"
+                                        <input name="input_37" id="input_10_37" type="number" step="any" min="1"
+                                            max="100" value="" class="medium" placeholder="" aria-required="true"
                                             aria-invalid="false">
                                         <div class="instruction">
                                             Please enter a value between <strong>1</strong> and <strong>100</strong>.
@@ -545,7 +671,7 @@
 
                                 <!-- Custom class: gfield_checkboxes -->
 
-                                <fieldset id="field_4_8"
+                                <fieldset id="field_10_38"
                                     class="gfield  gfield_checkboxes gfield_contains_required field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class="gfield_label gfield_label_before_complex">
                                         Checkboxes<span class="gfield_required gfield_required_text">*</span>
@@ -554,21 +680,21 @@
                                         <div class="gfield_checkbox">
 
                                             <div class="gchoice">
-                                                <input type="checkbox" value="" id="choice_4_8_1"
+                                                <input type="checkbox" value="" id="choice_10_38_1"
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_8_1">First Choice</label>
+                                                <label for="choice_10_38_1">First Choice</label>
                                             </div>
 
                                             <div class="gchoice">
-                                                <input type="checkbox" value="" id="choice_4_8_2"
+                                                <input type="checkbox" value="" id="choice_10_38_2"
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_8_2">Second Choice</label>
+                                                <label for="choice_10_38_2">Second Choice</label>
                                             </div>
 
                                             <div class="gchoice">
-                                                <input type="checkbox" value="" id="choice_4_8_3"
+                                                <input type="checkbox" value="" id="choice_10_38_3"
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_8_3">Third Choice</label>
+                                                <label for="choice_10_38_3">Third Choice</label>
                                             </div>
                                         </div>
                                     </div>
@@ -577,7 +703,7 @@
 
                                 <!-- Custom class: gfield_radio_buttons -->
 
-                                <fieldset id="field_4_9"
+                                <fieldset id="field_10_39"
                                     class="gfield  gfield_radio_buttons gfield_contains_required field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class="gfield_label">
                                         Radio Buttons<span class="gfield_required gfield_required_text">*</span>
@@ -585,27 +711,27 @@
                                     <div class="ginput_container ginput_container_radio">
                                         <div class="gfield_radio">
 
-                                            <div class="gchoice gchoice_4_9_1">
-                                                <input type="radio" name="input_9" value="" id="choice_4_9_2" checked
+                                            <div class="gchoice gchoice_10_39_1">
+                                                <input type="radio" name="input_39" value="" id="choice_10_39_2" checked
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_9_2">First Choice</label>
+                                                <label for="choice_10_39_2">First Choice</label>
                                             </div>
 
-                                            <div class="gchoice gchoice_4_9_3">
-                                                <input type="radio" name="input_9" value="" id="choice_4_9_4" checked
+                                            <div class="gchoice gchoice_10_39_3">
+                                                <input type="radio" name="input_39" value="" id="choice_10_39_4" checked
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_9_4">Second Choice</label>
+                                                <label for="choice_10_39_4">Second Choice</label>
                                             </div>
 
-                                            <div class="gchoice gchoice_4_9_5">
-                                                <input type="radio" name="input_9" value="" id="choice_4_9_6" checked
+                                            <div class="gchoice gchoice_10_39_5">
+                                                <input type="radio" name="input_39" value="" id="choice_10_39_6" checked
                                                     class="gfield-choice-input">
-                                                <label for="choice_4_9_6">Third Choice</label>
+                                                <label for="choice_10_39_6">Third Choice</label>
                                             </div>
                                             <div class="gchoice">
-                                                <input name='input_9' type='radio' value='gf_other_choice'
+                                                <input name='input_39' type='radio' value='gf_other_choice'
                                                     onfocus="jQuery(this).next('input').focus();">
-                                                <input id='input_4_9_other' name='input_9_other' type='text'
+                                                <input id='input_10_39_other' name='input_39_other' type='text'
                                                     value='Other' aria-label='Other'
                                                     onfocus='jQuery(this).prev("input")[0].click(); if(jQuery(this).val() === "Other") { jQuery(this).val(""); }'
                                                     onblur='if(jQuery(this).val().replace(" ", "") === "") { jQuery(this).val("Other"); }'>
@@ -628,42 +754,42 @@
                                 </div>
 
                                 <!-- Custom class: gfield_name -->
-                                <fieldset id="field_4_10"
+                                <fieldset id="field_10_40"
                                     class="gfield  gfield_name gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class="gfield_label">
                                         Name<span class="gfield_required">*</span>
                                     </legend>
                                     <div
                                         class="ginput_complex ginput_container  has_first_name has_middle_name has_last_name has_suffix gf_name_has_4 ginput_container_name gfield_trigger_change">
-                                        <span id="input_4_10_3_container" class="name_first">
-                                            <input type="text" name="input_10.3" id="input_4_10_3" value=""
+                                        <span id="input_10_40_3_container" class="name_first">
+                                            <input type="text" name="input_40.3" id="input_10_40_3" value=""
                                                 aria-label="First name" aria-required="true" aria-invalid="false"
                                                 placeholder="">
-                                            <label for="input_4_10_3">
+                                            <label for="input_10_40_3">
                                                 First
                                             </label>
                                         </span>
-                                        <span id="input_4_10_4_container" class="name_middle">
-                                            <input type="text" name="input_10.4" id="input_4_10_4" value=""
+                                        <span id="input_10_40_4_container" class="name_middle">
+                                            <input type="text" name="input_40.4" id="input_10_40_4" value=""
                                                 aria-label="Middle name" aria-required="true" aria-invalid="false"
                                                 placeholder="">
-                                            <label for="input_4_10_4">
+                                            <label for="input_10_40_4">
                                                 Middle
                                             </label>
                                         </span>
-                                        <span id="input_4_10_6_container" class="name_last">
-                                            <input type="text" name="input_10.6" id="input_4_10_6" value=""
+                                        <span id="input_10_40_6_container" class="name_last">
+                                            <input type="text" name="input_40.6" id="input_10_40_6" value=""
                                                 aria-label="Last name" aria-required="true" aria-invalid="false"
                                                 placeholder="">
-                                            <label for="input_4_10_6">
+                                            <label for="input_10_40_6">
                                                 Last
                                             </label>
                                         </span>
-                                        <span id="input_4_10_4_container" class="name_suffix ">
-                                            <input type="text" name="input_10.8" id="input_4_10_8" value=""
+                                        <span id="input_10_40_10_container" class="name_suffix ">
+                                            <input type="text" name="input_40.8" id="input_10_40_8" value=""
                                                 aria-label="Name suffix" aria-required="true" aria-invalid="false"
                                                 placeholder="">
-                                            <label for="input_4_10_8">
+                                            <label for="input_10_40_8">
                                                 Suffix
                                             </label>
                                         </span>
@@ -673,17 +799,17 @@
 
                                 <!-- Custom class: gfield_date -->
 
-                                <div id="field_4_11"
+                                <div id="field_10_41"
                                     class="gfield gfield_date   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <label class="gfield_label">
                                         Date<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_date">
-                                        <input name="input_11" id="input_4_11" type="text" value=""
+                                        <input name="input_41" id="input_10_41" type="text" value=""
                                             class="datepicker medium mdy datepicker_no_icon hasDatepicker"
                                             placeholder="">
                                     </div>
-                                    <input type="hidden" id="gforms_calendar_icon_input_4_11" class="gform_hidden"
+                                    <input type="hidden" id="gforms_calendar_icon_input_10_41" class="gform_hidden"
                                         value="/wp-content/plugins/gravityforms/images/calendar.png">
                                     <div class="gfield_description">Description text</div>
                                 </div>
@@ -692,11 +818,11 @@
 
                                 <div
                                     class="gfield gfield_phone   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_12">
+                                    <label class="gfield_label" for="input_10_42">
                                         Phone<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_phone">
-                                        <input name="input_12" id="input_4_12" type="text" value="" class="medium"
+                                        <input name="input_42" id="input_10_42" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                     <div class="gfield_description">Description text</div>
@@ -704,36 +830,37 @@
 
                                 <!-- Custom class: gfield_address -->
 
-                                <fieldset id="field_4_13"
+                                <fieldset id="field_10_43"
                                     class="gfield  gfield_address gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class="gfield_label gfield_label_before_complex">
                                         Address<span class="gfield_required">*</span>
                                     </legend>
                                     <div
                                         class="ginput_complex ginput_container  has_street has_street2 has_city has_state has_zip has_country ginput_container_address gfield_trigger_change">
-                                        <span class="ginput_full address_line_1" id="input_4_13_1_container">
-                                            <input type="text" name="input_13.1" id="input_4_13_1" value="">
-                                            <label for="input_4_13_1" id="input_4_13_1_label">Street Address</label>
+                                        <span class="ginput_full address_line_1" id="input_10_43_1_container">
+                                            <input type="text" name="input_43.1" id="input_10_43_1" value="">
+                                            <label for="input_10_43_1" id="input_10_43_1_label">Street Address</label>
                                         </span>
-                                        <span class="ginput_full address_line_2" id="input_4_13_2_container">
-                                            <input type="text" name="input_13.2" id="input_4_13_2" value="">
-                                            <label for="input_4_13_2" id="input_4_13_2_label">Address Line 2</label>
+                                        <span class="ginput_full address_line_2" id="input_10_43_2_container">
+                                            <input type="text" name="input_43.2" id="input_10_43_2" value="">
+                                            <label for="input_10_43_2" id="input_10_43_2_label">Address Line 2</label>
                                         </span>
-                                        <span class="ginput_left address_city" id="input_4_13_3_container">
-                                            <input type="text" name="input_13.3" id="input_4_13_3" value="">
-                                            <label for="input_4_13_3" id="input_4_13_3_label">City</label>
+                                        <span class="ginput_left address_city" id="input_10_43_3_container">
+                                            <input type="text" name="input_43.3" id="input_10_43_3" value="">
+                                            <label for="input_10_43_3" id="input_10_43_3_label">City</label>
                                         </span>
-                                        <span class="ginput_right address_state" id="input_4_13_4_container">
-                                            <input type="text" name="input_13.4" id="input_4_13_4" value="">
-                                            <label for="input_4_13_4" id="input_4_13_4_label">State / Province /
+                                        <span class="ginput_right address_state" id="input_10_43_4_container">
+                                            <input type="text" name="input_43.4" id="input_10_43_4" value="">
+                                            <label for="input_10_43_4" id="input_10_43_4_label">State / Province /
                                                 Region</label>
                                         </span>
-                                        <span class="ginput_left address_zip" id="input_4_13_5_container">
-                                            <input type="text" name="input_13.5" id="input_4_13_5" value="">
-                                            <label for="input_4_13_5" id="input_4_13_5_label">ZIP / Postal Code</label>
+                                        <span class="ginput_left address_zip" id="input_10_43_5_container">
+                                            <input type="text" name="input_43.5" id="input_10_43_5" value="">
+                                            <label for="input_10_43_5" id="input_10_43_5_label">ZIP / Postal
+                                                Code</label>
                                         </span>
-                                        <span class="ginput_right address_country" id="input_4_13_6_container">
-                                            <select name="input_13.6" id="input_4_13_6">
+                                        <span class="ginput_right address_country" id="input_10_43_6_container">
+                                            <select name="input_43.6" id="input_10_43_6">
                                                 <option value="" selected="selected">Select...</option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
@@ -951,7 +1078,7 @@
                                                 <option value="Zambia">Zambia</option>
                                                 <option value="Zimbabwe">Zimbabwe</option>
                                             </select>
-                                            <label for="input_4_13_6" id="input_4_13_6_label">Country</label>
+                                            <label for="input_10_43_6" id="input_10_43_6_label">Country</label>
                                         </span>
                                     </div>
                                     <div class="gfield_description">Description text</div>
@@ -961,11 +1088,11 @@
 
                                 <div
                                     class="gfield gfield_website   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_14">
+                                    <label class="gfield_label" for="input_10_44">
                                         Website<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_14" id="input_4_14" type="url" value="" class="medium"
+                                        <input name="input_44" id="input_10_44" type="url" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                     <div class="gfield_description">Description text</div>
@@ -975,11 +1102,11 @@
 
                                 <div
                                     class="gfield gfield_email   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_15">
+                                    <label class="gfield_label" for="input_10_45">
                                         Email<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_email">
-                                        <input name="input_15" id="input_4_15" type="text" value="" class="medium"
+                                        <input name="input_45" id="input_10_45" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                     <div class="gfield_description">Description text</div>
@@ -995,21 +1122,21 @@
 
                                 <!-- Custom class: gfield_file_upload -->
 
-                                <div id="field_4_16"
+                                <div id="field_10_46"
                                     class="gfield  gfield_file_upload gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <label class="gfield_label">
                                         File Upload<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_fileupload">
-                                        <div id="gform_multifile_upload_4_16"
-                                            data-settings="{&quot;runtimes&quot;:&quot;html5,flash,html4&quot;,&quot;browse_button&quot;:&quot;gform_browse_button_4_16&quot;,&quot;container&quot;:&quot;gform_multifile_upload_4_16&quot;,&quot;drop_element&quot;:&quot;gform_drag_drop_area_4_16&quot;,&quot;filelist&quot;:&quot;gform_preview_4_16&quot;,&quot;unique_names&quot;:true,&quot;file_data_name&quot;:&quot;file&quot;,&quot;url&quot;:&quot;http:\/\/nwbp.devbucket.me\/?gf_page=9a21cfc692a32ed&quot;,&quot;flash_swf_url&quot;:&quot;http:\/\/nwbp.devbucket.me\/wp-includes\/js\/plupload\/plupload.flash.swf&quot;,&quot;silverlight_xap_url&quot;:&quot;http:\/\/nwbp.devbucket.me\/wp-includes\/js\/plupload\/plupload.silverlight.xap&quot;,&quot;filters&quot;:{&quot;mime_types&quot;:[{&quot;title&quot;:&quot;Allowed Files&quot;,&quot;extensions&quot;:&quot;jpg,gif,png,pdf&quot;}],&quot;max_file_size&quot;:&quot;1048576b&quot;},&quot;multipart&quot;:true,&quot;urlstream_upload&quot;:false,&quot;multipart_params&quot;:{&quot;form_id&quot;:8,&quot;field_id&quot;:19},&quot;gf_vars&quot;:{&quot;max_files&quot;:0,&quot;message_id&quot;:&quot;gform_multifile_messages_4_16&quot;,&quot;disallowed_extensions&quot;:[&quot;php&quot;,&quot;asp&quot;,&quot;aspx&quot;,&quot;cmd&quot;,&quot;csh&quot;,&quot;bat&quot;,&quot;html&quot;,&quot;htm&quot;,&quot;hta&quot;,&quot;jar&quot;,&quot;exe&quot;,&quot;com&quot;,&quot;js&quot;,&quot;lnk&quot;,&quot;htaccess&quot;,&quot;phtml&quot;,&quot;ps1&quot;,&quot;ps2&quot;,&quot;php3&quot;,&quot;php4&quot;,&quot;php5&quot;,&quot;php6&quot;,&quot;py&quot;,&quot;rb&quot;,&quot;tmp&quot;]}}"
+                                        <div id="gform_multifile_upload_10_46"
+                                            data-settings="{&quot;runtimes&quot;:&quot;html5,flash,html4&quot;,&quot;browse_button&quot;:&quot;gform_browse_button_10_46&quot;,&quot;container&quot;:&quot;gform_multifile_upload_10_46&quot;,&quot;drop_element&quot;:&quot;gform_drag_drop_area_10_46&quot;,&quot;filelist&quot;:&quot;gform_preview_10_46&quot;,&quot;unique_names&quot;:true,&quot;file_data_name&quot;:&quot;file&quot;,&quot;url&quot;:&quot;http:\/\/nwbp.devbucket.me\/?gf_page=9a21cfc692a32ed&quot;,&quot;flash_swf_url&quot;:&quot;http:\/\/nwbp.devbucket.me\/wp-includes\/js\/plupload\/plupload.flash.swf&quot;,&quot;silverlight_xap_url&quot;:&quot;http:\/\/nwbp.devbucket.me\/wp-includes\/js\/plupload\/plupload.silverlight.xap&quot;,&quot;filters&quot;:{&quot;mime_types&quot;:[{&quot;title&quot;:&quot;Allowed Files&quot;,&quot;extensions&quot;:&quot;jpg,gif,png,pdf&quot;}],&quot;max_file_size&quot;:&quot;1048576b&quot;},&quot;multipart&quot;:true,&quot;urlstream_upload&quot;:false,&quot;multipart_params&quot;:{&quot;form_id&quot;:8,&quot;field_id&quot;:19},&quot;gf_vars&quot;:{&quot;max_files&quot;:0,&quot;message_id&quot;:&quot;gform_multifile_messages_10_46&quot;,&quot;disallowed_extensions&quot;:[&quot;php&quot;,&quot;asp&quot;,&quot;aspx&quot;,&quot;cmd&quot;,&quot;csh&quot;,&quot;bat&quot;,&quot;html&quot;,&quot;htm&quot;,&quot;hta&quot;,&quot;jar&quot;,&quot;exe&quot;,&quot;com&quot;,&quot;js&quot;,&quot;lnk&quot;,&quot;htaccess&quot;,&quot;phtml&quot;,&quot;ps1&quot;,&quot;ps2&quot;,&quot;php3&quot;,&quot;php4&quot;,&quot;php5&quot;,&quot;php6&quot;,&quot;py&quot;,&quot;rb&quot;,&quot;tmp&quot;]}}"
                                             class="gform_fileupload_multifile" style="position: relative;">
-                                            <div id="gform_drag_drop_area_4_16" class="gform_drop_area"
+                                            <div id="gform_drag_drop_area_10_46" class="gform_drop_area"
                                                 style="position: relative;">
                                                 <span class="gform_drop_instructions">Drop files here or </span>
-                                                <input id="gform_browse_button_4_16" type="button" value="Select files"
+                                                <input id="gform_browse_button_10_46" type="button" value="Select files"
                                                     class="button gform_button_select_files"
-                                                    aria-describedby="extensions_message_4_16"
+                                                    aria-describedby="extensions_message_10_46"
                                                     style="position: relative; z-index: 1;">
                                             </div>
                                             <div id="html5_1c67aebrg11dsnr2cbain1b3u3_container"
@@ -1021,7 +1148,7 @@
                                                     accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,application/pdf,.pdf">
                                             </div>
                                         </div>
-                                        <span id="extensions_message_4_16" class="screen-reader-text">
+                                        <span id="extensions_message_10_46" class="screen-reader-text">
                                             Accepted file types: jpg, gif, png, pdf.
                                         </span>
                                         <div class="validation_message">
@@ -1034,11 +1161,11 @@
 
                                 <div
                                     class="gfield  gfield_multi_select gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_17">
+                                    <label class="gfield_label" for="input_10_47">
                                         Multi Select<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_multiselect">
-                                        <select multiple="multiple" size="7" name="input_17[]" id="input_4_17"
+                                        <select multiple="multiple" size="7" name="input_47[]" id="input_10_47"
                                             class="gfield_select">
                                             <option value="First Choice">First Choice</option>
                                             <option value="Second Choice">Second Choice</option>
@@ -1050,9 +1177,9 @@
 
                                 <!-- Custom class: gfield_list -->
 
-                                <fieldset id="field_4_18"
+                                <fieldset id="field_10_48"
                                     class="gfield gfield--width-full  gfield_list gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible"
-                                    data-js-reload="field_4_18">
+                                    data-js-reload="field_10_48">
                                     <legend class="gfield_label gfield_label_before_complex">
                                         List<span class="gfield_required"><span
                                                 class="gfield_required gfield_required_asterisk">*</span></span>
@@ -1062,11 +1189,11 @@
                                             <div class="gfield_list_groups">
                                                 <div class="gfield_list_row_odd gfield_list_group">
                                                     <div
-                                                        class="gfield_list_group_item gfield_list_cell gfield_list_18_cell1">
+                                                        class="gfield_list_group_item gfield_list_cell gfield_list_48_cell1">
                                                         <input aria-invalid="false" aria-required="true"
                                                             aria-label="List, Row 1"
                                                             data-aria-label-template="List, Row {0}" type="text"
-                                                            name="input_18[]" value="">
+                                                            name="input_48[]" value="">
                                                     </div>
                                                     <div class="gfield_list_icons">
                                                         <button type="button" class="add_list_item"
@@ -1089,9 +1216,9 @@
 
                                 <!-- Custom class: gfield_list -->
 
-                                <fieldset id="field_4_19"
+                                <fieldset id="field_10_49"
                                     class="gfield gfield--width-full  gfield_list gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible"
-                                    data-js-reload="field_4_19">
+                                    data-js-reload="field_10_49">
                                     <legend class="gfield_label gfield_label_before_complex">
                                         List Multi Columns<span class="gfield_required"><span
                                                 class="gfield_required gfield_required_asterisk">*</span></span>
@@ -1106,26 +1233,26 @@
                                             </div>
                                             <div class="gfield_list_groups">
                                                 <div class="gfield_list_row_odd gfield_list_group">
-                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_19_cell1"
+                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_49_cell1"
                                                         data-label="Column 1">
                                                         <input aria-invalid="false" aria-required="true"
                                                             aria-label="Column 1, Row 1"
                                                             data-aria-label-template="Column 1, Row {0}" type="text"
-                                                            name="input_19[]" value="">
+                                                            name="input_49[]" value="">
                                                     </div>
-                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_19_cell1"
+                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_49_cell1"
                                                         data-label="Column 2">
                                                         <input aria-invalid="false" aria-required="true"
                                                             aria-label="Column 2, Row 1"
                                                             data-aria-label-template="Column 2, Row {0}" type="text"
-                                                            name="input_19[]" value="">
+                                                            name="input_49[]" value="">
                                                     </div>
-                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_19_cell1"
+                                                    <div class="gfield_list_group_item gfield_list_cell gfield_list_49_cell1"
                                                         data-label="Column 3">
                                                         <input aria-invalid="false" aria-required="true"
                                                             aria-label="Column 3, Row 1"
                                                             data-aria-label-template="Column 3, Row {0}" type="text"
-                                                            name="input_19[]" value="">
+                                                            name="input_49[]" value="">
                                                     </div>
                                                     <div class="gfield_list_icons">
                                                         <button type="button" class="add_list_item"
@@ -1147,45 +1274,45 @@
                                 </fieldset>
 
                                 <!-- Custom class: gfield_consent -->
-                                <fieldset id="field_4_20"
+                                <fieldset id="field_10_50"
                                     class="gfield  gfield_consent gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class='gfield_label gfield_label_before_complex'>Consent
                                         <span class="gfield_required">*</span>
                                     </legend>
                                     <div class='ginput_container ginput_container_consent'>
-                                        <input name='input_4_20' id='input_4_20' type='checkbox' value='1'
+                                        <input name='input_10_50' id='input_10_50' type='checkbox' value='1'
                                             aria-required="true" aria-invalid="false" /> <label
-                                            class="gfield_consent_label" for='input_4_20'>I agree to the privacy policy.
-                                            Test</label>
+                                            class="gfield_consent_label" for='input_10_50'>I agree to the privacy
+                                            policy. Test</label>
                                     </div>
                                     <div class="gfield_description">Description text</div>
                                 </fieldset>
 
                                 <!-- Custom class: gfield_time -->
 
-                                <fieldset id="field_4_21"
+                                <fieldset id="field_10_51"
                                     class="gfield  gfield_time gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <legend class="gfield_label gfield_label_before_complex">
                                         Time<span class="gfield_required">*</span>
                                     </legend>
                                     <div class="ginput_complex">
                                         <div class="gfield_time_hour ginput_container ginput_container_time">
-                                            <input type="text" maxlength="2" name="input_21[]" id="input_4_21_1"
+                                            <input type="text" maxlength="2" name="input_51[]" id="input_10_51_1"
                                                 value="">
-                                            <label class="hour_label screen-reader-text" for="input_4_21_1">
+                                            <label class="hour_label screen-reader-text" for="input_10_51_1">
                                                 HH
                                             </label>
                                         </div>
                                         <div class="below hour_minute_colon">:</div>
                                         <div class="gfield_time_minute ginput_container ginput_container_time">
-                                            <input type="text" maxlength="2" name="input_21[]" id="input_4_21_2"
+                                            <input type="text" maxlength="2" name="input_51[]" id="input_10_51_2"
                                                 value="">
-                                            <label class="minute_label screen-reader-text" for="input_4_21_2">
+                                            <label class="minute_label screen-reader-text" for="input_10_51_2">
                                                 MM
                                             </label>
                                         </div>
                                         <div class="gfield_time_ampm ginput_container ginput_container_time">
-                                            <select name="input_21[]" id="input_4_21_3">
+                                            <select name="input_51[]" id="input_10_51_3">
                                                 <option value="am">AM</option>
                                                 <option value="pm">PM</option>
                                             </select>
@@ -1199,18 +1326,18 @@
                                         parties. You must be 18 years or older to redeem 3 day passes.</p>
 
                                     <input type='submit' class='gform_button button' value='Submit'
-                                        onclick='if(window["gf_submitting_4"]){return false;}  window["gf_submitting_4"]=true;  '
-                                        onkeypress='if( event.keyCode === 13 ){ if(window["gf_submitting_4"]){return false;} window["gf_submitting_4"]=true;  jQuery("#gform_4").trigger("submit",[true]); }'>
+                                        onclick='if(window["gf_submitting_10"]){return false;}  window["gf_submitting_10"]=true;  '
+                                        onkeypress='if( event.keyCode === 13 ){ if(window["gf_submitting_10"]){return false;} window["gf_submitting_10"]=true;  jQuery("#gform_10").trigger("submit",[true]); }'>
 
-                                    <input type='hidden' class='gform_hidden' name='is_submit_4' value='1'>
-                                    <input type='hidden' class='gform_hidden' name='gform_submit' value='4'>
+                                    <input type='hidden' class='gform_hidden' name='is_submit_10' value='1'>
+                                    <input type='hidden' class='gform_hidden' name='gform_submit' value='10'>
                                     <input type='hidden' class='gform_hidden' name='gform_unique_id' value=''>
-                                    <input type='hidden' class='gform_hidden' name='state_4'
+                                    <input type='hidden' class='gform_hidden' name='state_10'
                                         value='WyJbXSIsIjI4ZTYyMGI3NzdjMzJjM2JkN2YyNzZkNzZlMWNhNWIzIl0='>
-                                    <input type='hidden' class='gform_hidden' name='gform_target_page_number_4'
-                                        id='gform_target_page_number_4' value='0'>
-                                    <input type='hidden' class='gform_hidden' name='gform_source_page_number_4'
-                                        id='gform_source_page_number_4' value='1'>
+                                    <input type='hidden' class='gform_hidden' name='gform_target_page_number_10'
+                                        id='gform_target_page_number_10' value='0'>
+                                    <input type='hidden' class='gform_hidden' name='gform_source_page_number_10'
+                                        id='gform_source_page_number_10' value='1'>
                                     <input type='hidden' name='gform_field_values' value=''>
                                 </div>
 
@@ -1224,130 +1351,130 @@
 
                                 <!-- Custom class width: gfield--width-full (width: 100%) -->
 
-                                <div id="field_4_22"
+                                <div id="field_10_52"
                                     class="gfield gfield_single_line_text  gfield--width-full gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_22">
+                                    <label class="gfield_label" for="input_10_52">
                                         gfield--width-full (width: 100%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_22" id="input_4_22" type="text" value="" class="medium"
+                                        <input name="input_52" id="input_10_52" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-half (width: 50%) -->
 
-                                <div id="field_4_23"
+                                <div id="field_10_53"
                                     class="gfield gfield_single_line_text  gfield--width-half gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_23">
+                                    <label class="gfield_label" for="input_10_53">
                                         gfield--width-half (width: 50%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_23" id="input_4_23" type="text" value="" class="medium"
+                                        <input name="input_53" id="input_10_53" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-half (width: 50%) -->
 
-                                <div id="field_4_24"
+                                <div id="field_10_54"
                                     class="gfield gfield_single_line_text  gfield--width-half gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_24">
+                                    <label class="gfield_label" for="input_10_54">
                                         gfield--width-half (width: 50%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_24" id="input_4_24" type="text" value="" class="medium"
+                                        <input name="input_54" id="input_10_54" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-half (width: 33.333%) -->
 
-                                <div id="field_4_25"
+                                <div id="field_10_55"
                                     class="gfield gfield_single_line_text  gfield--width-third gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_25">
+                                    <label class="gfield_label" for="input_10_55">
                                         gfield--width-third (33%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_25" id="input_4_25" type="text" value="" class="medium"
+                                        <input name="input_55" id="input_10_55" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-half (width: 33.333%) -->
 
-                                <div id="field_4_26"
+                                <div id="field_10_56"
                                     class="gfield gfield_single_line_text  gfield--width-third gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_26">
+                                    <label class="gfield_label" for="input_10_56">
                                         gfield--width-third (33%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_26" id="input_4_26" type="text" value="" class="medium"
+                                        <input name="input_56" id="input_10_56" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-half (width: 33.333%) -->
 
-                                <div id="field_4_27"
+                                <div id="field_10_57"
                                     class="gfield gfield_single_line_text  gfield--width-third gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_27">
+                                    <label class="gfield_label" for="input_10_57">
                                         gfield--width-third (33%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_27" id="input_4_27" type="text" value="" class="medium"
+                                        <input name="input_57" id="input_10_57" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-quarter (width: 25%) -->
 
-                                <div id="field_4_28"
+                                <div id="field_10_58"
                                     class="gfield gfield_single_line_text  gfield--width-quarter gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_28">
+                                    <label class="gfield_label" for="input_10_58">
                                         gfield--width-quarter (25%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_28" id="input_4_28" type="text" value="" class="medium"
+                                        <input name="input_58" id="input_10_58" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-quarter (width: 25%) -->
 
-                                <div id="field_4_29"
+                                <div id="field_10_59"
                                     class="gfield gfield_single_line_text  gfield--width-quarter gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_29">
+                                    <label class="gfield_label" for="input_10_59">
                                         gfield--width-quarter (25%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_29" id="input_4_29" type="text" value="" class="medium"
+                                        <input name="input_59" id="input_10_59" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-quarter (width: 25%) -->
 
-                                <div id="field_4_30"
+                                <div id="field_10_60"
                                     class="gfield gfield_single_line_text  gfield--width-quarter gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_30">
+                                    <label class="gfield_label" for="input_10_60">
                                         gfield--width-quarter (25%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_30" id="input_4_30" type="text" value="" class="medium"
+                                        <input name="input_60" id="input_10_60" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
 
                                 <!-- Custom class width: gfield--width-quarter (width: 25%) -->
 
-                                <div id="field_4_31"
+                                <div id="field_10_61"
                                     class="gfield gfield_single_line_text  gfield--width-quarter gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_31">
+                                    <label class="gfield_label" for="input_10_61">
                                         gfield--width-quarter (25%)<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_text">
-                                        <input name="input_31" id="input_4_31" type="text" value="" class="medium"
+                                        <input name="input_61" id="input_10_61" type="text" value="" class="medium"
                                             placeholder="" aria-required="true" aria-invalid="false">
                                     </div>
                                 </div>
@@ -1362,13 +1489,13 @@
 
                                 <!-- Custom class: gfield_product -->
 
-                                <div id="field_4_32"
-                                    class="gfield gfield_product    gfield_contains_required gfield_price gfield_price_4_32 gfield_product_4_32 field_sublabel_below field_description_below gfield_visibility_visible">
+                                <div id="field_10_62"
+                                    class="gfield gfield_product    gfield_contains_required gfield_price gfield_price_10_62 gfield_product_10_62 field_sublabel_below field_description_below gfield_visibility_visible">
                                     <label class="gfield_label">
                                         product<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_select">
-                                        <select name="input_32" id="input_4_32" class="medium gfield_select"
+                                        <select name="input_62" id="input_10_62" class="medium gfield_select"
                                             aria-invalid="false">
                                             <option value="First Choice|10">First Choice</option>
                                             <option value="Second Choice|20">Second Choice</option>
@@ -1380,13 +1507,13 @@
 
                                 <!-- Custom class: gfield_quantity -->
 
-                                <div id="field_4_33"
-                                    class="gfield gfield_quantity     gfield_price gfield_price_4_33 gfield_quantity_4_33 field_sublabel_below field_description_below gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_33">
+                                <div id="field_10_63"
+                                    class="gfield gfield_quantity     gfield_price gfield_price_10_63 gfield_quantity_10_63 field_sublabel_below field_description_below gfield_visibility_visible">
+                                    <label class="gfield_label" for="input_10_63">
                                         product Quantity<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_number">
-                                        <input name="input_33" id="input_4_33" type="number" step="any" min="1"
+                                        <input name="input_63" id="input_10_63" type="number" step="any" min="1"
                                             max="100" value="" class="medium" placeholder="" aria-required="true"
                                             aria-invalid="false">
                                         <div class="instruction">
@@ -1401,11 +1528,11 @@
 
                                 <div
                                     class="gfield  gfield_product_option gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_34">
+                                    <label class="gfield_label" for="input_10_64">
                                         product Option<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_select">
-                                        <select name="input_34" id="input_4_34" class="medium gfield_select"
+                                        <select name="input_64" id="input_10_64" class="medium gfield_select"
                                             aria-required="true" aria-invalid="false">
                                             <option value="First Option|0">First Option</option>
                                             <option value="Second Option|3">Second Option +$3.00</option>
@@ -1421,27 +1548,27 @@
 
                                 <div
                                     class="gfield  gfield_product_option gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_35">
+                                    <label class="gfield_label" for="input_10_65">
                                         product Option<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_checkbox">
-                                        <ul class="gfield_checkbox" id="input_4_35">
-                                            <li class="gchoice_4_35_1">
-                                                <input name="input_35.1" type="checkbox" value="First Option|0"
-                                                    id="choice_4_35_1">
-                                                <label for="choice_4_35_1" id="label_4_35_1">First
+                                        <ul class="gfield_checkbox" id="input_10_65">
+                                            <li class="gchoice_10_65_1">
+                                                <input name="input_65.1" type="checkbox" value="First Option|0"
+                                                    id="choice_10_65_1">
+                                                <label for="choice_10_65_1" id="label_10_65_1">First
                                                     Option<span class="ginput_price"></span></label>
                                             </li>
-                                            <li class="gchoice_4_35_2">
-                                                <input name="input_35.2" type="checkbox" value="Second Option|3"
-                                                    id="choice_4_35_2">
-                                                <label for="choice_4_35_2" id="label_4_35_2">Second
+                                            <li class="gchoice_10_65_2">
+                                                <input name="input_65.2" type="checkbox" value="Second Option|3"
+                                                    id="choice_10_65_2">
+                                                <label for="choice_10_65_2" id="label_10_65_2">Second
                                                     Option<span class="ginput_price"> +$3.00</span></label>
                                             </li>
-                                            <li class="gchoice_4_35_3">
-                                                <input name="input_35.3" type="checkbox" value="Third Option|4"
-                                                    id="choice_4_35_3">
-                                                <label for="choice_4_35_3" id="label_4_35_3">Third
+                                            <li class="gchoice_10_65_3">
+                                                <input name="input_65.3" type="checkbox" value="Third Option|4"
+                                                    id="choice_10_65_3">
+                                                <label for="choice_10_65_3" id="label_10_65_3">Third
                                                     Option<span class="ginput_price"> +$4.00</span></label>
                                             </li>
                                         </ul>
@@ -1455,27 +1582,27 @@
 
                                 <div
                                     class="gfield  gfield_product_option gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
-                                    <label class="gfield_label" for="input_4_36">
+                                    <label class="gfield_label" for="input_10_66">
                                         product Option<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_radio">
-                                        <ul class="gfield_radio" id="input_4_36">
-                                            <li class="gchoice_4_36_0">
-                                                <input name="input_36" type="radio" value="First Option|0"
-                                                    id="choice_4_36_0">
-                                                <label for="choice_4_36_0" id="label_4_36_0">First
+                                        <ul class="gfield_radio" id="input_10_66">
+                                            <li class="gchoice_10_66_0">
+                                                <input name="input_66" type="radio" value="First Option|0"
+                                                    id="choice_10_66_0">
+                                                <label for="choice_10_66_0" id="label_10_66_0">First
                                                     Option<span class="ginput_price"></span></label>
                                             </li>
-                                            <li class="gchoice_4_36_1">
-                                                <input name="input_36" type="radio" value="Second Option|3"
-                                                    id="choice_4_36_1">
-                                                <label for="choice_4_36_1" id="label_4_36_1">Second
+                                            <li class="gchoice_10_66_1">
+                                                <input name="input_66" type="radio" value="Second Option|3"
+                                                    id="choice_10_66_1">
+                                                <label for="choice_10_66_1" id="label_10_66_1">Second
                                                     Option<span class="ginput_price"> +$3.00</span></label>
                                             </li>
-                                            <li class="gchoice_4_36_2">
-                                                <input name="input_36" type="radio" value="Third Option|4"
-                                                    id="choice_4_36_2">
-                                                <label for="choice_4_36_2" id="label_4_36_2">Third
+                                            <li class="gchoice_10_66_2">
+                                                <input name="input_66" type="radio" value="Third Option|4"
+                                                    id="choice_10_66_2">
+                                                <label for="choice_10_66_2" id="label_10_66_2">Third
                                                     Option<span class="ginput_price"> +$4.00</span></label>
                                             </li>
                                         </ul>
@@ -1486,26 +1613,26 @@
 
                                 <!-- Custom class: gfield_shipping -->
 
-                                <div id="field_4_37"
-                                    class="gfield   gfield_contains_required gfield_price gfield_shipping gfield_shipping_37 field_sublabel_below field_description_below  gfield_visibility_visible">
+                                <div id="field_10_67"
+                                    class="gfield   gfield_contains_required gfield_price gfield_shipping gfield_shipping_67 field_sublabel_below field_description_below  gfield_visibility_visible">
                                     <label class="gfield_label">
                                         product Shipping<span class="gfield_required">*</span>
                                     </label>
                                     <div class="ginput_container ginput_container_singleshipping">
-                                        <input type="hidden" name="input_37" value="$10.00" class="gform_hidden">
-                                        <span class="ginput_shipping_price" id="input_4_37">$10.00</span>
+                                        <input type="hidden" name="input_67" value="$10.00" class="gform_hidden">
+                                        <span class="ginput_shipping_price" id="input_10_67">$10.00</span>
                                     </div>
                                     <div class="gfield_description">Description text</div>
                                 </div>
 
                                 <!-- Custom class: gfield_product_total -->
 
-                                <div id="field_4_38"
-                                    class="gfield gfield_product_total  gfield_price gfield_price_4_39 gfield_total gfield_total_4_39 field_sublabel_below field_description_below gfield_visibility_visible">
+                                <div id="field_10_68"
+                                    class="gfield gfield_product_total  gfield_price gfield_price_10_69 gfield_total gfield_total_10_69 field_sublabel_below field_description_below gfield_visibility_visible">
                                     <label class="gfield_label">product Total</label>
                                     <div class="ginput_container ginput_container_total">
-                                        <span class="ginput_total ginput_total_39">$.00</span>
-                                        <input type="hidden" name="input_39" id="input_4_39" class="gform_hidden">
+                                        <span class="ginput_total ginput_total_69">$.00</span>
+                                        <input type="hidden" name="input_69" id="input_10_69" class="gform_hidden">
                                     </div>
                                     <div class="gfield_description">Description text</div>
                                 </div>
@@ -1521,6 +1648,24 @@
     <footer class="page-footer">
         <div class="inner">
             <div class="page-footer__top">
+                <div class="page-footer__content">
+                    <div class="logo">
+                        <img src="assets/images/logo-footer.png" alt="">
+                    </div>
+                    <div class="page-footer__contacts">
+                        <p class="page-footer__phone">
+                            <a href="tel:+380735533505" class="page-footer__link-phone">+38 (073) 553-35-05</a>
+                        </p>
+                        <p class="page-footer__address">
+                            <a href="#" class="page-footer__a">м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве
+                                крило, 2 поверх)</a>
+                        </p>
+                        <div class="page-footer__time">
+                            <p class="page-footer__time-item">10:00-19:00</p>
+                            <p class="page-footer__time-item">Без вихідних</p>
+                        </div>
+                    </div>
+                </div>
                 <nav class="menu-footer-main" aria-label="Footer Main">
                     <ul class="menu-footer-main__items" data-keyboard-menu="true">
                         <li class="
@@ -1538,7 +1683,7 @@
 						   
 					">
 
-                                Lorem ipsum
+                                Каталог
                             </a>
                             <div class="
 							menu-footer-main__sub-menu
@@ -1565,7 +1710,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Новинкиг
                                         </a>
                                     </li>
                                     <li class="
@@ -1583,7 +1728,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            SALE
                                         </a>
                                     </li>
                                     <li class="
@@ -1601,7 +1746,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Бренди
                                         </a>
                                     </li>
                                     <li class="
@@ -1619,7 +1764,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Обличчя
                                         </a>
                                     </li>
                                     <li class="
@@ -1637,7 +1782,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Волосся
                                         </a>
                                     </li>
                                     <li class="
@@ -1655,7 +1800,25 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Тіло
+                                        </a>
+                                    </li>
+                                    <li class="
+																		menu-footer-main__item
+																		menu-footer-main__item_level_2
+																		menu-footer-main__item_level_sub
+																		
+																		
+																	">
+                                        <a href="#" class="
+																			menu-footer-main__link
+																			menu-footer-main__link_level_2
+																			   menu-footer-main__link_level_sub
+																			   
+																			   
+																		">
+
+                                            Набори
                                         </a>
                                     </li>
                                 </ul>
@@ -1676,7 +1839,7 @@
 						   
 					">
 
-                                Lorem ipsum
+                                Для клієнтів
                             </a>
                             <div class="
 							menu-footer-main__sub-menu
@@ -1703,7 +1866,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Блог
                                         </a>
                                     </li>
                                     <li class="
@@ -1721,7 +1884,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Доставка та оплата
                                         </a>
                                     </li>
                                     <li class="
@@ -1739,109 +1902,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-												menu-footer-main__item
-												menu-footer-main__item_level_2
-												menu-footer-main__item_level_sub
-												
-												menu-footer-main__item_has_sub-menu
-											">
-                                        <a href="#" class="
-													menu-footer-main__link
-													menu-footer-main__link_level_2
-													   menu-footer-main__link_level_sub
-													   
-													   
-												">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                        <div class="
-														menu-footer-main__sub-menu
-														menu-footer-main__sub-menu_level_2
-														menu-footer-main__sub-menu_level_sub
-													">
-                                            <ul class="
-															menu-footer-main__sub-items
-															menu-footer-main__sub-items_level_2
-															menu-footer-main__sub-items_level_sub
-														">
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
+                                            Послуги
                                         </a>
                                     </li>
                                     <li class="
@@ -1859,229 +1920,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="
-					menu-footer-main__item
-					menu-footer-main__item_level_1
-					menu-footer-main__item_level_top
-					
-					menu-footer-main__item_has_sub-menu
-				">
-                            <a href="#" class="
-						menu-footer-main__link
-						menu-footer-main__link_level_1
-						   menu-footer-main__link_level_top
-						   
-						   
-					">
-
-                                Lorem ipsum
-                            </a>
-                            <div class="
-							menu-footer-main__sub-menu
-							menu-footer-main__sub-menu_level_1
-							menu-footer-main__sub-menu_level_top
-						">
-                                <ul class="
-								menu-footer-main__sub-items
-								menu-footer-main__sub-items_level_1
-								menu-footer-main__sub-items_level_top
-							">
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="
-					menu-footer-main__item
-					menu-footer-main__item_level_1
-					menu-footer-main__item_level_top
-					
-					menu-footer-main__item_has_sub-menu
-				">
-                            <a href="#" class="
-						menu-footer-main__link
-						menu-footer-main__link_level_1
-						   menu-footer-main__link_level_top
-						   
-						   
-					">
-
-                                Lorem ipsum
-                            </a>
-                            <div class="
-							menu-footer-main__sub-menu
-							menu-footer-main__sub-menu_level_1
-							menu-footer-main__sub-menu_level_top
-						">
-                                <ul class="
-								menu-footer-main__sub-items
-								menu-footer-main__sub-items_level_1
-								menu-footer-main__sub-items_level_top
-							">
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
+                                            Про нас
                                         </a>
                                     </li>
                                 </ul>
@@ -2089,130 +1928,45 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="page-footer__content">
-                    <div class="page-footer__contacts">
-                        <h3 class="page-footer__h3">Lorem ipsum dolor sit</h3>
-                        <p class="page-footer__p">
-                            Telephone:
-                            <a href="tel:+11111111111" class="page-footer__a">(111) 111-1111</a>
-                        </p>
-                        <p class="page-footer__p">
-                            Email:
-                            <a href="mailto:123456@site.com" class="page-footer__a">123456@site.com</a>
-                        </p>
-                        <p class="page-footer__p">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        <p class="page-footer__p">Dallas, TX 75247</p>
-                    </div>
+                <div class="page-footer__social">
+                    <h2>Ми у соцмережах</h2>
                     <div class="social-links social-links_toggle">
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/instagram-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
                                 src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
                             <span class="social-links__text">Instagram</span>
                         </a>
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/facebook-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
                                 src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
                             <span class="social-links__text">Facebook</span>
                         </a>
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/linkedin-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
-                                src="../assets/images/social-icons/linkedin.svg" alt="" aria-hidden="true">
-                            <span class="social-links__text">LinkedIn</span>
+                                src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                            <span class="social-links__text">Tiktok</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="page-footer__bottom">
                 <div class="page-footer__wrapper">
-                    <p class="page-footer__copyright">© Lorem ipsum. All Rights Reserved</p>
-                    <nav class="menu-footer-links" aria-label="Footer Links">
-                        <ul class="menu-footer-links__items" data-keyboard-menu="true">
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Site Map
-                                </a>
-                            </li>
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Privacy
-                                </a>
-                            </li>
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Terms
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <p class="page-footer__copyright">© 2023 Relume. All rights reserved.</p>
                 </div>
                 <div class="page-footer__by">
+                </div>
+                <div class="page-footer__pay">
+                    <img src="../assets/images/image-pay.png" alt="">
                 </div>
             </div>
         </div>
     </footer>
-
-    <dialog id="mini-cart">
-        <div class="popup">
-            <div class="popup__content">
-                <h2 class="popup__title">Mini Cart</h2>
-            </div>
-            <button class="popup__close-btn" type="button">
-                <svg class="popup__close-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                    viewBox="0 0 18 18">
-                    <path
-                        d="M.93 18a.926.926 0 0 1-.654-1.581L16.422.27a.926.926 0 1 1 1.31 1.31L1.584 17.728A.929.929 0 0 1 .929 18Z" />
-                    <path
-                        d="M17.078 18a.919.919 0 0 1-.654-.272L.275 1.581a.926.926 0 0 1 1.31-1.31L17.732 16.42A.926.926 0 0 1 17.078 18Z" />
-                </svg>
-                <span class="popup__close-text">Close</span>
-            </button>
-        </div>
-    </dialog>
 
     <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <div class="mobile-menu__wrapper">
@@ -2258,10 +2012,11 @@
 												menu-header-main-mobile__expend-button_level_1
 												menu-header-main-mobile__expend-button_level_top
 										">
-                            <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="11" height="6">
-                                <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                    fill="#BFBFBF" />
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
                             </svg>
 
                             <span class="screen-reader-text">Submenu for "About Us"</span>
@@ -2334,10 +2089,11 @@
 																			menu-header-main-mobile__expend-button_level_2
 																			menu-header-main-mobile__expend-button_level_sub
 																	">
-                                        <svg class="[object Object]" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="11" height="6">
-                                            <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                                fill="#BFBFBF" />
+                                        <svg class="[object Object]" aria-hidden="true" width="14" height="9"
+                                            viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                                fill="#171A19" />
                                         </svg>
 
                                         <span class="screen-reader-text">Submenu for "Sub menu item II"</span>
@@ -2488,10 +2244,11 @@
 												menu-header-main-mobile__expend-button_level_1
 												menu-header-main-mobile__expend-button_level_top
 										">
-                            <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="11" height="6">
-                                <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                    fill="#BFBFBF" />
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
                             </svg>
 
                             <span class="screen-reader-text">Submenu for "Contact"</span>

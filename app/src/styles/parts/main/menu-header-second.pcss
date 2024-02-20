@@ -1,64 +1,173 @@
 @import "../../variables-and-mixins.pcss";
 
 .menu-header-second {
-	display: none;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
 
-	@media (--lg) {
+	li {
+		&::before {
+			content: "";
+			float: initial;
+		}
+	}
+
+	&__items {
 		display: flex;
-		justify-content: flex-end;
-		margin: 10px 0 14px;
+		gap: 5px;
+		align-items: center;
+		height: 100%;
+		margin: 0;
 
-		&__items {
-			display: flex;
-			gap: 33px;
+		@media (--md) {
+			gap: 15px;
+		}
+	}
+
+	&__item {
+		display: block;
+		vertical-align: middle;
+		position: relative;
+	}
+
+	&__link {
+		display: block;
+		color: $color-colors-white;
+		text-transform: uppercase;
+
+		&_phone {
+			font-size: 18px;
+			font-weight: 700;
 		}
 
-		&__item {
-			display: flex;
+		&.btn-link {
+			@include btn;
+		}
+	}
 
-			&.menu-cart-link {
-				align-items: center;
+	.account,
+	.cart,
+	.wish-list {
+		a {
+			font-size: 0;
+			position: relative;
+			display: block;
+			transition: background 0.8s;
+			width: 20px;
+
+			@media (--lg) {
+				width: 24px;
 			}
 
+			&::before {
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				content: "";
+				transition: background 0.8s;
+			}
+		}
+	}
+
+	.account {
+		a {
+			&::before {
+				background: svg-load("../../../images/account.svg") no-repeat center;
+				background-size: 80%;
+
+				@media (--sm) {
+					background-size: 100%;
+				}
+			}
 		}
 
-		&__link {
-			display: flex;
-			align-items: center;
-			color: $color-colors-white;
-
-			&_phone {
-				font-size: 18px;
-				font-weight: 700;
-			}
-
-			&_btn {
-				@include btn;
-			}
-
-			&_mini_cart {
-				padding: 10px;
-				position: relative;
-
+		&:hover {
+			a {
 				&::before {
-					content: url(../../../images/cart.svg);
-				}
+					background: svg-load("../../../images/account.svg") no-repeat center;
+					background-size: 80%;
 
-				&_counter {
-					color: $white;
-					position: absolute;
-					top: 0;
-					right: -4px;
-					font-size: 12px;
-					font-weight: 700;
-					height: 18px;
-					width: 18px;
-					border-radius: 50%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					@media (--sm) {
+						background-size: 100%;
+					}
 				}
 			}
 		}
+	}
+
+	.wish-list {
+		a {
+			&::before {
+				background: svg-load("../../../images/wish.svg") no-repeat center;
+				background-size: 80%;
+
+				@media (--sm) {
+					background-size: 100%;
+				}
+			}
+		}
+
+		&:hover {
+			a {
+				&::before {
+					background: svg-load("../../../images/wish.svg") no-repeat center;
+					background-size: 80%;
+
+					@media (--sm) {
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.cart {
+		a {
+			&::before {
+				background: svg-load("../../../images/shopping-cart.svg") no-repeat center;
+				background-size: 80%;
+				left: -2px;
+
+				@media (--sm) {
+					background-size: 100%;
+				}
+
+				@media (--lg) {
+					left: 0;
+				}
+			}
+		}
+
+		&:hover {
+			a {
+				&::before {
+					background: svg-load("../../../images/shopping-cart.svg") no-repeat center;
+					background-size: 80%;
+
+					@media (--sm) {
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.cart-count {
+		position: absolute;
+		right: -7px;
+		top: -18px;
+		background: #000;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 11px;
+		font-family: $font-family-raleway;
 	}
 }

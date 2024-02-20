@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/second.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/gravity-forms.css">
     <link rel="stylesheet" href="../assets/css/breadcrumb.css">
     <link rel="stylesheet" href="../assets/css/menu-site-map.css">
     <link rel="stylesheet" href="../assets/css/site-map.css">
@@ -22,425 +23,551 @@
     <header class="page-header">
         <div class="page-header__wrapper">
             <div class="page-header__content">
-                <div class="logo">
-                    <a href="../">
-                        <img src="../assets/images/logo.svg" alt="">
-                    </a>
+                <div class="page-header__top">
+                    <div class="inner">
+                        <div class="social-links social-links_toggle">
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Instagram</span>
+                            </a>
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Facebook</span>
+                            </a>
+                            <a class="social-links__link" href="#">
+                                <img class="social-links__image social-links__image_color"
+                                    src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                                <img class="social-links__image social-links__image_outline"
+                                    src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                                <span class="social-links__text">Tiktok</span>
+                            </a>
+                        </div>
+                        <a href="tel:+380735533505" class="page-header__top-phone">+38 (073) 553-35-05</a>
+                        <div class="page-header__time">
+                            <p class="page-header__time-item">10:00-19:00</p>
+                            <p class="page-header__time-item">Без вихідних</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="page-header__middle">
+                    <div class="inner">
+                        <div class="wrap__search">
+                            <button class="button__search"></button>
+                            <div class="wrap-search">
+                                <form class="search-form__form" role="search" method="get" action="/">
+                                    <label class="search-form__label">
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input class="search-form__input" type="search" placeholder="Шукати" value=""
+                                            name="s">
+                                    </label>
+                                    <input class="search-form__submit" type="submit" value="Search">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <a href="../">
+                                <img src="../assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="menu-header-second" aria-label="Header Second">
+                            <ul class="menu-header-second__items" data-role="menubar" data-accessibility-menu>
+                                <li class="menu-header-second__item account">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                                <li class="menu-header-second__item cart menu-cart-link">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                                <li class="menu-header-second__item wish-list">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="page-header__bottom">
+                    <div class="inner">
+                        <div class="nav-menu">
+                            <nav class="menu-header-main" aria-label="Header Main">
+                                <ul class="menu-header-main__items" data-expend-menu="auto-close"
+                                    data-keyboard-menu="auto-close" data-hover-menu>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_current
+												menu-header-main__item_has_sub-menu
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_current
+				
+												">
 
-                <div class="nav-menu">
-                    <nav class="menu-header-second" aria-label="Header Second">
-                        <ul class="menu-header-second__items" data-expend-menu="auto-close"
-                            data-keyboard-menu="auto-close" data-hover-menu>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										menu-header-second__item_phone
-										
-									">
-                                <a href="tel:+1234567890" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   menu-header-second__link_phone
-											   
-										">
+                                            Послуги
+                                        </a>
+                                        <button aria-expanded="false" class="
+																	menu-header-main__expend-button
+																	menu-header-main__expend-button_level_1
+																	menu-header-main__expend-button_level_top
+															">
+                                            <svg class="[object Object]" aria-hidden="true" width="14" height="9"
+                                                viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                                    fill="#171A19" />
+                                            </svg>
 
-                                    (123) 456-7890
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										menu-header-second__item_btn
-										
-									">
-                                <a href="#" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   menu-header-second__link_btn
-											   
-										">
-
-                                    Get A Quote
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-second__item
-										menu-header-second__item_level_1
-										menu-header-second__item_level_top
-										
-										
-									">
-                                <a href="#mini-cart" class="
-											menu-header-second__link
-											menu-header-second__link_level_1
-											   menu-header-second__link_level_top
-											   
-											   menu-header-second__link_mini_cart
-										" data-popup-id="mini-cart">
-                                    <span class="menu-header-second__link_mini_cart_counter">2</span>
-
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="menu-header-main" aria-label="Header Main">
-                        <ul class="menu-header-main__items" data-expend-menu="auto-close"
-                            data-keyboard-menu="auto-close" data-hover-menu>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Home
-                                </a>
-                            </li>
-                            <li class="
-							menu-header-main__item
-							menu-header-main__item_level_1
-							menu-header-main__item_level_top
-							menu-header-main__item_current
-							menu-header-main__item_has_sub-menu
-						">
-                                <a href="#" class="
-								menu-header-main__link
-								menu-header-main__link_level_1
-								   menu-header-main__link_level_top
-								   menu-header-main__link_current
-								   
-							">
-
-                                    About Us
-                                </a>
-                                <button aria-expanded="false" class="
-												menu-header-main__expend-button
-												menu-header-main__expend-button_level_1
-												menu-header-main__expend-button_level_top
-										">
-                                    <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        width="11" height="6">
-                                        <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                            fill="#BFBFBF" />
-                                    </svg>
-
-                                    <span class="screen-reader-text">Submenu for "About Us"</span>
-                                </button>
-                                <div class="
-									menu-header-main__sub-menu
-									menu-header-main__sub-menu_level_1
-									menu-header-main__sub-menu_level_top
-								" hidden>
-                                    <ul class="
-										menu-header-main__sub-items
-										menu-header-main__sub-items_level_1
-										menu-header-main__sub-items_level_top
-									">
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-														menu-header-main__item
-														menu-header-main__item_level_2
-														menu-header-main__item_level_sub
-														
-														menu-header-main__item_has_sub-menu
-													">
-                                            <a href="#" class="
-															menu-header-main__link
-															menu-header-main__link_level_2
-															   menu-header-main__link_level_sub
-															   
-															   
+                                            <span class="screen-reader-text">Submenu for "Послуги"</span>
+                                        </button>
+                                        <div class="
+														menu-header-main__sub-menu
+														menu-header-main__sub-menu_level_1
+														menu-header-main__sub-menu_level_top
+													" hidden>
+                                            <ul class="
+															menu-header-main__sub-items
+															menu-header-main__sub-items_level_1
+															menu-header-main__sub-items_level_top
 														">
+                                                <li class="
+																										menu-header-main__item
+																										menu-header-main__item_level_2
+																										menu-header-main__item_level_sub
+				
+				
+																									">
+                                                    <a href="#popup-menu" class="
+																											menu-header-main__link
+																											menu-header-main__link_level_2
+																											   menu-header-main__link_level_sub btn-services
+				
+				
+																										">
 
-                                                Sub menu item II
-                                            </a>
-                                            <button aria-expanded="false" class="
-																			menu-header-main__expend-button
-																			menu-header-main__expend-button_level_2
-																			menu-header-main__expend-button_level_sub
-																	">
-                                                <svg class="[object Object]" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" width="11" height="6">
-                                                    <path
-                                                        d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                                        fill="#BFBFBF" />
-                                                </svg>
-
-                                                <span class="screen-reader-text">Submenu for "Sub menu item II"</span>
-                                            </button>
-                                            <div class="
-																menu-header-main__sub-menu
-																menu-header-main__sub-menu_level_2
-																menu-header-main__sub-menu_level_sub
-															" hidden>
-                                                <ul class="
-																	menu-header-main__sub-items
-																	menu-header-main__sub-items_level_2
-																	menu-header-main__sub-items_level_sub
+                                                        Записатись на прийом
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
 																">
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                        <a href="#" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                            Бренди
+                                        </a>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
+																">
+                                        <a href="/product-category/sale/" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                    <li class="
-																												menu-header-main__item
-																												menu-header-main__item_level_3
-																												menu-header-main__item_level_sub
-																												
-																												
-																											">
-                                                        <a href="#" class="
-																													menu-header-main__link
-																													menu-header-main__link_level_3
-																													   menu-header-main__link_level_sub
-																													   
-																													   
-																												">
+                                            SALE
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu face-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable face-category
+				
+												">
+                                            Обличчя
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu hair-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable hair-category
+				
+												">
 
-                                                            Sub menu item III
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            Волосся
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu body-category
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable body-category
+				
+												">
+
+                                            Тіло
+                                        </a>
+                                    </li>
+                                    <li class="
+																	menu-header-main__item
+																	menu-header-main__item_level_1
+																	menu-header-main__item_level_top
+				
+				
+																">
+                                        <a href="#" class="
+																		menu-header-main__link
+																		menu-header-main__link_level_1
+																		   menu-header-main__link_level_top
+				
+				
+																	">
+
+                                            Набори
+                                        </a>
+                                    </li>
+                                    <li class="
+												menu-header-main__item
+												menu-header-main__item_level_1
+												menu-header-main__item_level_top
+												menu-header-main__item_no-clickable
+												menu-header-main__item_has_sub-menu about-company
+											">
+                                        <a href="#" class="
+													menu-header-main__link
+													menu-header-main__link_level_1
+													   menu-header-main__link_level_top
+													   menu-header-main__link_no-clickable about-company
+				
+												">
+
+                                            Про компанію
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="face-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-1.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для очищення</a>
                                 </div>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Services
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Technology
-                                </a>
-                            </li>
-                            <li class="
-										menu-header-main__item
-										menu-header-main__item_level_1
-										menu-header-main__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-header-main__link
-											menu-header-main__link_level_1
-											   menu-header-main__link_level_top
-											   
-											   
-										">
-
-                                    Careers
-                                </a>
-                            </li>
-                            <li class="
-							menu-header-main__item
-							menu-header-main__item_level_1
-							menu-header-main__item_level_top
-							menu-header-main__item_no-clickable
-							menu-header-main__item_has_sub-menu
-						">
-                                <a href="#" class="
-								menu-header-main__link
-								menu-header-main__link_level_1
-								   menu-header-main__link_level_top
-								   menu-header-main__link_no-clickable
-								   
-							">
-
-                                    Contact
-                                </a>
-                                <button aria-expanded="false" class="
-												menu-header-main__expend-button
-												menu-header-main__expend-button_level_1
-												menu-header-main__expend-button_level_top
-										">
-                                    <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        width="11" height="6">
-                                        <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                            fill="#BFBFBF" />
-                                    </svg>
-
-                                    <span class="screen-reader-text">Submenu for "Contact"</span>
-                                </button>
-                                <div class="
-									menu-header-main__sub-menu
-									menu-header-main__sub-menu_level_1
-									menu-header-main__sub-menu_level_top
-								" hidden>
-                                    <ul class="
-										menu-header-main__sub-items
-										menu-header-main__sub-items_level_1
-										menu-header-main__sub-items_level_top
-									">
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                        <li class="
-																			menu-header-main__item
-																			menu-header-main__item_level_2
-																			menu-header-main__item_level_sub
-																			
-																			
-																		">
-                                            <a href="#" class="
-																				menu-header-main__link
-																				menu-header-main__link_level_2
-																				   menu-header-main__link_level_sub
-																				   
-																				   
-																			">
-
-                                                Sub menu item II
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-2.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для тонізації обличчя</a>
                                 </div>
-                            </li>
-                        </ul>
-                    </nav>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-3.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для ексфоліації обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-4.svg" alt="">
+                                    </div>
+                                    <a href="#">Сироватки для обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-5.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-6.svg" alt="">
+                                    </div>
+                                    <a href="#">Креми для обличчя</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-7.svg" alt="">
+                                    </div>
+                                    <a href="#">Засоби для шкіри навколо очей</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-8.svg" alt="">
+                                    </div>
+                                    <a href="#">Захист від сонця</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-9.svg" alt="">
+                                    </div>
+                                    <a href="#">Маски для обличчя</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hair-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-10.svg" alt="">
+                                    </div>
+                                    <a href="#">Шампуні</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-11.svg" alt="">
+                                    </div>
+                                    <a href="#">Кондиціонери</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-12.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-13.svg" alt="">
+                                    </div>
+                                    <a href="#">Маски для волосся</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-14.svg" alt="">
+                                    </div>
+                                    <a href="#">Незмивні засоби для волосся</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-category-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-15.svg" alt="">
+                                    </div>
+                                    <a href="#">Очищення</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-16.svg" alt="">
+                                    </div>
+                                    <a href="#">Зволоження</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-17.svg" alt="">
+                                    </div>
+                                    <a href="#">Скраби та пілінги</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-18.svg" alt="">
+                                    </div>
+                                    <a href="#">Усі засоби</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-company-menu-wrapper">
+                            <div class="inner-category">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-19.svg" alt="">
+                                    </div>
+                                    <a href="#">Про нас</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-22.svg" alt="">
+                                    </div>
+                                    <a href="#">Доставка та оплата</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-20.svg" alt="">
+                                    </div>
+                                    <a href="#">Блог</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-23.svg" alt="">
+                                    </div>
+                                    <a href="#">Правила користування сайтом</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-21.svg" alt="">
+                                    </div>
+                                    <a href="#">FAQ</a>
+                                </div>
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../assets/images/image-category-24.svg" alt="">
+                                    </div>
+                                    <a href="#">Контакти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <dialog id="popup-menu">
+                <div class="popup">
+                    <div class="popup__content">
+                        <img src="../assets/images/contact-bg.png" alt="" class="object-fit-cover object-fit">
+                        <div class="popup__item">
+                            <h2 class="popup__item_title-popup">Lorem ipsum</h2>
+                            <p class="popup__item_p">Lorem ipsum dolor sit amet consectetur. Euismod gravida risus
+                                molestie
+                                sapien. </p>
+
+                            <!-- ../assets/css/gravity-forms.css -->
+
+                            <div class="gf_browser_chrome gform_wrapper " id="gform_wrapper_13">
+                                <form method="post" enctype="multipart/form-data" id="gform_13" class="" action="/">
+
+                                    <div class="gform_body">
+                                        <div class="gform_fields top_label form_sublabel_below description_below">
+
+                                            <div id="field_13_80"
+                                                class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_13_80">
+                                                    First name
+                                                </label>
+                                                <div class="ginput_container ginput_container_text">
+                                                    <input name="input_80" id="input_13_80" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div id="field_13_81"
+                                                class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_13_81">
+                                                    Last name
+                                                </label>
+                                                <div class="ginput_container ginput_container_text">
+                                                    <input name="input_81" id="input_13_81" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_phone     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_13_82">
+                                                    Phone
+                                                </label>
+                                                <div class="ginput_container ginput_container_phone">
+                                                    <input name="input_82" id="input_13_82" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_email     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_13_83">
+                                                    Email
+                                                </label>
+                                                <div class="ginput_container ginput_container_email">
+                                                    <input name="input_83" id="input_13_83" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="false"
+                                                        aria-invalid="false">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="gfield gfield_paragraph_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <label class="gfield_label" for="input_13_84">
+                                                    Message
+                                                </label>
+                                                <div class="ginput_container ginput_container_textarea">
+                                                    <textarea name="input_84" id="input_13_84" class="textarea "
+                                                        placeholder="" aria-required="false" aria-invalid="false"
+                                                        rows="10" cols="50"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="gform_footer top_label">
+
+                                                <input type='submit' class='gform_button button'
+                                                    value='Send booking request'
+                                                    onclick='if(window["gf_submitting_13"]){return false;}  window["gf_submitting_13"]=true;  '
+                                                    onkeypress='if( event.keyCode === 13 ){ if(window["gf_submitting_13"]){return false;} window["gf_submitting_13"]=true;  jQuery("#gform_13").trigger("submit",[true]); }'>
+
+                                                <input type='hidden' class='gform_hidden' name='is_submit_13' value='1'>
+                                                <input type='hidden' class='gform_hidden' name='gform_submit'
+                                                    value='13'>
+                                                <input type='hidden' class='gform_hidden' name='gform_unique_id'
+                                                    value=''>
+                                                <input type='hidden' class='gform_hidden' name='state_13'
+                                                    value='WyJbXSIsIjI4ZTYyMGI3NzdjMzJjM2JkN2YyNzZkNzZlMWNhNWIzIl0='>
+                                                <input type='hidden' class='gform_hidden'
+                                                    name='gform_target_page_number_13' id='gform_target_page_number_13'
+                                                    value='0'>
+                                                <input type='hidden' class='gform_hidden'
+                                                    name='gform_source_page_number_13' id='gform_source_page_number_13'
+                                                    value='1'>
+                                                <input type='hidden' name='gform_field_values' value=''>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup__close-btn" type="button">
+                        <svg class="popup__close-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 18 18">
+                            <path
+                                d="M.93 18a.926.926 0 0 1-.654-1.581L16.422.27a.926.926 0 1 1 1.31 1.31L1.584 17.728A.929.929 0 0 1 .929 18Z" />
+                            <path
+                                d="M17.078 18a.919.919 0 0 1-.654-.272L.275 1.581a.926.926 0 0 1 1.31-1.31L17.732 16.42A.926.926 0 0 1 17.078 18Z" />
+                        </svg>
+                        <span class="popup__close-text">Close</span>
+                    </button>
+                </div>
+            </dialog>
 
             <button class="open-mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
                 <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-1'></span>
@@ -656,6 +783,24 @@
     <footer class="page-footer">
         <div class="inner">
             <div class="page-footer__top">
+                <div class="page-footer__content">
+                    <div class="logo">
+                        <img src="assets/images/logo-footer.png" alt="">
+                    </div>
+                    <div class="page-footer__contacts">
+                        <p class="page-footer__phone">
+                            <a href="tel:+380735533505" class="page-footer__link-phone">+38 (073) 553-35-05</a>
+                        </p>
+                        <p class="page-footer__address">
+                            <a href="#" class="page-footer__a">м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве
+                                крило, 2 поверх)</a>
+                        </p>
+                        <div class="page-footer__time">
+                            <p class="page-footer__time-item">10:00-19:00</p>
+                            <p class="page-footer__time-item">Без вихідних</p>
+                        </div>
+                    </div>
+                </div>
                 <nav class="menu-footer-main" aria-label="Footer Main">
                     <ul class="menu-footer-main__items" data-keyboard-menu="true">
                         <li class="
@@ -673,7 +818,7 @@
 						   
 					">
 
-                                Lorem ipsum
+                                Каталог
                             </a>
                             <div class="
 							menu-footer-main__sub-menu
@@ -700,7 +845,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Новинкиг
                                         </a>
                                     </li>
                                     <li class="
@@ -718,7 +863,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            SALE
                                         </a>
                                     </li>
                                     <li class="
@@ -736,7 +881,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Бренди
                                         </a>
                                     </li>
                                     <li class="
@@ -754,7 +899,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Обличчя
                                         </a>
                                     </li>
                                     <li class="
@@ -772,7 +917,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Волосся
                                         </a>
                                     </li>
                                     <li class="
@@ -790,7 +935,25 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Тіло
+                                        </a>
+                                    </li>
+                                    <li class="
+																		menu-footer-main__item
+																		menu-footer-main__item_level_2
+																		menu-footer-main__item_level_sub
+																		
+																		
+																	">
+                                        <a href="#" class="
+																			menu-footer-main__link
+																			menu-footer-main__link_level_2
+																			   menu-footer-main__link_level_sub
+																			   
+																			   
+																		">
+
+                                            Набори
                                         </a>
                                     </li>
                                 </ul>
@@ -811,7 +974,7 @@
 						   
 					">
 
-                                Lorem ipsum
+                                Для клієнтів
                             </a>
                             <div class="
 							menu-footer-main__sub-menu
@@ -838,7 +1001,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Блог
                                         </a>
                                     </li>
                                     <li class="
@@ -856,7 +1019,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
+                                            Доставка та оплата
                                         </a>
                                     </li>
                                     <li class="
@@ -874,109 +1037,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-												menu-footer-main__item
-												menu-footer-main__item_level_2
-												menu-footer-main__item_level_sub
-												
-												menu-footer-main__item_has_sub-menu
-											">
-                                        <a href="#" class="
-													menu-footer-main__link
-													menu-footer-main__link_level_2
-													   menu-footer-main__link_level_sub
-													   
-													   
-												">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                        <div class="
-														menu-footer-main__sub-menu
-														menu-footer-main__sub-menu_level_2
-														menu-footer-main__sub-menu_level_sub
-													">
-                                            <ul class="
-															menu-footer-main__sub-items
-															menu-footer-main__sub-items_level_2
-															menu-footer-main__sub-items_level_sub
-														">
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                                <li class="
-																											menu-footer-main__item
-																											menu-footer-main__item_level_3
-																											menu-footer-main__item_level_sub
-																											
-																											
-																										">
-                                                    <a href="#" class="
-																												menu-footer-main__link
-																												menu-footer-main__link_level_3
-																												   menu-footer-main__link_level_sub
-																												   
-																												   
-																											">
-
-                                                        Lorem ipsum dolor
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
+                                            Послуги
                                         </a>
                                     </li>
                                     <li class="
@@ -994,229 +1055,7 @@
 																			   
 																		">
 
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="
-					menu-footer-main__item
-					menu-footer-main__item_level_1
-					menu-footer-main__item_level_top
-					
-					menu-footer-main__item_has_sub-menu
-				">
-                            <a href="#" class="
-						menu-footer-main__link
-						menu-footer-main__link_level_1
-						   menu-footer-main__link_level_top
-						   
-						   
-					">
-
-                                Lorem ipsum
-                            </a>
-                            <div class="
-							menu-footer-main__sub-menu
-							menu-footer-main__sub-menu_level_1
-							menu-footer-main__sub-menu_level_top
-						">
-                                <ul class="
-								menu-footer-main__sub-items
-								menu-footer-main__sub-items_level_1
-								menu-footer-main__sub-items_level_top
-							">
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="
-					menu-footer-main__item
-					menu-footer-main__item_level_1
-					menu-footer-main__item_level_top
-					
-					menu-footer-main__item_has_sub-menu
-				">
-                            <a href="#" class="
-						menu-footer-main__link
-						menu-footer-main__link_level_1
-						   menu-footer-main__link_level_top
-						   
-						   
-					">
-
-                                Lorem ipsum
-                            </a>
-                            <div class="
-							menu-footer-main__sub-menu
-							menu-footer-main__sub-menu_level_1
-							menu-footer-main__sub-menu_level_top
-						">
-                                <ul class="
-								menu-footer-main__sub-items
-								menu-footer-main__sub-items_level_1
-								menu-footer-main__sub-items_level_top
-							">
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
-                                        </a>
-                                    </li>
-                                    <li class="
-																		menu-footer-main__item
-																		menu-footer-main__item_level_2
-																		menu-footer-main__item_level_sub
-																		
-																		
-																	">
-                                        <a href="#" class="
-																			menu-footer-main__link
-																			menu-footer-main__link_level_2
-																			   menu-footer-main__link_level_sub
-																			   
-																			   
-																		">
-
-                                            Lorem ipsum dolor
+                                            Про нас
                                         </a>
                                     </li>
                                 </ul>
@@ -1224,130 +1063,45 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="page-footer__content">
-                    <div class="page-footer__contacts">
-                        <h3 class="page-footer__h3">Lorem ipsum dolor sit</h3>
-                        <p class="page-footer__p">
-                            Telephone:
-                            <a href="tel:+11111111111" class="page-footer__a">(111) 111-1111</a>
-                        </p>
-                        <p class="page-footer__p">
-                            Email:
-                            <a href="mailto:123456@site.com" class="page-footer__a">123456@site.com</a>
-                        </p>
-                        <p class="page-footer__p">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        <p class="page-footer__p">Dallas, TX 75247</p>
-                    </div>
+                <div class="page-footer__social">
+                    <h2>Ми у соцмережах</h2>
                     <div class="social-links social-links_toggle">
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/instagram-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
                                 src="../assets/images/social-icons/instagram.svg" alt="" aria-hidden="true">
                             <span class="social-links__text">Instagram</span>
                         </a>
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/facebook-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
                                 src="../assets/images/social-icons/facebook.svg" alt="" aria-hidden="true">
                             <span class="social-links__text">Facebook</span>
                         </a>
                         <a class="social-links__link" href="#">
                             <img class="social-links__image social-links__image_color"
-                                src="../assets/images/social-icons/linkedin-color.svg" alt="" aria-hidden="true">
+                                src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
                             <img class="social-links__image social-links__image_outline"
-                                src="../assets/images/social-icons/linkedin.svg" alt="" aria-hidden="true">
-                            <span class="social-links__text">LinkedIn</span>
+                                src="../assets/images/social-icons/tiktok.svg" alt="" aria-hidden="true">
+                            <span class="social-links__text">Tiktok</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="page-footer__bottom">
                 <div class="page-footer__wrapper">
-                    <p class="page-footer__copyright">© Lorem ipsum. All Rights Reserved</p>
-                    <nav class="menu-footer-links" aria-label="Footer Links">
-                        <ul class="menu-footer-links__items" data-keyboard-menu="true">
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Site Map
-                                </a>
-                            </li>
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Privacy
-                                </a>
-                            </li>
-                            <li class="
-										menu-footer-links__item
-										menu-footer-links__item_level_1
-										menu-footer-links__item_level_top
-										
-										
-									">
-                                <a href="#" class="
-											menu-footer-links__link
-											menu-footer-links__link_level_1
-											   menu-footer-links__link_level_top
-											   
-											   
-										">
-
-                                    Terms
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <p class="page-footer__copyright">© 2023 Relume. All rights reserved.</p>
                 </div>
                 <div class="page-footer__by">
+                </div>
+                <div class="page-footer__pay">
+                    <img src="../assets/images/image-pay.png" alt="">
                 </div>
             </div>
         </div>
     </footer>
-
-    <dialog id="mini-cart">
-        <div class="popup">
-            <div class="popup__content">
-                <h2 class="popup__title">Mini Cart</h2>
-            </div>
-            <button class="popup__close-btn" type="button">
-                <svg class="popup__close-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                    viewBox="0 0 18 18">
-                    <path
-                        d="M.93 18a.926.926 0 0 1-.654-1.581L16.422.27a.926.926 0 1 1 1.31 1.31L1.584 17.728A.929.929 0 0 1 .929 18Z" />
-                    <path
-                        d="M17.078 18a.919.919 0 0 1-.654-.272L.275 1.581a.926.926 0 0 1 1.31-1.31L17.732 16.42A.926.926 0 0 1 17.078 18Z" />
-                </svg>
-                <span class="popup__close-text">Close</span>
-            </button>
-        </div>
-    </dialog>
 
     <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <div class="mobile-menu__wrapper">
@@ -1393,10 +1147,11 @@
 												menu-header-main-mobile__expend-button_level_1
 												menu-header-main-mobile__expend-button_level_top
 										">
-                            <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="11" height="6">
-                                <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                    fill="#BFBFBF" />
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
                             </svg>
 
                             <span class="screen-reader-text">Submenu for "About Us"</span>
@@ -1469,10 +1224,11 @@
 																			menu-header-main-mobile__expend-button_level_2
 																			menu-header-main-mobile__expend-button_level_sub
 																	">
-                                        <svg class="[object Object]" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="11" height="6">
-                                            <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                                fill="#BFBFBF" />
+                                        <svg class="[object Object]" aria-hidden="true" width="14" height="9"
+                                            viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                                fill="#171A19" />
                                         </svg>
 
                                         <span class="screen-reader-text">Submenu for "Sub menu item II"</span>
@@ -1623,10 +1379,11 @@
 												menu-header-main-mobile__expend-button_level_1
 												menu-header-main-mobile__expend-button_level_top
 										">
-                            <svg class="[object Object]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                width="11" height="6">
-                                <path d="M8.94 0L5.35999 3.58L1.78 0H0.290009L5.35999 5.07L10.43 0H8.94Z"
-                                    fill="#BFBFBF" />
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
                             </svg>
 
                             <span class="screen-reader-text">Submenu for "Contact"</span>

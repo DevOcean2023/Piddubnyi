@@ -3,44 +3,141 @@
 .menu-header-main {
 	display: none;
 
-	@media (--lg) {
+	@media (--xl) {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 
 		&__items {
 			display: flex;
-			gap: 40px;
+			width: 100%;
+			justify-content: space-between;
+		}
 
-			@media (--xxl) {
-				gap: 60px;
+		&__item.face-category,
+		&__item.hair-category,
+		&__item.body-category,
+		&__item.about-company {
+			position: relative;
+
+			&::after {
+				content: "";
+				background: url(../../../images/menu-marker.svg) no-repeat center;
+				background-size: cover;
+				display: block;
+				width: 14px;
+				height: 8px;
+				position: absolute;
+				top: 39%;
+				right: 0;
+				transform: translate(-50%, 0);
+			}
+
+			&:hover {
+				&::after {
+					content: "";
+					background: url(../../../images/menu-marker-hover.svg) no-repeat center;
+				}
+			}
+		}
+
+		&__item.active {
+			position: relative;
+			background: rgba(244, 245, 240, 1);
+
+			&::after {
+				content: "";
+				background: url(../../../images/menu-marker-hover.svg) no-repeat center;
+				background-size: cover;
+				display: block;
+				width: 14px;
+				height: 8px;
+				position: absolute;
+				top: 39%;
+				right: 0;
+				transform: translate(-50%, 0);
 			}
 		}
 
 		&__item {
 			display: flex;
 			position: relative;
+			width: max-content;
+			cursor: pointer;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				background: rgba(244, 245, 240, 1);
+			}
 
 			&_level_top&_has_sub-menu {
-				margin-right: -14px;
+				padding-right: 34px;
+
+				&:hover {
+					transition: all 0.5s;
+
+					.menu-header-main {
+
+						&__expend-button {
+
+							&::after {
+								content: "";
+								background: url(../../../images/menu-marker-hover.svg) no-repeat center;
+							}
+						}
+					}
+				}
+
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+
+					&:visited,
+					&:focus-within,
+					&:focus-visible {
+						text-decoration: none;
+					}
+				}
+			}
+
+			&_level_sub {
+				padding: 0;
 			}
 		}
 
 		&__link {
 			display: flex;
 			align-items: center;
-			font-weight: 600;
-			color: $color-colors-white;
+			font-family: $font-family-raleway;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 26px;
+			text-align: left;
+			color: rgba(23, 26, 25, 1);
+			transition: all 0.5s;
+			padding: 7px;
+
+			&:hover {
+				text-decoration: none;
+			}
 
 			&_level_sub {
 				width: 100%;
-				padding: 8px 29px;
-			}
-
-			&_current {
-				color: $color-colors-main;
+				padding: 8px 0;
+				margin-right: 0 !important;
+				font-family: $font-family-raleway;
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 26px;
 			}
 
 			&_no-clickable:--enter {
+				text-decoration: none;
+			}
+
+			&:visited,
+			&:focus-within,
+			&:focus-visible {
 				text-decoration: none;
 			}
 		}
@@ -48,24 +145,39 @@
 		&__expend-button {
 			background: transparent;
 			border: none;
-
-			/* Minimum size 44x44 https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
-			width: 44px;
-			height: 44px;
+			width: 16px;
+			height: 25px;
 			flex-shrink: 0;
+			position: relative;
+			margin-top: 7px;
+
+			svg {
+				display: none;
+			}
+
+			&::after {
+				content: "";
+				background: url(../../../images/menu-marker.svg) no-repeat center;
+				background-size: cover;
+				display: block;
+				width: 14px;
+				height: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 
 		&__sub-menu {
-			width: 250px;
+			width: 313px;
 			position: absolute;
-			background-color: $color-bg-custom;
-			box-shadow: 0 5px 4px rgb(0 0 0 / 10%);
 			padding: 20px 0;
+			background: rgba(244, 245, 240, 1);
 
 			&_level_top {
-				top: 35px;
-				left: 50%;
-				transform: translateX(-50%);
+				top: 42px;
+				left: 0;
 			}
 
 			&_level_sub {
@@ -80,6 +192,35 @@
 				left: 0;
 				right: 0;
 			}
+		}
+
+		&__sub-items {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+	}
+
+	.btn-services {
+		position: relative;
+		padding-left: 20px;
+
+		&::after {
+			content: "";
+			background: url(../../../images/btn-services.svg) no-repeat center;
+			background-size: cover;
+			display: block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, 0);
+		}
+
+		&:hover {
+			color: rgba(1, 95, 69, 1);
 		}
 	}
 }

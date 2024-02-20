@@ -3,51 +3,314 @@
 .page-header {
 	position: sticky;
 	top: 0;
-	z-index: 10;
-	background-color: $color-bg-custom;
-	padding: 10px 0;
+	z-index: 9999;
+	background-color: #fff;
+	padding: 0;
 
 	@media (--lg) {
-		padding: 12px 0 2px;
+		padding: 0;
 	}
 
 	&__wrapper {
-		max-width: 1200px;
-		padding: 0 35px;
+		max-width: 100%;
+		padding: 0 0 0 16px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
 		@media (--lg) {
-			padding: 0 15px;
+			padding: 0;
 		}
 	}
 
 	&__content {
 		display: flex;
-		align-items: center;
-		width: max-content;
+		width: 100%;
 
 		@media (--lg) {
-			justify-content: space-between;
-			width: 100%;
+			flex-direction: column;
 		}
 	}
 
 	.logo {
-		@media (--less-lg) {
-			max-width: 136px;
+		width: 100%;
+		max-width: 98px;
+
+		@media (--lg) {
+			max-width: 98px;
+		}
+
+		img {
+			width: 98px;
+			height: 6424px;
+
+			@media (--lg) {
+				width: 98px;
+				height: 64px;
+			}
 		}
 	}
+
+	&__top {
+		background: rgba(1, 95, 69, 1);
+		padding: 10px 0;
+
+		.inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-phone {
+			font-family: $font-family-raleway;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 19px;
+			text-align: left;
+			color: rgba(255, 255, 255, 1);
+			position: relative;
+
+			&::after {
+				content: "";
+				background: url(../../../images/phone.svg) no-repeat center;
+				background-size: cover;
+				display: block;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 0;
+				left: -26px;
+			}
+		}
+	}
+
+	&__time {
+		display: flex;
+		gap: 10px;
+
+		&-item {
+			font-family: $font-family-raleway;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 19px;
+			text-align: left;
+			color: rgba(255, 255, 255, 1);
+		}
+	}
+
+	&__middle {
+		padding: 19px 0 19px;
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+
+		@media (--md) {
+			position: relative;
+		}
+
+		@media (--lg) {
+			align-items: center;
+		}
+
+		.inner {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__bottom {
+		display: none;
+
+		@media (--lg) {
+			display: block;
+			padding: 0;
+			border-bottom: 1px solid #d9d9d9;
+			width: 100%;
+			max-width: 1440px;
+			margin: 0 auto;
+
+			.face-category-menu-wrapper,
+			.hair-category-menu-wrapper,
+			.body-category-menu-wrapper,
+			.about-company-menu-wrapper {
+				display: none;
+				background: rgba(244, 245, 240, 1);
+				width: 100%;
+				max-width: max-content;
+
+				.inner-category {
+					display: flex;
+					flex-direction: column;
+					gap: 15px;
+					max-width: max-content;
+					padding: 10px;
+
+					.item {
+						display: flex;
+						gap: 10px;
+						align-items: center;
+						width: 100%;
+						max-width: max-content;
+
+						a {
+							color: rgba(23, 26, 25, 1);
+							font-family: $font-family-raleway;
+							font-size: 20px;
+							font-weight: 400;
+							line-height: 26px;
+							width: 100%;
+							max-width: 294px;
+
+							&:hover {
+								color: rgba(1, 95, 69, 1);
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+
+			.about-company-menu-wrapper {
+
+				.inner-category {
+
+					.item {
+
+						a {
+							max-width: 280px;
+						}
+					}
+				}
+			}
+
+			.big {
+				.inner-category {
+					width: 100%;
+					max-width: max-content;
+					display: grid;
+					grid-template-columns: auto auto;
+					padding: 10px;
+					grid-column-gap: 50px;
+					grid-row-gap: 15px;
+				}
+			}
+		}
+	}
+
+	.wrap {
+		&__search {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.button {
+		&__search {
+			width: 20px;
+			height: 20px;
+			background: url(../../../images/search.svg) center no-repeat, transparent;
+			background-size: 100%;
+			border: 0;
+			font-size: 0;
+			padding: 0;
+
+			@media (--lg) {
+				width: 32px;
+				height: 32px;
+			}
+
+			&:hover {
+				background: url(../../../images/search.svg) center no-repeat, transparent;
+				border: 0;
+			}
+
+			&:--enter {
+				background: url(../../../images/search.svg) center no-repeat, transparent;
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
+
+	.wrap-search {
+		width: 100%;
+		max-width: 269px;
+		padding: 0;
+		margin: 0;
+		border-bottom: 1px solid rgba(204, 209, 214, 1);
+
+		.close-button {
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.search-form {
+			&__label {
+				@media (--sm) {
+					max-width: 100%;
+				}
+			}
+
+			&__input {
+				width: 100%;
+				min-width: 100px;
+				padding: 5px 30px;
+				background: #fff;
+				border-bottom: none;
+				border-top: 0;
+				border-right: 0;
+				border-left: 0;
+				color: $color-bg-custom;
+				font-family: $font-family-raleway;
+				display: block;
+				outline: none;
+				position: relative;
+			}
+
+			&__submit {
+				@include btn;
+				font-size: 0;
+				background: url(../../../images/arrow_right.svg) center right 0 / 20px 20px no-repeat;
+				border: 0;
+				height: 24px;
+				width: 24px;
+				padding: 0;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+.menu-tooltip {
+	@include text-style-text-text-2;
+
+	position: absolute;
+	bottom: -33px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 10px;
+	background: $color-colors-main;
+	border-radius: 5px;
+	line-height: 27px;
+	color: $color-colors-white;
+	white-space: nowrap;
+	text-transform: uppercase;
 }
 
 .open-mobile-menu-button {
 	@media (--less-lg) {
 		@include focus;
 
-		width: 24px;
-		height: 24px;
+		width: 21px;
+		height: 13px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -61,21 +324,22 @@
 		&__item {
 			width: 100%;
 			height: 3px;
-			background: $color-colors-element;
+			background: #000;
 			border-radius: 2px;
 			transition: opacity 0.3s, transform 0.3s;
 		}
 
-		&:--enter &__item {
+		&:hover &__item {
 			opacity: 0.8;
 		}
 	}
 
 	&[aria-expanded="true"] &__item {
 		position: absolute;
-		width: 31px;
-		top: 48%;
-		left: -4px;
+		width: 14px;
+		top: 47%;
+		left: 3px;
+		height: 2px;
 
 		&:nth-child(1) {
 			transform: rotate(45deg);
