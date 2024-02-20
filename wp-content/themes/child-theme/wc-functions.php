@@ -159,3 +159,21 @@ $updated_columns = array(
 add_filter( 'woocommerce_account_orders_columns', function ( $columns ) use ( $updated_columns ) {
 	return $updated_columns;
 } );
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+
+/**
+ * Change a currency symbol
+ */
+add_filter( 'woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2 );
+
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+	switch ( $currency ) {
+		case 'UAH':
+			$currency_symbol = 'грн';
+			break;
+	}
+
+	return $currency_symbol;
+}
