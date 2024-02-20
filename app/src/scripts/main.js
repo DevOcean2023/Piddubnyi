@@ -3,6 +3,7 @@
 import "../../base/defaults/scripts/main";
 // import './quantity';
 import "../../base/defaults/scripts/libs/accessibility-accordion";
+import defer from "../../base/defaults/scripts/jquery/libs/jquery-defer";
 
 /*menu*/
 
@@ -93,5 +94,16 @@ containers.forEach((container, index) => {
 		if (!isRelatedToButton) {
 			hideMenu(container, buttons[index]);
 		}
+	});
+});
+
+/////
+defer(() => {
+	$(function () {
+		$(".marquee").marquee({
+			duration: 14000,
+			startVisible: true,
+			duplicated: true,
+		});
 	});
 });

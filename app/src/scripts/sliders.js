@@ -1,5 +1,21 @@
 import { tinySlider } from '../../base/defaults/scripts/libs/tiny-slider';
 
+tinySlider('[data-slider="banner-slider"]', {
+	items: 1,
+	gutter: 0,
+	autoplay: false,
+	autoplayTimeout: 4000,
+	autoplayButtonOutput: false,
+	speed: 1500,
+	controls: true,
+	controlsPosition: "bottom",
+	controlsText: ["<span>&#10229;</span>", "<span>&#10230;</span>"],
+	navAsThumbnails: true,
+	navPosition: "bottom",
+	swipeAngle: 15,
+	displayCounter: true,
+});
+
 tinySlider( '[data-slider="demo-simple"]', {
 	items: 1,
 	gutter: 30,

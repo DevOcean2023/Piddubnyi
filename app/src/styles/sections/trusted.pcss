@@ -1,0 +1,51 @@
+@import "../variables-and-mixins.pcss";
+
+.trusted {
+	padding: 50px 0 70px;
+
+	@media (--sm) {
+		padding: 62px 0 100px;
+	}
+
+	&__title {
+		color: #000;
+		font-size: 35px;
+		letter-spacing: 0.05em;
+		text-align: center;
+		margin-bottom: 32px;
+		text-transform: inherit;
+
+		@media (--md) {
+			font-size: 64px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		@media (--sm) {
+			flex-wrap: nowrap;
+		}
+
+		@media (--md) {
+			gap: 40px;
+		}
+
+		@media (--xl) {
+			gap: 88px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 140px;
+	}
+
+	.marquee {
+		overflow: hidden;
+	}
+}
