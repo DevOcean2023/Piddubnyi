@@ -1,0 +1,60 @@
+@import "../../variables-and-mixins.pcss";
+
+.blog-articles {
+	padding: 60px 0;
+
+	@media (--lg) {
+		padding: 90px 0 40px;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 42px;
+		letter-spacing: 0;
+		text-align: left;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		gap: 24px;
+		justify-content: flex-start;
+
+		@media (--lg) {
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 845px;
+
+		@media (--lg) {
+			width: calc(100% - 300px);
+		}
+	}
+
+	&__items {
+		list-style: none;
+		padding: 0 0 17px;
+		margin: 0;
+	}
+
+	&__item {
+		&:last-child {
+			.blog-article {
+				margin-bottom: 0;
+				padding-bottom: 0;
+
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+}
