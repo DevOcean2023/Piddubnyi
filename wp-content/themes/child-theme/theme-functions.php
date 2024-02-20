@@ -9,23 +9,6 @@ DOV_Login_Style::set( 'btn_color', '' );
 
 // Security
 DOV_Security_Headers::init();
-DOV_CSP::init(
-	array(
-		'connect-src' => array(
-			'*.acsbapp.com',
-			'*.cookieyes.com',
-			'cdn-cookieyes.com',
-		),
-		'img-src'     => array(
-			'*.acsbapp.com',
-			'cdn-cookieyes.com',
-		),
-		'script-src'  => array(
-			'*.acsbapp.com',
-			'cdn-cookieyes.com',
-		),
-	)
-);
 
 // Add custom post types
 DOV_CPT::add( 'testimonial' );
