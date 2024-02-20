@@ -85,6 +85,11 @@
                                 <li class="menu-header-second__item wish-list">
                                     <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
                                 </li>
+
+                                <li class="menu-header-second__item delivery">
+                                    <a class="menu-header-second__link" href="#" data-role="menuitem">Доставка та
+                                        оплата</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -567,12 +572,14 @@
                 </div>
             </dialog>
 
-            <button class="open-mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
-                <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-1'></span>
-                <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-2'></span>
-                <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-3'></span>
-                <span class="screen-reader-text">Menu</span>
-            </button>
+            <div class="button-mobile-menu">
+                <button class="open-mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-1'></span>
+                    <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-2'></span>
+                    <span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-3'></span>
+                    <span class="screen-reader-text">Menu</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -974,7 +981,43 @@
 									   
 								">
 
-                            Home
+                            Послуги
+                        </a>
+                    </li>
+                    <li class="
+								menu-header-main-mobile__item
+								menu-header-main-mobile__item_level_1
+								menu-header-main-mobile__item_level_top
+								
+								
+							">
+                        <a href="#" class="
+									menu-header-main-mobile__link
+									menu-header-main-mobile__link_level_1
+									   menu-header-main-mobile__link_level_top
+									   
+									   
+								">
+
+                            Бренди
+                        </a>
+                    </li>
+                    <li class="
+								menu-header-main-mobile__item
+								menu-header-main-mobile__item_level_1
+								menu-header-main-mobile__item_level_top
+								
+								
+							">
+                        <a href="#" class="
+									menu-header-main-mobile__link
+									menu-header-main-mobile__link_level_1
+									   menu-header-main-mobile__link_level_top
+									   
+									   
+								">
+
+                            SALE
                         </a>
                     </li>
                     <li class="
@@ -992,7 +1035,7 @@
 								   
 							">
 
-                            About Us
+                            Обличчя
                         </a>
                         <button aria-expanded="false" class="
 												menu-header-main-mobile__expend-button
@@ -1006,7 +1049,7 @@
                                     fill="#171A19" />
                             </svg>
 
-                            <span class="screen-reader-text">Submenu for "About Us"</span>
+                            <span class="screen-reader-text">Submenu for "Обличчя"</span>
                         </button>
                         <div class="
 									menu-header-main-mobile__sub-menu
@@ -1033,7 +1076,7 @@
 																		   
 																	">
 
-                                        Sub menu item II
+                                        Усі засоби
                                     </a>
                                 </li>
                                 <li class="
@@ -1051,106 +1094,384 @@
 																		   
 																	">
 
-                                        Sub menu item II
+                                        Засоби для очищення
                                     </a>
                                 </li>
                                 <li class="
-														menu-header-main-mobile__item
-														menu-header-main-mobile__item_level_2
-														menu-header-main-mobile__item_level_sub
-														
-														menu-header-main-mobile__item_has_sub-menu
-													">
-                                    <a href="#" class="
-															menu-header-main-mobile__link
-															menu-header-main-mobile__link_level_2
-															   menu-header-main-mobile__link_level_sub
-															   
-															   
-														">
-
-                                        Sub menu item II
-                                    </a>
-                                    <button aria-expanded="false" class="
-																			menu-header-main-mobile__expend-button
-																			menu-header-main-mobile__expend-button_level_2
-																			menu-header-main-mobile__expend-button_level_sub
-																	">
-                                        <svg class="[object Object]" aria-hidden="true" width="14" height="9"
-                                            viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
-                                                fill="#171A19" />
-                                        </svg>
-
-                                        <span class="screen-reader-text">Submenu for "Sub menu item II"</span>
-                                    </button>
-                                    <div class="
-																menu-header-main-mobile__sub-menu
-																menu-header-main-mobile__sub-menu_level_2
-																menu-header-main-mobile__sub-menu_level_sub
-															" hidden>
-                                        <ul class="
-																	menu-header-main-mobile__sub-items
-																	menu-header-main-mobile__sub-items_level_2
-																	menu-header-main-mobile__sub-items_level_sub
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
 																">
-                                            <li class="
-																										menu-header-main-mobile__item
-																										menu-header-main-mobile__item_level_3
-																										menu-header-main-mobile__item_level_sub
-																										
-																										
-																									">
-                                                <a href="#" class="
-																											menu-header-main-mobile__link
-																											menu-header-main-mobile__link_level_3
-																											   menu-header-main-mobile__link_level_sub
-																											   
-																											   
-																										">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
 
-                                                    Sub menu item III
-                                                </a>
-                                            </li>
-                                            <li class="
-																										menu-header-main-mobile__item
-																										menu-header-main-mobile__item_level_3
-																										menu-header-main-mobile__item_level_sub
-																										
-																										
-																									">
-                                                <a href="#" class="
-																											menu-header-main-mobile__link
-																											menu-header-main-mobile__link_level_3
-																											   menu-header-main-mobile__link_level_sub
-																											   
-																											   
-																										">
+                                        Засоби для тонізації обличчя
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
 
-                                                    Sub menu item III
-                                                </a>
-                                            </li>
-                                            <li class="
-																										menu-header-main-mobile__item
-																										menu-header-main-mobile__item_level_3
-																										menu-header-main-mobile__item_level_sub
-																										
-																										
-																									">
-                                                <a href="#" class="
-																											menu-header-main-mobile__link
-																											menu-header-main-mobile__link_level_3
-																											   menu-header-main-mobile__link_level_sub
-																											   
-																											   
-																										">
+                                        Засоби для ексфоліації обличчя
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
 
-                                                    Sub menu item III
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                        Сироватки для обличчя
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Креми для обличчя
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Засоби для шкіри навколо очей
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Захист від сонця
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Маски для обличчя
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="
+							menu-header-main-mobile__item
+							menu-header-main-mobile__item_level_1
+							menu-header-main-mobile__item_level_top
+							
+							menu-header-main-mobile__item_has_sub-menu
+						">
+                        <a href="#" class="
+								menu-header-main-mobile__link
+								menu-header-main-mobile__link_level_1
+								   menu-header-main-mobile__link_level_top
+								   
+								   
+							">
+
+                            Волосся
+                        </a>
+                        <button aria-expanded="false" class="
+												menu-header-main-mobile__expend-button
+												menu-header-main-mobile__expend-button_level_1
+												menu-header-main-mobile__expend-button_level_top
+										">
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
+                            </svg>
+
+                            <span class="screen-reader-text">Submenu for "Волосся"</span>
+                        </button>
+                        <div class="
+									menu-header-main-mobile__sub-menu
+									menu-header-main-mobile__sub-menu_level_1
+									menu-header-main-mobile__sub-menu_level_top
+								" hidden>
+                            <ul class="
+										menu-header-main-mobile__sub-items
+										menu-header-main-mobile__sub-items_level_1
+										menu-header-main-mobile__sub-items_level_top
+									">
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Шампуні
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Кондиціонери
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Усі засоби
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Маски для волосся
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Незмивні засоби для волосся
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="
+							menu-header-main-mobile__item
+							menu-header-main-mobile__item_level_1
+							menu-header-main-mobile__item_level_top
+							
+							menu-header-main-mobile__item_has_sub-menu
+						">
+                        <a href="#" class="
+								menu-header-main-mobile__link
+								menu-header-main-mobile__link_level_1
+								   menu-header-main-mobile__link_level_top
+								   
+								   
+							">
+
+                            Тіло
+                        </a>
+                        <button aria-expanded="false" class="
+												menu-header-main-mobile__expend-button
+												menu-header-main-mobile__expend-button_level_1
+												menu-header-main-mobile__expend-button_level_top
+										">
+                            <svg class="[object Object]" aria-hidden="true" width="14" height="9" viewBox="0 0 14 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7098 1.21001C13.6169 1.11628 13.5063 1.04189 13.3844 0.991122C13.2625 0.940353 13.1318 0.914215 12.9998 0.914215C12.8678 0.914215 12.7371 0.940353 12.6152 0.991122C12.4934 1.04189 12.3828 1.11628 12.2898 1.21001L7.70982 5.79C7.61685 5.88373 7.50625 5.95813 7.38439 6.00889C7.26253 6.05966 7.13183 6.0858 6.99982 6.0858C6.86781 6.0858 6.7371 6.05966 6.61524 6.00889C6.49338 5.95813 6.38278 5.88373 6.28982 5.79L1.70982 1.21001C1.61685 1.11628 1.50625 1.04189 1.38439 0.991122C1.26253 0.940353 1.13183 0.914215 0.999816 0.914215C0.867804 0.914215 0.737098 0.940353 0.615239 0.991122C0.49338 1.04189 0.382779 1.11628 0.289816 1.21001C0.103565 1.39737 -0.000976562 1.65083 -0.000976562 1.91501C-0.000976562 2.1792 0.103565 2.43265 0.289816 2.62001L4.87982 7.21C5.44232 7.7718 6.20481 8.08736 6.99982 8.08736C7.79482 8.08736 8.55732 7.7718 9.11982 7.21L13.7098 2.62001C13.8961 2.43265 14.0006 2.1792 14.0006 1.91501C14.0006 1.65083 13.8961 1.39737 13.7098 1.21001Z"
+                                    fill="#171A19" />
+                            </svg>
+
+                            <span class="screen-reader-text">Submenu for "Тіло"</span>
+                        </button>
+                        <div class="
+									menu-header-main-mobile__sub-menu
+									menu-header-main-mobile__sub-menu_level_1
+									menu-header-main-mobile__sub-menu_level_top
+								" hidden>
+                            <ul class="
+										menu-header-main-mobile__sub-items
+										menu-header-main-mobile__sub-items_level_1
+										menu-header-main-mobile__sub-items_level_top
+									">
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Очищення
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Зволоження
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Скраби та пілінги
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Усі засоби
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -1170,43 +1491,7 @@
 									   
 								">
 
-                            Services
-                        </a>
-                    </li>
-                    <li class="
-								menu-header-main-mobile__item
-								menu-header-main-mobile__item_level_1
-								menu-header-main-mobile__item_level_top
-								
-								
-							">
-                        <a href="#" class="
-									menu-header-main-mobile__link
-									menu-header-main-mobile__link_level_1
-									   menu-header-main-mobile__link_level_top
-									   
-									   
-								">
-
-                            Technology
-                        </a>
-                    </li>
-                    <li class="
-								menu-header-main-mobile__item
-								menu-header-main-mobile__item_level_1
-								menu-header-main-mobile__item_level_top
-								
-								
-							">
-                        <a href="#" class="
-									menu-header-main-mobile__link
-									menu-header-main-mobile__link_level_1
-									   menu-header-main-mobile__link_level_top
-									   
-									   
-								">
-
-                            Careers
+                            Набори
                         </a>
                     </li>
                     <li class="
@@ -1224,7 +1509,7 @@
 								   
 							">
 
-                            Contact
+                            Про компанію
                         </a>
                         <button aria-expanded="false" class="
 												menu-header-main-mobile__expend-button
@@ -1238,7 +1523,7 @@
                                     fill="#171A19" />
                             </svg>
 
-                            <span class="screen-reader-text">Submenu for "Contact"</span>
+                            <span class="screen-reader-text">Submenu for "Про компанію"</span>
                         </button>
                         <div class="
 									menu-header-main-mobile__sub-menu
@@ -1265,7 +1550,7 @@
 																		   
 																	">
 
-                                        Sub menu item II
+                                        Про нас
                                     </a>
                                 </li>
                                 <li class="
@@ -1283,7 +1568,7 @@
 																		   
 																	">
 
-                                        Sub menu item II
+                                        Блог
                                     </a>
                                 </li>
                                 <li class="
@@ -1301,7 +1586,61 @@
 																		   
 																	">
 
-                                        Sub menu item II
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Доставка та оплата
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Правила користування сайтом
+                                    </a>
+                                </li>
+                                <li class="
+																	menu-header-main-mobile__item
+																	menu-header-main-mobile__item_level_2
+																	menu-header-main-mobile__item_level_sub
+																	
+																	
+																">
+                                    <a href="#" class="
+																		menu-header-main-mobile__link
+																		menu-header-main-mobile__link_level_2
+																		   menu-header-main-mobile__link_level_sub
+																		   
+																		   
+																	">
+
+                                        Контакти
                                     </a>
                                 </li>
                             </ul>
@@ -1309,45 +1648,45 @@
                     </li>
                 </ul>
             </div>
-            <div class="menu-header-second-mobile" aria-label="Header Second">
-                <ul class="menu-header-second-mobile__items" data-expend-menu="true">
-                    <li class="
-								menu-header-second-mobile__item
-								menu-header-second-mobile__item_level_1
-								menu-header-second-mobile__item_level_top
-								menu-header-second-mobile__item_phone
-								
-							">
-                        <a href="tel:+1234567890" class="
-									menu-header-second-mobile__link
-									menu-header-second-mobile__link_level_1
-									   menu-header-second-mobile__link_level_top
-									   menu-header-second-mobile__link_phone
-									   
-								">
-
-                            (123) 456-7890
-                        </a>
+            <nav class="menu-header-second" aria-label="Header Second">
+                <ul class="menu-header-second__items" data-role="menubar" data-accessibility-menu>
+                    <li class="menu-header-second__item account">
+                        <a class="menu-header-second__link" href="#" data-role="menuitem">Особистий кабінет</a>
                     </li>
-                    <li class="
-								menu-header-second-mobile__item
-								menu-header-second-mobile__item_level_1
-								menu-header-second-mobile__item_level_top
-								menu-header-second-mobile__item_btn
-								
-							">
-                        <a href="#" class="
-									menu-header-second-mobile__link
-									menu-header-second-mobile__link_level_1
-									   menu-header-second-mobile__link_level_top
-									   menu-header-second-mobile__link_btn
-									   
-								">
-
-                            Get A Quote
-                        </a>
+                    <li class="menu-header-second__item cart menu-cart-link">
+                        <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                    </li>
+                    <li class="menu-header-second__item wish-list">
+                        <a class="menu-header-second__link" href="#" data-role="menuitem"></a>
+                    </li>
+                    <li class="menu-header-second__item delivery">
+                        <a class="menu-header-second__link" href="#" data-role="menuitem">Доставка та оплата</a>
                     </li>
                 </ul>
+            </nav>
+
+            <div class="social-links social-links_toggle">
+                <a class="social-links__link" href="#">
+                    <img class="social-links__image social-links__image_color"
+                        src="assets/images/social-icons/instagram-mobile.svg" alt="" aria-hidden="true">
+                    <img class="social-links__image social-links__image_outline"
+                        src="assets/images/social-icons/instagram-mobile.svg" alt="" aria-hidden="true">
+                    <span class="social-links__text">Instagram</span>
+                </a>
+                <a class="social-links__link" href="#">
+                    <img class="social-links__image social-links__image_color"
+                        src="assets/images/social-icons/facebook-mobile.svg" alt="" aria-hidden="true">
+                    <img class="social-links__image social-links__image_outline"
+                        src="assets/images/social-icons/facebook-mobile.svg" alt="" aria-hidden="true">
+                    <span class="social-links__text">Facebook</span>
+                </a>
+                <a class="social-links__link" href="#">
+                    <img class="social-links__image social-links__image_color"
+                        src="assets/images/social-icons/tiktok-mobile.svg" alt="" aria-hidden="true">
+                    <img class="social-links__image social-links__image_outline"
+                        src="assets/images/social-icons/tiktok-mobile.svg" alt="" aria-hidden="true">
+                    <span class="social-links__text">Tiktok</span>
+                </a>
             </div>
         </div>
     </aside>

@@ -33,7 +33,6 @@
 	&__link {
 		display: block;
 		color: $color-colors-white;
-		text-transform: uppercase;
 
 		&_phone {
 			font-size: 18px;
@@ -47,7 +46,8 @@
 
 	.account,
 	.cart,
-	.wish-list {
+	.wish-list,
+	.delivery {
 		a {
 			font-size: 0;
 			position: relative;
@@ -73,6 +73,7 @@
 	}
 
 	.account {
+		display: none;
 		a {
 			&::before {
 				background: svg-load("../../../images/account.svg") no-repeat center;
@@ -84,17 +85,8 @@
 			}
 		}
 
-		&:hover {
-			a {
-				&::before {
-					background: svg-load("../../../images/account.svg") no-repeat center;
-					background-size: 80%;
-
-					@media (--sm) {
-						background-size: 100%;
-					}
-				}
-			}
+		@media (--lg) {
+			display: block;
 		}
 	}
 
@@ -106,19 +98,6 @@
 
 				@media (--sm) {
 					background-size: 100%;
-				}
-			}
-		}
-
-		&:hover {
-			a {
-				&::before {
-					background: svg-load("../../../images/wish.svg") no-repeat center;
-					background-size: 80%;
-
-					@media (--sm) {
-						background-size: 100%;
-					}
 				}
 			}
 		}
@@ -140,19 +119,6 @@
 				}
 			}
 		}
-
-		&:hover {
-			a {
-				&::before {
-					background: svg-load("../../../images/shopping-cart.svg") no-repeat center;
-					background-size: 80%;
-
-					@media (--sm) {
-						background-size: 100%;
-					}
-				}
-			}
-		}
 	}
 
 	.cart-count {
@@ -169,5 +135,23 @@
 		align-items: center;
 		font-size: 11px;
 		font-family: $font-family-raleway;
+	}
+
+	.delivery {
+		display: none;
+		a {
+			font-size: 16px;
+			color: #000;
+			width: 100%;
+
+			&::before {
+				background: svg-load("../../../images/delivery.svg") no-repeat center;
+				background-size: 80%;
+
+				@media (--sm) {
+					background-size: 100%;
+				}
+			}
+		}
 	}
 }

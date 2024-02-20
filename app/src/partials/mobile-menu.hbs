@@ -4,37 +4,88 @@
 	wrapper="div"
 	expend=true
 }}
-	{{>menu-item title="Home"}}
-	{{#>menu-item title="About Us" modifier="current"}}
+	{{>menu-item title="Послуги"}}
+	{{>menu-item title="Бренди"}}
+	{{>menu-item title="SALE"}}
+	{{#>menu-item title="Обличчя" modifier="current"}}
 		{{#>sub-menu}}
-			{{>menu-item title="Sub menu item II"}}
-			{{>menu-item title="Sub menu item II"}}
-			{{#>menu-item title="Sub menu item II"}}
-				{{#>sub-menu}}
-					{{>menu-item title="Sub menu item III"}}
-					{{>menu-item title="Sub menu item III"}}
-					{{>menu-item title="Sub menu item III"}}
-				{{/sub-menu}}
-			{{/menu-item}}
+			{{>menu-item title="Усі засоби"}}
+			{{>menu-item title="Засоби для очищення"}}
+			{{>menu-item title="Засоби для тонізації обличчя"}}
+			{{>menu-item title="Засоби для ексфоліації обличчя"}}
+			{{>menu-item title="Сироватки для обличчя"}}
+			{{>menu-item title="Креми для обличчя"}}
+			{{>menu-item title="Засоби для шкіри навколо очей"}}
+			{{>menu-item title="Захист від сонця"}}
+			{{>menu-item title="Маски для обличчя"}}
 		{{/sub-menu}}
 	{{/menu-item}}
-	{{>menu-item title="Services"}}
-	{{>menu-item title="Technology"}}
-	{{>menu-item title="Careers"}}
-	{{#>menu-item title="Contact"}}
+	{{#>menu-item title="Волосся"}}
 		{{#>sub-menu}}
-			{{>menu-item title="Sub menu item II"}}
-			{{>menu-item title="Sub menu item II"}}
-			{{>menu-item title="Sub menu item II"}}
+			{{>menu-item title="Шампуні"}}
+			{{>menu-item title="Кондиціонери"}}
+			{{>menu-item title="Усі засоби"}}
+			{{>menu-item title="Маски для волосся"}}
+			{{>menu-item title="Незмивні засоби для волосся"}}
+		{{/sub-menu}}
+	{{/menu-item}}
+	{{#>menu-item title="Тіло"}}
+		{{#>sub-menu}}
+			{{>menu-item title="Очищення"}}
+			{{>menu-item title="Зволоження"}}
+			{{>menu-item title="Скраби та пілінги"}}
+			{{>menu-item title="Усі засоби"}}
+		{{/sub-menu}}
+	{{/menu-item}}
+	{{>menu-item title="Набори"}}
+	{{#>menu-item title="Про компанію"}}
+		{{#>sub-menu}}
+			{{>menu-item title="Про нас"}}
+			{{>menu-item title="Блог"}}
+			{{>menu-item title="FAQ"}}
+			{{>menu-item title="Доставка та оплата"}}
+			{{>menu-item title="Правила користування сайтом"}}
+			{{>menu-item title="Контакти"}}
 		{{/sub-menu}}
 	{{/menu-item}}
 {{/menu}}
-{{#>menu
-	class="menu-header-second-mobile"
-	label="Header Second"
-	wrapper="div"
-	expend=true
-}}
-	{{>menu-item title="(123) 456-7890" modifier="phone" href="tel:+1234567890"}}
-	{{>menu-item title="Get A Quote" modifier="btn"}}
-{{/menu}}
+<nav class="menu-header-second" aria-label="Header Second">
+	<ul class="menu-header-second__items" data-role="menubar" data-accessibility-menu>
+		<li class="menu-header-second__item account">
+			<a class="menu-header-second__link" href="#"
+			   data-role="menuitem">Особистий кабінет</a></li>
+		<li class="menu-header-second__item cart menu-cart-link">
+			<a class="menu-header-second__link" href="#"
+			   data-role="menuitem"></a></li>
+		<li class="menu-header-second__item wish-list">
+			<a class="menu-header-second__link" href="#"
+			   data-role="menuitem"></a></li>
+		<li class="menu-header-second__item delivery">
+			<a class="menu-header-second__link" href="#"
+			   data-role="menuitem">Доставка та оплата</a></li>
+	</ul>
+</nav>
+
+<div class="social-links social-links_toggle">
+	<a class="social-links__link" href="#">
+		<img class="social-links__image social-links__image_color"
+			 src="assets/images/social-icons/instagram-mobile.svg" alt="" aria-hidden="true">
+		<img class="social-links__image social-links__image_outline"
+			 src="assets/images/social-icons/instagram-mobile.svg" alt="" aria-hidden="true">
+		<span class="social-links__text">Instagram</span>
+	</a>
+	<a class="social-links__link" href="#">
+		<img class="social-links__image social-links__image_color"
+			 src="assets/images/social-icons/facebook-mobile.svg" alt="" aria-hidden="true">
+		<img class="social-links__image social-links__image_outline"
+			 src="assets/images/social-icons/facebook-mobile.svg" alt="" aria-hidden="true">
+		<span class="social-links__text">Facebook</span>
+	</a>
+	<a class="social-links__link" href="#">
+		<img class="social-links__image social-links__image_color"
+			 src="assets/images/social-icons/tiktok-mobile.svg" alt="" aria-hidden="true">
+		<img class="social-links__image social-links__image_outline"
+			 src="assets/images/social-icons/tiktok-mobile.svg" alt="" aria-hidden="true">
+		<span class="social-links__text">Tiktok</span>
+	</a>
+</div>
