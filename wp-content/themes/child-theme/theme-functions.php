@@ -1,5 +1,8 @@
 <?php
 require_once 'wc-functions.php';
+
+add_theme_support( 'woocommerce' );
+
 // Specify styles for .btn as in file styles.css
 DOV_TinyMCE::add_editor_styles( '.btn', 'background-color:;color:#fff;' );
 
