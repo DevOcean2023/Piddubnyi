@@ -11,13 +11,20 @@
 		padding: 0;
 	}
 
+	.button-mobile-menu {
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
 	&__wrapper {
 		max-width: 100%;
-		padding: 0 0 0 16px;
+		padding: 0;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 
 		@media (--lg) {
 			padding: 0;
@@ -27,10 +34,7 @@
 	&__content {
 		display: flex;
 		width: 100%;
-
-		@media (--lg) {
-			flex-direction: column;
-		}
+		flex-direction: column;
 	}
 
 	.logo {
@@ -43,7 +47,7 @@
 
 		img {
 			width: 98px;
-			height: 6424px;
+			height: 64px;
 
 			@media (--lg) {
 				width: 98px;
@@ -104,17 +108,17 @@
 		max-width: 1440px;
 		margin: 0 auto;
 
-		@media (--md) {
-			position: relative;
-		}
-
-		@media (--lg) {
-			align-items: center;
-		}
-
 		.inner {
 			display: flex;
 			justify-content: space-between;
+
+			@media (--md) {
+				position: relative;
+			}
+
+			@media (--lg) {
+				align-items: center;
+			}
 		}
 	}
 
@@ -238,6 +242,7 @@
 		padding: 0;
 		margin: 0;
 		border-bottom: 1px solid rgba(204, 209, 214, 1);
+		position: relative;
 
 		.close-button {
 			display: block;
@@ -284,6 +289,12 @@
 				right: 10px;
 				top: 50%;
 				transform: translateY(-50%);
+			}
+
+			&__submit:is(:hover, :focus, :focus-within) {
+				background: transparent;
+				border: none;
+				text-decoration: none;
 			}
 		}
 	}
