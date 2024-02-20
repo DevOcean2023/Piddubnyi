@@ -385,7 +385,7 @@ class DOV_Images_Base {
 		$ext      = pathinfo( $file, PATHINFO_EXTENSION );
 		$name     = wp_basename( $file, '.' . $ext );
 		$new_name = $name . '-' . $width . 'x' . $height . '.' . $ext;
-		$new_file = dirname($file) . 'class-dov-images-base.php/' . $new_name;
+		$new_file = dirname( $file ) . '/' . $new_name;
 
 		if ( ! file_exists( $new_file ) ) {
 			copy( $file, $new_file );

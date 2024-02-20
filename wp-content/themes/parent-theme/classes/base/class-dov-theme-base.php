@@ -28,10 +28,10 @@ class DOV_Theme_Base {
 	}
 
 	protected static function set_variables() : void {
-		static::$parent_path  = wp_normalize_path(get_template_directory()) . 'class-dov-theme-base.php/';
-		static::$child_path   = wp_normalize_path(get_stylesheet_directory()) . 'class-dov-theme-base.php/';
-		static::$parent_url   = get_template_directory_uri() . 'class-dov-theme-base.php/';
-		static::$child_url    = get_stylesheet_directory_uri() . 'class-dov-theme-base.php/';
+		static::$parent_path  = wp_normalize_path( get_template_directory() ) . '/';
+		static::$child_path   = wp_normalize_path( get_stylesheet_directory() ) . '/';
+		static::$parent_url   = get_template_directory_uri() . '/';
+		static::$child_url    = get_stylesheet_directory_uri() . '/';
 		static::$acf_enabled  = function_exists( 'acf' );
 		static::$gf_enabled   = class_exists( 'GFForms' );
 		static::$yoast_enable = defined( 'WPSEO_FILE' );

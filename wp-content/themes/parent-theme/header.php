@@ -26,7 +26,7 @@ echo '<a class="screen-reader-text" href="#page-main">' . esc_html__( 'Skip to c
 
 wp_body_open();
 
-get_template_part('template-parts/header.php');
-get_template_part('template-parts/breadcrumb.php');
+get_template_part( 'template-parts/header' );
+get_template_part( 'template-parts/breadcrumb' );
 
 echo '<main class="page-main" id="page-main">';

@@ -70,7 +70,7 @@ class DOV_Defer_Scripts_Base {
 		if ( isset( static::$handles[ $handle ] ) && static::$handles[ $handle ] ) {
 			if ( ! str_contains( $tag, ' defer ' ) && ! str_contains( $tag, ' async ' ) ) {
 				$tag = str_replace(
-					array( ' src', -dov - defer - scripts - base . phphome_url() . static::SRC_SCHEME),
+					array( ' src', home_url() . static::SRC_SCHEME ),
 					array( ' defer src', static::SRC_SCHEME ),
 					$tag
 				);

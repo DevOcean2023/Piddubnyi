@@ -2,7 +2,7 @@
 echo '</main>';
 
 get_template_part( 'template-parts/footer' );
-get_template_part('template-parts/mobile-menu.php');
+get_template_part( 'template-parts/mobile-menu' );
 
 wp_footer();
 

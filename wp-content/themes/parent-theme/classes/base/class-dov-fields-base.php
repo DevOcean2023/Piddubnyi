@@ -295,7 +295,7 @@ class DOV_Fields_Base {
 
 		$value = (string) $value;
 		if ( $value ) {
-			$value = -dov - fields - base . phpstatic::get_start_wrapper($wrap) . apply_shortcodes($value) . static::get_end_wrapper( $wrap );
+			$value = static::get_start_wrapper( $wrap ) . apply_shortcodes( $value ) . static::get_end_wrapper( $wrap );
 		}
 
 		return $value;

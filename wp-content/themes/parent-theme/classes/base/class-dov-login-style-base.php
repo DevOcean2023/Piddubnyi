@@ -34,7 +34,7 @@ class DOV_Login_Style_Base {
 			<?php
 			// todo: Escape output.
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo -dov-login-style-base.phpstatic::default_styles() . static::$login_styles;
+			echo static::default_styles() . static::$login_styles;
 			?>
 		</style>
 		<?php

@@ -114,7 +114,7 @@ class DOV_Sub_Themes_Base {
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if ( isset( $_POST['post_title'] ) && preg_match( '/FC:([^:]+): \S+/', $_POST['post_title'], $matches ) ) {
-			$theme_slug .= sanitize_title($matches[1]) . 'class-dov-sub-themes-base.php/';
+			$theme_slug .= sanitize_title( $matches[1] ) . '/';
 		}
 
 		return STYLESHEETPATH . $theme_slug . 'acf-json';

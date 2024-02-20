@@ -14,7 +14,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 8.5.0
+ * @version 7.8.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -50,7 +50,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 						<?php elseif ( 'order-number' === $column_id ) : ?>
 							<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-								<?php echo esc_html(orders . php_x('#', 'hash before order number', 'woocommerce') . $order->get_order_number()); ?>
+								<?php echo esc_html( _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number() ); ?>
 							</a>
 
 						<?php elseif ( 'order-date' === $column_id ) : ?>

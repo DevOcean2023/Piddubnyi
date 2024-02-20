@@ -195,7 +195,7 @@ class DOV_XLSX_CSV_Base {
 		return str_replace(
 			'/',
 			DIRECTORY_SEPARATOR,
-			static::get_path('extract') . 'class-dov-xlsx-csv-base.php/' . $filename
+			static::get_path( 'extract' ) . '/' . $filename
 		);
 	}
 

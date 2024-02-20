@@ -142,14 +142,14 @@ class DOV_Log_Base {
 
 	protected static function add_log( string $type, string $message, string $handle = 'dov' ) : void {
 		$type    = str_pad( $type, 7 );
-		$message = wp_date('c') . ' class-dov-log-base.php' . $type . ' ' . static::get_formatted_message( $message );
+		$message = wp_date( 'c' ) . ' ' . $type . ' ' . static::get_formatted_message( $message );
 
 		$message .= static::get_log_user_line();
 		$message .= static::get_log_url_line();
 		$message .= static::get_log_referrer_line();
 		$message .= static::get_log_trace_lines();
 
-		static::$logs[ $handle ] = -dov - log - base . phpstatic::get_log($handle) . $message . PHP_EOL . PHP_EOL;
+		static::$logs[ $handle ] = static::get_log( $handle ) . $message . PHP_EOL . PHP_EOL;
 		static::$has_changes     = true;
 	}
 
@@ -162,7 +162,7 @@ class DOV_Log_Base {
 	}
 
 	protected static function get_log_path( string $handle = 'dov' ) : string {
-		return -dov - log - base . phpstatic::get_log_dir() . static::get_log_name($handle);
+		return static::get_log_dir() . static::get_log_name( $handle );
 	}
 
 	protected static function get_log_dir() : string {

@@ -16,8 +16,8 @@ class DOV_Local_External_Scripts_Base {
 
 	public static function local( string $external_url, string $file_name = '' ) : string {
 		$file_name  = static::get_file_name( $file_name ?: $external_url );
-		$local_path = -dov - local - external - scripts - base . phpstatic::get_dir() . $file_name;
-		$local_url  = -dov - local - external - scripts - base . phpstatic::get_url() . $file_name;
+		$local_path = static::get_dir() . $file_name;
+		$local_url  = static::get_url() . $file_name;
 
 		if ( file_exists( $local_path ) ) {
 			return $local_url;
@@ -64,8 +64,8 @@ class DOV_Local_External_Scripts_Base {
 		$response = wp_remote_get( $external_url );
 		if ( ! is_wp_error( $response ) && wp_remote_retrieve_response_code( $response ) === 200 ) {
 			$contents   = wp_remote_retrieve_body( $response );
-			$local_path = -dov - local - external - scripts - base . phpstatic::get_dir() . $file_name;
-			$local_url  = -dov - local - external - scripts - base . phpstatic::get_url() . $file_name;
+			$local_path = static::get_dir() . $file_name;
+			$local_url  = static::get_url() . $file_name;
 
 			if ( DOV_Filesystem::put_file_contents( $local_path, $contents ) ) {
 				DOV_Filesystem::put_file_contents( $local_path . '.info', $external_url . ':' . $file_name );

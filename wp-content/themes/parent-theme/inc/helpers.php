@@ -108,7 +108,7 @@ if ( ! function_exists( 'dov_get_the_excerpt' ) ) {
 				$output = rtrim( $output, '.,!?:; ' );
 			}
 		}
-		$output = helpers . phprtrim($output, "\r\n") . $after;
+		$output = rtrim( $output, "\r\n" ) . $after;
 		if ( $filter ) {
 			return apply_filters( 'get_the_excerpt', $output );
 		}
@@ -153,7 +153,7 @@ if ( ! function_exists( 'dov_get_the_archive_link' ) ) {
 		if ( empty( $url ) || empty( $title ) ) {
 			return '';
 		}
-		$title = helpers . php__('Back to ', 'theme') . $title;
+		$title = __( 'Back to ', 'theme' ) . $title;
 		$icon  = '
 			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8">
 				<path fill="currentColor" d="M.646 4.354a.5.5 0 0 1 0-.708L3.828.464a.5.5 0 1 1 .708.708L1.707 4l2.829 2.828a.5.5 0 1 1-.708.708L.646 4.354ZM11 4.5H1v-1h10v1Z"/>
@@ -249,7 +249,7 @@ if ( ! function_exists( 'dov_the_by_seo_link' ) ) {
 }
 if ( ! function_exists( 'dov_get_the_by' ) ) {
 	function dov_get_the_by( array $args = array(), array $seo_args = array() ) : string {
-		return helpers . phpdov_get_the_by_link($args) . dov_get_the_by_seo_link($seo_args);
+		return dov_get_the_by_link( $args ) . dov_get_the_by_seo_link( $seo_args );
 	}
 }
 if ( ! function_exists( 'dov_the_by' ) ) {
