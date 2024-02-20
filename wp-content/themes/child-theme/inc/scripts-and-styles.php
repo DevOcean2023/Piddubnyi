@@ -7,9 +7,17 @@ DOV_Defer_Scripts::add( 'frontend.filters' );
 
 DOV_Defer_Scripts::add( 'woo' );
 
+
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
 
 function theme_scripts() {
+	wp_enqueue_script(
+		'marque',
+		'https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js',
+		array( 'jquery' ),
+		'1.1',
+		false
+	);
 	wp_enqueue_script(
 		'dov',
 		get_stylesheet_directory_uri() . '/assets/js/dov.js',
