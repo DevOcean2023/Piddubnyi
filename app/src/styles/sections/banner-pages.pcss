@@ -1,0 +1,28 @@
+@import "../variables-and-mixins.pcss";
+
+.banner-pages {
+	margin: 40px 0 60px;
+	padding: 65px 0;
+	position: relative;
+
+	@media (--sm) {
+		padding: 113px 0;
+	}
+
+	.inner {
+		width: 100%;
+		max-width: 403px;
+		padding: 16px;
+		background-color: #fff;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		color: #171a19;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

@@ -13,7 +13,16 @@ $row-gap: 20px;
 
 	input:not([type="radio"], [type="checkbox"], [type="submit"], [type="button"], [type="image"], [type="file"]),
 	.textarea {
-		@include input;
+		font-family: $font-family-raleway;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+		color: #fff;
+		background-color: transparent;
+		padding: 10px 10px 10px 0;
+		border: none;
+		border-bottom: 1px solid #fff;
+		width: 100%;
 
 		&::placeholder {
 			color: $color-colors-89;
@@ -36,7 +45,9 @@ $row-gap: 20px;
 	}
 
 	.textarea {
-		height: 100px;
+		height: 41px;
+		min-height: 41px;
+		max-height: 100px;
 		resize: vertical;
 	}
 
@@ -104,10 +115,11 @@ $row-gap: 20px;
 .gform_fields {
 	display: flex;
 	flex-wrap: wrap;
-	gap: $row-gap $column-gap;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	gap: 48px 32px;
+	justify-content: space-between;
 
 	.gfield,
 	.ginput_product_price_wrapper {
@@ -139,12 +151,14 @@ $row-gap: 20px;
 
 		.gfield_label,
 		label {
-			@include text-style-text-text-main;
-
-			color: $color-colors-89;
+			font-family: $font-family-raleway;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 21px;
+			color: #639B8B;
 			position: absolute;
-			left: 30px;
-			top: calc($height-element / 4);
+			left: 0;
+			top: 11px;
 			transition: 0.3s;
 			cursor: pointer;
 		}
@@ -152,7 +166,7 @@ $row-gap: 20px;
 		&_in-focus-or-has-value {
 			.gfield_label,
 			label {
-				top: 5px;
+				top: 0;
 				font-size: 10px;
 				line-height: 10px;
 			}
@@ -505,6 +519,24 @@ $row-gap: 20px;
 			color: $color-text-main;
 			margin-bottom: 15px;
 		}
+
+		&_single_line_text,
+		&_email {
+			width: 100%;
+			max-width: 100%;
+
+			@media (--md) {
+				max-width: 300px;
+			}
+
+			@media (min-width: 864px) {
+				max-width: 364px;
+			}
+
+			@media (--lg) {
+				max-width: 269px;
+			}
+		}
 	}
 }
 
@@ -512,7 +544,19 @@ $row-gap: 20px;
 	position: relative;
 
 	input[type="submit"] {
-		@include btn;
+		width: 302px;
+		padding: 16px 24px;
+		border: 1px solid #171a19;
+		background-color: #fff;
+		color: #171a19;
+		text-align: center;
+		font-family: $font-family-raleway;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 21px;
+		text-transform: uppercase;
+		margin: 0 auto;
+		display: block;
 	}
 
 	.gform_ajax_spinner {
@@ -527,6 +571,12 @@ $row-gap: 20px;
 
 .gfield_captcha {
 	position: absolute !important;
+}
+
+.gform {
+	&_body {
+		margin-bottom: 36px;
+	}
 }
 
 .gfield {

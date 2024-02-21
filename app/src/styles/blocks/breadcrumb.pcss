@@ -7,36 +7,41 @@
 		display: block;
 		margin: 0 auto;
 		padding: 10px 35px;
-		max-width: $max-width-main-inner;
+		max-width: 1300px;
 		width: 100%;
 
 		@media (--lg) {
-			padding: 10px 15px;
+			padding: 22px 10px;
 		}
 	}
 
 	span,
 	a {
-		font-style: normal;
-		font-weight: 300;
-		font-size: 14px;
-		line-height: 21px;
+		font-family: $font-family-raleway;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 26px;
 	}
 
 	span {
-		color: $color-text-main;
+		color: #ccd1d6;
 	}
 
 	a {
 		position: relative;
-		padding-right: 10px;
-		color: $color-colors-main;
+		padding-right: 28px;
+		color: #171a19;
 
 		&::before {
 			position: absolute;
-			content: "/";
-			top: -2px;
+			content: "";
+			top: 0;
 			right: 0;
+			background: url("../../images/arrow-right-breadcrumbs.svg") no-repeat center;
+			background-size: cover;
+			display: block;
+			width: 24px;
+			height: 24px;
 		}
 	}
 }
