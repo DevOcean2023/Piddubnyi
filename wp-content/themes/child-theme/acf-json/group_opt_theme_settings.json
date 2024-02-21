@@ -344,11 +344,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_64d9c10068436",
-            "label": "Newsletter Top",
-            "name": "dov_blog_newsletter_top",
+            "key": "field_65d5f23f45092",
+            "label": "Закріплені пости",
+            "name": "dov_sticky_posts",
             "aria-label": "",
-            "type": "group",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -357,202 +357,26 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64d9c1ce68437",
-                    "label": "title",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "title",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "replace": "",
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "default_level": 2
-                },
-                {
-                    "key": "field_64d9c1de68438",
-                    "label": "form",
-                    "name": "form",
-                    "aria-label": "",
-                    "type": "forms",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "",
-                    "multiple": "",
-                    "allow_null": 1
-                }
-            ]
-        },
-        {
-            "key": "field_64d9c1fc68439",
-            "label": "Newsletter Bottom",
-            "name": "dov_blog_newsletter_bottom",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64d9c26a6843c",
-                    "label": "images",
-                    "name": "images",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Image",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_64d9c2946843d",
-                            "label": "image",
-                            "name": "image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "preview_size": "thumbnail",
-                            "parent_repeater": "field_64d9c26a6843c"
-                        }
-                    ]
-                },
-                {
-                    "key": "field_64d9c1fc6843a",
-                    "label": "title",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "title",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "replace": "",
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "default_level": 2
-                },
-                {
-                    "key": "field_64d9c2c66843e",
-                    "label": "text",
-                    "name": "text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "placeholder": "",
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_64d9c1fc6843b",
-                    "label": "form",
-                    "name": "form",
-                    "aria-label": "",
-                    "type": "forms",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "post_object",
-                    "multiple": 0,
-                    "allow_null": 1
-                }
-            ]
+            "post_type": [
+                "post"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "relationship_all": 0,
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         },
         {
             "key": "field_64d9d78d33657",
             "label": "Sidebar Blog",
             "name": "dov_blog",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_64d9d66d64bc9"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 1,
-            "prefix_name": 1
-        },
-        {
-            "key": "field_64d9dd287f527",
-            "label": "Sidebar Blog Post",
-            "name": "dov_blog_post",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -1057,5 +881,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702542881
+    "modified": 1708520163
 }
