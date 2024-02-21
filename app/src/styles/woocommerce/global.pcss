@@ -145,6 +145,10 @@ body.filters-opened {
 				transform: rotate(-45deg);
 			}
 		}
+
+		&__products-holder {
+			flex-grow: 1;
+		}
 	}
 
 	.page-title {
@@ -538,5 +542,17 @@ body.filters-opened {
 		width: 100% !important;
 		border-radius: 0 !important;
 		border: 1px solid $woo-btn-color !important;
+	}
+}
+
+[class*="wpfPreviewLoader"] {
+	width: 100% !important;
+
+	@media (--md) {
+		grid-column-end: span 2;
+	}
+
+	@media (--xl) {
+		grid-column-end: span 3;
 	}
 }
