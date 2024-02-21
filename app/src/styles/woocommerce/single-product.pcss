@@ -14,7 +14,7 @@ body.single-product {
 			flex: 1 0 57.3%;
 			max-width: 57.3%;
 			margin: 0 -50px 0 0;
-			max-height: 600px;
+			max-height: 541px;
 			display: flex;
 			flex-direction: row-reverse;
 			gap: 24px;
@@ -23,6 +23,7 @@ body.single-product {
 		.entry-summary {
 			flex: 1 0 calc(42.7% - 27px);
 			max-width: calc(42.7% - 27px);
+			margin: 0 0 0 50px;
 		}
 
 		&_title {
@@ -35,7 +36,7 @@ body.single-product {
 	}
 
 	.thumbs-holder {
-		padding: 16px 24px;
+		padding: 19px 24px;
 		width: 193px;
 		height: 100%;
 		flex-shrink: 0;
@@ -48,6 +49,39 @@ body.single-product {
 		.swiper-slide {
 			height: 85px !important;
 			overflow: hidden;
+			border: 1px solid $woo-border-color;
+			cursor: pointer;
+
+			&.swiper-slide-thumb-active {
+				border-color: $woo-main-color;
+
+				img {
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				border-color: $woo-main-color;
+			}
+
+			img {
+				opacity: 0.5;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.product-images {
+		box-shadow: 0 0 40px 0 rgba(135, 135, 135, 0.1);
+
+		.swiper-slide {
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }
