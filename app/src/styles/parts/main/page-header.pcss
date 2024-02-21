@@ -39,10 +39,11 @@
 
 	.logo {
 		width: 100%;
-		max-width: 98px;
+		max-width: 6798px;
 
-		@media (--lg) {
+		@media (--md) {
 			max-width: 98px;
+			margin-right: 183px;
 		}
 
 		img {
@@ -58,11 +59,22 @@
 
 	&__top {
 		background: rgba(1, 95, 69, 1);
-		padding: 10px 0;
+		padding: 10px 0 7px;
 
 		.inner {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+		}
+
+		.social-links {
+			gap: 16px;
+			height: max-content;
+			display: none;
+
+			@media (--lg) {
+				display: flex;
+			}
 		}
 
 		&-phone {
@@ -73,6 +85,12 @@
 			text-align: left;
 			color: rgba(255, 255, 255, 1);
 			position: relative;
+			margin-left: 30px;
+			height: max-content;
+
+			@media (--lg) {
+				margin-left: 112px;
+			}
 
 			&::after {
 				content: "";
@@ -90,7 +108,26 @@
 
 	&__time {
 		display: flex;
-		gap: 10px;
+		gap: 0;
+		position: relative;
+		flex-direction: column;
+
+		@media (--md) {
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		&::after {
+			content: "";
+			background: url(../../../images/time.svg) no-repeat center;
+			background-size: cover;
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 0;
+			left: -30px;
+		}
 
 		&-item {
 			font-family: $font-family-raleway;
@@ -99,11 +136,12 @@
 			line-height: 19px;
 			text-align: left;
 			color: rgba(255, 255, 255, 1);
+			margin-bottom: 0;
 		}
 	}
 
 	&__middle {
-		padding: 19px 0 19px;
+		padding: 7px 0 7px;
 		width: 100%;
 		max-width: 1440px;
 		margin: 0 auto;
@@ -145,9 +183,13 @@
 				.inner-category {
 					display: flex;
 					flex-direction: column;
-					gap: 15px;
+					gap: 16px;
 					max-width: max-content;
-					padding: 10px;
+					padding: 10px 14px;
+
+					@media (--xxl) {
+						padding: 16px 24px;
+					}
 
 					.item {
 						display: flex;
@@ -156,14 +198,26 @@
 						width: 100%;
 						max-width: max-content;
 
+						.img {
+							width: 44px;
+							height: 44px;
+							display: flex;
+							align-items: center;
+						}
+
 						a {
 							color: rgba(23, 26, 25, 1);
 							font-family: $font-family-raleway;
-							font-size: 20px;
+							font-size: 18px;
 							font-weight: 400;
 							line-height: 26px;
 							width: 100%;
-							max-width: 294px;
+							max-width: 180px;
+
+							@media (--xxl) {
+								font-size: 20px;
+								max-width: 294px;
+							}
 
 							&:hover {
 								color: rgba(1, 95, 69, 1);
@@ -193,9 +247,15 @@
 					max-width: max-content;
 					display: grid;
 					grid-template-columns: auto auto;
-					padding: 10px;
-					grid-column-gap: 50px;
-					grid-row-gap: 15px;
+					padding: 10px 14px;
+					grid-column-gap: 30px;
+					grid-row-gap: 16px;
+
+					@media (--xxl) {
+						padding: 16px 24px;
+						grid-column-gap: 40px;
+						grid-row-gap: 16px;
+					}
 				}
 			}
 		}
@@ -238,11 +298,11 @@
 
 	.wrap-search {
 		width: 100%;
-		max-width: 269px;
+		max-width: 302px;
 		padding: 0;
-		margin: 0;
 		border-bottom: 1px solid rgba(204, 209, 214, 1);
 		position: relative;
+		margin-top: 4px;
 
 		.close-button {
 			display: block;
@@ -263,14 +323,17 @@
 
 			&__input {
 				width: 100%;
-				min-width: 100px;
-				padding: 5px 30px;
+				min-width: 269px;
+				padding: 5px;
 				background: #fff;
 				border-bottom: none;
 				border-top: 0;
 				border-right: 0;
 				border-left: 0;
-				color: $color-bg-custom;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 20px;
+				text-align: left;
 				font-family: $font-family-raleway;
 				display: block;
 				outline: none;

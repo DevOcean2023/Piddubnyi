@@ -3,7 +3,7 @@
 .menu-header-main {
 	display: none;
 
-	@media (--xl) {
+	@media (--lg) {
 		display: flex;
 		justify-content: space-between;
 
@@ -64,13 +64,18 @@
 			width: max-content;
 			cursor: pointer;
 			border-bottom: 1px solid transparent;
+			margin-right: 10px;
 
 			&:hover {
 				background: rgba(244, 245, 240, 1);
 			}
 
 			&_level_top&_has_sub-menu {
-				padding-right: 34px;
+				padding-right: 24px;
+
+				&:first-child {
+					padding-right: 13px;
+				}
 
 				&:hover {
 					transition: all 0.5s;
@@ -109,13 +114,18 @@
 			display: flex;
 			align-items: center;
 			font-family: $font-family-raleway;
-			font-size: 20px;
+			font-size: 18px;
 			font-weight: 500;
 			line-height: 26px;
 			text-align: left;
 			color: rgba(23, 26, 25, 1);
 			transition: all 0.5s;
-			padding: 7px;
+			padding: 8px;
+
+			@media (--xl) {
+				font-size: 20px;
+				padding: 12px;
+			}
 
 			&:hover {
 				text-decoration: none;
@@ -126,9 +136,13 @@
 				padding: 8px 0;
 				margin-right: 0 !important;
 				font-family: $font-family-raleway;
-				font-size: 20px;
+				font-size: 18px;
 				font-weight: 400;
 				line-height: 26px;
+
+				@media (--xxl) {
+					font-size: 20px;
+				}
 			}
 
 			&_no-clickable:--enter {
@@ -163,7 +177,7 @@
 				width: 14px;
 				height: 8px;
 				position: absolute;
-				top: 50%;
+				top: 67%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
@@ -172,11 +186,11 @@
 		&__sub-menu {
 			width: 313px;
 			position: absolute;
-			padding: 20px 0;
+			padding: 16px 24px;
 			background: rgba(244, 245, 240, 1);
 
 			&_level_top {
-				top: 42px;
+				top: 51px;
 				left: 0;
 			}
 
