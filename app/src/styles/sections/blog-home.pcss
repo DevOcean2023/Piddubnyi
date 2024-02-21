@@ -1,0 +1,118 @@
+@import "../variables-and-mixins.pcss";
+
+.blog-home {
+	padding: 0 0 30px;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin: 30px 0;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.btn {
+		@include btn;
+		text-transform: uppercase;
+		color: $black;
+		border-radius: 0;
+		background: $white;
+		border: 1px solid $black;
+		width: 100%;
+		max-width: 302px;
+
+		&:--enter {
+			background: $black;
+			text-decoration: none;
+			color: $white;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		gap: 20px 30px;
+
+		@media (--md) {
+			grid-template-columns: 1fr 0.7fr 0.7fr;
+		}
+	}
+
+	&__item {
+		min-height: 302px;
+		text-decoration: none;
+		transition: transform 0.3s;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		&_first {
+			@media (--md) {
+				grid-row: 1/3;
+			}
+
+			.blog-home {
+				&__content {
+					padding: 30px 23px 55px;
+				}
+			}
+		}
+
+		&:--enter {
+			transform: translateY(-10px);
+			text-decoration: none;
+		}
+	}
+
+	&__image {
+		height: 100%;
+		position: relative;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 32px 19px;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 26px;
+		text-align: left;
+		color: $black;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
+	&__excerpt {
+		font-family: $font-family-raleway;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: left;
+		color: $black;
+		margin-bottom: 0;
+	}
+
+	&__item_first &__sub-title {
+		@media (--md) {
+			@include text-style-text-headline-3;
+		}
+	}
+}
