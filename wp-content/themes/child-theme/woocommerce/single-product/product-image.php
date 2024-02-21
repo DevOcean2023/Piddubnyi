@@ -81,3 +81,36 @@ endif;
 	</div>
 </div>
 <!-- /.thumbs-holder -->
+<script>
+	// const sliderThumbs = document.querySelectorAll(".swiper-thumbs");
+	//
+	// if (sliderThumbs.length) {
+	// 	Array.from(sliderThumbs).forEach(sliderEl => {
+	// 		const swiper = new Swiper(sliderEl, {
+	// 			direction: "vertical",
+	// 			slidesPerView: 4,
+	// 			spaceBetween: 24,
+	// 			loop: false,
+	// 			freeMode: true,
+	// 			watchSlidesProgress: true,
+	// 			mousewheel: true,
+	// 		});
+	// 	});
+	// }
+	//
+	// const sliderProduct = document.querySelectorAll(".product-images");
+	//
+	// if (sliderProduct.length) {
+	// 	Array.from(sliderProduct).forEach(sliderEl => {
+	// 		let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
+	// 		const swiper = new Swiper(sliderEl, {
+	// 			loop: false,
+	// 			thumbs: {
+	// 				swiper: thumbs,
+	// 			},
+	// 			slideClass: "product-img",
+	// 		});
+	// 	});
+	// }
+</script>
+
