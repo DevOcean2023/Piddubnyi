@@ -22,15 +22,15 @@
 		padding: 31px 0 0;
 		display: flex;
 		justify-content: center;
-		border-bottom: 1px solid #dcdcdc;
 		flex-wrap: wrap;
 
 		@media (min-width: 500px) {
-			padding: 44px 0 61px;
+			padding: 63px 0 65px;
 		}
 
 		@media (min-width: 750px) {
 			justify-content: space-between;
+			margin-right: 147px;
 		}
 	}
 
@@ -57,7 +57,7 @@
 		@media (--lg) {
 			width: 100%;
 			padding: 0 15px;
-			max-width: 25%;
+			max-width: 28%;
 			margin: 0;
 		}
 
@@ -124,13 +124,14 @@
 	}
 
 	&__bottom {
-		padding: 30px 15px;
+		padding: 30px 0;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 8px;
 		flex-direction: column;
 		text-align: center;
+		border-top: 1px solid rgba(255, 255, 255, 1);
 
 		@media (min-width: 555px) {
 
@@ -163,6 +164,28 @@
 	&__time {
 		display: flex;
 		gap: 10px;
+		position: relative;
+		flex-direction: column;
+
+		&::after {
+			content: "";
+			background: url(../../../images/time.svg) no-repeat center;
+			background-size: cover;
+			display: block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			left: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@media (--md) {
+				top: 0;
+				transform: translateY(0);
+				width: 20px;
+				height: 20px;
+			}
+		}
 
 		&-item {
 			font-family: $font-family-raleway;
@@ -170,7 +193,7 @@
 			font-weight: 400;
 			line-height: 19px;
 			text-align: left;
-
+			margin-bottom: 0;
 			color: rgba(255, 255, 255, 1);
 		}
 	}
@@ -179,17 +202,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-	}
-
-	&__link-phone {
-		font-family: $font-family-raleway;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 19px;
-		text-align: left;
-		color: rgba(255, 255, 255, 1);
 		position: relative;
-		padding-left: 30px;
 
 		&::after {
 			content: "";
@@ -200,8 +213,17 @@
 			height: 20px;
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: -30px;
 		}
+	}
+
+	&__link-phone {
+		font-family: $font-family-raleway;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 19px;
+		text-align: left;
+		color: rgba(255, 255, 255, 1);
 	}
 
 	&__address {
@@ -211,53 +233,37 @@
 		line-height: 21px;
 		color: rgba(255, 255, 255, 1);
 		text-align: left;
+		position: relative;
+		width: 100%;
+		max-width: 299px;
+
+		&::after {
+			content: "";
+			background: url(../../../images/address-marker.svg) no-repeat center;
+			background-size: cover;
+			display: block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			left: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@media (--md) {
+				top: 0;
+				transform: translateY(0);
+				width: 20px;
+				height: 20px;
+			}
+		}
 	}
 
 	&__contacts {
 		margin: 11px 0 24px;
+		padding-left: 30px;
 
 		@media (min-width: 500px) {
-			margin: 24px 0 24px;
-		}
-
-		p {
-			color: #fff;
-			font-family: $font-family-raleway;
-			font-size: 12px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 20px;
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			max-width: 153px;
-			margin-bottom: 8px;
-
-			@media (min-width: 380px) {
-				max-width: 179px;
-			}
-
-			@media (--md) {
-				font-size: 14px;
-				line-height: 28px;
-				display: block;
-				flex-wrap: unset;
-				flex-direction: unset;
-				width: unset;
-				max-width: unset;
-				margin-bottom: 15px;
-			}
-
-			&:nth-child(2) {
-				display: flex;
-				flex-direction: column;
-
-				@media (min-width: 500px) {
-					display: block;
-					flex-wrap: unset;
-					flex-direction: unset;
-				}
-			}
+			margin: 25px 0 24px;
 		}
 
 		a {
@@ -277,7 +283,7 @@
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 30px;
+		line-height: 25px;
 
 		@media (--lg) {
 			text-align: left;
@@ -298,7 +304,7 @@
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 30px;
+		line-height: 25px;
 	}
 
 	&__pay {
@@ -313,5 +319,15 @@
 		@media (--lg) {
 			text-align: right;
 		}
+	}
+
+	&__terms {
+		order: 3;
+		display: flex;
+		gap: 21px;
+	}
+
+	.menu-footer-links {
+		order: 3;
 	}
 }

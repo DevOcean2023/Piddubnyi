@@ -1,14 +1,14 @@
 @import "../variables-and-mixins.pcss";
 
 .home-about {
-	padding: 100px 0 100px;
+	padding: 103px 0 120px;
 
 	&__title {
 		font-family: $font-family-raleway;
 		font-size: 32px;
 		font-weight: 600;
 		line-height: 42px;
-		margin-bottom: 30px;
+		margin-bottom: 38px;
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -22,20 +22,29 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 
 		&-left,
 		&-center {
 			width: 100%;
-			max-width: 33%;
+
+			p {
+				font-family: $font-family-raleway;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+				margin-bottom: 22px;
+			}
 		}
 
 		&-left {
-			padding-right: 30px;
+			margin-right: 25px;
+			max-width: 411px;
 		}
 
 		&-center {
 			margin-right: auto;
+			max-width: 305px;
 		}
 
 		&-right {
@@ -44,7 +53,8 @@
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
-			max-width: max-content;
+			max-width: 302px;
+			padding-bottom: 20px;
 
 			.btn {
 				@include btn;
@@ -53,6 +63,9 @@
 				border-radius: 0;
 				background: $white;
 				border: 1px solid $black;
+				width: 100%;
+				max-width: 302px;
+				text-align: center;
 
 				&:--enter {
 					background: $black;

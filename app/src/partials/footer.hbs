@@ -10,7 +10,8 @@
 						<a href="tel:+380735533505" class="page-footer__link-phone">+38 (073) 553-35-05</a>
 					</p>
 					<p class="page-footer__address">
-						<a href="#" class="page-footer__a">м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве крило, 2 поверх)</a></p>
+						<a href="#" class="page-footer__a">м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве
+							крило, 2 поверх)</a></p>
 					<div class="page-footer__time">
 						<p class="page-footer__time-item">10:00-19:00</p>
 						<p class="page-footer__time-item">Без вихідних</p>
@@ -54,8 +55,18 @@
 			<div class="page-footer__by">
 				{{>by title="Made by" href="https://devocean.pro" name="DevOcean"}}
 			</div>
-			<div class="page-footer__pay">
-				<img src="{{root}}assets/images/image-pay.png" alt="">
+			<div class="page-footer__terms">
+				<div class="page-footer__pay">
+					<img src="{{root}}assets/images/image-pay.png" alt="">
+				</div>
+				{{#>menu
+						class="menu-footer-links"
+						label="Footer Links"
+						keyboard=true
+				}}
+					{{>menu-item title="Політика конфіденційності "}}
+					{{>menu-item title="Оферта"}}
+				{{/menu}}
 			</div>
 		</div>
 	</div>
