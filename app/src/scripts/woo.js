@@ -1,5 +1,9 @@
+import Swiper from "swiper";
+import "swiper/css";
+
 document.addEventListener("DOMContentLoaded", function () {
 	initFilterControls();
+	initProductSlider();
 });
 
 function initFilterControls() {
@@ -16,4 +20,34 @@ function initFilterControls() {
 		e.preventDefault();
 		document.body.classList.remove("filters-opened");
 	});
+}
+
+function initProductSlider() {
+	const sliderThumbs = document.querySelectorAll(".swiper-thumbs");
+
+	if (sliderThumbs.length) {
+		Array.from(sliderThumbs).forEach(sliderEl => {
+			const swiper = new Swiper(sliderEl, {
+				direction: "vertical",
+				slidesPerView: 4,
+				spaceBetween: 24,
+				freeMode: true,
+				watchSlidesProgress: true,
+			});
+		});
+	}
+
+	const sliderProduct = document.querySelectorAll(".product-images");
+
+	if (sliderProduct.length) {
+		Array.from(sliderProduct).forEach(sliderEl => {
+			let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
+			const swiper = new Swiper(sliderEl, {
+				spaceBetween: 0,
+				thumbs: {
+					swiper: thumbs,
+				},
+			});
+		});
+	}
 }

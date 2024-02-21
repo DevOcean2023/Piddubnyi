@@ -177,3 +177,9 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
 
 	return $currency_symbol;
 }
+
+function get_image_alt( $id ) {
+	$alt = get_post_meta( $id, '_wp_attachment_image_alt', true );
+
+	return $alt;
+}
