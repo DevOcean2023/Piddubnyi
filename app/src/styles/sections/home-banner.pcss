@@ -1,7 +1,7 @@
 @import "../variables-and-mixins.pcss";
 @import "../tiny-slider-styles.pcss";
 
-.banner-home {
+.home-banner {
 	position: relative;
 	overflow: hidden;
 	padding: 0;
@@ -117,23 +117,7 @@
 		}
 
 		.btn {
-			padding: 16px 24px;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 1.25;
-			color: $white;
-			border-radius: 0;
-			background: $woo-btn-color;
-			border: 1px solid $woo-btn-color;
-
-			@media (--lg) {
-				width: 50%;
-			}
-
-			&:hover {
-				background: none;
-				color: $woo-btn-color;
-			}
+			@include btn;
 		}
 	}
 

@@ -1,0 +1,76 @@
+@import "../variables-and-mixins.pcss";
+
+.home-about {
+	padding: 100px 0 100px;
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-bottom: 50px;
+
+		&-left,
+		&-center {
+			width: 100%;
+			max-width: 33%;
+		}
+
+		&-left {
+			padding-right: 30px;
+		}
+
+		&-center {
+			margin-right: auto;
+		}
+
+		&-right {
+			width: 100%;
+			text-align: right;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+			max-width: max-content;
+
+			.btn {
+				@include btn;
+				text-transform: uppercase;
+				color: $black;
+				border-radius: 0;
+				background: $white;
+				border: 1px solid $black;
+
+				&:--enter {
+					background: $black;
+					text-decoration: none;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&__image {
+		img {
+			object-fit: cover;
+			width: 100%;
+			max-width: 1280px;
+			height: 100%;
+			min-height: 375px;
+			max-height: 100%;
+		}
+	}
+}

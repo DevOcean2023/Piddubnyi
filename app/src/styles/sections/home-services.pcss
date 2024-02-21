@@ -1,16 +1,26 @@
 @import "../variables-and-mixins.pcss";
 
 .home-services {
-	background: rgba(1, 95, 69, 1);
 	width: 100%;
 
 	.inner {
 		padding: 0;
 	}
 
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		background: rgba(1, 95, 69, 1);
 	}
 
 	&__item {
@@ -25,7 +35,7 @@
 		justify-content: center;
 
 		&:hover {
-			background: rgba(1, 120, 69, 1);
+			background: $light-green;
 		}
 	}
 
