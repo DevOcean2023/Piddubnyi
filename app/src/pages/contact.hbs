@@ -1,0 +1,100 @@
+---
+pageTitle: Контакти
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/banner-pages.css">
+<section class="banner-pages">
+	<img class="object-fit-cover object-fit" src="{{root}}assets/images/contact-banner.jpg" alt="">
+	<div class="inner">
+		<h1 class="banner-pages__title">Контакти</h1>
+	</div>
+</section>
+
+<link rel="stylesheet" href="{{root}}assets/css/contact-info.css">
+<section class="contact-info">
+	<div class="inner">
+		<div class="contact-info__items">
+			<div class="contact-info__item">
+				<h2 class="contact-info__item-title">наша адреса</h2>
+				<p class="contact-info__item-text contact-info__item-address">
+					м. Вінниця, площа Гагаріна, 2 (Вінницький універмаг, ліве крило, 2 поверх)
+				</p>
+			</div>
+			<div class="contact-info__item">
+				<h2 class="contact-info__item-title">робочий час</h2>
+				<p class="contact-info__item-text contact-info__item-time">
+					10:00-19:00<br>
+					Без вихідних
+				</p>
+			</div>
+			<div class="contact-info__item">
+				<h2 class="contact-info__item-title">телефон</h2>
+				<a class="contact-info__item-text contact-info__item-phone" href="tel:+38 (073) 553-35-05">
+					+38 (073) 553-35-05
+				</a>
+			</div>
+			<div class="contact-info__item">
+				<h2 class="contact-info__item-title">Пошта</h2>
+				<a class="contact-info__item-text contact-info__item-mail" href="mailto:example@gmail.com">
+					example@gmail.com
+				</a>
+			</div>
+		</div>
+	</div>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.283209702684!2d28.45111859268324!3d49.23311950048978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5ddb61721b0f%3A0xc4b0a13d9407681a!2zRHIuUGlkZHVibnlpIENsaW5pYyDQmtC-0YHQvNC10YLQvtC70L7Qs9GW0Y8!5e0!3m2!1sru!2sua!4v1708508487826!5m2!1sru!2sua"
+			width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<link rel="stylesheet" href="{{root}}assets/css/contact-form.css">
+<section class="contact-form">
+	<div class="inner">
+		<img src="{{root}}assets/images/contact-form-image.jpg" alt="">
+		<div class="contact-form__wrap">
+			<h2 class="contact-form__title">зв’язатись з нами</h2>
+			<p class="contact-form__text">Залишились запитання, на які не знайшли відповіді? Заповніть, будь ласка,
+				форму нижче, і ми вам відповімо якнайшвидше.</p>
+			{{#> gform-form
+					showError=false
+					showConfirmation=false
+			}}
+				{{#> gform-body showError=showError}}
+					<!-- Custom class: gfield_single_line_text -->
+					{{> gform-singleLineText
+							showError=showError
+							customClass=""
+							hideLabel=false
+							labelText="Ваше Ім’я"
+							required=true
+							typeTextOrPassword="text"
+							fieldSize="medium"
+					}}
+					{{> gform-email
+							showError=showError
+							customClass=""
+							hideLabel=false
+							labelText="Електронна пошта"
+							required=true
+							fieldSize="medium"
+							enableConfirmation=false
+							enterEmailLabel=""
+							confirmEmailLabel=""
+					}}
+					{{> gform-paragraphText
+							showError=showError
+							customClass=""
+							hideLabel=false
+							labelText="Текст повідомлення"
+							required=true
+							fieldSize="medium"
+					}}
+
+				{{/gform-body}}
+				{{> gform-footer
+						type="button"
+						text="Надіслати"
+				}}
+			{{/gform-form}}
+		</div>
+	</div>
+</section>
