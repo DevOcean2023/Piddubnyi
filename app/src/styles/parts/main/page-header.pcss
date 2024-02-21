@@ -13,8 +13,8 @@
 
 	.button-mobile-menu {
 		position: absolute;
-		top: 100px;
-		left: 0;
+		bottom: 24px;
+		left: 26px;
 	}
 
 	&__wrapper {
@@ -48,7 +48,7 @@
 
 		img {
 			width: 98px;
-			height: 64px;
+			height: 44px;
 
 			@media (--lg) {
 				width: 98px;
@@ -265,13 +265,18 @@
 		&__search {
 			display: flex;
 			align-items: center;
+			margin-left: 60px;
+
+			@media (--lg) {
+				margin-left: 0;
+			}
 		}
 	}
 
 	.button {
 		&__search {
-			width: 20px;
-			height: 20px;
+			width: 32px;
+			height: 32px;
 			background: url(../../../images/search.svg) center no-repeat, transparent;
 			background-size: 100%;
 			border: 0;
@@ -301,8 +306,33 @@
 		max-width: 302px;
 		padding: 0;
 		border-bottom: 1px solid rgba(204, 209, 214, 1);
-		position: relative;
-		margin-top: 4px;
+		height: 40px;
+		position: absolute;
+		left: 0;
+		top: -240%;
+		transition: all 0.4s;
+		margin: 0;
+		box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+		z-index: 9999;
+
+		@media (--md) {
+			max-width: 300px;
+			left: 15px;
+		}
+
+		@media (--lg) {
+			left: 30px;
+		}
+
+		&.active {
+			top: 60px;
+			transition: all 0.4s;
+			background: rgba(244, 245, 240, 1);
+
+			@media (--md) {
+				top: 5px;
+			}
+		}
 
 		.close-button {
 			display: block;
@@ -312,6 +342,17 @@
 			left: 5px;
 			top: 50%;
 			transform: translateY(-50%);
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				height: 20px;
+				width: 20px;
+				background: url(../../../images/close-search.svg) center right 0 / 20px 20px no-repeat;
+			}
 		}
 
 		.search-form {
@@ -324,8 +365,8 @@
 			&__input {
 				width: 100%;
 				min-width: 269px;
-				padding: 5px;
-				background: #fff;
+				padding: 8px 5px 5px 30px;
+				background: rgba(244, 245, 240, 1);
 				border-bottom: none;
 				border-top: 0;
 				border-right: 0;
@@ -355,7 +396,7 @@
 			}
 
 			&__submit:is(:hover, :focus, :focus-within) {
-				background: transparent;
+				background: url(../../../images/arrow_right.svg) center right 0 / 20px 20px no-repeat;
 				border: none;
 				text-decoration: none;
 			}
@@ -397,7 +438,7 @@
 
 		&__item {
 			width: 100%;
-			height: 3px;
+			height: 2px;
 			background: #000;
 			border-radius: 2px;
 			transition: opacity 0.3s, transform 0.3s;
@@ -410,7 +451,7 @@
 
 	&[aria-expanded="true"] &__item {
 		position: absolute;
-		width: 14px;
+		width: 25px;
 		top: 47%;
 		left: 3px;
 		height: 2px;

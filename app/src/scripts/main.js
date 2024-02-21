@@ -108,3 +108,24 @@ defer(() => {
 		});
 	});
 });
+
+
+/* search */
+
+document.addEventListener("DOMContentLoaded", function () {
+	const searchLink = document.querySelector(".button__search");
+	const searchForm = document.querySelector(".wrap-search");;
+
+	if (searchLink) {
+		searchLink.addEventListener("click", function (event) {
+			searchForm.classList.add('active');
+		});
+
+		const closeFormButton = searchForm.querySelector(".close-button");
+		if (closeFormButton) {
+			closeFormButton.addEventListener("click", function (event) {
+				searchForm.classList.remove('active');
+			});
+		}
+	}
+});
