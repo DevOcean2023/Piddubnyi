@@ -14,13 +14,13 @@
 
 	&__items {
 		display: flex;
-		gap: 5px;
+		gap: 10px;
 		align-items: center;
 		height: 100%;
 		margin: 0;
 
 		@media (--md) {
-			gap: 23px;
+			gap: 17px;
 		}
 	}
 
@@ -53,17 +53,17 @@
 			position: relative;
 			display: block;
 			transition: background 0.8s;
-			width: 20px;
+			width: 32px;
 
 			@media (--lg) {
-				width: 24px;
+				width: 32px;
 			}
 
 			&::before {
 				width: 32px;
 				height: 32px;
 				position: absolute;
-				left: -8px;
+				left: 0;
 				top: 50%;
 				transform: translate(0, -50%);
 				content: "";
@@ -115,7 +115,7 @@
 				}
 
 				@media (--lg) {
-					left: -8px;
+					left: 0;
 				}
 			}
 		}
