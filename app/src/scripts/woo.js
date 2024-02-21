@@ -42,7 +42,9 @@ function initProductSlider() {
 
 	if (sliderProduct.length) {
 		Array.from(sliderProduct).forEach(sliderEl => {
+			console.log(sliderEl.nextElementSibling)
 			let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
+			console.log(thumbs);
 			const swiper = new Swiper(sliderEl, {
 				loop: false,
 				thumbs: {

@@ -46,12 +46,12 @@ if ( $product->get_image_id() ) {
 ?>
 <div class="product-images swiper">
 	<div class="swiper-wrapper">
-		<?php
-		echo '<div class="product-img swiper-slide">
+	<?php
+	echo '<div class="product-img swiper-slide">
 				<img alt="' . esc_html( $image_alt ) . '" src="' . esc_url( $url ) . '">
 			</div>';
-		do_action( 'woocommerce_product_thumbnails' );
-		?>
+	do_action( 'woocommerce_product_thumbnails' );
+	?>
 	</div>
 </div>
 <!-- / product-images -->
@@ -62,19 +62,22 @@ else :
 	$thumb_url = wc_placeholder_img_src( 'medium' );
 endif;
 ?>
-<div thumbsSlider="" class="swiper swiper-thumbs">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_html( $image_alt ); ?>">
+<div class="thumbs-holder">
+	<div thumbsSlider="" class="swiper swiper-thumbs">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_html( $image_alt ); ?>">
+			</div>
+			<?php $attachment_ids = $product->get_gallery_image_ids(); ?>
+			<?php if ( $attachment_ids ) : ?>
+				<?php foreach ( $attachment_ids as $attachment_id ) : ?>
+					<div class="swiper-slide">
+						<img src="<?php echo esc_html( wp_get_attachment_image_src( $attachment_id, 'medium' )[0] ); ?>">
+					</div>
+				<?php endforeach ?>
+			<?php endif ?>
+
 		</div>
-		<?php $attachment_ids = $product->get_gallery_image_ids(); ?>
-		<?php if ( $attachment_ids ) : ?>
-			<?php foreach ( $attachment_ids as $attachment_id ) : ?>
-				<div class="swiper-slide">
-					<img src="<?php echo esc_html( wp_get_attachment_image_src( $attachment_id, 'medium' )[0] ); ?>">
-				</div>
-			<?php endforeach ?>
-		<?php endif ?>
 	</div>
 </div>
 <!-- /.thumbs-holder -->
