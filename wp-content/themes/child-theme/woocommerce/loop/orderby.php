@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form class="woocommerce-ordering" method="get">
-	<span><?php esc_html_e( 'Order by:', 'woocommerce' ); ?></span>
+	<span><?php esc_html_e( 'Сортувати за:', 'woocommerce' ); ?></span>
 	<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option

@@ -35,7 +35,13 @@ do_action( 'woocommerce_before_main_content' );
 		<div class="inner">
 
 			<div class="shop-page__sidebar">
-				<?php echo do_shortcode( '[wpf-filters id=1]' ); ?>
+				<a href="#" class="shop-page__filter-open-btn"><?php echo esc_html( 'Фільтр' ); ?></a>
+				<div class="shop-page__filter-holder">
+					<a href="#" class="shop-page__filter-close-btn">
+						<span class="screen-reader-text"><?php echo esc_html( 'Закрити' ); ?></span>
+					</a>
+					<?php echo do_shortcode( '[wpf-filters id=1]' ); ?>
+				</div>
 			</div>
 
 			<div class="shop-page__products-holder">
@@ -104,14 +110,6 @@ do_action( 'woocommerce_before_main_content' );
 				 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 				 */
 				do_action( 'woocommerce_after_main_content' );
-
-				/**
-				 * Hook: woocommerce_sidebar.
-				 *
-				 * @hooked woocommerce_get_sidebar - 10
-				 */
-				do_action( 'woocommerce_sidebar' );
-
 
 				?>
 
