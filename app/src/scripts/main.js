@@ -4,6 +4,7 @@ import "../../base/defaults/scripts/main";
 // import './quantity';
 import "../../base/defaults/scripts/libs/accessibility-accordion";
 import defer from "../../base/defaults/scripts/jquery/libs/jquery-defer";
+import "./woo";
 
 /*menu*/
 
@@ -97,7 +98,7 @@ containers.forEach((container, index) => {
 	});
 });
 
-/////
+///
 defer(() => {
 	$(function () {
 		$(".marquee").marquee({
