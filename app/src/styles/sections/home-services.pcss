@@ -1,0 +1,50 @@
+@import "../variables-and-mixins.pcss";
+
+.home-services {
+	width: 100%;
+
+	.inner {
+		padding: 0;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		background: rgba(1, 95, 69, 1);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		width: 205px;
+		height: 205px;
+		align-items: center;
+		gap: 5px;
+		padding: 10px;
+		background: rgba(1, 95, 69, 1);
+		justify-content: center;
+
+		&:hover {
+			background: $light-green;
+		}
+	}
+
+	&__link {
+		font-family: $font-family-raleway;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 26px;
+		text-align: center;
+		color: #fff;
+	}
+}

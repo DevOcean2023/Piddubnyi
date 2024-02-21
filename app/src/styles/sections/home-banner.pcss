@@ -1,0 +1,136 @@
+@import "../variables-and-mixins.pcss";
+@import "../tiny-slider-styles.pcss";
+
+.home-banner {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	height: 100%;
+	max-height: 500px;
+	min-height: 500px;
+
+	@media (--sm) {
+		max-height: 500px;
+		min-height: 500px;
+	}
+
+	@media (min-width: 1441px) {
+		max-height: 650px;
+		min-height: 650px;
+	}
+
+	@media (--lg) {
+		padding: 0;
+	}
+
+	.tns-nav {
+		display: flex;
+		gap: 5px;
+		margin: 40px auto 0;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		button {
+			width: 8px;
+			height: 8px;
+			border-radius: 6px;
+			background: rgba(204, 209, 214, 1);
+			border: none;
+		}
+
+		.tns-nav-active {
+			width: 8px;
+			height: 8px;
+			border-radius: 6px;
+			background: rgba(255, 255, 255, 1);
+		}
+	}
+
+	&__item {
+		display: flex !important;
+		height: 100%;
+		max-height: 500px;
+		min-height: 500px;
+		position: relative;
+		width: 100%;
+		max-width: 1920px;
+
+		@media (min-width: 1441px) {
+			max-height: 650px;
+			min-height: 650px;
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		img {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			max-height: 500px;
+			min-height: 500px;
+			object-fit: cover;
+
+			@media (--sm) {
+				max-height: 500px;
+				min-height: 500px;
+			}
+
+			@media (min-width: 1441px) {
+				max-height: 550px;
+				min-height: 550px;
+			}
+
+			@media (min-width: 1600px) {
+				max-height: 650px;
+				min-height: 650px;
+			}
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		width: 100%;
+		max-width: 692px;
+		height: 100%;
+		max-height: 500px;
+		flex-direction: column;
+		text-align: start;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-right: 192px;
+
+		@media (min-width: 1441px) {
+			max-width: 830px;
+			max-height: 550px;
+		}
+
+		@media (min-width: 1600px) {
+			max-width: 930px;
+			max-height: 650px;
+		}
+
+		.btn {
+			@include btn;
+		}
+	}
+
+	&__text {
+		margin-left: auto;
+	}
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 56px;
+		font-weight: 500;
+		line-height: 73px;
+		width: 100%;
+		max-width: 452px;
+	}
+}

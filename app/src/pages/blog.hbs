@@ -1,0 +1,27 @@
+---
+pageTitle: Блог
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/blog-and-defaults-pages.css">
+
+<h1 class="blog-title">Блог</h1>
+
+{{>blog-preview}}
+
+<section class="blog-articles">
+	<div class="inner">
+		<div class="blog-articles__wrapper">
+			<div class="blog-articles__content">
+				<h2 class="blog-articles__title">Інші статті</h2>
+				<ul class="blog-articles__items">
+					{{>blog-article index=1}}
+					{{>blog-article index=2}}
+					{{>blog-article index=3}}
+				</ul>
+			</div>
+			{{>blog-sidebar archive=true}}
+		</div>
+		{{>pagination}}
+	</div>
+</section>
+

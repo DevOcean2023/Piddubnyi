@@ -128,22 +128,23 @@ $transition: all 0.3s ease;
 
 	font-family: $font-family-raleway;
 	display: inline-block;
-	height: $height-element;
-	line-height: calc($height-element - 2px);
-	padding: 0 33px;
-	color: $color-colors-white;
-	background: $woo-btn-color;
-	border-radius: $border-radius-global;
-	border: 1px solid $woo-btn-color;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
 	transition: background 0.3s;
+	padding: 16px 24px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+	color: $white;
+	border-radius: 0;
+	background: $woo-btn-color;
+	border: 1px solid $woo-btn-color;
 
 	&:--enter {
-		background: $color-element-hover;
-		border: 1px solid $color-element-hover;
+		background: $white;
 		text-decoration: none;
+		color: $woo-btn-color;
 	}
 
 	&[disabled] {
