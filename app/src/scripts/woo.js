@@ -31,6 +31,7 @@ function initProductSlider() {
 				direction: "vertical",
 				slidesPerView: 4,
 				spaceBetween: 24,
+				loop: false,
 				freeMode: true,
 				watchSlidesProgress: true,
 			});
@@ -43,10 +44,11 @@ function initProductSlider() {
 		Array.from(sliderProduct).forEach(sliderEl => {
 			let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
 			const swiper = new Swiper(sliderEl, {
-				spaceBetween: 0,
+				loop: false,
 				thumbs: {
 					swiper: thumbs,
 				},
+				slideClass: "product-img",
 			});
 		});
 	}
