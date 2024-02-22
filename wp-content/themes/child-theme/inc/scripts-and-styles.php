@@ -84,6 +84,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 			'contact-form.css',
 			'gravity-forms.css',
 		),
+		'brands'       => array(
+			'brands.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
