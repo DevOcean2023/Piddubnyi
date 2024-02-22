@@ -250,6 +250,29 @@
 			});
 		}
 	};
+
+	$(".single_variation_wrap").on("show_variation", function (event, variation) {
+		console.log(variation);
+		let element = document.querySelector(".single_variation_wrap");
+		let delElement = element.querySelector(".woocommerce-variation-price del bdi");
+		let delElementAmount = element.querySelector(".woocommerce-variation-price del .amount");
+		let insElement = element.querySelector(".woocommerce-variation-price ins bdi");
+
+		if (delElement && insElement) {
+			let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+			let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+
+			if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
+				let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
+				let salesElement = document.createElement("div");
+				salesElement.className = "sales";
+				salesElement.innerText = "-" + discountPercentage + "%";
+				delElementAmount.appendChild(salesElement);
+			} else {
+				console.error("Помилка при отриманні значень цін для карточки товару.");
+			}
+		}
+	});
 })(jQuery);
 ////////////////////////login-section
 document.addEventListener("DOMContentLoaded", function () {
@@ -345,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////////add sale to shop
-let instockElements = document.querySelectorAll(".sale");
+let instockElements = document.querySelectorAll("body.woocommerce-shop .sale");
 
 instockElements.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");
@@ -359,6 +382,28 @@ instockElements.forEach(function (instockElement) {
 			salesElement.className = "sales";
 			salesElement.innerText = "-" + discountPercentage + "%";
 			instockElement.appendChild(salesElement);
+		} else {
+			console.error("Помилка при отриманні значень цін для карточки товару.");
+		}
+	}
+});
+
+////////////////////////add sale to single product
+let productSimple = document.querySelectorAll("body.single-product .product-type-simple");
+
+productSimple.forEach(function (instockElement) {
+	let delElement = instockElement.querySelector("del bdi");
+	let insElement = instockElement.querySelector("ins bdi");
+	let amountElement = instockElement.querySelector(".price del .amount");
+	if (delElement || insElement) {
+		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
+			let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
+			let salesElement = document.createElement("div");
+			salesElement.className = "sales";
+			salesElement.innerText = "-" + discountPercentage + "%";
+			amountElement.appendChild(salesElement);
 		} else {
 			console.error("Помилка при отриманні значень цін для карточки товару.");
 		}
@@ -461,6 +506,7 @@ function initProductSlider() {
 		Array.from(sliderProduct).forEach(sliderEl => {
 			let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
 			const swiper = new Swiper(sliderEl, {
+				spaceBetween: 2,
 				loop: false,
 				thumbs: {
 					swiper: thumbs,
@@ -470,3 +516,4 @@ function initProductSlider() {
 		});
 	}
 }
+

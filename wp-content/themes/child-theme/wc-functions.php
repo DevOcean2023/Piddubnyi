@@ -183,3 +183,16 @@ function get_image_alt( $id ) {
 
 	return $alt;
 }
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+function add_product_info() {
+	global $product;
+	$sku    = $product->get_sku();
+	$status = $product->get_stock_status();
+
+	echo '<div class="product_sku">ID товару: ' . esc_html( $sku ) . '</div> <div class="product_stock-status">' . esc_html( $status ) . '</div>';
+}
+
+add_action( 'woocommerce_single_product_summary', 'add_product_info', 7 );
