@@ -388,9 +388,7 @@
 {{#>popup id="popup-menu"}}
 	<img src="{{root}}assets/images/contact-bg.png" alt="" class="object-fit-cover object-fit">
 	<div class="popup__item">
-		<h2 class="popup__item_title-popup">Lorem ipsum</h2>
-		<p class="popup__item_p">Lorem ipsum dolor sit amet consectetur. Euismod gravida risus molestie
-			sapien. </p>
+		<h2 class="popup__item_title-popup">Вкажіть ваші дані та ми обов’язково з вами зв’яжемось</h2>
 		{{#> gform-form
 				showError=false
 				showConfirmation=false
@@ -400,43 +398,56 @@
 						showError=showError
 						customClass=""
 						hideLabel=false
-						labelText="First name"
+						labelText="Ваше Ім’я*"
 						typeTextOrPassword="text"
 						fieldSize="medium"
 						placeholderText=""
 				}}
-				{{> gform-singleLineText
-						showError=showError
-						customClass=""
-						hideLabel=false
-						labelText="Last name"
-						typeTextOrPassword="text"
-						fieldSize="medium"
-						placeholderText=""
-				}}
+
 				{{> gform-phone
 						showError=showError
 						customClass=""
 						hideLabel=false
-						labelText="Phone"
+						labelText="Ваш номер телефону*"
 						fieldSize="medium"
 				}}
-				{{> gform-email
+				{{> gform-consent
+						showError=showError
+						customClass="gfield_consent"
+						hideLabel=false
+						labelText=""
+						required=false
+						checkboxLabel="Не телефонуйте мені, а краще напишіть у месенджер"
+						descriptionText=""
+				}}
+
+				{{> gform-singleLineText
 						showError=showError
 						customClass=""
 						hideLabel=false
-						labelText="Email"
+						labelText="Нік у соцмережах (Instagram, Facebook, Telegram)*"
+						required=true
+						typeTextOrPassword="text"
 						fieldSize="medium"
+						placeholderText=""
+						descriptionText=""
 				}}
-				{{> gform-paragraphText
+
+				{{> gform-singleLineText
 						showError=showError
 						customClass=""
 						hideLabel=false
-						labelText="Message"
+						labelText="Назва процедури, на яку бажаєте записатись"
+						required=true
+						typeTextOrPassword="text"
+						fieldSize="medium"
+						placeholderText=""
+						descriptionText=""
 				}}
+
 				{{> gform-footer
 						type="button"
-						text="Send booking request"
+						text="підтвердити запис"
 				}}
 			{{/gform-body}}
 		{{/gform-form}}
