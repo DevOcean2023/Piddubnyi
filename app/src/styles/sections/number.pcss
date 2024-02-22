@@ -67,6 +67,10 @@
 		border-right: 2px solid rgba(99, 155, 139, 1);
 		align-items: center;
 
+		@media (--md) {
+			min-height: 177px;
+		}
+
 		@media (--lg) {
 			min-height: 103px;
 			gap: 7px;
@@ -75,6 +79,10 @@
 			max-width: 302px;
 			min-width: 302px;
 			border-right: 2px solid rgba(1, 95, 69, 1);
+		}
+
+		@media (min-width: 1440px) {
+			gap: 13px;
 		}
 	}
 
@@ -96,6 +104,9 @@
 			min-height: 56px;
 			font-size: 32px;
 			line-height: 42px;
+			width: 100%;
+			min-width: 71px;
+			max-width: max-content;
 		}
 	}
 
