@@ -30,7 +30,7 @@ body.filters-opened {
 }
 
 .woocommerce-shop {
-	ul.products {
+	.products {
 		padding: 0;
 		margin: 0;
 		list-style: none;
@@ -44,6 +44,17 @@ body.filters-opened {
 
 		@media (--xl) {
 			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.product {
+			&:hover {
+				.add {
+					&_to_cart_button {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
 		}
 	}
 
@@ -201,15 +212,6 @@ body.filters-opened {
 	font-family: $font-family-raleway;
 	position: relative;
 
-	&:hover {
-		.add {
-			&_to_cart_button {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
-	}
-
 	.onsale {
 		position: absolute;
 		opacity: 0;
@@ -225,6 +227,7 @@ body.filters-opened {
 			flex-direction: column;
 			transition: $transition;
 			position: relative;
+			background: $white;
 
 			&:hover {
 				border-color: $woo-btn-color;
