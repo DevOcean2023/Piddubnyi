@@ -21,8 +21,8 @@ tinySlider(
 	"[data-slider=\"slider-reviews\"]",
 	{
 		items: 1,
-		gutter: 30,
-		autoplay: true,
+		gutter: 0,
+		autoplay: false,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
 		speed: 1500,
@@ -61,7 +61,7 @@ tinySlider(
 
 tinySlider("[data-slider=\"slider-products\"]", {
 	items: 1,
-	gutter: 0,
+	gutter: 24,
 	autoplay: false,
 	autoplayTimeout: 3000,
 	autoplayButtonOutput: false,
@@ -82,10 +82,10 @@ tinySlider("[data-slider=\"slider-products\"]", {
 		878: {
 			items: 3,
 		},
-		1140: {
-			items: 4,
+		1024: {
+			items: 3,
 		},
-		1440: {
+		1360: {
 			items: 4,
 		},
 	},

@@ -1,0 +1,17 @@
+/**
+ * Custom WooCommerce fonts.
+ */
+
+@font-face {
+	font-family: Gilroy;
+	src: url(../fonts/Gilroy-Light.otf) format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Gilroy-ExtraBold;
+	src: url(../fonts/Gilroy-ExtraBold.otf) format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
