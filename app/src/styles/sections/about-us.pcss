@@ -1,0 +1,115 @@
+@import "../variables-and-mixins.pcss";
+
+.about-us {
+	padding-bottom: 60px;
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 24px;
+		flex-direction: column;
+
+		@media (--lg) {
+			flex-direction: row;
+		}
+	}
+
+	&__left {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 30px;
+		order: 2;
+		flex-direction: column;
+
+		@media (--lg) {
+			order: 1;
+			flex-direction: row;
+			max-width: 737px;
+		}
+
+		&-items {
+			width: 100%;
+			max-width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 24px;
+
+			@media (--lg) {
+				max-width: 188px;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+		}
+
+		&-item {
+			&-title {
+				font-family: $font-family-raleway;
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 23px;
+				margin-bottom: 8px;
+				color: #171a19;
+				text-transform: uppercase;
+			}
+
+			&-text {
+				font-family: $font-family-raleway;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+				color: #171a19;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		&-info {
+			width: 100%;
+			max-width: 100%;
+
+			@media (--lg) {
+				max-width: 521px;
+			}
+
+			&-title {
+				font-family: $font-family-raleway;
+				font-size: 32px;
+				font-weight: 600;
+				line-height: 42px;
+				color: #171a19;
+				margin-bottom: 24px;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-family: $font-family-raleway;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+				margin-bottom: 20px;
+				color: #171a19;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__right {
+		width: 100%;
+		max-width: 100%;
+		order: 1;
+		text-align: center;
+
+		@media ( --lg ) {
+			max-width: 40.5%;
+			order: 2;
+		}
+	}
+}
