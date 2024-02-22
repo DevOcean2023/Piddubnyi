@@ -4,7 +4,7 @@ import {tns} from "tiny-slider";
 tinySlider("[data-slider=\"banner-slider\"]", {
 	items: 1,
 	gutter: 0,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 4000,
 	autoplayButtonOutput: false,
 	speed: 1500,
@@ -22,7 +22,7 @@ tinySlider(
 	{
 		items: 1,
 		gutter: 0,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
 		speed: 1500,
@@ -62,7 +62,7 @@ tinySlider(
 tinySlider("[data-slider=\"slider-products\"]", {
 	items: 1,
 	gutter: 10,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 3000,
 	autoplayButtonOutput: false,
 	speed: 1500,
