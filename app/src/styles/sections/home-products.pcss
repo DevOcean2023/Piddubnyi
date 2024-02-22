@@ -122,9 +122,12 @@
 		width: 100%;
 		max-width: 164px;
 		list-style: none;
+		height: 100%;
+		min-height: 405px;
 
 		@media (--lg) {
 			max-width: 302px;
+			min-height: 440px;
 		}
 
 		.woocommerce-loop-product {
@@ -136,7 +139,7 @@
 				width: 100%;
 				max-width: 302px !important;
 				position: relative;
-				padding: 12px;
+				padding: 12px 12px 65px 12px;
 				border-radius: 0;
 				background: #fff;
 				height: 100%;
@@ -144,6 +147,7 @@
 				border: 1px solid #015f45 !important;
 
 				@media (--lg) {
+					padding: 12px;
 					border: 1px solid #fff !important;
 				}
 
@@ -266,38 +270,81 @@
 			display: none;
 		}
 
+		&:hover {
+			.add {
+				&_to_cart_button {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
 		.add {
 			&_to {
 				&_cart {
 					&_button {
 						@include btn;
-						top: 58%;
+						opacity: 1;
+						visibility: visible;
+						top: unset;
+						bottom: 12px;
 						left: 50.2%;
 						width: 100%;
 						max-width: 140px;
 
 						@media (--lg) {
+							bottom: unset;
+							top: 58%;
+							visibility: hidden;
 							max-width: 278px;
+							opacity: 0;
 						}
 					}
 				}
 			}
 		}
 
+		.tinvwl {
+			&_remove_from_wishlist-text,
+			&_add_to_wishlist-text {
+				display: none !important;
+			}
+
+			&_add_to_wishlist_button {
+				position: absolute;
+				top: 19px;
+				left: 19px;
+				margin: 0 !important;
+
+				@media (--lg) {
+					top: 32px;
+					left: 28px;
+				}
+			}
+		}
+
 		.sales {
 			position: absolute;
-			top: 31px;
-			right: 26px;
+			top: 20px;
+			right: 19px;
 			color: #fff;
 			text-align: center;
 			font-family: $font-family-raleway;
-			font-size: 14px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: 500;
-			line-height: 18.2px;
+			line-height: 16px;
 			border-radius: 20px;
 			background: #171a19;
-			padding: 8px 12px;
+			padding: 6px 8px;
+
+			@media (--lg) {
+				padding: 8px 12px;
+				font-size: 14px;
+				line-height: 18.2px;
+				top: 31px;
+				right: 26px;
+			}
 		}
 
 		.product-date {

@@ -3,6 +3,21 @@
 .blog-home {
 	padding: 93px 0 20px;
 
+	.top-btn.btn {
+		display: none;
+
+		@media (min-width: 835px) {
+			display: block;
+		}
+	}
+	.bottom-btn {
+		display: block;
+
+		@media (min-width: 835px) {
+			display: none;
+		}
+	}
+
 	&__head {
 		display: flex;
 		justify-content: space-between;
