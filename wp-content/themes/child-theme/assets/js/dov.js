@@ -350,16 +350,18 @@ let instockElements = document.querySelectorAll(".sale");
 instockElements.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");
 	let insElement = instockElement.querySelector("ins bdi");
-	let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
-	let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
-	if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
-		let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
-		let salesElement = document.createElement("div");
-		salesElement.className = "sales";
-		salesElement.innerText = "-" + discountPercentage + "%";
-		instockElement.appendChild(salesElement);
-	} else {
-		console.error("Помилка при отриманні значень цін для карточки товару.");
+	if (delElement || insElement) {
+		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
+			let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
+			let salesElement = document.createElement("div");
+			salesElement.className = "sales";
+			salesElement.innerText = "-" + discountPercentage + "%";
+			instockElement.appendChild(salesElement);
+		} else {
+			console.error("Помилка при отриманні значень цін для карточки товару.");
+		}
 	}
 });
 
