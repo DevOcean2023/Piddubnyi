@@ -1,7 +1,7 @@
 @import "../variables-and-mixins.pcss";
 
 .trusted {
-	padding: 50px 0 70px;
+	padding: 50px 0 87px;
 
 	@media (--sm) {
 		padding: 62px 0 24px;
@@ -9,19 +9,24 @@
 
 	&__title {
 		font-family: $font-family-raleway;
-		font-size: 32px;
+		font-size: 24px;
 		font-weight: 600;
-		line-height: 42px;
-		margin-bottom: 41px;
+		line-height: 31px;
+		margin-bottom: 29px;
 		text-align: center;
 		text-transform: uppercase;
+
+		@media (--md) {
+			margin-bottom: 41px;
+			line-height: 42px;
+			font-size: 32px;
+		}
 	}
 
 	&__items {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
 		gap: 20px;
 
 		@media (--sm) {
