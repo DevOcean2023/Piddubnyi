@@ -7,7 +7,17 @@
 	margin: 0 auto;
 
 	@media (--md) {
-		padding: 59px 0 34px;
+		padding: 59px 0 58px;
+	}
+
+	.inner {
+		@media (--lg) {
+			padding: 0 32px;
+		}
+
+		@media (--xxl) {
+			padding: 0 35px;
+		}
 	}
 
 	.tooltip {
@@ -15,14 +25,16 @@
 	}
 
 	[data-slider="slider-products"] .tns-item {
-		padding-right: 23px !important;
+		padding-right: 19px !important;
+		width: 321px !important;
 	}
 
 	[data-slider="slider-products"] .tns-inner {
 		margin: 0 !important;
 	}
 
-	#tns2-iw {
+	#tns2-iw,
+	#tns1-iw {
 		margin: 0 !important;
 	}
 
@@ -43,11 +55,11 @@
 			max-width: 803px;
 		}
 
-		@media (min-width: 1140px) {
-			max-width: 1280px;
+		@media (min-width: 1024px) {
+			max-width: 963px;
 		}
 
-		@media (min-width: 1440px) {
+		@media (min-width: 1360px) {
 			max-width: 1280px;
 		}
 	}
@@ -59,6 +71,7 @@
 		font-weight: 600;
 		line-height: 42px;
 		text-align: center;
+		margin-bottom: 15px;
 
 	}
 
@@ -69,12 +82,13 @@
 		font-weight: 400;
 		line-height: 26px;
 		text-align: center;
+		margin-bottom: 21px;
 	}
 
 	&__button {
 		display: flex;
 		justify-content: center;
-		margin-top: 50px;
+		margin-top: 21px;
 
 		.btn {
 			@include btn;
@@ -83,6 +97,8 @@
 			border-radius: 0;
 			background: $white;
 			border: 1px solid $black;
+			width: 100%;
+			max-width: 300px;
 
 			&:--enter {
 				background: $black;
@@ -154,7 +170,7 @@
 				text-transform: capitalize;
 				width: 100%;
 				max-width: 278px;
-				margin-top: 0;
+				margin-top: 17px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -272,8 +288,8 @@
 
 		.sales {
 			position: absolute;
-			top: 20px;
-			right: 10px;
+			top: 31px;
+			right: 26px;
 			color: #fff;
 			text-align: center;
 			font-family: $font-family-raleway;
@@ -320,7 +336,7 @@
 
 			@media (min-width: 1440px) {
 				position: absolute;
-				top: 50%;
+				top: 42%;
 			}
 
 			[data-controls="prev"] {
@@ -329,7 +345,7 @@
 				@media (min-width: 1440px) {
 					position: absolute;
 					top: 50%;
-					left: -50px;
+					left: -60px;
 				}
 			}
 

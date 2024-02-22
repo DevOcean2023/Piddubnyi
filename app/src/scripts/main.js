@@ -114,7 +114,7 @@ defer(() => {
 
 document.addEventListener("DOMContentLoaded", function () {
 	const searchLink = document.querySelector(".button__search");
-	const searchForm = document.querySelector(".wrap-search");;
+	const searchForm = document.querySelector(".wrap-search");
 
 	if (searchLink) {
 		searchLink.addEventListener("click", function (event) {

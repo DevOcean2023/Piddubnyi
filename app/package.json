@@ -92,6 +92,7 @@
         "dialog-polyfill": "^0.5.6",
         "instant.page": "^5.2.0",
         "select2": "^4.1.0-rc.0",
+        "swiper": "^11.0.6",
         "tiny-slider": "^2.9.4",
         "tom-select": "^2.3.1"
     },
