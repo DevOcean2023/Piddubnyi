@@ -481,6 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 	initProductSlider();
+	initRelatedProductsSlider();
 });
 
 function initProductSlider() {
@@ -512,6 +513,41 @@ function initProductSlider() {
 					swiper: thumbs,
 				},
 				slideClass: "product-img",
+			});
+		});
+	}
+}
+
+function initRelatedProductsSlider() {
+	const sliderEls = document.querySelectorAll(".swiper-related");
+
+	if (sliderEls.length) {
+		Array.from(sliderEls).forEach(sliderEl => {
+			const btnPrev = sliderEl.querySelector(".swiper-button-prev");
+			const btnNext = sliderEl.querySelector(".swiper-button-next");
+
+			const swiper = new Swiper(sliderEl, {
+				direction: "horizontal",
+				slidesPerView: 4,
+				spaceBetween: 24,
+				loop: false,
+				navigation: {
+					nextEl: btnNext,
+					prevEl: btnPrev,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 0
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 24
+					},
+					991: {
+						slidesPerView: 4
+					}
+				}
 			});
 		});
 	}
