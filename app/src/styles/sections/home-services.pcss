@@ -26,12 +26,18 @@
 
 	&__title {
 		font-family: $font-family-raleway;
-		font-size: 32px;
+		font-size: 24px;
 		font-weight: 600;
-		line-height: 42px;
-		margin-bottom: 39px;
+		line-height: 31px;
+		margin-bottom: 34px;
 		text-align: center;
 		text-transform: uppercase;
+
+		@media (--md) {
+			margin-bottom: 39px;
+			line-height: 42px;
+			font-size: 32px;
+		}
 	}
 
 	&__wrapper {
@@ -39,7 +45,7 @@
 		flex-wrap: wrap;
 		background: rgba(1, 95, 69, 1);
 		justify-content: center;
-		padding: 16px 24px;
+		padding: 24px 15px;
 		gap: 16px;
 
 		@media (--md) {
@@ -50,8 +56,10 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
-		width: 205px;
-		height: 205px;
+		width: 100%;
+		max-width: 164px;
+		height: 100%;
+		min-height: 116px;
 		align-items: center;
 		gap: 5px;
 		padding: 10px;
@@ -59,6 +67,9 @@
 		justify-content: center;
 
 		@media (--md) {
+			flex-direction: column;
+			max-width: 205px;
+			min-height: 205px;
 			background: rgba(1, 95, 69, 1);
 
 			&:hover {
@@ -86,9 +97,12 @@
 		line-height: 21px;
 		text-align: center;
 		color: rgba(1, 95, 69, 1);
+		width: 100%;
+		max-width: 148px;
 
 
 		@media (--md) {
+			max-width: unset;
 			font-size: 20px;
 			line-height: 26px;
 			color: #fff;

@@ -1,16 +1,43 @@
 @import "../variables-and-mixins.pcss";
 
 .home-about {
-	padding: 103px 0 120px;
+	padding: 112px 0 109px;
+
+	@media (--md) {
+		padding: 103px 0 120px;
+	}
+
+	.desktop {
+		display: none;
+
+		@media (--md) {
+			display: block;
+		}
+	}
+
+	.mobile {
+		display: block;
+
+		@media (--md) {
+			display: none;
+		}
+	}
 
 	&__title {
 		font-family: $font-family-raleway;
-		font-size: 32px;
+		font-size: 24px;
 		font-weight: 600;
-		line-height: 42px;
-		margin-bottom: 38px;
-		text-align: center;
+		line-height: 31px;
+		margin-bottom: 30px;
+		text-align: left;
 		text-transform: uppercase;
+
+		@media (--md) {
+			text-align: center;
+			margin-bottom: 38px;
+			line-height: 42px;
+			font-size: 32px;
+		}
 	}
 
 	&__wrapper {
@@ -22,7 +49,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 3px;
+
+		@media (--md) {
+			margin-bottom: 20px;
+		}
 
 		&-left,
 		&-center {
@@ -30,31 +61,50 @@
 
 			p {
 				font-family: $font-family-raleway;
-				font-size: 16px;
+				font-size: 14px;
 				font-weight: 400;
-				line-height: 21px;
+				line-height: 18px;
 				margin-bottom: 22px;
+
+				@media (--md) {
+					line-height: 21px;
+					font-size: 16px;
+				}
 			}
 		}
 
 		&-left {
-			margin-right: 25px;
-			max-width: 411px;
+			max-width: 100%;
+
+			@media (--md) {
+				margin-right: 25px;
+				max-width: 411px;
+			}
 		}
 
 		&-center {
-			margin-right: auto;
-			max-width: 305px;
+			max-width: 100%;
+
+			@media (--md) {
+				margin-right: auto;
+				max-width: 305px;
+			}
 		}
 
 		&-right {
 			width: 100%;
 			text-align: right;
 			display: flex;
-			align-items: flex-end;
-			justify-content: flex-end;
-			max-width: 302px;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
 			padding-bottom: 20px;
+
+			@media (--md) {
+				max-width: 302px;
+				align-items: flex-end;
+				justify-content: flex-end;
+			}
 
 			.btn {
 				@include btn;
@@ -82,8 +132,12 @@
 			width: 100%;
 			max-width: 1280px;
 			height: 100%;
-			min-height: 375px;
+			min-height: 276px;
 			max-height: 100%;
+
+			@media (--md) {
+				min-height: 375px;
+			}
 		}
 	}
 }

@@ -22,7 +22,7 @@ tinySlider(
 	{
 		items: 1,
 		gutter: 0,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
 		speed: 1500,
