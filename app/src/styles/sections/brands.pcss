@@ -1,0 +1,84 @@
+@import "../variables-and-mixins.pcss";
+
+.brands {
+	padding: 37px 0 60px;
+
+	&__title {
+		font-family: $font-family-raleway;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+		text-align: center;
+		color: #171a19;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 21px 25px;
+
+		@media (--xs) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (--md) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		@media (--xl) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 80%;
+		background-color: #f4f5f0;
+		text-align: center;
+		margin: 0 auto;
+		transition: 0.3s;
+
+		@media (--xs) {
+			max-width: 301px;
+		}
+
+		@media (--sm) {
+			max-width: 301px;
+		}
+
+		&:hover {
+			background-color: #e8f5e8;
+			transition: 0.3s;
+		}
+
+		img {
+			width: 100%;
+			max-width: 177px;
+			margin-bottom: 32px;
+		}
+
+		&-title {
+			font-family: $font-family-raleway;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 28px;
+			color: #171a19;
+
+			@media (--lg) {
+				font-size: 24px;
+				line-height: 31px;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 21.5px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@ import {tns} from "tiny-slider";
 tinySlider("[data-slider=\"banner-slider\"]", {
 	items: 1,
 	gutter: 0,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 4000,
 	autoplayButtonOutput: false,
 	speed: 1500,
@@ -22,7 +22,7 @@ tinySlider(
 	{
 		items: 1,
 		gutter: 0,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
 		speed: 1500,
@@ -61,7 +61,7 @@ tinySlider(
 
 tinySlider("[data-slider=\"slider-products\"]", {
 	items: 1,
-	gutter: 24,
+	gutter: 10,
 	autoplay: false,
 	autoplayTimeout: 3000,
 	autoplayButtonOutput: false,
@@ -73,14 +73,15 @@ tinySlider("[data-slider=\"slider-products\"]", {
 	swipeAngle: 15,
 	displayCounter: true,
 	responsive: {
-		390: {
+		375: {
 			items: 2,
 		},
-		768: {
-			gutter: 32,
-		},
-		878: {
+
+		568: {
 			items: 3,
+		},
+		768: {
+			items: 4,
 		},
 		1024: {
 			items: 3,

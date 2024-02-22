@@ -56,9 +56,13 @@
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		bottom: 24px;
+		bottom: 17px;
 		left: 50%;
 		transform: translateX(-50%);
+
+		@media (min-width: 500px) {
+			bottom: 24px;
+		}
 
 		button {
 			width: 8px;
@@ -121,7 +125,7 @@
 	&__wrap {
 		display: flex;
 		width: 100%;
-		max-width: 692px;
+		max-width: 245px;
 		height: 100%;
 		max-height: 500px;
 		flex-direction: column;
@@ -130,7 +134,24 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding-right: 160px;
+		padding-right: 55px;
+
+		@media (min-width: 500px) {
+			max-width: 392px;
+		}
+
+		@media (min-width: 600px) {
+			max-width: 578px;
+			padding-right: 160px;
+		}
+
+		@media (min-width: 850px) {
+			max-width: 730px;
+		}
+
+		@media (--lg) {
+			max-width: 692px;
+		}
 
 		@media (min-width: 1441px) {
 			max-width: 830px;
@@ -153,7 +174,7 @@
 				display: none;
 			}
 
-			@media (min-width: 800px) {
+			@media (--lg) {
 				display: block;
 			}
 		}
@@ -167,15 +188,23 @@
 				display: block;
 			}
 
-			@media (min-width: 800px) {
+			@media (--lg) {
 				display: none;
 			}
 		}
 	}
 
 	&__text {
-		margin-left: auto;
-		margin-top: 91px;
+		margin-left: 16px;
+		margin-top: 90px;
+
+		@media (--md) {
+			margin-top: 91px;
+		}
+
+		@media (--lg) {
+			margin-left: auto;
+		}
 	}
 
 	&__title {
@@ -184,10 +213,12 @@
 		line-height: 42px;
 		font-weight: 500;
 		width: 100%;
-		max-width: 452px;
-		margin-bottom: 56px;
+		max-width: 253px;
+		margin-bottom: 41px;
 
 		@media (--md) {
+			max-width: 452px;
+			margin-bottom: 56px;
 			font-size: 56px;
 			line-height: 73px;
 		}
