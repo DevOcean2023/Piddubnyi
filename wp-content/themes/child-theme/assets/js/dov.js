@@ -393,7 +393,7 @@ processElements(document);
 //////////add class to contact my account
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
-	if ($('.wrapper-form-account').length > 0) {
+	if ($(".wrapper-form-account").length > 0) {
 		$(".default-page__p").addClass("deactive");
 		$("button[name=\"save_account_details\"]").hide();
 		$(".edit-fields-link").click(function () {
@@ -431,3 +431,40 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+	initProductSlider();
+});
+
+function initProductSlider() {
+	const sliderThumbs = document.querySelectorAll(".swiper-thumbs");
+
+	if (sliderThumbs.length) {
+		Array.from(sliderThumbs).forEach(sliderEl => {
+			const swiper = new Swiper(sliderEl, {
+				direction: "vertical",
+				slidesPerView: 4,
+				spaceBetween: 24,
+				loop: false,
+				freeMode: true,
+				watchSlidesProgress: true,
+				mousewheel: true,
+			});
+		});
+	}
+
+	const sliderProduct = document.querySelectorAll(".product-images");
+
+	if (sliderProduct.length) {
+		Array.from(sliderProduct).forEach(sliderEl => {
+			let thumbs = sliderEl.nextElementSibling.querySelector(".swiper-thumbs").swiper;
+			const swiper = new Swiper(sliderEl, {
+				loop: false,
+				thumbs: {
+					swiper: thumbs,
+				},
+				slideClass: "product-img",
+			});
+		});
+	}
+}
