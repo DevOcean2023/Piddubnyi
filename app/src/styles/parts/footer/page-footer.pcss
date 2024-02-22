@@ -23,7 +23,7 @@
 	}
 
 	&__top {
-		padding: 31px 0 0;
+		padding: 41px 0 0;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -79,9 +79,9 @@
 
 		.logo {
 			width: 100%;
-			max-width: 92px;
+			max-width: 163px;
 			height: 100%;
-			max-height: 71px;
+			max-height: 105px;
 
 			@media (min-width: 500px) {
 				max-width: 193px;
@@ -97,10 +97,12 @@
 
 	&__social {
 		order: 2;
+		margin-right: 13px;
 
 		@media (min-width: 775px) {
 			margin-top: 50px;
 			order: unset;
+			margin-right: 0;
 		}
 
 		@media (min-width: 966px) {
@@ -110,14 +112,15 @@
 		h2 {
 			color: #fff;
 			font-family: $font-family-raleway;
-			margin-bottom: 20px;
 			font-size: 16px;
 			font-weight: 500;
 			line-height: 20.8px;
+			margin-bottom: 23px;
 
 			@media (--sm) {
 				font-size: 20px;
 				line-height: 26px;
+				margin-bottom: 20px;
 			}
 		}
 
@@ -242,17 +245,27 @@
 		flex-direction: column;
 		gap: 10px;
 		position: relative;
+		margin-bottom: 23px;
+
+		@media (--md) {
+			margin-bottom: 16px;
+		}
 
 		&::after {
 			content: "";
 			background: url(../../../images/phone.svg) no-repeat center;
 			background-size: cover;
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 16px;
+			height: 16px;
 			position: absolute;
 			top: 0;
 			left: -30px;
+
+			@media (--md) {
+				width: 20px;
+				height: 20px;
+			}
 		}
 	}
 
@@ -280,6 +293,11 @@
 		position: relative;
 		width: 100%;
 		max-width: 299px;
+		margin-bottom: 20px;
+
+		@media (--md) {
+			margin-bottom: 16px;
+		}
 
 		@media (--sm) {
 			font-size: 16px;
@@ -308,11 +326,12 @@
 	}
 
 	&__contacts {
-		margin: 11px 0 24px;
-		padding-left: 30px;
+		margin: 21px 0 24px;
+		padding-left: 32px;
 
 		@media (min-width: 500px) {
 			margin: 25px 0 24px;
+			padding-left: 30px;
 		}
 
 		a {
