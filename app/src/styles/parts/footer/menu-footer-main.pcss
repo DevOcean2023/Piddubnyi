@@ -4,7 +4,7 @@
 	width: 100%;
 	max-width: 100%;
 	order: 3;
-	margin-top: 50px;
+	margin-top: -3px;
 
 	@media (min-width: 775px) {
 		max-width: 51%;
@@ -30,6 +30,11 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		gap: 32px;
+
+		@media (min-width: 390px) {
+			gap: 0;
+		}
 
 		@media (min-width: 360px) {
 			align-items: unset;
@@ -73,8 +78,12 @@
 		}
 
 		&:not(&_level_1) {
-			margin-bottom: 15px;
+			margin-bottom: 9px;
 			width: 100%;
+
+			@media (--md) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -112,7 +121,7 @@
 	}
 
 	&__sub-items {
-		margin: 10px 0 0;
+		margin: 22px 0 0;
 
 		@media (min-width: 500px) {
 			margin: 14px 0 0;
