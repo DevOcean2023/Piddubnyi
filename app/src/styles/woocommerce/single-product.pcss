@@ -85,6 +85,8 @@ body.single-product {
 		}
 
 		table.variations {
+			margin: 0 0 9px;
+
 			.label {
 				text-align: left;
 				font-size: 16px;
@@ -303,6 +305,121 @@ body.single-product {
 
 	.woocommerce-tabs {
 		flex: 1 0 100%;
+		margin: 35px 0;
+
+		.accordion {
+			border-bottom: 1px solid $woo-border-color;
+
+			&.accordion {
+				&_active {
+					.accordion {
+						&__header {
+							padding-bottom: 10px;
+						}
+
+						&__trigger {
+							color: $white;
+
+							&::before {
+								transform: none;
+							}
+
+							&::after {
+								transform: rotate(-135deg);
+								top: 40%;
+								right: 23px;
+							}
+						}
+					}
+				}
+			}
+
+			&__header {
+				padding: 32px 0;
+				margin: 0;
+				position: relative;
+
+			}
+
+			&__trigger {
+				font-size: 24px;
+				font-weight: 500;
+				width: 100%;
+				background: none;
+				outline: 0;
+				border: none;
+				position: relative;
+				text-align: left;
+				padding: 19px 55px 19px 30px;
+				overflow: hidden;
+				transition: $transition;
+
+				@media (--md) {
+					font-size: 32px;
+					padding: 19px 55px;
+				}
+
+				&:hover {
+					color: $white;
+
+					&::before {
+						transform: none;
+					}
+				}
+
+				&::before {
+					content: "";
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translateX(-100%);
+					background: $woo-main-color;
+					transition: $transition;
+				}
+
+				&::after {
+					content: "";
+					height: 18px;
+					width: 18px;
+					border-width: 0 3px 3px 0;
+					border-style: solid;
+					transform: rotate(45deg) translateY(-50%);
+					position: absolute;
+					top: 30%;
+					right: 30px;
+
+					@media (--md) {
+						height: 26px;
+						width: 26px;
+						right: 34px;
+					}
+				}
+			}
+
+			&__panel {
+				padding: 0 16px 32px;
+			}
+
+			&__title {
+				position: relative;
+			}
+
+			&__counter {
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				font-size: 23px;
+				font-weight: 300;
+				font-style: italic;
+				color: inherit;
+
+				@media (--md) {
+					left: 16px;
+				}
+			}
+		}
 	}
 
 	.thumbs-holder {

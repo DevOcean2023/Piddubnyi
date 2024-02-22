@@ -196,3 +196,125 @@ function add_product_info() {
 }
 
 add_action( 'woocommerce_single_product_summary', 'add_product_info', 7 );
+
+////////////////////////////////////////////////////////////////////
+/// Add the "Composition" tab on the product edit page in the admin
+function custom_product_data_tab_composition( $tabs ) {
+	$tabs['composition'] = array(
+		'label'    => __( 'Склад', 'woocommerce' ),
+		'target'   => 'custom_composition',
+	);
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_data_tabs', 'custom_product_data_tab_composition' );
+
+// The contents of the "Application Features" tab on the product editing page in the admin
+function custom_product_data_content_composition() {
+	global $post;
+
+	$custom_field = get_post_meta( $post->ID, '_custom_composition', true );
+	$editor_id    = '_custom_composition';
+	$settings     = array( 'name' => '_custom_composition' );
+
+	echo '<div id="custom_composition" class="panel woocommerce_options_panel">';
+	echo '<div class="options_group">';
+	echo '<h2>Склад</h2>';
+	wp_editor( $custom_field, $editor_id, $settings );
+	echo '</div>';
+	echo '</div>';
+}
+
+add_action( 'woocommerce_product_data_panels', 'custom_product_data_content_composition' );
+
+// Saving the value of the field when saving the product
+function save_custom_product_data_field_composition( $post_id ): void {
+	$custom_application_features = isset( $_POST['_custom_composition'] ) ? wp_kses_post( $_POST['_custom_composition'] ) : '';
+	update_post_meta( $post_id, '_custom_composition', $custom_application_features );
+}
+
+add_action( 'woocommerce_process_product_meta', 'save_custom_product_data_field_composition' );
+
+// Adding a new "Usage Features" tab on the product page
+function custom_product_tabs( $tabs ) {
+	unset( $tabs['reviews'] );
+	unset( $tabs['additional_information'] );
+	$tabs['composition'] = array(
+		'title'    => __( 'Склад', 'woocommerce' ),
+		'priority' => 50,
+		'callback' => 'custom_product_tabs_content_composition',
+	);
+	$tabs['application'] = array(
+		'title'    => __( 'Спосіб застосування', 'woocommerce' ),
+		'priority' => 60,
+		'callback' => 'custom_product_tabs_content_application',
+	);
+
+	return $tabs;
+}
+
+function custom_product_tabs_content_composition() {
+	global $product;
+	$custom = get_post_meta( $product->get_id(), '_custom_composition', true );
+
+	echo '<div id="composition_features_content">';
+	echo wp_kses_post( $custom );
+	echo '</div>';
+}
+
+add_filter( 'woocommerce_product_tabs', 'custom_product_tabs' );
+/////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////
+/// Add the "Application method" tab on the product edit page in the admin
+function custom_product_data_tab_application( $tabs ) {
+	$tabs['application'] = array(
+		'label'    => __( 'Спосіб застосування', 'woocommerce' ),
+		'target'   => 'custom_application',
+	);
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_data_tabs', 'custom_product_data_tab_application' );
+
+// The contents of the "Application Features" tab on the product editing page in the admin
+function custom_product_data_content_application() {
+	global $post;
+
+	$custom_field = get_post_meta( $post->ID, '_custom_application', true );
+	$editor_id    = '_custom_application';
+	$settings     = array( 'name' => '_custom_application' );
+
+	echo '<div id="custom_application" class="panel woocommerce_options_panel">';
+	echo '<div class="options_group">';
+	echo '<h2>Спосіб застосування</h2>';
+	wp_editor( $custom_field, $editor_id, $settings );
+	echo '</div>';
+	echo '</div>';
+}
+
+add_action( 'woocommerce_product_data_panels', 'custom_product_data_content_application' );
+
+// Saving the value of the field when saving the product
+function save_custom_product_data_field_application( $post_id ): void {
+	$custom_application_features = isset( $_POST['_custom_application'] ) ? wp_kses_post( $_POST['_custom_application'] ) : '';
+	update_post_meta( $post_id, '_custom_application', $custom_application_features );
+}
+
+add_action( 'woocommerce_process_product_meta', 'save_custom_product_data_field_application' );
+
+// Adding a new "Usage Features" tab on the product page
+
+function custom_product_tabs_content_application() {
+	global $product;
+	$custom = get_post_meta( $product->get_id(), '_custom_application', true );
+
+	echo '<div id="application_features_content">';
+	echo wp_kses_post( $custom );
+	echo '</div>';
+}
+/////////////////////////////////////////////////////////////////////
