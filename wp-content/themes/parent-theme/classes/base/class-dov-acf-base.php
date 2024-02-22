@@ -14,10 +14,10 @@ class DOV_ACF_Base {
 			'acf/settings/save_json',
 			array( static::class, 'save_json' )
 		);
-		add_filter(
-			'acf/settings/show_admin',
-			array( static::class, 'show_admin_menu' )
-		);
+//		add_filter(
+//			'acf/settings/show_admin',
+//			array( static::class, 'show_admin_menu' )
+//		);
 		add_filter(
 			'acf/load_field/type=checkbox',
 			array( static::class, 'get_custom_choices' )
@@ -101,12 +101,12 @@ class DOV_ACF_Base {
 		return DOV_Theme::$child_path . 'acf-json';
 	}
 
-	public static function show_admin_menu() : bool {
-		// phpcs:ignore WordPress.Security.NonceVerification
-		$post_type = sanitize_text_field( $_GET['post_type'] ?? '' );
-
-		return 'local' === wp_get_environment_type() || 'acf-field-group' === $post_type;
-	}
+//	public static function show_admin_menu() : bool {
+//		// phpcs:ignore WordPress.Security.NonceVerification
+//		$post_type = sanitize_text_field( $_GET['post_type'] ?? '' );
+//
+//		return 'local' === wp_get_environment_type() || 'acf-field-group' === $post_type;
+//	}
 
 	public static function get_custom_choices( $field ) {
 		if ( isset( $field['allow_custom'] ) && 1 === $field['allow_custom'] && ! acf_is_screen( 'acf-field-group' ) ) {

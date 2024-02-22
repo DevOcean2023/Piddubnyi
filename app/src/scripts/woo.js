@@ -3,7 +3,7 @@ import "swiper/css";
 
 document.addEventListener("DOMContentLoaded", function () {
 	initFilterControls();
-	initProductSlider();
+	// initProductSlider();
 });
 
 function initFilterControls() {
