@@ -1,3 +1,5 @@
+@import "../variables-and-mixins.pcss";
+
 .quantity {
 	position: relative;
 	white-space: nowrap;
@@ -46,7 +48,7 @@
 		padding: 0 0 3px;
 
 		&.disabled {
-			opacity: 0.5;
+			border-color: $woo-border-color;
 			pointer-events: none;
 		}
 
