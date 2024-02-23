@@ -37,165 +37,142 @@
 					<div class="nav-menu">
 						<?php dov_the_nav( 'Header Main' ); ?>
 					</div>
-					<div class="face-category-menu-wrapper">
-						<div class="inner-category">
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-1.svg" alt="">
-								</div>
-								<a href="#">Засоби для очищення</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-2.svg" alt="">
-								</div>
-								<a href="#">Засоби для тонізації обличчя</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-3.svg" alt="">
-								</div>
-								<a href="#">Засоби для ексфоліації обличчя</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-4.svg" alt="">
-								</div>
-								<a href="#">Сироватки для обличчя</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-5.svg" alt="">
-								</div>
-								<a href="#">Усі засоби</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-6.svg" alt="">
-								</div>
-								<a href="#">Креми для обличчя</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-7.svg" alt="">
-								</div>
-								<a href="#">Засоби для шкіри навколо очей</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-8.svg" alt="">
-								</div>
-								<a href="#">Захист від сонця</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-9.svg" alt="">
-								</div>
-								<a href="#">Маски для обличчя</a>
-							</div>
-						</div>
-					</div>
-					<div class="hair-category-menu-wrapper">
-						<div class="inner-category">
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-10.svg" alt="">
-								</div>
-								<a href="#">Шампуні</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-11.svg" alt="">
-								</div>
-								<a href="#">Кондиціонери</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-12.svg" alt="">
-								</div>
-								<a href="#">Усі засоби</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-13.svg" alt="">
-								</div>
-								<a href="#">Маски для волосся</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-14.svg" alt="">
-								</div>
-								<a href="#">Незмивні засоби для волосся</a>
-							</div>
-						</div>
-					</div>
-					<div class="body-category-menu-wrapper">
-						<div class="inner-category">
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-15.svg" alt="">
-								</div>
-								<a href="#">Очищення</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-16.svg" alt="">
-								</div>
-								<a href="#">Зволоження</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-17.svg" alt="">
-								</div>
-								<a href="#">Скраби та пілінги</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-18.svg" alt="">
-								</div>
-								<a href="#">Усі засоби</a>
-							</div>
-						</div>
-					</div>
+
+					<?php
+					$parent_category_slug = 'face-category';
+					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
+
+					if ( $parent_category ) {
+						$parent_category_id = $parent_category->term_id;
+
+						$subcategories = get_categories(
+							array(
+								'parent'     => $parent_category_id,
+								'taxonomy'   => 'product_cat',
+								'hide_empty' => false,
+							)
+						);
+
+						if ( $subcategories ) {
+							echo "<div class='face-category-menu-wrapper'>";
+							echo "<div class='inner-category'>";
+
+							foreach ( $subcategories as $subcategory ) {
+								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
+
+								echo "
+                <div class='item'>
+                    <div class='img'>";
+
+								if ( $thumbnail_id ) {
+									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
+								}
+
+								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
+							}
+
+							echo '</div></div>';
+						} else {
+							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
+						}
+					} else {
+						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
+					}
+					?>
+
+					<?php
+					$parent_category_slug = 'hair-category';
+					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
+
+					if ( $parent_category ) {
+						$parent_category_id = $parent_category->term_id;
+
+						$subcategories = get_categories(
+							array(
+								'parent'     => $parent_category_id,
+								'taxonomy'   => 'product_cat',
+								'hide_empty' => false,
+							)
+						);
+
+						if ( $subcategories ) {
+							echo "<div class='hair-category-menu-wrapper'>";
+							echo "<div class='inner-category'>";
+
+							foreach ( $subcategories as $subcategory ) {
+								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
+
+								echo "
+                <div class='item'>
+                    <div class='img'>";
+
+								if ( $thumbnail_id ) {
+									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
+								}
+
+								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
+							}
+
+							echo '</div></div>';
+						} else {
+							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
+						}
+					} else {
+						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
+					}
+					?>
+
+					<?php
+					$parent_category_slug = 'body-category';
+					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
+
+					if ( $parent_category ) {
+						$parent_category_id = $parent_category->term_id;
+
+						$subcategories = get_categories(
+							array(
+								'parent'     => $parent_category_id,
+								'taxonomy'   => 'product_cat',
+								'hide_empty' => false,
+							)
+						);
+
+						if ( $subcategories ) {
+							echo "<div class='body-category-menu-wrapper'>";
+							echo "<div class='inner-category'>";
+
+							foreach ( $subcategories as $subcategory ) {
+								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
+
+								echo "
+                <div class='item'>
+                    <div class='img'>";
+
+								if ( $thumbnail_id ) {
+									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
+								}
+
+								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
+							}
+
+							echo '</div></div>';
+						} else {
+							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
+						}
+					} else {
+						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
+					}
+					?>
+
 					<div class="about-company-menu-wrapper">
-						<div class="inner-category">
+						<?php while ( dov_loop( 'dov_header_about', '<div class="inner-category">' ) ) : ?>
 							<div class="item">
 								<div class="img">
-									<img src="assets/images/image-category-19.svg" alt="">
+									<?php dov_the( 'header_image_menu', '32x0' ); ?>
 								</div>
-								<a href="#">Про нас</a>
+								<?php dov_the( 'header_link_menu' ); ?>
 							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-22.svg" alt="">
-								</div>
-								<a href="#">Доставка та оплата</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-20.svg" alt="">
-								</div>
-								<a href="#">Блог</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-23.svg" alt="">
-								</div>
-								<a href="#">Правила користування сайтом</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-21.svg" alt="">
-								</div>
-								<a href="#">FAQ</a>
-							</div>
-							<div class="item">
-								<div class="img">
-									<img src="assets/images/image-category-24.svg" alt="">
-								</div>
-								<a href="#">Контакти</a>
-							</div>
-						</div>
+							<?php endwhile; ?>
 					</div>
 				</div>
 			</div>
