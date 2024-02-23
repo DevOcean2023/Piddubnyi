@@ -93,6 +93,12 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'home-reviews' => array(
 			'home-reviews.css',
 		),
+		'about-us'     => array(
+			'about-us.css',
+		),
+		'our-team'     => array(
+			'our-team.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
