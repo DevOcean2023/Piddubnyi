@@ -37,6 +37,7 @@ DOV_Nav::add( 'Header Main' );
 DOV_Nav::add( 'Header Second' );
 DOV_Nav::add( 'Footer Main' );
 DOV_Nav::add( 'Footer Links' );
+DOV_Nav::add( 'Header Mobile' );
 
 // Add image sizes
 // DOV_Images::add_size( '30x30' );

@@ -23,7 +23,7 @@
 	}
 
 	&__top {
-		padding: 41px 0 0;
+		padding: 41px 0 21px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -32,7 +32,7 @@
 		margin: 0 auto;
 
 		@media (min-width: 775px) {
-			padding: 63px 0 65px;
+			padding: 63px 0 70px;
 			max-width: 100%;
 			margin: 0;
 			justify-content: space-between;
@@ -43,7 +43,7 @@
 		}
 
 		@media (min-width: 1440px) {
-			margin-right: 147px;
+			padding-right: 147px;
 		}
 	}
 
@@ -63,6 +63,9 @@
 
 		@media (min-width: 750px) {
 			max-width: 300px;
+		}
+
+		@media (min-width: 775px) {
 			margin: 0;
 		}
 
@@ -120,7 +123,7 @@
 			@media (--sm) {
 				font-size: 20px;
 				line-height: 26px;
-				margin-bottom: 20px;
+				margin-bottom: 24px;
 			}
 		}
 
@@ -162,21 +165,20 @@
 	}
 
 	&__bottom {
-		padding: 30px 0;
+		padding: 2px 0 10px;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 8px;
-		flex-direction: column;
 		text-align: center;
+		gap: 14px;
 		border-top: 1px solid rgba(255, 255, 255, 1);
 
-		@media (min-width: 555px) {
-			gap: 20px;
-			flex-direction: unset;
+		@media (--sm) {
+			padding: 20px 0;
 		}
 
 		@media (min-width: 969px) {
+			padding: 30px 0;
 			text-align: unset;
 			justify-content: space-between;
 		}
@@ -190,7 +192,7 @@
 		order: 2;
 
 		@media (min-width: 555px) {
-			order: 1;
+			order: 2;
 		}
 
 		@media (--lg) {
@@ -294,6 +296,9 @@
 		width: 100%;
 		max-width: 299px;
 		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 
 		@media (--md) {
 			margin-bottom: 16px;
@@ -348,10 +353,15 @@
 		text-align: center;
 		color: #fff;
 		font-family: $font-family-raleway;
-		font-size: 14px;
+		font-size: 10px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 25px;
+		line-height: 15px;
+
+		@media (--sm) {
+			font-size: 14px;
+			line-height: 25px;
+		}
 
 		@media (--lg) {
 			text-align: left;
@@ -359,9 +369,10 @@
 	}
 
 	&__by {
-		order: 3;
+		order: 2;
+		display: flex;
 
-		@media (min-width: 555px) {
+		@media (--md) {
 			order: 2;
 		}
 	}
@@ -369,10 +380,15 @@
 	&__by-link {
 		color: #fff;
 		font-family: $font-family-raleway;
-		font-size: 14px;
+		font-size: 10px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 25px;
+		line-height: 15px;
+
+		@media (--sm) {
+			font-size: 14px;
+			line-height: 25px;
+		}
 	}
 
 	&__pay {
@@ -390,13 +406,17 @@
 	}
 
 	&__terms {
-		order: 3;
+		order: 1;
 		display: flex;
 		gap: 21px;
-		justify-content: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 100%;
 
-		@media (min-width: 830px) {
+		@media (--md) {
 			justify-content: unset;
+			order: 3;
+			max-width: max-content;
 		}
 	}
 

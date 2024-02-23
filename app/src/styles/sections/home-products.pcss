@@ -7,6 +7,10 @@
 	margin: 0 auto;
 
 	@media (--md) {
+		padding: 27px 0 44px;
+	}
+
+	@media (--lg) {
 		padding: 59px 0 58px;
 	}
 
@@ -26,8 +30,13 @@
 	}
 
 	[data-slider="slider-products"] .tns-item {
-		padding-right: 16px !important;
-		width: 180px !important;
+		padding-right: 5px !important;
+		width: 169px !important;
+
+		@media (min-width: 375px) {
+			padding-right: 16px !important;
+			width: 180px !important;
+		}
 
 		@media (--lg) {
 			padding-right: 19px !important;
@@ -47,8 +56,12 @@
 
 	.tns-ovh {
 		overflow: hidden;
-		max-width: 358px;
+		max-width: 338px;
 		margin: 0 auto;
+
+		@media (min-width: 375px) {
+			max-width: 358px;
+		}
 
 		@media (--sm) {
 			max-width: 540px;
@@ -110,6 +123,7 @@
 			max-width: 100%;
 			font-size: 18px;
 			text-align: center;
+			margin-bottom: 0;
 		}
 
 		@media (--lg) {
@@ -119,6 +133,10 @@
 			font-size: 20px;
 			line-height: 26px;
 		}
+
+		@media (min-width: 1440px) {
+			margin-bottom: 26px;
+		}
 	}
 
 	&__button {
@@ -127,7 +145,7 @@
 		margin-top: 35px;
 
 		@media (--md) {
-			margin-top: 21px;
+			margin-top: 23px;
 		}
 
 		.btn {
@@ -182,6 +200,8 @@
 				height: 100%;
 				max-height: max-content;
 				border: 1px solid #015f45 !important;
+				justify-content: center;
+				align-items: center;
 
 				@media (--lg) {
 					padding: 12px;
@@ -241,6 +261,7 @@
 					max-width: 278px;
 					font-size: 16px;
 					line-height: 20.8px;
+					justify-content: flex-start;
 				}
 
 				a {

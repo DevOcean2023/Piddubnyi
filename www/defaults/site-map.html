@@ -210,7 +210,7 @@
 												menu-header-main__item_level_1
 												menu-header-main__item_level_top
 												menu-header-main__item_no-clickable
-												menu-header-main__item_has_sub-menu face-category
+												 face-category
 											">
                                         <a href="#" class="
 													menu-header-main__link
@@ -227,7 +227,7 @@
 												menu-header-main__item_level_1
 												menu-header-main__item_level_top
 												menu-header-main__item_no-clickable
-												menu-header-main__item_has_sub-menu hair-category
+											hair-category
 											">
                                         <a href="#" class="
 													menu-header-main__link
@@ -245,7 +245,7 @@
 												menu-header-main__item_level_1
 												menu-header-main__item_level_top
 												menu-header-main__item_no-clickable
-												menu-header-main__item_has_sub-menu body-category
+												 body-category
 											">
                                         <a href="#" class="
 													menu-header-main__link
@@ -281,7 +281,7 @@
 												menu-header-main__item_level_1
 												menu-header-main__item_level_top
 												menu-header-main__item_no-clickable
-												menu-header-main__item_has_sub-menu about-company
+												 about-company
 											">
                                         <a href="#" class="
 													menu-header-main__link
@@ -466,10 +466,8 @@
                     <div class="popup__content">
                         <img src="../assets/images/contact-bg.png" alt="" class="object-fit-cover object-fit">
                         <div class="popup__item">
-                            <h2 class="popup__item_title-popup">Lorem ipsum</h2>
-                            <p class="popup__item_p">Lorem ipsum dolor sit amet consectetur. Euismod gravida risus
-                                molestie
-                                sapien. </p>
+                            <h2 class="popup__item_title-popup">Вкажіть ваші дані та ми обов’язково з вами зв’яжемось
+                            </h2>
 
                             <!-- ../assets/css/gravity-forms.css -->
 
@@ -482,7 +480,7 @@
                                             <div id="field_19_108"
                                                 class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
                                                 <label class="gfield_label" for="input_19_108">
-                                                    First name
+                                                    Ваше Ім’я*
                                                 </label>
                                                 <div class="ginput_container ginput_container_text">
                                                     <input name="input_108" id="input_19_108" type="text" value=""
@@ -491,58 +489,59 @@
                                                 </div>
                                             </div>
 
-                                            <div id="field_19_109"
-                                                class="gfield gfield_single_line_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                            <div
+                                                class="gfield gfield_phone     field_sublabel_below field_description_below  gfield_visibility_visible">
                                                 <label class="gfield_label" for="input_19_109">
-                                                    Last name
+                                                    Ваш номер телефону*
                                                 </label>
-                                                <div class="ginput_container ginput_container_text">
+                                                <div class="ginput_container ginput_container_phone">
                                                     <input name="input_109" id="input_19_109" type="text" value=""
                                                         class="medium" placeholder="" aria-required="false"
                                                         aria-invalid="false">
                                                 </div>
                                             </div>
-
-                                            <div
-                                                class="gfield gfield_phone     field_sublabel_below field_description_below  gfield_visibility_visible">
-                                                <label class="gfield_label" for="input_19_110">
-                                                    Phone
-                                                </label>
-                                                <div class="ginput_container ginput_container_phone">
-                                                    <input name="input_110" id="input_19_110" type="text" value=""
-                                                        class="medium" placeholder="" aria-required="false"
-                                                        aria-invalid="false">
+                                            <fieldset id="field_19_110"
+                                                class="gfield  gfield_consent   field_sublabel_below field_description_below  gfield_visibility_visible">
+                                                <legend class='gfield_label gfield_label_before_complex'>
+                                                </legend>
+                                                <div class='ginput_container ginput_container_consent'>
+                                                    <input name='input_19_110' id='input_19_110' type='checkbox'
+                                                        value='1' aria-required="true" aria-invalid="false" /> <label
+                                                        class="gfield_consent_label" for='input_19_110'>Не телефонуйте
+                                                        мені, а краще напишіть у месенджер</label>
                                                 </div>
-                                            </div>
+                                            </fieldset>
 
-                                            <div
-                                                class="gfield gfield_email     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                            <div id="field_19_111"
+                                                class="gfield gfield_single_line_text   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                                 <label class="gfield_label" for="input_19_111">
-                                                    Email
+                                                    Нік у соцмережах (Instagram, Facebook, Telegram)*<span
+                                                        class="gfield_required">*</span>
                                                 </label>
-                                                <div class="ginput_container ginput_container_email">
+                                                <div class="ginput_container ginput_container_text">
                                                     <input name="input_111" id="input_19_111" type="text" value=""
-                                                        class="medium" placeholder="" aria-required="false"
+                                                        class="medium" placeholder="" aria-required="true"
                                                         aria-invalid="false">
                                                 </div>
                                             </div>
 
-                                            <div
-                                                class="gfield gfield_paragraph_text     field_sublabel_below field_description_below  gfield_visibility_visible">
+                                            <div id="field_19_112"
+                                                class="gfield gfield_single_line_text   gfield_contains_required  field_sublabel_below field_description_below  gfield_visibility_visible">
                                                 <label class="gfield_label" for="input_19_112">
-                                                    Message
+                                                    Назва процедури, на яку бажаєте записатись<span
+                                                        class="gfield_required">*</span>
                                                 </label>
-                                                <div class="ginput_container ginput_container_textarea">
-                                                    <textarea name="input_112" id="input_19_112" class="textarea "
-                                                        placeholder="" aria-required="false" aria-invalid="false"
-                                                        rows="10" cols="50"></textarea>
+                                                <div class="ginput_container ginput_container_text">
+                                                    <input name="input_112" id="input_19_112" type="text" value=""
+                                                        class="medium" placeholder="" aria-required="true"
+                                                        aria-invalid="false">
                                                 </div>
                                             </div>
 
                                             <div class="gform_footer top_label">
 
                                                 <input type='submit' class='gform_button button'
-                                                    value='Send booking request'
+                                                    value='підтвердити запис'
                                                     onclick='if(window["gf_submitting_19"]){return false;}  window["gf_submitting_19"]=true;  '
                                                     onkeypress='if( event.keyCode === 13 ){ if(window["gf_submitting_19"]){return false;} window["gf_submitting_19"]=true;  jQuery("#gform_19").trigger("submit",[true]); }'>
 
@@ -858,7 +857,7 @@
 																			   
 																		">
 
-                                            Новинкиг
+                                            Новинки
                                         </a>
                                     </li>
                                     <li class="

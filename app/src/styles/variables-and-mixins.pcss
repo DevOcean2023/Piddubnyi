@@ -207,3 +207,117 @@ body {
 		display: none !important;
 	}
 }
+
+.popup {
+	text-align: center;
+	width: 100%;
+	max-width: 320px;
+	padding: 30px 10px 0;
+
+	@media (min-width: 538px) {
+		max-width: 500px;
+	}
+
+	@media (min-width: 746px) {
+		padding: 80px;
+		max-width: 679px;
+	}
+
+	&__item_title-popup {
+		font-family: $font-family-raleway;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 26px;
+	}
+
+	.gform {
+		&_wrapper {
+			input:not([type="radio"],[type="checkbox"], [type="submit"], [type="button"], [type="image"], [type="file"]) {
+				border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
+			}
+		}
+
+		&_footer {
+			margin: 0 auto;
+
+			input[type="submit"] {
+				width: 302px;
+				padding: 16px 24px;
+				border: 1px solid rgba(1, 95, 69, 1);
+				background-color: rgba(1, 95, 69, 1);
+				color: #fff;
+			}
+		}
+	}
+
+	form {
+		.gfield {
+			&_paragraph {
+				&_text {
+					border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
+				}
+			}
+
+			&_consent label {
+				color: rgba(1, 95, 69, 1);
+			}
+		}
+
+		.gform {
+
+			&_fields {
+				.gfield {
+					&_label {
+						color: rgba(101, 102, 106, 1);
+					}
+
+					&_consent .ginput {
+						&_container {
+							&_consent input:checked + label::before {
+								background: url(../images/check-popup.svg) no-repeat center !important;
+								border: 1px solid rgba(1, 95, 69, 1);
+							}
+						}
+					}
+				}
+
+				label {
+					color: rgba(101, 102, 106, 1);
+					font-size: 12px !important;
+
+					@media (min-width: 538px) {
+						font-size: 12px !important;
+					}
+
+					@media (--lg) {
+						font-size: 16px !important;
+					}
+				}
+			}
+		}
+	}
+
+	&__close-btn {
+		display: inline-block;
+		padding: 5px 32px;
+		color: rgba(1, 95, 69, 1);
+		border: none;
+		background: url(../images/close-popup.svg) no-repeat center;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background 0.3s;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 23px;
+		border-radius: 6px;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		span {
+			font-size: 0;
+		}
+	}
+}

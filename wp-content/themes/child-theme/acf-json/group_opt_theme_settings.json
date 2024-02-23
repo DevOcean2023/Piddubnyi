@@ -45,6 +45,212 @@
             "mime_types": ""
         },
         {
+            "key": "field_65d7ccb19e41b",
+            "label": "Кнопка форми",
+            "name": "dov_header_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65d7b4d19cfd0",
+            "label": "Повторюване поле",
+            "name": "dov_header_time",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d7b5249cfd1",
+                    "label": "Текст",
+                    "name": "time",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65d7b4d19cfd0"
+                }
+            ]
+        },
+        {
+            "key": "field_65d7b3cf0c97b",
+            "label": "Повторюване поле",
+            "name": "dov_header_phone",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d7b4450c97c",
+                    "label": "Телефон",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "dov_contact_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "class_attr": "",
+                    "select_link_type": 0,
+                    "link_type": "phone",
+                    "return_format": "html",
+                    "custom_class": 1,
+                    "default_value": {
+                        "url": "",
+                        "title": "",
+                        "number": "",
+                        "type": "",
+                        "class": ""
+                    },
+                    "parent_repeater": "field_65d7b3cf0c97b"
+                }
+            ]
+        },
+        {
+            "key": "field_65d7c9e552363",
+            "label": "Повторюване поле соцмереж",
+            "name": "dov_social_links_header",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d7c9e552364",
+                    "label": "Зображення Активне",
+                    "name": "icon_color",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_65d7c9e552363"
+                },
+                {
+                    "key": "field_65d7ca4d52365",
+                    "label": "Зображення",
+                    "name": "icon_outline",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_65d7c9e552363"
+                },
+                {
+                    "key": "field_65d7ca6352366",
+                    "label": "Посилання",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_65d7c9e552363"
+                }
+            ]
+        },
+        {
             "key": "field_593a98f960235",
             "label": "Footer",
             "name": "",
@@ -63,10 +269,10 @@
         },
         {
             "key": "field_5f0aec2d8af7a",
-            "label": "Text",
-            "name": "dov_footer_text",
+            "label": "Повторюване поле адреси",
+            "name": "dov_footer_address",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -75,11 +281,103 @@
                 "class": "",
                 "id": ""
             },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d7c259fb672",
+                    "label": "Адреса",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_5f0aec2d8af7a"
+                }
+            ]
+        },
+        {
+            "key": "field_65d7bef238255",
+            "label": "Лого футер",
+            "name": "dov_logo_footer",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65d7c4b11bdbe",
+            "label": "Зображення Pay",
+            "name": "dov_footer_image_pay",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65d7c3842ae98",
+            "label": "Заголовок соцмереж",
+            "name": "dov_footer_social_title",
+            "aria-label": "",
+            "type": "title",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "replace": "",
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 1
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "default_level": 2
         },
         {
             "key": "field_593a990c60236",
@@ -881,5 +1179,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708520163
+    "modified": 1708641505
 }
