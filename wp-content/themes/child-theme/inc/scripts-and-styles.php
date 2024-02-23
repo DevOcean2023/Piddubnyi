@@ -61,37 +61,46 @@ DOV_Enqueue_Scripts::enqueue_blocks(
 // Styles
 DOV_Enqueue_Styles::enqueue_blocks(
 	array(
-		'site-map'     => array(
+		'site-map'      => array(
 			'menu-site-map.css',
 		),
-		'faq'          => array(
+		'faq'           => array(
 			'forms.css',
 			'accordion.css',
 		),
-		'form-login'   => array(
+		'form-login'    => array(
 			'login-section.css',
 		),
-		'my-account'   => array(
+		'my-account'    => array(
 			'my-account.css',
 		),
-		'banner-pages' => array(
+		'banner-pages'  => array(
 			'banner-pages.css',
 		),
-		'contact-info' => array(
+		'contact-info'  => array(
 			'contact-info.css',
 		),
-		'contact-form' => array(
+		'contact-form'  => array(
 			'contact-form.css',
 			'gravity-forms.css',
 		),
-		'brands'       => array(
+		'brands'        => array(
 			'brands.css',
 		),
-		'home-banner'  => array(
+		'home-banner'   => array(
 			'home-banner.css',
 		),
-		'home-reviews' => array(
+		'home-reviews'  => array(
 			'home-reviews.css',
+		),
+		'about-us'      => array(
+			'about-us.css',
+		),
+		'our-team'      => array(
+			'our-team.css',
+		),
+		'delivery-info' => array(
+			'delivery-info.css',
 		),
 	),
 	static function ( $css ) {
