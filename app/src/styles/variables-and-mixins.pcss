@@ -219,7 +219,7 @@ body {
 	}
 
 	@media (min-width: 746px) {
-		padding: 80px;
+		padding: 75px;
 		max-width: 679px;
 	}
 
@@ -228,12 +228,14 @@ body {
 		font-size: 20px;
 		font-weight: 500;
 		line-height: 26px;
+		margin-bottom: 40px;
 	}
 
 	.gform {
 		&_wrapper {
 			input:not([type="radio"],[type="checkbox"], [type="submit"], [type="button"], [type="image"], [type="file"]) {
 				border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
+				color: #000 !important;
 			}
 		}
 
@@ -266,9 +268,22 @@ body {
 		.gform {
 
 			&_fields {
+				gap: 32px 32px !important;
+
 				.gfield {
+
+					&--type-text {
+						max-width: 100% !important;
+					}
+
 					&_label {
 						color: rgba(101, 102, 106, 1);
+
+						&_before {
+							&_complex {
+								display: none !important;
+							}
+						}
 					}
 
 					&_consent .ginput {
@@ -302,7 +317,7 @@ body {
 		padding: 5px 32px;
 		color: rgba(1, 95, 69, 1);
 		border: none;
-		background: url(../images/close-popup.svg) no-repeat center;
+		background: url(../images/close-popup.svg) no-repeat center !important;
 		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
@@ -313,8 +328,13 @@ body {
 		line-height: 23px;
 		border-radius: 6px;
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 0 !important;
+		right: 0 !important;
+
+		@media (--lg) {
+			top: 15px !important;
+			right: 15px !important;
+		}
 
 		span {
 			font-size: 0;

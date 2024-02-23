@@ -62,7 +62,7 @@ tinySlider(
 tinySlider( '[data-slider="slider-products"]', {
 	items: 1,
 	gutter: 10,
-	autoplay: true,
+	autoplay: false,
 	autoplayTimeout: 3000,
 	autoplayButtonOutput: false,
 	speed: 1500,

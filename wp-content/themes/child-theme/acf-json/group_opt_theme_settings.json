@@ -1308,6 +1308,62 @@
                     "parent_repeater": "field_65d879f4291c8"
                 }
             ]
+        },
+        {
+            "key": "field_65d880e7fe295",
+            "label": "Спливаюча Форма",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65d880fffe296",
+            "label": "Заголовок форми",
+            "name": "dov_title_form",
+            "aria-label": "",
+            "type": "title",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "replace": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "default_level": 2
+        },
+        {
+            "key": "field_65d881350c6e9",
+            "label": "Форма",
+            "name": "dov_forms_popup",
+            "aria-label": "",
+            "type": "forms",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "post_object",
+            "multiple": 0,
+            "allow_null": 1
         }
     ],
     "location": [
@@ -1328,5 +1384,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708686170
+    "modified": 1708687704
 }

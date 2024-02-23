@@ -11,9 +11,15 @@
 
 	.inner {
 		width: 100%;
-		max-width: 403px;
+		max-width: 100%;
 		padding: 16px;
 		background-color: #fff;
+
+		@media (--sm) {
+			min-width: 403px;
+			max-width: max-content;
+			padding: 16px 22px;
+		}
 	}
 
 	&__title {
