@@ -235,6 +235,35 @@ body {
 			input:not([type="radio"],[type="checkbox"], [type="submit"], [type="button"], [type="image"], [type="file"]) {
 				border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
 			}
+		}
+
+		&_footer {
+			margin: 0 auto;
+
+			input[type="submit"] {
+				width: 302px;
+				padding: 16px 24px;
+				border: 1px solid rgba(1, 95, 69, 1);
+				background-color: rgba(1, 95, 69, 1);
+				color: #fff;
+			}
+		}
+	}
+
+	form {
+		.gfield {
+			&_paragraph {
+				&_text {
+					border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
+				}
+			}
+
+			&_consent label {
+				color: rgba(1, 95, 69, 1);
+			}
+		}
+
+		.gform {
 
 			&_fields {
 				.gfield {
@@ -265,30 +294,6 @@ body {
 					}
 				}
 			}
-		}
-
-		&_footer {
-			margin: 0 auto;
-
-			input[type="submit"] {
-				width: 302px;
-				padding: 16px 24px;
-				border: 1px solid rgba(1, 95, 69, 1);
-				background-color: rgba(1, 95, 69, 1);
-				color: #fff;
-			}
-		}
-	}
-
-	.gfield {
-		&_paragraph {
-			&_text {
-				border-bottom: 1px solid rgba(1, 95, 69, 1) !important;
-			}
-		}
-
-		&_consent label {
-			color: rgba(1, 95, 69, 1);
 		}
 	}
 
