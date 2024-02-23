@@ -523,17 +523,20 @@ function initRelatedProductsSlider() {
 
 	if (sliderEls.length) {
 		Array.from(sliderEls).forEach(sliderEl => {
-			const btnPrev = sliderEl.querySelector(".swiper-button-prev");
-			const btnNext = sliderEl.querySelector(".swiper-button-next");
+			const btnPrev = sliderEl.parentElement.querySelector(".swiper-button-prev");
+			const btnNext = sliderEl.parentElement.querySelector(".swiper-button-next");
+			const pagination = sliderEl.parentElement.querySelector(".swiper-pagination");
 
 			const swiper = new Swiper(sliderEl, {
 				direction: "horizontal",
-				slidesPerView: 4,
 				spaceBetween: 24,
 				loop: false,
 				navigation: {
 					nextEl: btnNext,
 					prevEl: btnPrev,
+				},
+				pagination: {
+					el: pagination
 				},
 				breakpoints: {
 					320: {

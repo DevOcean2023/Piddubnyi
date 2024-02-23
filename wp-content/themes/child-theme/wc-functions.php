@@ -318,3 +318,17 @@ function custom_product_tabs_content_application() {
 	echo '</div>';
 }
 /////////////////////////////////////////////////////////////////////
+
+add_filter( 'woocommerce_output_related_products_args', 'woo_related_products_args', 20 );
+function woo_related_products_args( $args ) {
+	$args['posts_per_page'] = 20;
+	return $args;
+}
+
+add_action( 'wp', 'remove_sidebar_product_pages' );
+
+function remove_sidebar_product_pages() {
+	if ( is_product() ) {
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+	}
+}
