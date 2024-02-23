@@ -9,8 +9,10 @@
 			<?php while ( dov_loop( 'items', '<div class="our-team__slider" data-slider="our-team__slider">' ) ) : ?>
 				<div class="our-team__slider-item">
 					<?php dov_the( 'image', '270x0' ); ?>
-					<?php dov_the( 'title', 'our-team__slider-item-title' ); ?>
-					<?php dov_the( 'position', '<p class="our-team__slider-item-position">' ); ?>
+					<div class="our-team__slider-item-info">
+						<?php dov_the( 'title', 'our-team__slider-item-title' ); ?>
+						<?php dov_the( 'position', '<p class="our-team__slider-item-position">' ); ?>
+					</div>
 				</div>
 			<?php endwhile; ?>
 		</div>
