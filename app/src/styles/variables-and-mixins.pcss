@@ -219,7 +219,7 @@ body {
 	}
 
 	@media (min-width: 746px) {
-		padding: 80px;
+		padding: 75px;
 		max-width: 679px;
 	}
 
@@ -228,6 +228,7 @@ body {
 		font-size: 20px;
 		font-weight: 500;
 		line-height: 26px;
+		margin-bottom: 40px;
 	}
 
 	.gform {
@@ -267,6 +268,7 @@ body {
 		.gform {
 
 			&_fields {
+				gap: 32px 32px !important;
 
 				.gfield {
 
@@ -326,8 +328,13 @@ body {
 		line-height: 23px;
 		border-radius: 6px;
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 0 !important;
+		right: 0 !important;
+
+		@media (--lg) {
+			top: 15px !important;
+			right: 15px !important;
+		}
 
 		span {
 			font-size: 0;
