@@ -188,7 +188,7 @@
 						<?php dov_the( 'dov_forms_popup' ); ?>
 					</div>
 				</div>
-				<button class="popup__close-btn" type="button">
+				<button class="popup__close-btn" type="button" autofocus>
 					<span class="popup__close-text"><?php esc_attr_e( 'Close', 'theme' ); ?></span>
 				</button>
 			</div>
