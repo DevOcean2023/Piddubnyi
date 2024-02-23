@@ -47,9 +47,10 @@ if ( $related_products ) : ?>
 					</div>
 				<?php endforeach; ?>
 			</div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
 		</div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-pagination"></div>
 
 		<?php woocommerce_product_loop_end(); ?>
 
