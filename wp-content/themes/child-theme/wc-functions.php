@@ -201,8 +201,8 @@ add_action( 'woocommerce_single_product_summary', 'add_product_info', 7 );
 /// Add the "Composition" tab on the product edit page in the admin
 function custom_product_data_tab_composition( $tabs ) {
 	$tabs['composition'] = array(
-		'label'    => __( 'Склад', 'woocommerce' ),
-		'target'   => 'custom_composition',
+		'label'  => __( 'Склад', 'woocommerce' ),
+		'target' => 'custom_composition',
 	);
 
 	return $tabs;
@@ -267,13 +267,12 @@ add_filter( 'woocommerce_product_tabs', 'custom_product_tabs' );
 /////////////////////////////////////////////////////////////////////
 
 
-
 ////////////////////////////////////////////////////////////////////
 /// Add the "Application method" tab on the product edit page in the admin
 function custom_product_data_tab_application( $tabs ) {
 	$tabs['application'] = array(
-		'label'    => __( 'Спосіб застосування', 'woocommerce' ),
-		'target'   => 'custom_application',
+		'label'  => __( 'Спосіб застосування', 'woocommerce' ),
+		'target' => 'custom_application',
 	);
 
 	return $tabs;
@@ -317,11 +316,13 @@ function custom_product_tabs_content_application() {
 	echo wp_kses_post( $custom );
 	echo '</div>';
 }
+
 /////////////////////////////////////////////////////////////////////
 
 add_filter( 'woocommerce_output_related_products_args', 'woo_related_products_args', 20 );
 function woo_related_products_args( $args ) {
 	$args['posts_per_page'] = 20;
+
 	return $args;
 }
 
@@ -332,3 +333,5 @@ function remove_sidebar_product_pages() {
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 	}
 }
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );

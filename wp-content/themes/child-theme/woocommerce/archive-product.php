@@ -68,6 +68,9 @@ do_action( 'woocommerce_before_main_content' );
 					 */
 					do_action( 'woocommerce_before_shop_loop' );
 					?>
+					<div class="filter-results-holder">
+						<?php echo do_shortcode( '[wpf-selected-filters id=1]' ); ?>
+					</div>
 				</header>
 				<?php
 				if ( woocommerce_product_loop() ) {
