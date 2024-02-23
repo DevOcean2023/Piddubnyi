@@ -1159,6 +1159,71 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65d8570154a4a",
+            "label": "Відгуки",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65d8571954a4b",
+            "label": "Заголовок Відгуків",
+            "name": "dov_title_testimonials",
+            "aria-label": "",
+            "type": "title",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "replace": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "default_level": 2
+        },
+        {
+            "key": "field_65d8573c54a4c",
+            "label": "Блок відгуків",
+            "name": "dov_testimonials_relationship",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "testimonial"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "relationship_all": 0,
+            "min": "",
+            "max": "",
+            "elements": ""
         }
     ],
     "location": [
@@ -1179,5 +1244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708641505
+    "modified": 1708677358
 }

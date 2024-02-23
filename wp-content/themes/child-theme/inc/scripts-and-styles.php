@@ -90,6 +90,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'home-banner'  => array(
 			'home-banner.css',
 		),
+		'home-reviews' => array(
+			'home-reviews.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;

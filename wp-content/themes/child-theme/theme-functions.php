@@ -14,7 +14,15 @@ DOV_Login_Style::set( 'btn_color', '' );
 DOV_Security_Headers::init();
 
 // Add custom post types
-DOV_CPT::add( 'testimonial' );
+DOV_CPT::add(
+	'testimonial',
+	array(
+		'public'      => true,
+		'has_archive' => false,
+		'menu_icon'   => 'dashicons-megaphone',
+		'supports'    => array( 'title', 'editor' ),
+	)
+);
 
 DOV_CPT::add(
 	'faq',
@@ -62,31 +70,33 @@ function remove_my_account_dashboard( $menu_links ) {
 	unset( $menu_links['dashboard'] );
 
 	return $menu_links;
-
 }
 
 ///////////////////////
-add_filter( 'body_class', function ( $classes ) {
-	if ( is_page( 'wish-list' ) ) {
-		$classes[] = 'wishlist-page';
-	}
-	if ( is_page( 'checkout' ) ) {
-		$classes[] = 'checkout-section';
-	}
-	if ( is_page( 'cart' ) ) {
-		$classes[] = 'cart';
-	}
-	if ( is_account_page() ) {
-		if ( is_wc_endpoint_url( 'orders' ) ) {
-			$classes[] = 'my-orders';
-		} elseif ( is_wc_endpoint_url( 'view-order' ) ) {
-			$classes[] = 'my-view-order';
-		} elseif ( is_wc_endpoint_url( 'edit-address' ) ) {
-			$classes[] = 'my-edit-address-class';
-		} elseif ( is_wc_endpoint_url( 'wishlist' ) ) {
-			$classes[] = 'my-account-wishlist';
+add_filter(
+	'body_class',
+	function ( $classes ) {
+		if ( is_page( 'wish-list' ) ) {
+			$classes[] = 'wishlist-page';
 		}
-	}
+		if ( is_page( 'checkout' ) ) {
+			$classes[] = 'checkout-section';
+		}
+		if ( is_page( 'cart' ) ) {
+			$classes[] = 'cart';
+		}
+		if ( is_account_page() ) {
+			if ( is_wc_endpoint_url( 'orders' ) ) {
+				$classes[] = 'my-orders';
+			} elseif ( is_wc_endpoint_url( 'view-order' ) ) {
+				$classes[] = 'my-view-order';
+			} elseif ( is_wc_endpoint_url( 'edit-address' ) ) {
+				$classes[] = 'my-edit-address-class';
+			} elseif ( is_wc_endpoint_url( 'wishlist' ) ) {
+				$classes[] = 'my-account-wishlist';
+			}
+		}
 
-	return $classes;
-} );
+		return $classes;
+	}
+);
