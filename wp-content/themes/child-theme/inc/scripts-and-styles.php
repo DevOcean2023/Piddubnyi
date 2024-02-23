@@ -102,6 +102,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'delivery-info' => array(
 			'delivery-info.css',
 		),
+		'rules-info'    => array(
+			'rules-info.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
