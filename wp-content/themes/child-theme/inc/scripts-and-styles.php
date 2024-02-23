@@ -105,6 +105,12 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'rules-info'    => array(
 			'rules-info.css',
 		),
+		'products-top'  => array(
+			'home-products.css',
+		),
+		'products-sale' => array(
+			'home-products.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
