@@ -87,6 +87,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'brands'       => array(
 			'brands.css',
 		),
+		'home-banner'  => array(
+			'home-banner.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
