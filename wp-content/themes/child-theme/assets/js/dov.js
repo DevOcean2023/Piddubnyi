@@ -439,34 +439,26 @@ processElements(document);
 
 
 ///////////////////////add sale to home products
-function processElements(element) {
-	let instockElements = element.querySelectorAll('.sale');
+let productHome = document.querySelectorAll(".home-products .product");
 
-	instockElements.forEach(function (instockElement) {
-		let delElement = instockElement.querySelector('del bdi');
-		let insElement = instockElement.querySelector('ins bdi');
-		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, '').replace(',', ''));
-		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, '').replace(',', ''));
+productHome.forEach(function (instockElement) {
+	let delElement = instockElement.querySelector("del bdi");
+	let insElement = instockElement.querySelector("ins bdi");
+	let amountElement = instockElement.querySelector(".price del .amount");
+	if (delElement || insElement) {
+		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
 		if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
 			let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
-			let salesElement = document.createElement('div');
-			salesElement.className = 'sales';
-			salesElement.innerText = '-' + discountPercentage + '%';
-			instockElement.appendChild(salesElement);
+			let salesElement = document.createElement("div");
+			salesElement.className = "sales";
+			salesElement.innerText = "-" + discountPercentage + "%";
+			amountElement.appendChild(salesElement);
 		} else {
-			console.error('Помилка при отриманні значень цін для карточки товару.');
+			console.error("Помилка при отриманні значень цін для карточки товару.");
 		}
-	});
-}
-let homeProductsElements = document.querySelectorAll('.home-products');
-if (homeProductsElements.length > 0) {
-	homeProductsElements.forEach(function (homeProductElement) {
-		processElements(homeProductElement);
-	});
-} else {
-	console.warn('Елементи з класом "home-products" не знайдені на сторінці.');
-}
-processElements(document);
+	}
+});
 
 //////////add class to contact my account
 jQuery.noConflict();
