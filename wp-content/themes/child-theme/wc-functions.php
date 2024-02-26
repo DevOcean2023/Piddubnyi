@@ -169,9 +169,11 @@ remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
 add_filter( 'woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2 );
 
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
-	$currency_symbol = match ( $currency ) {
-		'UAH' => 'грн',
-	};
+	switch ( $currency ) {
+		case 'UAH':
+			$currency_symbol = 'грн';
+			break;
+	}
 
 	return $currency_symbol;
 }
@@ -365,6 +367,7 @@ function add_content_after_addtocart_button_func() {
 		echo '<a href="' . esc_url( $custom_field ) . '" class="btn btn-set" style="margin: 0 0 20px;">' . esc_html__( 'Оглянути набір', 'theme' ) . '</a>';
 	endif;
 }
+
 add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func' );
 
 ////////////////////////////////////////////////////////////////////
