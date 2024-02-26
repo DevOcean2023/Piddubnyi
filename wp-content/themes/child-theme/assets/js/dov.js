@@ -437,6 +437,37 @@ function processElements(parentElement) {
 
 processElements(document);
 
+
+///////////////////////add sale to home products
+function processElements(element) {
+	let instockElements = element.querySelectorAll('.sale');
+
+	instockElements.forEach(function (instockElement) {
+		let delElement = instockElement.querySelector('del bdi');
+		let insElement = instockElement.querySelector('ins bdi');
+		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, '').replace(',', ''));
+		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, '').replace(',', ''));
+		if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
+			let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
+			let salesElement = document.createElement('div');
+			salesElement.className = 'sales';
+			salesElement.innerText = '-' + discountPercentage + '%';
+			instockElement.appendChild(salesElement);
+		} else {
+			console.error('Помилка при отриманні значень цін для карточки товару.');
+		}
+	});
+}
+let homeProductsElements = document.querySelectorAll('.home-products');
+if (homeProductsElements.length > 0) {
+	homeProductsElements.forEach(function (homeProductElement) {
+		processElements(homeProductElement);
+	});
+} else {
+	console.warn('Елементи з класом "home-products" не знайдені на сторінці.');
+}
+processElements(document);
+
 //////////add class to contact my account
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
