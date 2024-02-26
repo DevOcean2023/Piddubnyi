@@ -1,0 +1,337 @@
+@import "../variables-and-mixins.pcss";
+
+.services {
+	font-family: $font-family-raleway;
+	overflow: hidden;
+	position: relative;
+	padding-top: 85px;
+	padding-bottom: 81px;
+
+	@media (--md) {
+		padding-top: 120px;
+		padding-bottom: 152px;
+	}
+
+	@media (--lg) {
+		padding-top: 222px;
+		padding-bottom: 292px;
+	}
+
+	.inner {
+		padding: 0 35px;
+
+		@media (--xs) {
+			padding: 0 35px;
+		}
+
+		@media (--lg) {
+			padding: 0 35px;
+		}
+
+		@media (min-width: 1300px) {
+			padding: 0 15px;
+		}
+	}
+
+	&__types {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 800px;
+		position: relative;
+		display: none;
+
+		@media (--lg) {
+			display: block;
+		}
+
+		@media (--lg) {
+			max-width: 1170px;
+		}
+
+		.layer {
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 50px;
+			border-radius: 20px;
+		}
+	}
+
+	&__accordion {
+		margin-top: 50px;
+
+		@media (--lg) {
+			display: none;
+		}
+
+		.accordion {
+			margin-bottom: 0;
+
+			&__header {
+				margin: 0;
+			}
+
+			&__trigger {
+				display: flex;
+				text-align: center;
+				justify-content: flex-start;
+				margin-bottom: 0;
+				position: relative;
+				border: 1px solid $black;
+				background: #fafafa;
+				color: $black;
+				font-family: $font-family-raleway;
+				font-weight: 400;
+				font-size: 18px;
+				font-style: normal;
+				line-height: 25px;
+				padding: 17px 5px 16px 26px;
+				cursor: pointer;
+				transition: background 0.7s;
+				width: 100%;
+				max-width: 100%;
+				border-radius: 10px;
+
+				@media (--sm) {
+					display: inline-block;
+					text-align: unset;
+					justify-content: unset;
+
+					&:hover {
+						border-radius: 10px;
+						border-top: 1px solid $black;
+						border-bottom: 1px solid $black;
+						border-left: 1px solid $black;
+						background: $black;
+						color: #fff;
+						font-weight: 600;
+						letter-spacing: -0.4px;
+					}
+				}
+
+				&[aria-expanded="true"] {
+					border-radius: 10px;
+					border: 1px solid $black;
+					background: $black;
+					color: #fff;
+					font-weight: 600;
+					letter-spacing: -0.4px;
+				}
+			}
+
+			&__panel {
+				padding: 19px 20px 25px 22px;
+				background: #fff;
+				position: relative;
+				border-radius: 10px;
+				box-shadow: 0 2.767px 2.214px 0 rgba(0, 0, 0, 0.01), 0 6.65px 5.32px 0 rgba(0, 0, 0, 0.01), 0 12.522px 10.017px 0 rgba(0, 0, 0, 0.01), 0 22.336px 17.869px 0 rgba(0, 0, 0, 0.01), 0 41.778px 33.422px 0 rgba(0, 0, 0, 0.01), 0 100px 80px 0 rgba(0, 0, 0, 0.02);
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 40px;
+					width: calc(100% - 85px);
+					height: 1px;
+					background: #f6f6f6;
+				}
+			}
+		}
+	}
+
+	.tabs {
+		position: relative;
+		flex-direction: column;
+		z-index: 3;
+		width: 100%;
+		display: flex;
+		padding: 10px;
+		background: #fff;
+		max-width: 1170px;
+
+		@media (--lg) {
+			flex-direction: row;
+		}
+
+		&__tabs-navigation {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 100%;
+
+			@media (--lg) {
+				max-width: 280px;
+			}
+
+			@media (min-width: 1100px) {
+				max-width: 300px;
+			}
+		}
+
+		&__tabs-button {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			margin-bottom: 0;
+			position: relative;
+			border: 1px solid $black;
+			border-top: 1px solid $black;
+			background: #fafafa;
+			color: $black;
+			font-family: $font-family-raleway;
+			font-weight: 400;
+			font-size: 18px;
+			font-style: normal;
+			line-height: 25px;
+			padding: 16px 5px 16px 24px;
+			cursor: pointer;
+			transition: background 0.7s;
+
+			&:first-child {
+				border-radius: 20px 0 0 0;
+				border-top: 1px solid #ccdce5;
+			}
+
+			&:last-child {
+				border-radius: 0 0 0 20px;
+			}
+
+			&:--enter,
+			&[aria-selected="true"] {
+
+				border-top: 1px solid $black;
+				border-bottom: 1px solid $black;
+				border-left: 1px solid $black;
+				background: $black;
+				color: #fff;
+				font-weight: 700;
+				letter-spacing: -0.5px;
+			}
+
+			@media (--sm) {
+				display: inline-block;
+				text-align: unset;
+				justify-content: unset;
+
+				&:hover {
+					border-top: 1px solid $black;
+					border-bottom: 1px solid $black;
+					border-left: 1px solid $black;
+					background: $black;
+					color: #fff;
+					font-weight: 700;
+					letter-spacing: -0.5px;
+				}
+			}
+		}
+
+		&__tabs-wrapper {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		&__tabs-content {
+			width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			flex-direction: column;
+			padding: 40px 20px 0 20px;
+			position: relative;
+
+			@media (min-width: 1100px) {
+				padding: 40px 60px 0 50px;
+			}
+
+			&_items {
+				display: flex;
+				flex-wrap: wrap;
+				text-align: center;
+				width: 100%;
+				max-width: 740px;
+				justify-content: center;
+				background: #fff;
+
+				&_item {
+					width: 100%;
+					max-width: 740px;
+					gap: 30px;
+					position: relative;
+					height: 100%;
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+
+					@media (--lg) {
+						flex-direction: row;
+					}
+
+					&_image {
+
+						img {
+							position: relative;
+							width: 100%;
+							max-width: 360px;
+							height: 100%;
+							min-height: 260px;
+							max-height: 260px;
+							object-fit: cover;
+							border-radius: 10px;
+
+							@media (--xs) {
+								min-height: 340px;
+								max-height: 340px;
+							}
+
+							@media (--md) {
+								border-radius: 30px;
+							}
+						}
+					}
+
+					&_text {
+						display: block;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						max-width: 100%;
+
+						@media (--lg) {
+							max-width: 350px;
+						}
+
+						h3 {
+							color: $black;
+							font-family: $font-family-raleway;
+							font-size: 30px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							text-align: start;
+							margin-bottom: 20px;
+							letter-spacing: -1px;
+						}
+
+						&_editor {
+							margin-bottom: 20px;
+
+							p {
+								margin-bottom: 15px;
+								text-align: start;
+
+								&:last-child {
+									margin-bottom: 0;
+								}
+							}
+						}
+
+						.btn {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
