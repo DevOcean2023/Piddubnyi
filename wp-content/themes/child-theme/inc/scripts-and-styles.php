@@ -117,6 +117,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'number'        => array(
 			'number.css',
 		),
+		'home-about'    => array(
+			'home-about.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
