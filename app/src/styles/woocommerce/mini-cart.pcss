@@ -1,14 +1,28 @@
+@import "../variables-and-mixins.pcss";
+
 dialog#mini-cart {
 	.popup {
 		top: 0;
 		right: 0;
 		height: 100vh;
-		width: 400px;
-		max-width: 400px;
+		width: 100%;
+		max-width: 100%;
 		position: absolute;
 		margin: 0;
 		border-radius: 0;
 		box-shadow: none;
+		padding: 16px;
+
+		@media (--sm) {
+			width: 400px;
+			max-width: 400px;
+		}
+
+		@media (--md) {
+			padding: 80px 32px 32px;
+			width: 628px;
+			max-width: 628px;
+		}
 
 		&__content {
 			display: flex;
@@ -21,9 +35,14 @@ dialog#mini-cart {
 .mini-cart {
 	display: flex;
 	flex-direction: column;
-	//flex-grow: 1;
 	overflow-y: auto;
 	height: 100%;
+
+	h4 {
+		font-size: 20px;
+		font-weight: 500;
+		margin: 0 0 24px;
+	}
 
 	&__list {
 		margin: 0;
@@ -38,7 +57,7 @@ dialog#mini-cart {
 		align-items: stretch;
 		justify-content: space-between;
 		padding-bottom: 20px;
-		border-bottom: 1px solid $gray-600;
+		border-bottom: 1px solid $woo-border-color;
 		margin-bottom: 20px;
 
 		&:last-child {
@@ -47,12 +66,11 @@ dialog#mini-cart {
 		}
 
 		&-image-holder {
-			width: 35%;
 			margin-right: 15px;
 			flex-shrink: 0;
 
 			@media (--md) {
-				margin-right: 20px;
+				margin-right: 40px;
 			}
 
 			&-inner {
@@ -76,46 +94,30 @@ dialog#mini-cart {
 			display: flex;
 			align-items: flex-start;
 
-			&-info-inner {
-				margin-right: 10px;
+			&-inner {
+				max-width: 314px;
 			}
 
+			.amount {
+				font-family: $font-family-raleway;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1;
+			}
 		}
 
 		&-remove {
-			height: 14px;
-			width: 14px;
+			height: 20px;
+			width: 20px;
 			position: relative;
 			flex-shrink: 0;
-			margin-left: auto;
+			background: url(../../images/close-popup.svg) no-repeat;
+			background-size: contain;
+			text-align: center;
+			margin: 0 0 0 10px;
 
-			&:hover {
-				&::before,
-				&::after {
-					border-bottom-color: $black;
-				}
-			}
-
-			&::before {
-				content: "";
-				width: 100%;
-				border-bottom: 1px solid $gray-600;
-				transform: rotate(45deg);
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transition: all 0.3s ease;
-			}
-
-			&::after {
-				content: "";
-				width: 100%;
-				border-bottom: 1px solid $gray-600;
-				transform: rotate(-45deg);
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transition: all 0.3s ease;
+			@media (--md) {
+				margin: 0 0 0 auto;
 			}
 		}
 
@@ -125,24 +127,56 @@ dialog#mini-cart {
 		}
 
 		&-footer {
-			margin-top: auto;
+			margin-top: 16px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 
 			.amount {
+				display: block;
 				padding-top: 5px;
+				font-size: 16px;
+				font-weight: 500;
 			}
 
 			.input-quantity-wrapper {
 				margin-left: auto;
 			}
 		}
+
+		&-image-inner {
+			margin: 0;
+			height: 100px;
+			width: 100px;
+
+			@media (--md) {
+				height: 150px;
+				width: 150px;
+			}
+		}
+
+		&-image {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		h4 {
+			font-size: 16px;
+			font-weight: 400 !important;
+			line-height: 1.25;
+			margin: 0 0 16px;
+			color: inherit;
+
+			a {
+				color: inherit;
+			}
+		}
 	}
 
 	&__footer {
 		margin-top: auto;
-		padding-top: 20px;
+		padding-top: 16px;
 		position: relative;
 
 		@media (--md) {
@@ -153,24 +187,15 @@ dialog#mini-cart {
 			content: "";
 			position: absolute;
 			top: 0;
-			left: -14px;
-			width: calc(100% + 30px);
-			border-top: 1px solid $gray-600;
-
-			@media (--md) {
-				width: 100%;
-				left: 0;
-			}
+			left: 0;
+			width: 100%;
+			border-top: 1px solid $woo-border-color;
 		}
 
 		header {
 			display: flex;
 			justify-content: space-between;
-			margin-bottom: 10px;
-
-			@media (--md) {
-				margin-bottom: 20px;
-			}
+			margin-bottom: 16px;
 
 			h4 {
 				margin: 0;
@@ -178,13 +203,40 @@ dialog#mini-cart {
 
 			.amount {
 				text-align: right;
+				font-family: $font-family-raleway;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 1.333333;
 			}
 		}
 
 		.btn {
 			width: 100%;
-			padding: 20px;
+			padding: 15px;
 			line-height: 1;
+			font-size: 20px;
+			font-weight: 500;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+
+			&:hover {
+				&::before {
+					background: $woo-btn-color;
+				}
+			}
+
+			&::before {
+				content: "";
+				mask-image: url(../../images/ico-shopping-cart.svg);
+				mask-repeat: no-repeat;
+				mask-size: 32px 32px;
+				background: $white;
+				height: 32px;
+				width: 32px;
+			}
 		}
 	}
 }
