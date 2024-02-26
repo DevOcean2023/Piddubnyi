@@ -1,0 +1,136 @@
+---
+pageTitle: FAQ
+---
+
+<link rel="stylesheet" href="{{root}}assets/css/banner-pages.css">
+<section class="banner-pages">
+	<img class="object-fit-cover object-fit" src="{{root}}assets/images/bg-faq.jpg" alt="">
+	<div class="inner">
+		<h1 class="banner-pages__title">FAQ</h1>
+	</div>
+</section>
+
+<link rel="stylesheet" href="{{root}}assets/css/faq.css">
+<section class="faq">
+	<div class="inner">
+		{{#>accordion}}
+			{{#>accordion-button}}
+				Які продукти мені підходять?
+			{{/accordion-button}}
+			{{#>accordion-panel}}
+				<p>Наші фахівці готові надати персоналізовані рекомендації. Звертайтеся до наших консультантів чи
+					використовуйте онлайн-інструменти для визначення типу шкіри та вибору оптимального догляду.</p>
+			{{/accordion-panel}}
+		{{/accordion}}
+		{{#>accordion}}
+			{{#>accordion-button}}
+				Як дізнатися про акції та знижки?
+			{{/accordion-button}}
+			{{#>accordion-panel}}
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu quis eu, adipiscing magna
+					aliquam rhoncus
+					lacus, molestie mattis. Ac diam at eget vitae id integer eu, tellus. Diam semper sagittis
+					maecenas
+					ultricies facilisis. Arcu nisl pretium, interdum scelerisque. Suspendisse curabitur sit
+					egestas tortor
+					cursus fermentum pulvinar tincidunt tincidunt.</p>
+			{{/accordion-panel}}
+		{{/accordion}}
+		{{#>accordion}}
+			{{#>accordion-button}}
+				Як здійснити замовлення та оплату?
+			{{/accordion-button}}
+			{{#>accordion-panel}}
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu quis eu, adipiscing magna
+					aliquam rhoncus
+					lacus, molestie mattis. Ac diam at eget vitae id integer eu, tellus. Diam semper sagittis
+					maecenas
+					ultricies facilisis. Arcu nisl pretium, interdum scelerisque. Suspendisse curabitur sit
+					egestas tortor
+					cursus fermentum pulvinar tincidunt tincidunt.</p>
+			{{/accordion-panel}}
+		{{/accordion}}
+		{{#>accordion}}
+			{{#>accordion-button}}
+				Як доставка та повернення робляться?
+			{{/accordion-button}}
+			{{#>accordion-panel}}
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu quis eu, adipiscing magna
+					aliquam rhoncus
+					lacus, molestie mattis. Ac diam at eget vitae id integer eu, tellus. Diam semper sagittis
+					maecenas
+					ultricies facilisis. Arcu nisl pretium, interdum scelerisque. Suspendisse curabitur sit
+					egestas tortor
+					cursus fermentum pulvinar tincidunt tincidunt.</p>
+			{{/accordion-panel}}
+		{{/accordion}}
+		{{#>accordion}}
+			{{#>accordion-button}}
+				Які продукти мені підходять?
+			{{/accordion-button}}
+			{{#>accordion-panel}}
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu quis eu, adipiscing magna
+					aliquam rhoncus
+					lacus, molestie mattis. Ac diam at eget vitae id integer eu, tellus. Diam semper sagittis
+					maecenas
+					ultricies facilisis. Arcu nisl pretium, interdum scelerisque. Suspendisse curabitur sit
+					egestas tortor
+					cursus fermentum pulvinar tincidunt tincidunt.</p>
+			{{/accordion-panel}}
+		{{/accordion}}
+	</div>
+</section>
+
+<link rel="stylesheet" href="{{root}}assets/css/contact-form.css">
+<section class="contact-form">
+	<div class="inner">
+		<img src="{{root}}assets/images/contact-form-image.jpg" alt="">
+		<div class="contact-form__wrap">
+			<h2 class="contact-form__title">зв’язатись з нами</h2>
+			<p class="contact-form__text">Залишились запитання, на які не знайшли відповіді? Заповніть, будь ласка,
+				форму нижче, і ми вам відповімо якнайшвидше.</p>
+			{{#> gform-form
+				showError=false
+				showConfirmation=false
+			}}
+				{{#> gform-body showError=showError}}
+					<!-- Custom class: gfield_single_line_text -->
+					{{> gform-singleLineText
+						showError=showError
+						customClass=""
+						hideLabel=false
+						labelText="Ваше Ім’я"
+						required=true
+						typeTextOrPassword="text"
+						fieldSize="medium"
+					}}
+					{{> gform-email
+						showError=showError
+						customClass=""
+						hideLabel=false
+						labelText="Електронна пошта"
+						required=true
+						fieldSize="medium"
+						enableConfirmation=false
+						enterEmailLabel=""
+						confirmEmailLabel=""
+					}}
+					{{> gform-paragraphText
+						showError=showError
+						customClass=""
+						hideLabel=false
+						labelText="Текст повідомлення"
+						required=true
+						fieldSize="medium"
+					}}
+
+				{{/gform-body}}
+				{{> gform-footer
+					type="button"
+					text="Надіслати"
+				}}
+			{{/gform-form}}
+		</div>
+	</div>
+</section>
+
