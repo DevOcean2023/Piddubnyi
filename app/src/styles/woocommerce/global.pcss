@@ -30,7 +30,7 @@ body.filters-opened {
 }
 
 body.woocommerce {
-	.products:not(.related):not(.columns-4) {
+	.products:not(.related) {
 		padding: 0;
 		margin: 0;
 		list-style: none;
@@ -611,5 +611,15 @@ body.woocommerce {
 
 	[class*="wpfSelectedTitle"] {
 		padding: 0 !important;
+	}
+}
+
+.woocommerce-message {
+	max-width: 1350px;
+	margin: 0 auto;
+
+	.button {
+		@include btn;
+		margin: 0 20px 0 0;
 	}
 }
