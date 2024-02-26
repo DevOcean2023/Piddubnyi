@@ -437,6 +437,29 @@ function processElements(parentElement) {
 
 processElements(document);
 
+
+///////////////////////add sale to home products
+let productHome = document.querySelectorAll(".home-products .product");
+
+productHome.forEach(function (instockElement) {
+	let delElement = instockElement.querySelector("del bdi");
+	let insElement = instockElement.querySelector("ins bdi");
+	let amountElement = instockElement.querySelector(".price del .amount");
+	if (delElement || insElement) {
+		let fullPrice = parseFloat(delElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		let discountedPrice = parseFloat(insElement.textContent.replace(/[^\d.]/g, "").replace(",", ""));
+		if (!isNaN(fullPrice) && !isNaN(discountedPrice)) {
+			let discountPercentage = Math.round(((fullPrice - discountedPrice) / fullPrice) * 100);
+			let salesElement = document.createElement("div");
+			salesElement.className = "sales";
+			salesElement.innerText = "-" + discountPercentage + "%";
+			amountElement.appendChild(salesElement);
+		} else {
+			console.error("Помилка при отриманні значень цін для карточки товару.");
+		}
+	}
+});
+
 //////////add class to contact my account
 jQuery.noConflict();
 jQuery(document).ready(function ($) {

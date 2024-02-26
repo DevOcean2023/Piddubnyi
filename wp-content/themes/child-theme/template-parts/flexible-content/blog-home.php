@@ -1,10 +1,3 @@
-<?php
-/**
- * @var array{
- *     is_first: bool
- * } $args
- */
-?>
 <section class="blog-home">
 	<div class="inner">
 		<div class="blog-home__head">
@@ -26,7 +19,6 @@
 				</div>
 			</a>
 		<?php endwhile; ?>
-
 		<?php dov_the( 'button', 'bottom-btn btn' ); ?>
 	</div>
 </section>

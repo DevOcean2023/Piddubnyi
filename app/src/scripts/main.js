@@ -24,7 +24,7 @@ function showMenu(container, button) {
 		container.style.position = 'absolute';
 
 		if (button.classList.contains('about-company')) {
-			container.style.right = window.innerWidth - buttonRect.right - 20 + 'px';
+			container.style.right = window.innerWidth - buttonRect.right - 17 + 'px';
 		} else {
 			container.style.left = buttonRect.left + 'px';
 		}
