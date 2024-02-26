@@ -78,7 +78,7 @@
 				left: 0;
 				top: 50%;
 				transform: translate(0, -50%);
-				content: "";
+				content: "" !important;
 				transition: background 0.8s;
 			}
 		}
@@ -86,6 +86,7 @@
 
 	.account {
 		display: none;
+
 		a {
 			&::before {
 				background: svg-load("../../../images/account-menu.svg") no-repeat center;
@@ -108,6 +109,7 @@
 		@media (--lg) {
 			order: unset;
 		}
+
 		a {
 			&::before {
 				background: svg-load("../../../images/wish-menu.svg") no-repeat center;
@@ -126,6 +128,7 @@
 		@media (--lg) {
 			order: unset;
 		}
+
 		a {
 			&::before {
 				background: svg-load("../../../images/shopping-cart.svg") no-repeat center;
@@ -161,6 +164,7 @@
 
 	.delivery {
 		display: none;
+
 		a {
 			font-size: 16px;
 			color: #000;
