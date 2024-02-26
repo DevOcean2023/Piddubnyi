@@ -1,0 +1,90 @@
+@import "../variables-and-mixins.pcss";
+@import "../../../base/defaults/styles/blocks/accordion.pcss";
+
+.faq {
+	margin: 0 0 60px;
+}
+
+.accordion {
+	margin: 0 0 23px;
+	border: 1px solid;
+
+	&.accordion {
+		&_active {
+			box-shadow: none;
+			color: $white;
+			border: 1px solid $woo-main-color;
+
+			.accordion {
+				&__trigger {
+					color: $white;
+					background: $woo-main-color;
+					font-size: 24px;
+					font-weight: 500;
+					line-height: 1.333333;
+
+					&::after {
+						transform: rotate(-135deg);
+						top: 50%;
+						right: 30px;
+					}
+				}
+
+				&__panel {
+					background: $woo-main-color;
+				}
+			}
+		}
+	}
+
+	&__trigger {
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.333333;
+		padding: 15px 55px 15px 24px;
+		background: none;
+		border-radius: 0;
+		position: relative;
+
+		@media (--sm) {
+			padding: 15px 55px 15px 24px;
+		}
+
+		&:hover {
+			background: $woo-main-color;
+			color: $white;
+		}
+
+		&::after {
+			content: "";
+			height: 18px;
+			width: 18px;
+			border-width: 0 2px 2px 0;
+			border-style: solid;
+			transform: rotate(45deg) translateY(-50%);
+			position: absolute;
+			top: 44%;
+			right: 30px;
+
+			@media (--md) {
+				height: 10px;
+				width: 10px;
+				right: 34px;
+			}
+		}
+	}
+
+	&__panel {
+		padding: 4px 23px 16px;
+		line-height: 1.333333;
+
+		&::before {
+			display: none;
+		}
+
+		p {
+			max-width: 713px;
+			line-height: 1.333333;
+		}
+	}
+}
