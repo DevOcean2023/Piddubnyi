@@ -24,6 +24,18 @@ DOV_CPT::add(
 	)
 );
 
+
+DOV_CPT::add(
+	'services',
+	array(
+		'public'      => true,
+		'has_archive' => true,
+		'menu_icon'   => 'dashicons-media-document',
+		'supports'    => array( 'title', 'editor', 'thumbnail' ),
+	)
+);
+
+
 DOV_CPT::add(
 	'faq',
 	array(
