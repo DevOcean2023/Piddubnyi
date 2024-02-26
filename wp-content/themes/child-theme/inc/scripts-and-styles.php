@@ -111,6 +111,12 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'products-sale' => array(
 			'home-products.css',
 		),
+		'trusted'       => array(
+			'trusted.css',
+		),
+		'number'        => array(
+			'number.css',
+		),
 	),
 	static function ( $css ) {
 		return $css;
