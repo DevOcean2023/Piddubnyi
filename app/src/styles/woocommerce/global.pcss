@@ -616,10 +616,25 @@ body.woocommerce {
 
 .woocommerce-message {
 	max-width: 1350px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 
 	.button {
 		@include btn;
 		margin: 0 20px 0 0;
+	}
+}
+
+.return-to-shop {
+	.button {
+		@include btn;
+		color: $white !important;
+
+		&:hover {
+			color: $woo-btn-color !important;
+		}
+
+		br {
+			display: none;
+		}
 	}
 }
