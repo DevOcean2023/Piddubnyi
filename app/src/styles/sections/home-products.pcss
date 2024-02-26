@@ -390,6 +390,21 @@
 			}
 		}
 
+		.tinv-wishlist {
+			position: static;
+
+			.tinvwl {
+				&_add_to_wishlist_button {
+
+					&.tinvwl-icon-heart {
+						&::before {
+							content: "" !important;
+						}
+					}
+				}
+			}
+		}
+
 		.sales {
 			position: absolute;
 			top: 20px;
