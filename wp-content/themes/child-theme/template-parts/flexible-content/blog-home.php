@@ -21,7 +21,6 @@
 				<div class="blog-home__content">
 					<h2 class="blog-home__title"><?php the_title(); ?></h2>
 					<p class="blog-home__excerpt">
-						<?php echo $i; ?>
 						<?php dov_the_excerpt( ( $i == 1 ) ? ' 160' : '100', false, true, '...' ); ?>
 					</p>
 				</div>
