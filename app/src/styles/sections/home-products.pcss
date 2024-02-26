@@ -282,9 +282,13 @@
 		.price {
 			display: flex;
 			flex-direction: row-reverse;
-			gap: 18px;
+			gap: 5px;
 			justify-content: center;
 			padding-bottom: 8px;
+
+			@media (--lg) {
+				gap: 18px;
+			}
 
 			del {
 				color: #bcbcbc;
