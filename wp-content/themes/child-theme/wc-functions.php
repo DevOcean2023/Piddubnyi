@@ -45,7 +45,7 @@ function checkout_shipping_change_position() {
 
 add_action( 'woocommerce_before_checkout_billing_form', 'billing_header_modify', 100 );
 function billing_header_modify() {
-	if ( is_user_logged_in() ):
+	if ( is_user_logged_in() ) :
 		echo '<div class="edit-link-holder"><a href="/my-account/edit-account">' . wp_kses_post( 'Change info', 'woocommerce' ) . '</a></div>';
 	endif;
 }
@@ -156,7 +156,7 @@ $updated_columns = array(
 	'order-total'   => esc_html__( 'Сума', 'woocommerce' ),
 	'order-actions' => '&nbsp;',
 );
-add_filter( 'woocommerce_account_orders_columns', function ( $columns ) use ( $updated_columns ) {
+add_filter( 'woocommerce_account_orders_columns', function () use ( $updated_columns ) {
 	return $updated_columns;
 } );
 
@@ -318,6 +318,61 @@ function custom_product_tabs_content_application() {
 }
 
 /////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////
+/// Add the "Composition" tab on the product edit page in the admin
+function custom_product_data_tab_set( $tabs ) {
+	$tabs['set'] = array(
+		'label'  => __( 'Набір в якому є товар', 'woocommerce' ),
+		'target' => 'custom_set',
+	);
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_data_tabs', 'custom_product_data_tab_set' );
+
+// The contents of the "Application Features" tab on the product editing page in the admin
+function custom_product_data_content_set() {
+	global $post;
+
+	$custom_field = get_post_meta( $post->ID, '_custom_set', true );
+	$editor_id    = '_custom_set';
+	$settings     = array( 'name' => '_custom_set' );
+
+	echo '<div id="custom_set" class="panel woocommerce_options_panel">';
+	echo '<div class="options_group" style="padding:15px;">';
+	echo '<input type="text" id="_custom_set" name="_custom_set" value="' . esc_attr( $custom_field ) . '"></input>';
+	echo '</div>';
+	echo '</div>';
+}
+
+add_action( 'woocommerce_product_data_panels', 'custom_product_data_content_set' );
+
+// Saving the value of the field when saving the product
+function save_custom_product_data_field_set( $post_id ): void {
+	$custom_application_features = isset( $_POST['_custom_set'] ) ? wp_kses_post( $_POST['_custom_set'] ) : '';
+	update_post_meta( $post_id, '_custom_set', $custom_application_features );
+}
+
+add_action( 'woocommerce_process_product_meta', 'save_custom_product_data_field_set' );
+
+function add_content_after_addtocart_button_func() {
+	global $post;
+
+	$custom_field = get_post_meta( $post->ID, '_custom_set', true );
+
+	if ( $custom_field ) :
+		echo '<a href="' . esc_url( $custom_field ) . '" class="btn btn-set" style="margin: 0 0 20px;">' . esc_html__( 'Оглянути набір', 'theme' ) . '</a>';
+	endif;
+}
+
+add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func' );
+
+////////////////////////////////////////////////////////////////////
+
+add_action( 'woocommerce_process_product_meta', 'save_custom_product_data_field_composition' );
 
 add_filter( 'woocommerce_output_related_products_args', 'woo_related_products_args', 20 );
 function woo_related_products_args( $args ) {
