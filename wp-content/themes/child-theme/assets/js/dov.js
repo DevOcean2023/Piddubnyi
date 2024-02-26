@@ -482,6 +482,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 	initProductSlider();
 	initRelatedProductsSlider();
+	// resetMiniCartLink();
 });
 
 function initProductSlider() {
@@ -554,4 +555,17 @@ function initRelatedProductsSlider() {
 			});
 		});
 	}
+}
+
+
+function resetMiniCartLink() {
+	let links = document.querySelectorAll("[data-popup-id=\"mini-cart\"]");
+	if (!links.length) return;
+
+	links.forEach(el => {
+		el.addEventListener("click", e => {
+			e.preventDefault();
+			console.log('hflla');
+		});
+	});
 }

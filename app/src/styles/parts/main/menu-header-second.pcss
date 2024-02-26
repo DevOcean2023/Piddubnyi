@@ -35,6 +35,21 @@
 			font-weight: 700;
 		}
 
+		&_mini_cart_counter {
+			position: absolute;
+			top: -5px;
+			right: -10px;
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background: $woo-main-color;
+			color: $white;
+		}
+
 		&.btn-link {
 			@include btn;
 		}
@@ -49,6 +64,7 @@
 			position: relative;
 			display: block;
 			transition: background 0.8s;
+			height: 32px;
 			width: 32px;
 
 			@media (--lg) {

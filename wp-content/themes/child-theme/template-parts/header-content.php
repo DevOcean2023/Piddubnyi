@@ -19,7 +19,8 @@
 						<div class="wrap-search">
 							<form class="search-form__form" role="search" method="get" action="/">
 								<label class="search-form__label">
-									<span class="screen-reader-text"><?php esc_attr_e( 'Search for:', 'theme' ); ?></span>
+									<span
+										class="screen-reader-text"><?php esc_attr_e( 'Search for:', 'theme' ); ?></span>
 									<input class="search-form__input" type="search" placeholder="Шукати" value=""
 										   name="s">
 								</label>
@@ -29,7 +30,34 @@
 						</div>
 					</div>
 					<?php dov_the_logo(); ?>
-					<?php dov_the_nav( 'Header Second' ); ?>
+					<nav class="menu-header-second" aria-label="Header Second">
+						<ul class="menu-header-second__items" data-role="menubar" data-accessibility-menu>
+							<li class="menu-header-second__item account">
+								<a class="menu-header-second__link"
+								   href="<?php echo esc_url( wc_get_account_endpoint_url( 'edit-account' ) ); ?>"
+								   data-role="menuitem"></a></li>
+							<li class="menu-header-second__item cart menu-cart-link">
+								<a href="#mini-cart" data-popup-id="mini-cart"
+								   class="menu-header-second__link_mini_cart">
+									<?php
+									global $woocommerce;
+									$cart_count = $woocommerce->cart->cart_contents_count ? $woocommerce->cart->cart_contents_count : '';
+									if ( $cart_count ) :
+										?>
+										<span class="menu-header-second__link_mini_cart_counter">
+										<?php echo esc_html( $cart_count ); ?>
+									</span>
+									<?php endif; ?>
+								</a>
+							</li>
+							<li class="menu-header-second__item wish-list">
+								<?php echo do_shortcode( '[ti_wishlist_products_counter]' ); ?>
+							</li>
+							<li class="menu-header-second__item delivery">
+								<a class="menu-header-second__link" href="#"
+								   data-role="menuitem">Доставка та оплата</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 			<div class="page-header__bottom">
@@ -172,7 +200,7 @@
 								</div>
 								<?php dov_the( 'header_link_menu' ); ?>
 							</div>
-							<?php endwhile; ?>
+						<?php endwhile; ?>
 					</div>
 				</div>
 			</div>
