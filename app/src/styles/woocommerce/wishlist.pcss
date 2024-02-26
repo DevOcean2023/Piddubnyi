@@ -66,34 +66,11 @@
 		}
 
 		.return-to-shop {
+			text-align: center;
 			width: 100%;
 
 			.wc-backward {
-				width: 100%;
-				padding: 16px 24px;
-				font-family: $font-family-raleway;
-				height: 53px;
-				color: #171a19;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: 400;
-				text-transform: uppercase;
-				margin: 0 auto;
-				background: #fff;
-				border-radius: 0;
-				border: 1px solid #171a19;
-				justify-content: center;
-				display: flex;
-
-				@media (--sm) {
-					width: 374px;
-					margin: 0 auto;
-				}
-
-				&:hover {
-					color: #fff;
-					background: #171a19;
-				}
+				@include btn;
 			}
 		}
 

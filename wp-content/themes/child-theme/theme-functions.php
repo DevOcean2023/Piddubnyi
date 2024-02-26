@@ -88,7 +88,7 @@ function remove_my_account_dashboard( $menu_links ) {
 add_filter(
 	'body_class',
 	function ( $classes ) {
-		if ( is_page( 'wish-list' ) ) {
+		if ( is_page( 'wishlist' ) ) {
 			$classes[] = 'wishlist-page';
 		}
 		if ( is_page( 'checkout' ) ) {
