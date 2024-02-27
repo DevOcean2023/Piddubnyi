@@ -646,3 +646,33 @@ body.filters-opened {
 		}
 	}
 }
+
+div.sale-banner {
+	display: flex;
+	align-items: center;
+	background: url(../../images/bg-sale-banner.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	min-height: 92px;
+	margin: 0 0 32px;
+	padding: 2px 16px;
+
+	.sale-logo-holder {
+		margin: 0;
+		display: none;
+
+		@media (--md) {
+			display: block;
+		}
+	}
+
+	.page-title {
+		margin: 0;
+		color: $white;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 1;
+		text-align: center;
+		text-transform: none;
+	}
+}
