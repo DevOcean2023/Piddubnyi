@@ -28,7 +28,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 
 if ( $attachment_ids && $product->get_image_id() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
-		echo '<div class="product-img swiper-slide">
+		echo '<div class="product-slider__slide">
 			<img src="' . esc_url( wp_get_attachment_image_src( $attachment_id, 'full' )[0] ) . '" alt="' . esc_html( get_image_alt( $attachment_id ) ) . '">
 		</div>';
 	}

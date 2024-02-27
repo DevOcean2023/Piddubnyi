@@ -43,6 +43,10 @@ body.single-product {
 				gap: 24px;
 				max-width: 57.3%;
 			}
+
+			.tns-controls {
+				display: none;
+			}
 		}
 
 		.entry-summary {
@@ -312,6 +316,10 @@ body.single-product {
 			font-weight: 500;
 			text-transform: uppercase;
 		}
+
+		#tns1-ow {
+			flex-grow: 1;
+		}
 	}
 
 	.related {
@@ -321,6 +329,10 @@ body.single-product {
 			flex: 1 0 100%;
 			max-width: 100%;
 			position: relative;
+
+			@media (--lg) {
+				margin: 0 0 57px;
+			}
 
 			&::before {
 				content: "";
@@ -450,6 +462,53 @@ body.single-product {
 				@media (--lg) {
 					display: none;
 				}
+			}
+		}
+
+		.tns-nav,
+		.slide-counter {
+			display: none;
+		}
+
+		[data-controls="prev"],
+		[data-controls="next"] {
+			position: absolute;
+			top: 43%;
+			right: 0;
+			height: 56px;
+			width: 56px;
+			background: $white;
+			border: 1px solid;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			display: none;
+			cursor: pointer;
+
+			@media (--lg) {
+				display: flex;
+			}
+
+			&::before {
+				content: "";
+				mask-image: url(../../images/ico-slider-arrow.svg);
+				mask-repeat: no-repeat;
+				mask-size: 16px 16px;
+				background: $woo-main-color;
+				height: 16px;
+				width: 16px;
+			}
+
+			span {
+				display: none;
+			}
+		}
+
+		[data-controls="prev"] {
+			left: 0;
+
+			&::before {
+				transform: rotate(-180deg);
 			}
 		}
 	}
@@ -595,42 +654,47 @@ body.single-product {
 			width: 193px;
 		}
 
-		.swiper-thumbs {
+		.thumb-slider {
 			width: 100%;
 			height: 100%;
-		}
 
-		.swiper-slide {
-			height: 85px !important;
-			overflow: hidden;
-			border: 1px solid $woo-border-color;
-			cursor: pointer;
+			&__slide {
+				height: 85px !important;
+				overflow: hidden;
+				border: 1px solid $woo-border-color;
+				cursor: pointer;
+				margin: 0 0 24px;
 
-			&.swiper-slide-thumb-active {
-				border-color: $woo-main-color;
+				&.tns-nav-active,
+				&.swiper-slide-thumb-active {
+					border-color: $woo-main-color;
+
+					img {
+						opacity: 1;
+					}
+				}
+
+				&:hover {
+					border-color: $woo-main-color;
+				}
 
 				img {
-					opacity: 1;
+					opacity: 0.5;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
 				}
-			}
-
-			&:hover {
-				border-color: $woo-main-color;
-			}
-
-			img {
-				opacity: 0.5;
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
 			}
 		}
 	}
 
-	.product-images {
+	#tns2-ow {
 		box-shadow: 0 0 40px 0 rgba(135, 135, 135, 0.1);
+	}
 
-		.swiper-slide {
+	.product-slider {
+
+		&__slide {
 			img {
 				height: 100%;
 				width: 100%;
