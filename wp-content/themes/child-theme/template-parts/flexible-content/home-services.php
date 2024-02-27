@@ -17,7 +17,7 @@
 							<?php dov_the( 'image_white', 'desktop', '60x0' ); ?>
 							<?php dov_the( 'image_green', 'mobile', '40x0' ); ?>
 						</div>
-						<a class="home-services__link" href="#"><?php the_title(); ?></a>
+						<a class="home-services__link" href="#" data-service-id="<?php echo get_the_ID(); ?>"><?php the_title(); ?></a>
 					</div>
 					<?php
 				endwhile;

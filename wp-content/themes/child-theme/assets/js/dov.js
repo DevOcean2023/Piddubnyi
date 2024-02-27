@@ -592,3 +592,28 @@ function resetMiniCartLink() {
 		});
 	});
 }
+
+//////services
+document.addEventListener('DOMContentLoaded', function () {
+	var homeServicesLinks = document.querySelectorAll('.home-services__link');
+
+	homeServicesLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+			var serviceId = link.getAttribute('data-service-id');
+			localStorage.setItem('selectedServiceId', serviceId);
+			window.location.href = '/our-services';
+		});
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	var selectedServiceId = localStorage.getItem('selectedServiceId');
+	if (selectedServiceId) {
+		var tabToActivate = document.querySelector('[data-service-id="' + selectedServiceId + '"]');
+		if (tabToActivate) {
+			tabToActivate.click();
+		}
+		localStorage.removeItem('selectedServiceId');
+	}
+});
