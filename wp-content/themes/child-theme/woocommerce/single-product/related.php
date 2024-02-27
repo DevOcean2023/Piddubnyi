@@ -33,7 +33,7 @@ if ( $related_products ) : ?>
 
 		<?php woocommerce_product_loop_start(); ?>
 
-		<div class="swiper swiper-related">
+		<div class="swiper swiper-products">
 			<div class="swiper-wrapper">
 				<?php foreach ( $related_products as $related_product ) : ?>
 					<div class="swiper-slide">

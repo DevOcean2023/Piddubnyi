@@ -138,7 +138,7 @@ do_action( 'woocommerce_before_main_content' );
 			<div class="inner">
 				<h2><?php esc_html_e( 'Recently viewed products', 'theme' ); ?></h2>
 				<div class="slider-holder">
-					<div class="swiper swiper-recently-products">
+					<div class="swiper swiper-products">
 						<div class="swiper-wrapper">
 
 							<?php foreach ( $viewed_products as $_id ) : ?>
