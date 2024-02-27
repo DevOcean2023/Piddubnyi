@@ -122,6 +122,10 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		),
 	),
 	static function ( $css ) {
+		if ( is_404() ) {
+			$css .= DOV_Enqueue_Styles::get_css( 'section-404.css' );
+		}
+
 		return $css;
 	}
 );

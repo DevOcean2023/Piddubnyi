@@ -46,8 +46,18 @@ do_action( 'woocommerce_before_main_content' );
 
 			<div class="shop-page__products-holder">
 				<header class="woocommerce-products-header">
-					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-						<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+					<?php if ( is_product_category( 'sale' ) && dov_get( 'dov_banner_background' ) ) : ?>
+						<div class="sale-banner">
+							<?php dov_the( 'dov_banner_image', '<figure class="sale-logo-holder">' ); ?>
+							<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+								<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+							<?php endif; ?>
+							<?php dov_the( 'dov_banner_background', 'object-fit object-fit-cover' ); ?>
+						</div>
+					<?php else : ?>
+						<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+							<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+						<?php endif; ?>
 					<?php endif; ?>
 
 					<?php

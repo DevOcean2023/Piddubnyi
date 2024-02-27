@@ -1223,7 +1223,8 @@
             "relationship_all": 0,
             "min": "",
             "max": "",
-            "elements": ""
+            "elements": "",
+            "bidirectional_target": []
         },
         {
             "key": "field_65d879c2291c7",
@@ -1366,8 +1367,8 @@
             "allow_null": 1
         },
         {
-            "key": "field_65dc52baa0912",
-            "label": "Home Services",
+            "key": "field_65ddaedb2a5a7",
+            "label": "Sale banner",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -1383,11 +1384,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_65dc52faa0913",
-            "label": "Заголовок",
-            "name": "dov_title_home_services",
+            "key": "field_65ddaf082a5a8",
+            "label": "Image",
+            "name": "dov_banner_image",
             "aria-label": "",
-            "type": "title",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1396,12 +1397,41 @@
                 "class": "",
                 "id": ""
             },
-            "replace": "",
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "default_level": 0
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65ddaf422a5a9",
+            "label": "Background",
+            "name": "dov_banner_background",
+            "aria-label": "",
+            "type": "background",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -1422,5 +1452,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708938029
+    "modified": 1709027223
 }

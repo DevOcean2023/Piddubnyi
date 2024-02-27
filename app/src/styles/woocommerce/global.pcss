@@ -646,3 +646,44 @@ body.filters-opened {
 		}
 	}
 }
+
+div.sale-banner {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	min-height: 92px;
+	margin: 0 0 32px;
+	padding: 2px 16px;
+	position: relative;
+	z-index: 10;
+
+	@media (--lg) {
+		margin: -75px 0 32px;
+		padding: 2px 105px 2px 16px;
+	}
+
+	.sale-logo-holder {
+		margin: 0;
+		display: none;
+		flex-shrink: 0;
+
+		@media (--md) {
+			display: block;
+		}
+	}
+
+	.page-title {
+		margin: 0;
+		color: $white;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 1;
+		text-align: center;
+		text-transform: none;
+	}
+
+	.object-fit {
+		z-index: -1;
+	}
+}
