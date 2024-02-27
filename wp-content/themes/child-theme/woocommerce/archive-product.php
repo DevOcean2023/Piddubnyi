@@ -138,25 +138,19 @@ do_action( 'woocommerce_before_main_content' );
 			<div class="inner">
 				<h2><?php esc_html_e( 'Recently viewed products', 'theme' ); ?></h2>
 				<div class="slider-holder">
-					<div class="swiper swiper-products">
-						<div class="swiper-wrapper">
+					<div class="product-cards-slider" data-slider="product-cards-slider">
+						<?php foreach ( $viewed_products as $_id ) : ?>
+							<div class="product-cards-slider__slide">
+								<?php
+								$post_object = get_post( $_id );
 
-							<?php foreach ( $viewed_products as $_id ) : ?>
-								<div class="swiper-slide">
-									<?php
-									$post_object = get_post( $_id );
+								setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-									setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-
-									wc_get_template_part( 'content', 'product' );
-									?>
-								</div>
-							<?php endforeach; ?>
-						</div>
+								wc_get_template_part( 'content', 'product' );
+								?>
+							</div>
+						<?php endforeach; ?>
 					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</div>

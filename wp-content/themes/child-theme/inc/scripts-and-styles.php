@@ -7,7 +7,6 @@ DOV_Defer_Scripts::add( 'frontend.filters' );
 
 DOV_Defer_Scripts::add( 'woo' );
 
-
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
 
 function theme_scripts() {
@@ -16,13 +15,6 @@ function theme_scripts() {
 		'https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js',
 		array( 'jquery' ),
 		'1.1',
-		false
-	);
-	wp_enqueue_script(
-		'swiper',
-		'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
-		array(),
-		'1.0',
 		false
 	);
 	wp_enqueue_script(

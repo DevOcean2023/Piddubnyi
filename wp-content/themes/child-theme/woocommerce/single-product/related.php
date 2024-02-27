@@ -33,24 +33,19 @@ if ( $related_products ) : ?>
 
 		<?php woocommerce_product_loop_start(); ?>
 
-		<div class="swiper swiper-products">
-			<div class="swiper-wrapper">
-				<?php foreach ( $related_products as $related_product ) : ?>
-					<div class="swiper-slide">
-						<?php
-						$post_object = get_post( $related_product->get_id() );
+		<div class="product-cards-slider" data-slider="product-cards-slider">
+			<?php foreach ( $related_products as $related_product ) : ?>
+				<div class="product-cards-slider__slide">
+					<?php
+					$post_object = get_post( $related_product->get_id() );
 
-						setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-						wc_get_template_part( 'content', 'product' );
-						?>
-					</div>
-				<?php endforeach; ?>
-			</div>
+					wc_get_template_part( 'content', 'product' );
+					?>
+				</div>
+			<?php endforeach; ?>
 		</div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-pagination"></div>
 
 		<?php woocommerce_product_loop_end(); ?>
 
