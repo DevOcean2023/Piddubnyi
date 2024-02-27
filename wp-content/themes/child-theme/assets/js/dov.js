@@ -543,7 +543,7 @@ function initProductSlider() {
 }
 
 function initRelatedProductsSlider() {
-	const sliderEls = document.querySelectorAll(".swiper-related");
+	const sliderEls = document.querySelectorAll(".swiper-related, .swiper-recently-products");
 
 	if (sliderEls.length) {
 		Array.from(sliderEls).forEach(sliderEl => {

@@ -390,3 +390,35 @@ function remove_sidebar_product_pages() {
 }
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+
+add_filter( 'woocommerce_pagination_args', 'rocket_woo_pagination' );
+function rocket_woo_pagination( $args ) {
+
+	$args['prev_text'] = '<span class="arrow-prev"></span>';
+	$args['next_text'] = '<span class="arrow-next"></span>';
+
+	return $args;
+}
+
+add_action( 'template_redirect', 'track_product_view', 9999 );
+
+function track_product_view() {
+	if ( ! is_singular( 'product' ) ) {
+		return;
+	}
+	global $post;
+	if ( empty( $_COOKIE['recently_viewed'] ) ) {
+		$viewed_products = array();
+	} else {
+		$viewed_products = wp_parse_id_list( (array) explode( '|', wp_unslash( $_COOKIE['recently_viewed'] ) ) );
+	}
+	$keys = array_flip( $viewed_products );
+	if ( isset( $keys[ $post->ID ] ) ) {
+		unset( $viewed_products[ $keys[ $post->ID ] ] );
+	}
+	$viewed_products[] = $post->ID;
+	if ( count( $viewed_products ) > 15 ) {
+		array_shift( $viewed_products );
+	}
+	wc_setcookie( 'recently_viewed', implode( '|', $viewed_products ) );
+}
