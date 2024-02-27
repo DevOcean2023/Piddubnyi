@@ -187,6 +187,10 @@
 					left: -3px;
 					width: 20px;
 					height: 20px;
+
+					+ br {
+						display: none;
+					}
 				}
 			}
 
@@ -212,6 +216,12 @@
 						}
 					}
 				}
+			}
+		}
+
+		&_password {
+			+ p {
+				display: none;
 			}
 		}
 	}
@@ -252,6 +262,8 @@
 	position: relative;
 	padding: 50px 16px;
 	outline: 0;
+	background: url(../../images/bg-login.jpg) no-repeat;
+	background-size: cover;
 
 	@media (--sm) {
 		padding: 60px 16px;
