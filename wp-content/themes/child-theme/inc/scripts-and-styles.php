@@ -50,6 +50,18 @@ DOV_Enqueue_Scripts::enqueue_blocks(
 	)
 );
 
+DOV_Enqueue_Scripts::enqueue_blocks(
+	array(
+		'services' => array(
+			'faq-search.js',
+			'tabs.js',
+			'accordion.js' => array(
+				'jquery',
+			),
+		),
+	)
+);
+
 // Styles
 DOV_Enqueue_Styles::enqueue_blocks(
 	array(
@@ -111,6 +123,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		),
 		'home-about'    => array(
 			'home-about.css',
+		),
+		'services'      => array(
+			'services.css',
 		),
 	),
 	static function ( $css ) {
