@@ -129,3 +129,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
+
+//*Accordion*//
+document.addEventListener("DOMContentLoaded", function() {
+	var accordions = document.querySelectorAll(".accordion");
+	if (accordions.length > 0) {
+		var firstAccordion = accordions[0];
+		if (firstAccordion) {
+			firstAccordion.setAttribute("aria-expanded", "true");
+			firstAccordion.classList.add("accordion_active");
+			var tabPanel = firstAccordion.querySelector(".accordion__panel");
+			if (tabPanel) {
+				tabPanel.removeAttribute("hidden");
+			}
+			var firstAccordionButton = firstAccordion.querySelector(".accordion__trigger");
+			if (firstAccordionButton) {
+				firstAccordionButton.setAttribute("aria-expanded", "true");
+			}
+		}
+	}
+});
