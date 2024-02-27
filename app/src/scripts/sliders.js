@@ -59,7 +59,7 @@ tinySlider(
 );
 
 tinySlider("[data-slider=\"slider-products\"]", {
-	items: 1,
+	items: 2,
 	gutter: 10,
 	autoplay: true,
 	autoplayTimeout: 3000,
