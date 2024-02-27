@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////////add sale to shop
-let instockElements = document.querySelectorAll("body.woocommerce-shop .sale");
+let instockElements = document.querySelectorAll("body.woocommerce-shop .sale, body.tax-product_cat .sale");
 
 instockElements.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");
@@ -389,7 +389,7 @@ instockElements.forEach(function (instockElement) {
 });
 
 ////////////////////////add sale to single product
-let productSimple = document.querySelectorAll("body.single-product .product-type-simple");
+let productSimple = document.querySelectorAll("body.single-product .product-type-simple, .recently-products .product-type-simple");
 
 productSimple.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");
@@ -543,7 +543,7 @@ function initProductSlider() {
 }
 
 function initRelatedProductsSlider() {
-	const sliderEls = document.querySelectorAll(".swiper-related");
+	const sliderEls = document.querySelectorAll(".swiper-products");
 
 	if (sliderEls.length) {
 		Array.from(sliderEls).forEach(sliderEl => {

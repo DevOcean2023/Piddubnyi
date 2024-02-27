@@ -39,6 +39,7 @@
 		text-align: center;
 		margin: 0 auto;
 		transition: 0.3s;
+		border: 1px solid transparent;
 
 		@media (--xs) {
 			max-width: 301px;
@@ -49,7 +50,12 @@
 		}
 
 		&:hover {
-			background-color: #e8f5e8;
+			border: 1px solid rgba(99, 155, 139, 1);
+			transition: 0.3s;
+		}
+
+		&:active {
+			background-color: rgba(99, 155, 139, 1);
 			transition: 0.3s;
 		}
 
