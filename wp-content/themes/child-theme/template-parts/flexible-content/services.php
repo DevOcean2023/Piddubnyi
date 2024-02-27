@@ -2,7 +2,6 @@
 	<div class="inner">
 		<div class="services__types">
 			<theme-tabs>
-
 				<?php
 				$services_query = new WP_Query(
 					array(

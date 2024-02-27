@@ -132,6 +132,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		'home-about'    => array(
 			'home-about.css',
 		),
+		'services'      => array(
+			'services.css',
+		),
 	),
 	static function ( $css ) {
 		if ( is_404() ) {
