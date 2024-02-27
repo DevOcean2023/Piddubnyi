@@ -521,6 +521,15 @@
 }
 
 .wishlist {
+	&-counter-with-products {
+		.wishlist {
+			&_products_counter_number {
+				display: flex;
+			}
+		}
+
+	}
+
 	&_products_counter {
 		position: relative;
 
@@ -535,7 +544,6 @@
 			top: -5px;
 			right: -10px;
 			font-size: 12px;
-			display: flex;
 			align-items: center;
 			justify-content: center;
 			height: 20px;
@@ -543,6 +551,7 @@
 			border-radius: 50%;
 			background: $woo-main-color;
 			color: $white;
+			display: none;
 		}
 	}
 }
