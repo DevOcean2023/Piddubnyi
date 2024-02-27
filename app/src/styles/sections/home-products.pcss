@@ -53,6 +53,14 @@
 	#tns1-iw,
 	#tns3-iw {
 		margin: 0 !important;
+
+		@media (min-width: 376px) {
+			margin-left: 16px !important;
+		}
+
+		@media (--lg) {
+			margin-left: 0 !important;
+		}
 	}
 
 	.tns-ovh {
@@ -66,6 +74,7 @@
 
 		@media (min-width: 376px) {
 			margin: 0 auto;
+			max-width: 376px;
 		}
 
 		@media (--sm) {
