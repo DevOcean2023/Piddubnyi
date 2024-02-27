@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ////////////////////////add sale to shop
-let instockElements = document.querySelectorAll("body.woocommerce-shop .sale");
+let instockElements = document.querySelectorAll("body.woocommerce-shop .sale, body.tax-product_cat .sale");
 
 instockElements.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");
