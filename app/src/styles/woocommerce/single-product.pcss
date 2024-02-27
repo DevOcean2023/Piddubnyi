@@ -346,11 +346,17 @@ body.single-product {
 			}
 
 			> h2 {
-				font-size: 32px;
+				font-size: 24px;
 				font-weight: 600;
 				text-transform: uppercase;
 				margin: 0 0 35px;
-				text-align: center;
+				max-width: calc(100% - 100px);
+
+				@media (--lg) {
+					font-size: 32px;
+					text-align: center;
+					max-width: 100%;
+				}
 			}
 
 			.products {
@@ -473,20 +479,23 @@ body.single-product {
 		[data-controls="prev"],
 		[data-controls="next"] {
 			position: absolute;
-			top: 43%;
+			bottom: calc(100% + 30px);
 			right: 0;
-			height: 56px;
-			width: 56px;
+			height: 44px;
+			width: 44px;
 			background: $white;
 			border: 1px solid;
+			display: flex;
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			display: none;
 			cursor: pointer;
 
 			@media (--lg) {
-				display: flex;
+				bottom: unset;
+				top: 43%;
+				height: 56px;
+				width: 56px;
 			}
 
 			&::before {
@@ -497,6 +506,7 @@ body.single-product {
 				background: $woo-main-color;
 				height: 16px;
 				width: 16px;
+				display: block;
 			}
 
 			span {
@@ -505,7 +515,17 @@ body.single-product {
 		}
 
 		[data-controls="prev"] {
-			left: 0;
+			right: 56px;
+
+			@media (--lg) {
+				left: 0;
+			}
+
+			@media (--less-lg) {
+				height: 32px;
+				width: 32px;
+				bottom: calc(100% + 35px);
+			}
 
 			&::before {
 				transform: rotate(-180deg);

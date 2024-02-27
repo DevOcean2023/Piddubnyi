@@ -202,7 +202,6 @@ const productCardsSliderEl = document.querySelector("[data-slider=\"product-card
 if (productCardsSliderEl) {
 	tinySlider("[data-slider=\"product-cards-slider\"]", {
 		items: 1,
-		gutter: 24,
 		autoplay: true,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
@@ -217,18 +216,13 @@ if (productCardsSliderEl) {
 		responsive: {
 			375: {
 				items: 2,
+				gutter: 16,
 			},
-
 			568: {
 				items: 3,
 			},
-			768: {
-				items: 4,
-			},
-			1024: {
-				items: 3,
-			},
 			1360: {
+				gutter: 24,
 				items: 4,
 			},
 		},
