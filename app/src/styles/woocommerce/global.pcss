@@ -650,16 +650,24 @@ body.filters-opened {
 div.sale-banner {
 	display: flex;
 	align-items: center;
+	gap: 16px;
 	background: url(../../images/bg-sale-banner.jpg) no-repeat;
 	background-size: cover;
 	width: 100%;
 	min-height: 92px;
 	margin: 0 0 32px;
 	padding: 2px 16px;
+	position: relative;
+
+	@media (--lg) {
+		margin: -75px 0 32px;
+		padding: 2px 105px 2px 16px;
+	}
 
 	.sale-logo-holder {
 		margin: 0;
 		display: none;
+		flex-shrink: 0;
 
 		@media (--md) {
 			display: block;
@@ -674,5 +682,9 @@ div.sale-banner {
 		line-height: 1;
 		text-align: center;
 		text-transform: none;
+	}
+
+	.object-fit {
+		z-index: -1;
 	}
 }
