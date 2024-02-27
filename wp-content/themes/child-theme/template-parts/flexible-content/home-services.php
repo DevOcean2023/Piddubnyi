@@ -1,6 +1,6 @@
 <section class="home-services">
 	<div class="inner">
-		<h2 class="home-services__title">Наші послуги</h2>
+		<?php dov_the( 'dov_title_home_services', 'home-services__title' ); ?>
 		<div class="home-services__wrapper">
 			<?php
 			$args         = array(
