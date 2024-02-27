@@ -17,7 +17,7 @@
 						$post_content   = get_the_content();
 						$post_image_url = get_the_post_thumbnail_url();
 						?>
-						<theme-tabs-button>
+						<theme-tabs-button data-service-id="<?php echo esc_attr( get_the_ID() ); ?>">
 							<div class="services__icon-image">
 								<?php dov_the( 'image_black', 'black' ); ?>
 								<?php dov_the( 'image_white_services', 'white' ); ?>
@@ -25,7 +25,7 @@
 							<p class="services__text"><?php echo esc_html( $post_title ); ?></p>
 						</theme-tabs-button>
 
-						<theme-tabs-content>
+						<theme-tabs-content data-service-id="<?php echo esc_attr( get_the_ID() ); ?>">
 							<div class="tabs__tabs-content_items">
 								<div class="tabs__tabs-content_items_item">
 									<div class="tabs__tabs-content_items_item_text">
@@ -67,9 +67,10 @@
 					$post_title     = get_the_title();
 					$post_content   = get_the_content();
 					$post_image_url = get_the_post_thumbnail_url();
+					$service_id     = get_the_ID();
 					?>
-					<div class="accordion " id='accordion-<?php echo esc_attr( $accordion_index ); ?>'>
-						<h2 class="accordion__header">
+					<div class="accordion" id='accordion-<?php echo esc_attr( $service_id ); ?>'>
+						<h2 class="accordion__header" data-service-id="<?php echo esc_attr( $service_id ); ?>">
 							<button class="accordion__trigger"
 									id="accordion-btn-<?php echo esc_attr( $accordion_index ); ?>"
 									type="button"
