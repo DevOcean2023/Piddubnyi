@@ -608,6 +608,7 @@ function openAccordion(serviceId) {
 			if (accordionButton) {
 				accordionButton.setAttribute("aria-expanded", "true");
 			}
+			targetAccordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	}
 }
