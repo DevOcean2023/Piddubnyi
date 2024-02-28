@@ -8,6 +8,28 @@
 		max-width: 698px;
 	}
 
+	ul, ol {
+		list-style: none;
+	}
+
+	ul li::before {
+		content: "\2022";		color: black;
+		font-size: smaller;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em;
+	}
+
+	ol li::before {
+		content: counter(olLiCounter) ".";
+		counter-increment: olLiCounter;
+		color: black;
+		font-size: smaller;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em;
+	}
+
 	h2 {
 		font-family: $font-family-raleway;
 		font-size: 18px;

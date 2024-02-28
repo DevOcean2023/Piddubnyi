@@ -83,8 +83,12 @@
 			padding: 21.5px;
 
 			&:hover {
-				text-decoration: none;
+				text-decoration: none !important;
 			}
+		}
+
+		a:is(:hover, :focus, :focus-within) {
+			text-decoration: none !important;
 		}
 	}
 }
