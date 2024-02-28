@@ -202,9 +202,9 @@ const productCardsSliderEl = document.querySelector("[data-slider=\"product-card
 if (productCardsSliderEl) {
 	tinySlider("[data-slider=\"product-cards-slider\"]", {
 		items: 1,
-		// autoplay: true,
-		// autoplayTimeout: 3000,
-		// autoplayButtonOutput: false,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayButtonOutput: false,
 		speed: 1500,
 		controls: true,
 		controlsText: ["<span>&#10229;</span>", "<span>&#10230;</span>"],
