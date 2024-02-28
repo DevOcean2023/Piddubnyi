@@ -187,13 +187,15 @@ body.filters-opened {
 	font-weight: 500;
 	line-height: 1.333333;
 	width: 100%;
+	margin: 0 0 12px;
 
 	@media (--md) {
 		padding: 0 0 0 12px;
 	}
 
 	@media (--lg) {
-		width: 340px;
+		margin: 0 12px 0 0;
+		width: auto;
 	}
 
 	.orderby {
@@ -235,7 +237,7 @@ body.filters-opened {
 
 	@media (--lg) {
 		padding: 0;
-		width: 50%;
+		width: auto;
 	}
 }
 
@@ -332,12 +334,6 @@ body.filters-opened {
 				left: 50%;
 				transform: translateX(-50%);
 				width: calc(100% - (var(--offset) * 2));
-			}
-
-			&:hover {
-				background: $white;
-				color: $woo-btn-color;
-				border: 1px solid $woo-btn-color;
 			}
 		}
 	}
