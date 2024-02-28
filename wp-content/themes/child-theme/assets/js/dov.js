@@ -389,7 +389,7 @@ instockElements.forEach(function (instockElement) {
 });
 
 ////////////////////////add sale to single product
-let productSimple = document.querySelectorAll("body.single-product .product-type-simple, .recently-products .product-type-simple");
+let productSimple = document.querySelectorAll("body.single-product .product-type-simple");
 
 productSimple.forEach(function (instockElement) {
 	let delElement = instockElement.querySelector("del bdi");

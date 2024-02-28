@@ -342,7 +342,7 @@ body.single-product {
 				left: -50vw;
 				height: 100%;
 				width: 200vw;
-				z-index: -1;
+				z-index: 1;
 			}
 
 			> h2 {
@@ -351,6 +351,8 @@ body.single-product {
 				text-transform: uppercase;
 				margin: 0 0 35px;
 				max-width: calc(100% - 100px);
+				position: relative;
+				z-index: 5;
 
 				@media (--lg) {
 					font-size: 32px;
@@ -362,6 +364,7 @@ body.single-product {
 			.products {
 				position: relative;
 				display: block;
+				z-index: 5;
 
 				@media (--lg) {
 					padding: 0 60px;
@@ -529,6 +532,13 @@ body.single-product {
 
 			&::before {
 				transform: rotate(-180deg);
+			}
+		}
+		.product {
+			padding: 12px;
+
+			@media (--lg) {
+				padding: 12px;
 			}
 		}
 	}
