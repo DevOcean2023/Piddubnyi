@@ -505,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //////services-tab
 document.addEventListener('DOMContentLoaded', function () {
-	var homeServicesLinks = document.querySelectorAll('.home-services__link');
+	var homeServicesLinks = document.querySelectorAll('.home-services__permalink');
 
 	homeServicesLinks.forEach(function (link) {
 		link.addEventListener('click', function (event) {
@@ -557,7 +557,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
-var homeServiceLinks = document.querySelectorAll(".home-services__link");
+var homeServiceLinks = document.querySelectorAll(".home-services__permalink");
 homeServiceLinks.forEach(function(link) {
 	link.addEventListener("click", function(event) {
 		event.preventDefault();
