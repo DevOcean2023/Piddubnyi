@@ -422,3 +422,5 @@ function track_product_view() {
 	}
 	wc_setcookie( 'recently_viewed', implode( '|', $viewed_products ) );
 }
+
+add_filter( 'woocommerce_product_description_heading', '__return_null' );
