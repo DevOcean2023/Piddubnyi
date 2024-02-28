@@ -72,10 +72,10 @@
 					<div class="accordion" id='accordion-<?php echo esc_attr( $service_id ); ?>'>
 						<h2 class="accordion__header" data-service-id="<?php echo esc_attr( $service_id ); ?>">
 							<button class="accordion__trigger"
-									id="accordion-btn-<?php echo esc_attr( $accordion_index ); ?>"
+									id="accordion-btn-<?php echo esc_attr( $service_id ); ?>"
 									type="button"
 									aria-expanded="false"
-									aria-controls="accordion-panel-<?php echo esc_attr( $accordion_index ); ?>">
+									aria-controls="accordion-panel-<?php echo esc_attr( $service_id ); ?>">
 					<span class="accordion__title">
 						<div class="services__icon-image">
 							<?php dov_the( 'image_black', 'black' ); ?>
@@ -86,9 +86,9 @@
 							</button>
 						</h2>
 						<div class="accordion__panel"
-							 id="accordion-panel-<?php echo esc_attr( $accordion_index ); ?>"
+							 id="accordion-panel-<?php echo esc_attr( $service_id ); ?>"
 							 role="region"
-							 aria-labelledby="accordion-btn-<?php echo esc_attr( $accordion_index ); ?>" hidden>
+							 aria-labelledby="accordion-btn-<?php echo esc_attr( $service_id ); ?>" hidden>
 							<div class="tabs__tabs-content_items">
 								<div class="tabs__tabs-content_items_item">
 									<div class="tabs__tabs-content_items_item_text">

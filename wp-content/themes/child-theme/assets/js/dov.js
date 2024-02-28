@@ -503,7 +503,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//////services
+//////services-tab
 document.addEventListener('DOMContentLoaded', function () {
 	var homeServicesLinks = document.querySelectorAll('.home-services__link');
 
@@ -527,3 +527,87 @@ document.addEventListener('DOMContentLoaded', function () {
 		localStorage.removeItem('selectedServiceId');
 	}
 });
+
+///////////service-accordion
+document.addEventListener("DOMContentLoaded", function() {
+	// Отримати айді поста з sessionStorage
+	var selectedServiceId = sessionStorage.getItem("selectedServiceId");
+	console.log("Selected Service ID from sessionStorage:", selectedServiceId);
+
+	var accordions = document.querySelectorAll(".accordion");
+
+	if (accordions.length > 0) {
+		if (selectedServiceId) {
+			openAccordion(selectedServiceId);
+		} else {
+			var firstAccordion = accordions[0];
+			if (firstAccordion) {
+				firstAccordion.setAttribute("aria-expanded", "true");
+				firstAccordion.classList.add("accordion_active");
+				var tabPanel = firstAccordion.querySelector(".accordion__panel");
+				if (tabPanel) {
+					tabPanel.removeAttribute("hidden");
+				}
+				var firstAccordionButton = firstAccordion.querySelector(".accordion__trigger");
+				if (firstAccordionButton) {
+					firstAccordionButton.setAttribute("aria-expanded", "true");
+				}
+			}
+		}
+	}
+});
+
+var homeServiceLinks = document.querySelectorAll(".home-services__link");
+homeServiceLinks.forEach(function(link) {
+	link.addEventListener("click", function(event) {
+		event.preventDefault();
+		var serviceId = link.getAttribute("data-service-id");
+		console.log("Clicked Service ID:", serviceId);
+		saveServiceIdToSessionStorage(serviceId);
+		setTimeout(function() {
+			window.location.href = "/our-services";
+		}, 1000);
+	});
+});
+
+function saveServiceIdToSessionStorage(serviceId) {
+	sessionStorage.setItem("selectedServiceId", serviceId);
+	console.log("Saved Service ID to sessionStorage:", serviceId);
+}
+function openAccordion(serviceId) {
+	console.log("Opening Accordion for Service ID:", serviceId);
+
+	var targetAccordion = document.getElementById("accordion-" + serviceId);
+
+	if (targetAccordion) {
+		var isExpanded = targetAccordion.getAttribute("aria-expanded") === "true";
+		if (!isExpanded) {
+			var accordions = document.querySelectorAll(".accordion");
+
+			accordions.forEach(function(accordion) {
+				accordion.setAttribute("aria-expanded", "false");
+				accordion.classList.remove("accordion_active");
+
+				var tabPanel = accordion.querySelector(".accordion__panel");
+				if (tabPanel) {
+					tabPanel.setAttribute("hidden", "true");
+				}
+				var accordionButton = accordion.querySelector(".accordion__trigger");
+				if (accordionButton) {
+					accordionButton.setAttribute("aria-expanded", "false");
+				}
+			});
+			targetAccordion.setAttribute("aria-expanded", "true");
+			targetAccordion.classList.add("accordion_active");
+
+			var tabPanel = targetAccordion.querySelector(".accordion__panel");
+			if (tabPanel) {
+				tabPanel.removeAttribute("hidden");
+			}
+			var accordionButton = targetAccordion.querySelector(".accordion__trigger");
+			if (accordionButton) {
+				accordionButton.setAttribute("aria-expanded", "true");
+			}
+		}
+	}
+}
