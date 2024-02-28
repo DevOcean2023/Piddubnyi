@@ -238,18 +238,28 @@ add_action( 'woocommerce_process_product_meta', 'save_custom_product_data_field_
 
 // Adding a new "Usage Features" tab on the product page
 function custom_product_tabs( $tabs ) {
+	global $product;
 	unset( $tabs['reviews'] );
 	unset( $tabs['additional_information'] );
-	$tabs['composition'] = array(
-		'title'    => __( 'Склад', 'woocommerce' ),
-		'priority' => 50,
-		'callback' => 'custom_product_tabs_content_composition',
-	);
-	$tabs['application'] = array(
-		'title'    => __( 'Спосіб застосування', 'woocommerce' ),
-		'priority' => 60,
-		'callback' => 'custom_product_tabs_content_application',
-	);
+
+	$composition_content = get_post_meta( $product->get_id(), '_custom_composition', true );
+	$application_content = get_post_meta( $product->get_id(), '_custom_application', true );
+
+	if ( ! empty( $composition_content ) ) :
+		$tabs['composition'] = array(
+			'title'    => __( 'Склад', 'woocommerce' ),
+			'priority' => 50,
+			'callback' => 'custom_product_tabs_content_composition',
+		);
+	endif;
+
+	if ( ! empty( $application_content ) ) :
+		$tabs['application'] = array(
+			'title'    => __( 'Спосіб застосування', 'woocommerce' ),
+			'priority' => 60,
+			'callback' => 'custom_product_tabs_content_application',
+		);
+	endif;
 
 	return $tabs;
 }
