@@ -549,9 +549,15 @@ body.single-product {
 
 		.product {
 			padding: 12px;
+			border: 1px solid $woo-btn-color;
 
 			@media (--lg) {
+				border-color: transparent;
 				padding: 12px;
+
+				&:hover {
+					border-color: $woo-btn-color;
+				}
 			}
 		}
 	}
