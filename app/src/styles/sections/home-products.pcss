@@ -53,6 +53,14 @@
 	#tns1-iw,
 	#tns3-iw {
 		margin: 0 !important;
+
+		@media (min-width: 376px) {
+			margin-left: 16px !important;
+		}
+
+		@media (--sm) {
+			margin-left: 0 !important;
+		}
 	}
 
 	.tns-ovh {
@@ -61,7 +69,13 @@
 		margin: 0 auto;
 
 		@media (min-width: 375px) {
-			max-width: 358px;
+			max-width: 360px;
+			margin: 0 0 0 auto;
+		}
+
+		@media (min-width: 376px) {
+			margin: 0 auto;
+			max-width: 376px;
 		}
 
 		@media (--sm) {
@@ -283,6 +297,7 @@
 			display: flex;
 			flex-direction: row-reverse;
 			gap: 5px;
+			flex-wrap: nowrap;
 			justify-content: center;
 			padding-bottom: 8px;
 
@@ -360,11 +375,13 @@
 						opacity: 1;
 						visibility: visible;
 						top: unset;
-						bottom: 12px;
+						bottom: 22px;
 						left: 50.2%;
 						width: 100%;
 						max-width: 140px;
-						padding: 16px 15px;
+						padding: 16px 7px;
+						transform: translateX(-50%);
+						position: absolute;
 
 						@media (--lg) {
 							padding: 16px 24px;
