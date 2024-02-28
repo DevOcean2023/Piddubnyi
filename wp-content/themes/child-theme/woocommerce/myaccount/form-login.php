@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <div class="u-columns col2-set" id="customer_login">
-	<?php dov_the( 'dov_login_background', 'cover' ); ?>
+	<?php dov_the( 'dov_login_background' ); ?>
 	<div class="container-form">
 		<div class="container-button">
 			<div class="registration-button form-login-registration-button">
