@@ -368,6 +368,7 @@
 
 							ul {
 								padding-left: 24px;
+								list-style: none;
 
 								li {
 									font-size: 16px;
@@ -375,13 +376,16 @@
 									line-height: 21px;
 									text-align: left;
 									margin-bottom: 20px;
+									position: relative;
 								}
 
 								li::before {
 									content: "\2022";
-									color: black;
-									font-size: smaller;
-									margin-right: 5px;
+									color: $black;
+									font-size: medium;
+									position: absolute;
+									top: 0;
+									left: -14px;
 								}
 							}
 						}
