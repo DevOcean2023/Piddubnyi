@@ -18,7 +18,7 @@
 								<?php dov_the( 'image_white', 'desktop', '60x0' ); ?>
 								<?php dov_the( 'image_green', 'mobile', '40x0' ); ?>
 							</div>
-							<p class="home-services__link" href="#""><?php the_title(); ?></p>
+							<p class="home-services__link"><?php the_title(); ?></p>
 						</div>
 					</a>
 					<?php
