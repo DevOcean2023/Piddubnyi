@@ -1,3 +1,4 @@
+import select2 from "../../base/defaults/scripts/jquery/libs/select2";
 
 document.addEventListener("DOMContentLoaded", function () {
 	initFilterControls();
@@ -16,5 +17,16 @@ function initFilterControls() {
 	closeBnt.addEventListener("click", e => {
 		e.preventDefault();
 		document.body.classList.remove("filters-opened");
+	});
+}
+
+
+$(document).ready(function () {
+	initCustomSelects();
+});
+
+function initCustomSelects() {
+	$(".custom-select").select2({
+		minimumResultsForSearch: -1,
 	});
 }
