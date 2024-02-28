@@ -70,7 +70,7 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		),
 		'faq'           => array(
 			'forms.css',
-			'accordion.css',
+			'faq.css',
 		),
 		'form-login'    => array(
 			'login-section.css',
