@@ -39,12 +39,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
 							   id="username" autocomplete="username"
-							   placeholder="<?php esc_attr_e( 'Email', 'woocommerce' ); ?>"
+							   placeholder="<?php esc_attr_e( 'Email*', 'woocommerce' ); ?>"
 							   value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>"/><?php // @codingStandardsIgnoreLine ?>
 					</p>
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
-							   name="password" placeholder="<?php esc_attr_e( 'Пароль', 'woocommerce' ); ?>"
+							   name="password" placeholder="<?php esc_attr_e( 'Пароль*', 'woocommerce' ); ?>"
 							   id="password" autocomplete="current-password"/>
 					</p>
 					<?php do_action( 'woocommerce_login_form' ); ?>
