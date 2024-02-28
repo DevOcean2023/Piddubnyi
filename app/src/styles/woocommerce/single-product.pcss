@@ -4,6 +4,7 @@ body.single-product {
 	.product {
 		padding: 100px 0 0;
 		overflow: hidden;
+		border: none;
 
 		&.product-type-variable {
 			.entry-summary {
@@ -16,7 +17,7 @@ body.single-product {
 		> .inner {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 0 27px;
+			gap: 16px 27px;
 
 			@media (--md) {
 				gap: 27px;
@@ -498,7 +499,7 @@ body.single-product {
 			height: 44px;
 			width: 44px;
 			background: $white;
-			border: 1px solid;
+			border: 1px solid $woo-main-color;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -548,9 +549,15 @@ body.single-product {
 
 		.product {
 			padding: 12px;
+			border: 1px solid $woo-btn-color;
 
 			@media (--lg) {
+				border-color: transparent;
 				padding: 12px;
+
+				&:hover {
+					border-color: $woo-btn-color;
+				}
 			}
 		}
 	}
@@ -609,6 +616,7 @@ body.single-product {
 				padding: 19px 55px 19px 30px;
 				overflow: hidden;
 				transition: $transition;
+				color: $woo-main-color;
 
 				@media (--md) {
 					font-size: 32px;
