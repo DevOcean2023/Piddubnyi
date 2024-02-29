@@ -201,7 +201,6 @@ if (productSliderEl) {
 const productCardsSliderEl = document.querySelector("[data-slider=\"product-cards-slider\"]");
 if (productCardsSliderEl) {
 	tinySlider("[data-slider=\"product-cards-slider\"]", {
-		items: 1,
 		autoplay: true,
 		autoplayTimeout: 3000,
 		autoplayButtonOutput: false,
