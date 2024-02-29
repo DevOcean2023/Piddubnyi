@@ -108,11 +108,20 @@
 			}
 
 			button[data-controls="prev"] {
-				background: url(../../images/arrow-circle-review-mobile.svg) no-repeat center, transparent;
+				transform: rotate(180deg);
+				background: url(../../images/arrow-next-mobile.svg) no-repeat center, transparent;
 				z-index: 5;
 
 				@media (--lg) {
-					background: url(../../images/arrow-prev.svg) no-repeat center, transparent;
+					background: url(../../images/arrow-next.svg) no-repeat center;
+				}
+
+				&:hover {
+					background: url(../../images/arrow-next-mobile-active.svg) no-repeat center, transparent;
+
+					@media (--lg) {
+						background: url(../../images/arrow-next-active.svg) no-repeat center;
+					}
 				}
 			}
 

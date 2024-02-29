@@ -508,16 +508,25 @@
 			}
 
 			[data-controls="prev"] {
-				background: url(../../images/arrow-prev-mobile.svg) no-repeat center;
+				transform: rotate(180deg);
+				background: url(../../images/arrow-next-mobile.svg) no-repeat center;
 
 				@media (--lg) {
-					background: url(../../images/arrow-prev.svg) no-repeat center;
+					background: url(../../images/arrow-next.svg) no-repeat center;
 				}
 
 				@media (min-width: 1440px) {
 					position: absolute;
 					top: 50%;
 					left: -60px;
+				}
+			}
+
+			[data-controls="prev"]:hover {
+				background: url(../../images/arrow-next-mobile-active.svg) no-repeat center;
+
+				@media (--lg) {
+					background: url(../../images/arrow-next-active.svg) no-repeat center;
 				}
 			}
 
