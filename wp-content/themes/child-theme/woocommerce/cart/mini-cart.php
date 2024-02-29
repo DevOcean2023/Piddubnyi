@@ -104,11 +104,11 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 		<div class="mini-cart__footer">
 			<header>
-				<h4><?php echo wp_kses_post( 'TOTAL', 'woocommerce' ); ?></h4>
+				<h4><?php echo wp_kses_post( 'Підсумки кошика', 'woocommerce' ); ?></h4>
 				<span class="total"><?php echo wp_kses_post( WC()->cart->get_cart_total() ); ?></span>
 			</header>
 			<a href="<?php echo wp_kses_post( wc_get_checkout_url() ); ?>"
-			   class="btn"><?php echo wp_kses_post( 'Checkout', 'woocommerce' ); ?></a>
+			   class="btn"><?php echo wp_kses_post( 'Оформити замовлення', 'woocommerce' ); ?></a>
 		</div>
 
 
