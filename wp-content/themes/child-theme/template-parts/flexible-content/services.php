@@ -19,8 +19,8 @@
 						?>
 						<theme-tabs-button data-service-id="<?php echo esc_attr( get_the_ID() ); ?>">
 							<div class="services__icon-image">
-								<?php dov_the( 'image_black', 'black' ); ?>
-								<?php dov_the( 'image_white_services', 'white' ); ?>
+								<?php dov_the( 'image_black', 'black', '24x0' ); ?>
+								<?php dov_the( 'image_white_services', 'white', '24x0' ); ?>
 							</div>
 							<p class="services__text"><?php echo esc_html( $post_title ); ?></p>
 						</theme-tabs-button>
@@ -78,8 +78,8 @@
 									aria-controls="accordion-panel-<?php echo esc_attr( $service_id ); ?>">
 					<span class="accordion__title">
 						<div class="services__icon-image">
-							<?php dov_the( 'image_black', 'black' ); ?>
-							<?php dov_the( 'image_white_services', 'white' ); ?>
+							<?php dov_the( 'image_black', 'black', '24x0' ); ?>
+							<?php dov_the( 'image_white_services', 'white', '24x0' ); ?>
 						</div>
 						<p class="services__text"><?php echo esc_html( $post_title ); ?></p>
 					</span>
