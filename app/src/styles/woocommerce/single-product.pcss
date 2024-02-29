@@ -14,6 +14,14 @@ body.single-product {
 			}
 		}
 
+		&.outofstock {
+			.product {
+				&_stock-status {
+					color: $color-colors-main;
+				}
+			}
+		}
+
 		> .inner {
 			display: flex;
 			flex-wrap: wrap;
@@ -209,6 +217,10 @@ body.single-product {
 			font-weight: 500;
 			line-height: 1.333333;
 			margin: 0 0 16px;
+
+			&.out-of-stock {
+				color: $color-colors-main;
+			}
 		}
 
 		table.variations {
@@ -308,12 +320,6 @@ body.single-product {
 				margin: 0 0 16px;
 				width: 100%;
 
-				&:hover {
-					&::before {
-						background: $woo-btn-color;
-					}
-				}
-
 				&::before {
 					content: "";
 					mask-image: url(../../images/ico-shopping-cart.svg);
@@ -331,6 +337,10 @@ body.single-product {
 			font-weight: 500;
 			text-transform: uppercase;
 			width: 100%;
+		}
+
+		.woocommerce-variation-availability {
+			display: none;
 		}
 	}
 

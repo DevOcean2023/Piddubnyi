@@ -252,7 +252,6 @@
 	};
 
 	$(".single_variation_wrap").on("show_variation", function (event, variation) {
-		console.log(variation);
 		let element = document.querySelector(".single_variation_wrap");
 		let delElement = element.querySelector(".woocommerce-variation-price del bdi");
 		let delElementAmount = element.querySelector(".woocommerce-variation-price del .amount");
@@ -271,6 +270,15 @@
 			} else {
 				console.error("Помилка при отриманні значень цін для карточки товару.");
 			}
+		}
+
+		let stockStatus = $(".product_stock-status");
+		if (!variation.is_in_stock) {
+			stockStatus.addClass("out-of-stock");
+			stockStatus.text("Немає в наявності");
+		} else {
+			stockStatus.removeClass("out-of-stock");
+			stockStatus.text("В наявності");
 		}
 	});
 })(jQuery);
@@ -504,32 +512,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //////services-tab
-document.addEventListener('DOMContentLoaded', function () {
-	var homeServicesLinks = document.querySelectorAll('.home-services__permalink');
+document.addEventListener("DOMContentLoaded", function () {
+	var homeServicesLinks = document.querySelectorAll(".home-services__permalink");
 
 	homeServicesLinks.forEach(function (link) {
-		link.addEventListener('click', function (event) {
+		link.addEventListener("click", function (event) {
 			event.preventDefault();
-			var serviceId = link.getAttribute('data-service-id');
-			localStorage.setItem('selectedServiceId', serviceId);
-			window.location.href = '/our-services';
+			var serviceId = link.getAttribute("data-service-id");
+			localStorage.setItem("selectedServiceId", serviceId);
+			window.location.href = "/our-services";
 		});
 	});
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-	var selectedServiceId = localStorage.getItem('selectedServiceId');
+document.addEventListener("DOMContentLoaded", function () {
+	var selectedServiceId = localStorage.getItem("selectedServiceId");
 	if (selectedServiceId) {
-		var tabToActivate = document.querySelector('[data-service-id="' + selectedServiceId + '"]');
+		var tabToActivate = document.querySelector("[data-service-id=\"" + selectedServiceId + "\"]");
 		if (tabToActivate) {
 			tabToActivate.click();
 		}
-		localStorage.removeItem('selectedServiceId');
+		localStorage.removeItem("selectedServiceId");
 	}
 });
 
 ///////////service-accordion
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	// Отримати айді поста з sessionStorage
 	var selectedServiceId = sessionStorage.getItem("selectedServiceId");
 	console.log("Selected Service ID from sessionStorage:", selectedServiceId);
@@ -558,13 +566,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var homeServiceLinks = document.querySelectorAll(".home-services__permalink");
-homeServiceLinks.forEach(function(link) {
-	link.addEventListener("click", function(event) {
+homeServiceLinks.forEach(function (link) {
+	link.addEventListener("click", function (event) {
 		event.preventDefault();
 		var serviceId = link.getAttribute("data-service-id");
 		console.log("Clicked Service ID:", serviceId);
 		saveServiceIdToSessionStorage(serviceId);
-		setTimeout(function() {
+		setTimeout(function () {
 			window.location.href = "/our-services";
 		}, 1000);
 	});
@@ -574,6 +582,7 @@ function saveServiceIdToSessionStorage(serviceId) {
 	sessionStorage.setItem("selectedServiceId", serviceId);
 	console.log("Saved Service ID to sessionStorage:", serviceId);
 }
+
 function openAccordion(serviceId) {
 	console.log("Opening Accordion for Service ID:", serviceId);
 
@@ -584,7 +593,7 @@ function openAccordion(serviceId) {
 		if (!isExpanded) {
 			var accordions = document.querySelectorAll(".accordion");
 
-			accordions.forEach(function(accordion) {
+			accordions.forEach(function (accordion) {
 				accordion.setAttribute("aria-expanded", "false");
 				accordion.classList.remove("accordion_active");
 
@@ -608,7 +617,7 @@ function openAccordion(serviceId) {
 			if (accordionButton) {
 				accordionButton.setAttribute("aria-expanded", "true");
 			}
-			targetAccordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			targetAccordion.scrollIntoView({behavior: "smooth", block: "start"});
 		}
 	}
 }

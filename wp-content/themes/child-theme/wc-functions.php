@@ -191,8 +191,15 @@ function add_product_info() {
 	global $product;
 	$sku    = $product->get_sku();
 	$status = $product->get_stock_status();
+	if ( 'instock' === $status ) {
+		$product_status = 'В наявності';
+	}
+	if ( 'outofstock' === $status ) {
+		$product_status = 'Немає в наявності';
+	}
 
-	echo '<div class="product_sku">ID товару: ' . esc_html( $sku ) . '</div> <div class="product_stock-status">' . esc_html( $status ) . '</div>';
+	echo '<div class="product_sku">ID товару: ' . esc_html( $sku ) . '</div>
+	<div class="product_stock-status">' . esc_html( $product_status ) . '</div>';
 }
 
 add_action( 'woocommerce_single_product_summary', 'add_product_info', 7 );
