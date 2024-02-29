@@ -213,7 +213,7 @@ if (productCardsSliderEl) {
 		loop: false,
 		autoHeight: false,
 		responsive: {
-			320: {
+			375: {
 				items: 2,
 				gutter: 16,
 			},
