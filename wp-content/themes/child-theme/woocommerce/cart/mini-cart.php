@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <div class="mini-cart">
-	<h4><?php echo wp_kses_post( 'Mini Cart', 'woocommerce' ); ?></h4>
+	<h4><?php echo wp_kses_post( 'Кошик', 'woocommerce' ); ?></h4>
 	<?php if ( ! WC()->cart->is_empty() ) : ?>
 
 		<ul class="mini-cart__list">
@@ -120,7 +120,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 	<?php else : ?>
 
 		<div class="empty-cart-text">
-			<p><?php echo wp_kses_post( 'Empty cart.', 'woocommerce' ); ?></p>
+			<p><?php echo wp_kses_post( 'Кошик пустий', 'woocommerce' ); ?></p>
 		</div>
 
 	<?php endif; ?>
