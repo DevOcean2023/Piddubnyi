@@ -5,7 +5,7 @@ $current_per_page = $wp_query->get( 'posts_per_page' );
 $current_paged    = $wp_query->get( 'paged' );
 $base             = $current_paged ? $current_per_page * ( $current_paged - 1 ) : 0;
 $showing          = sprintf( // translators: %1$d min number showing posts, %2$d max number showing posts, %3$d all count found posts
-	esc_html__( 'Показано %1$d до %2$d з %3$d результатів', 'theme' ),
+	esc_html__( 'Показано %1$d з %2$d результатів', 'theme' ),
 	$base + 1,
 	$base + $wp_query->post_count,
 	$wp_query->found_posts
