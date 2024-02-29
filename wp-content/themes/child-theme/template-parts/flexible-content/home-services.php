@@ -12,7 +12,7 @@
 				while ( $custom_posts->have_posts() ) :
 					$custom_posts->the_post();
 					?>
-					<a class="home-services__permalink" href="#" data-service-id="<?php echo get_the_ID(); ?>">
+					<a class="home-services__permalink" href="/our-services" data-service-id="<?php echo get_the_ID(); ?>">
 						<div class="home-services__item">
 							<div class="home-services__img">
 								<?php dov_the( 'image_white', 'desktop', '60x0' ); ?>
