@@ -30,15 +30,15 @@ class DOV_Fonts_Base {
 //			);
 //		}
 
-		add_action(
-			'send_headers',
-			array( static::class, 'the_preload_headers' ),
-			5
-		);
-		add_action(
-			'rest_api_init',
-			array( static::class, 'registration_rest_routes' )
-		);
+//		add_action(
+//			'send_headers',
+//			array( static::class, 'the_preload_headers' ),
+//			5
+//		);
+//		add_action(
+//			'rest_api_init',
+//			array( static::class, 'registration_rest_routes' )
+//		);
 	}
 
 	public static function add_fonts_js() : void {
