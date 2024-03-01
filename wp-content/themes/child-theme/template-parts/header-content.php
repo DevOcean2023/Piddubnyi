@@ -37,17 +37,15 @@
 								   href="<?php echo esc_url( wc_get_account_endpoint_url( 'edit-account' ) ); ?>"
 								   data-role="menuitem"></a></li>
 							<li class="menu-header-second__item cart menu-cart-link">
+								<?php
+								global $woocommerce;
+								$cls_mini_cart = ( WC()->cart->get_cart_contents_count() ) ? ' products-in-cart' : '';
+								?>
 								<a href="#mini-cart" data-popup-id="mini-cart"
-								   class="menu-header-second__link_mini_cart">
-									<?php
-									global $woocommerce;
-									$cart_count = $woocommerce->cart->cart_contents_count ? $woocommerce->cart->cart_contents_count : '';
-									if ( $cart_count ) :
-										?>
-										<span class="menu-header-second__link_mini_cart_counter">
-										<?php echo esc_html( $cart_count ); ?>
+								   class="menu-header-second__link_mini_cart <?php echo esc_html( $cls_mini_cart ); ?>">
+									<span class="menu-header-second__link_mini_cart_counter">
+										<?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?>
 									</span>
-									<?php endif; ?>
 								</a>
 							</li>
 							<li class="menu-header-second__item wish-list">

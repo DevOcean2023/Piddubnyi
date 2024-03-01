@@ -60,6 +60,33 @@ function disable_shipping_calc_on_cart( $show_shipping ) {
 	return $show_shipping;
 }
 
+// WooCommerce, refresh fragments
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+
+	global $woocommerce;
+
+	$cls_mini_cart = ( WC()->cart->get_cart_contents_count() ) ? ' products-in-cart' : '';
+
+	$fragments['.page-header .menu-header-second__link_mini_cart'] = '<a href="#mini-cart" data-popup-id="mini-cart"
+								   class="menu-header-second__link_mini_cart ' . esc_html( $cls_mini_cart ) . '">
+									<span class="menu-header-second__link_mini_cart_counter">
+										' . WC()->cart->get_cart_contents_count() . '
+									</span>
+								</a>';
+
+	ob_start();
+
+	woocommerce_mini_cart();
+
+	$mini_cart = ob_get_clean();
+
+	$fragments['dialog#mini-cart .popup__content .mini-cart'] = $mini_cart;
+
+	return $fragments;
+
+}
+
 // Update mini cart
 function theme_update_mini_cart() {
 	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'ajax-nonce' ) ) {
@@ -82,27 +109,6 @@ add_action( 'wp_ajax_theme_update_mini_cart', 'theme_update_mini_cart' );
 // Get refresh fragment in variable
 function get_refreshed_fragments_in_variable() {
 	return apply_filters( 'woocommerce_add_to_cart_fragments', array() );
-}
-
-// WooCommerce, refresh fragments
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-
-	global $woocommerce;
-
-	$cart_count = ( $woocommerce->cart->cart_contents_count ) ?: '';
-
-	$fragments['.menu-header-second__link_mini_cart_counter'] = '<span class="menu-header-second__link_mini_cart_counter">' . esc_html( $cart_count ) . '</span>';
-
-	ob_start();
-
-	woocommerce_mini_cart();
-
-	$mini_cart = ob_get_clean();
-
-	$fragments['dialog#mini-cart .popup__content .mini-cart'] = $mini_cart;
-
-	return $fragments;
 }
 
 // Remove shipping form fields

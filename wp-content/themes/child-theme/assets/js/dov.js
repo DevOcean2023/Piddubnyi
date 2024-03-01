@@ -16,11 +16,6 @@
 		});
 	});
 
-	$(".ajax_add_to_cart").click(function () {
-		$(document.body).trigger("wc_fragment_refresh");
-		dov.countQuantityInput();
-	});
-
 	function debounce(func, timeout = 300) {
 		let timer;
 		return (...args) => {
@@ -38,11 +33,20 @@
 	};
 
 	dov.miniCart = function () {
-		var timer = null;
-		$(document).on("click", ".mini-cart .quantity .minus, .mini-cart .quantity .plus", function () {
+		let timer = null;
+		$(document).on("click", ".mini-cart .quantity .minus, .mini-cart .quantity .plus", function (e) {
+			e.preventDefault();
 			restartTimer();
-			var $holder = $(this).closest("li");
+			let $holder = $(this).closest("li");
 			$holder.addClass("for-update-el");
+			let val = parseInt($holder.find(".qty").attr("value"));
+			if ($(this).hasClass("minus")) {
+				val--;
+				$holder.find(".qty").attr("value", val);
+			} else {
+				val++;
+				$holder.find(".qty").attr("value", val);
+			}
 		});
 
 		function restartTimer() {
@@ -52,10 +56,10 @@
 
 		function updateMiniCart() {
 			$(".mini-cart li.for-update-el").each(function () {
-				var $that = $(this);
-				var $inp = $that.find("input[type=\"number\"]");
-				var val = parseInt($inp.val());
-				var key = $inp.attr("name").replace("cart[", "").replace("][qty]", "");
+				let $that = $(this);
+				let $inp = $that.find("input[type=\"number\"]");
+				let val = parseInt($inp.val());
+				let key = $inp.attr("name").replace("cart[", "").replace("][qty]", "");
 				$that.block({
 					message: null,
 					overlayCSS: {
@@ -64,7 +68,7 @@
 					}
 				});
 
-				var ajax_data = {
+				let ajax_data = {
 					"action": "theme_update_mini_cart",
 					"key": key,
 					"qty": val,
@@ -80,7 +84,6 @@
 						if (!res || res.error)
 							return;
 
-						console.log(res);
 						if (res) {
 							$.each(res, function (key, value) {
 								$(key).replaceWith(value);
@@ -99,8 +102,8 @@
 
 		$(document).on("click", ".mini-cart__item-remove", function (e) {
 			e.preventDefault();
-			var $holder = $(this).closest("li");
-			var val = 0;
+			let $holder = $(this).closest("li");
+			let val = 0;
 			$holder.block({
 				message: null,
 				overlayCSS: {
@@ -108,8 +111,8 @@
 					opacity: 0.6
 				}
 			});
-			var key = $(this).attr("data-cartkey");
-			var ajax_data = {
+			let key = $(this).attr("data-cartkey");
+			let ajax_data = {
 				"action": "theme_update_mini_cart",
 				"key": key,
 				"qty": val,
@@ -140,21 +143,21 @@
 		});
 
 
-		$(document.body).on("added_to_cart", function (fragments) {
-			if (!fragments) {
-				window.location.reload();
-			} else {
-				$("body").addClass("mini-cart-opened");
-			}
-		});
+		// $(document.body).on("added_to_cart", function (fragments) {
+		// 	if (!fragments) {
+		// 		window.location.reload();
+		// 	} else {
+		// 		$("body").addClass("mini-cart-opened");
+		// 	}
+		// });
 	};
 
 	dov.checkoutProductList = function () {
-		var timer = null;
+		let timer = null;
 		$(document).on("click", ".shop_table .quantity .minus, .shop_table .quantity .plus", function (e) {
 			//e.preventDefault();
 			restartTimer();
-			var $holder = $(this).closest("tr");
+			let $holder = $(this).closest("tr");
 			$holder.addClass("for-update-el");
 		});
 
@@ -165,10 +168,10 @@
 
 		function updateMiniCart() {
 			$(".shop_table tr.for-update-el").each(function () {
-				var $that = $(this);
-				var $inp = $that.find("input[type=\"number\"]");
-				var val = parseInt($inp.val());
-				var key = $inp.attr("name").replace("cart[", "").replace("][qty]", "");
+				let $that = $(this);
+				let $inp = $that.find("input[type=\"number\"]");
+				let val = parseInt($inp.val());
+				let key = $inp.attr("name").replace("cart[", "").replace("][qty]", "");
 				$that.block({
 					message: null,
 					overlayCSS: {
@@ -177,7 +180,7 @@
 					}
 				});
 
-				var ajax_data = {
+				let ajax_data = {
 					"action": "theme_update_mini_cart",
 					"key": key,
 					"qty": val,

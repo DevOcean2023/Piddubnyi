@@ -35,6 +35,17 @@
 			font-weight: 700;
 		}
 
+		&_mini_cart {
+			&.products-in-cart {
+				.menu-header-second {
+					&__link_mini_cart_counter {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+
 		&_mini_cart_counter {
 			position: absolute;
 			top: -5px;
@@ -48,6 +59,8 @@
 			border-radius: 50%;
 			background: $woo-main-color;
 			color: $white;
+			opacity: 0;
+			visibility: hidden;
 		}
 
 		&.btn-link {
