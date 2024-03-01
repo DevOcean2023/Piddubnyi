@@ -621,25 +621,3 @@ function openAccordion(serviceId) {
 		}
 	}
 }
-
-/////
-document.addEventListener('DOMContentLoaded', function () {
-	// Знаходимо поле телефону за класом
-	var phoneField = document.querySelector('.phone-field');
-
-	// Перевіряємо, чи знайдено поле
-	if (phoneField) {
-		phoneField.addEventListener('input', function () {
-			// Видаляємо всі символи, крім цифр
-			var phoneNumber = phoneField.value.replace(/\D/g, '');
-
-			// Додаємо код країни, якщо його немає і номер не починається з +380
-			if (phoneNumber !== '' && !phoneNumber.startsWith('+380')) {
-				phoneNumber = '+380' + phoneNumber;
-			}
-
-			// Записуємо нове значення у поле
-			phoneField.value = phoneNumber;
-		});
-	}
-});
