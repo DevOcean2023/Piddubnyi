@@ -285,6 +285,18 @@
 		}
 	});
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+	initInputMask();
+});
+
+function initInputMask() {
+	let phoneInput = document.getElementById("account_phone");
+
+	let im = new Inputmask("+38(999)999-99-99");
+	im.mask(phoneInput);
+}
+
 ////////////////////////login-section
 document.addEventListener("DOMContentLoaded", function () {
 	const loginOpen = document.getElementById("u-column1");
@@ -624,3 +636,4 @@ function openAccordion(serviceId) {
 		}
 	}
 }
+
