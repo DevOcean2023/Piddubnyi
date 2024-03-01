@@ -23,6 +23,7 @@ $row-gap: 20px;
 		border: none;
 		border-bottom: 1px solid #fff;
 		width: 100%;
+		border-radius: 0 !important;
 
 		&::placeholder {
 			color: $color-colors-89;
@@ -42,11 +43,16 @@ $row-gap: 20px;
 				}
 			}
 		}
+
+		&:focus-visible {
+			outline: none !important;
+			border-radius: 0;
+		}
 	}
 
 	.textarea {
-		height: 41px;
-		min-height: 41px;
+		height: 43px;
+		min-height: 43px;
 		max-height: 100px;
 		resize: vertical;
 	}
@@ -582,6 +588,14 @@ $row-gap: 20px;
 }
 
 .gfield {
+
+	&_visibility {
+		&_visible {
+			outline: none !important;
+			appearance: none !important;
+		}
+	}
+
 	.select2-container {
 		max-width: 100%;
 		min-width: 125px;
