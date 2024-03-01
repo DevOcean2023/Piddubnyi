@@ -244,7 +244,7 @@
 		}
 
 		a:is(:hover, :focus, :focus-within) {
-			text-decoration: none;
+			text-decoration: none !important;
 		}
 
 		.order-wrapper {
@@ -262,7 +262,7 @@
 				font-weight: 500;
 				line-height: 18.2px;
 				letter-spacing: 0.28px;
-				text-decoration-line: underline;
+				text-decoration-line: none;
 				text-transform: uppercase;
 				background: transparent;
 			}
@@ -364,6 +364,10 @@
 			line-height: 20.8px;
 			letter-spacing: 0.32px;
 			align-items: flex-start;
+
+			a:is(:hover, :focus, :focus-within) {
+				text-decoration: none !important;
+			}
 
 			[class*="woocommerce-Button"] {
 				width: 100%;
