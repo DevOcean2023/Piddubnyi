@@ -14,21 +14,21 @@ class DOV_Fonts_Base {
 
 	public static function init() : void {
 		$type = apply_filters( 'dov_fonts_type', 'js' );
-		if ( 'css' === $type ) {
-			array_unshift( static::$preload_js, 'fonts-classes.js' );
-			add_action(
-				'wp_head',
-				array( static::class, 'add_fonts_css' ),
-				2
-			);
-		} else {
-			array_unshift( static::$preload_js, 'fonts-all.js' );
-			add_action(
-				'wp_head',
-				array( static::class, 'add_fonts_js' ),
-				2
-			);
-		}
+//		if ( 'css' === $type ) {
+//			array_unshift( static::$preload_js, 'fonts-classes.js' );
+//			add_action(
+//				'wp_head',
+//				array( static::class, 'add_fonts_css' ),
+//				2
+//			);
+//		} else {
+//			array_unshift( static::$preload_js, 'fonts-all.js' );
+//			add_action(
+//				'wp_head',
+//				array( static::class, 'add_fonts_js' ),
+//				2
+//			);
+//		}
 
 		add_action(
 			'send_headers',
