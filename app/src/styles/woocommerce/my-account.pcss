@@ -243,6 +243,10 @@
 			padding: 40px 24px;
 		}
 
+		a:is(:hover, :focus, :focus-within) {
+			text-decoration: none;
+		}
+
 		.order-wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -385,6 +389,7 @@
 				&:hover {
 					color: #fff;
 					background: #171a19;
+					text-decoration: none !important;
 				}
 			}
 		}
