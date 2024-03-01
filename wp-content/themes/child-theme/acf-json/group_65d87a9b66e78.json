@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_65d87a9bafa17",
-            "label": "Зображення",
+            "label": "Зображення ( мінімальний розмір ширина 273px, висота 274px )",
             "name": "image_left",
             "aria-label": "",
             "type": "image",
@@ -180,5 +180,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708686220
+    "modified": 1709291617
 }
