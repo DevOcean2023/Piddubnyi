@@ -8,20 +8,6 @@ $row-gap: 20px;
 	@include screen-reader-text;
 }
 
-.ginput {
-	&_container {
-		&_textarea {
-			textarea {
-				scrollbar-width: thin;
-			}
-
-			textarea::-webkit-scrollbar {
-				width: 8px;
-			}
-		}
-	}
-}
-
 .gform_wrapper {
 	color: $color-text-main;
 
@@ -621,7 +607,8 @@ $row-gap: 20px;
 
 					b {
 						border-width: 6px 5px 0 5px;
-						border-color: $color-text-main transparent transparent transparent;
+						border-color: $color-text-main transparent transparent
+							transparent;
 					}
 				}
 			}
@@ -667,7 +654,7 @@ $row-gap: 20px;
 				.select2-selection__arrow b {
 					border-width: 0 5px 6px 5px;
 					border-color: transparent transparent $color-text-main
-					transparent;
+						transparent;
 				}
 			}
 		}
@@ -691,11 +678,11 @@ $row-gap: 20px;
 		border-radius: $border-radius-global;
 		z-index: 9;
 		box-shadow: 0 18px 112px rgba(0, 0, 0, 0.04),
-		0 7.51997px 46.7909px rgba(0, 0, 0, 0.0287542),
-		0 4.02054px 25.0167px rgba(0, 0, 0, 0.0238443),
-		0 2.25388px 14.0241px rgba(0, 0, 0, 0.02),
-		0 1.19702px 7.44811px rgba(0, 0, 0, 0.0161557),
-		0 0.498106px 3.09933px rgba(0, 0, 0, 0.0112458);
+			0 7.51997px 46.7909px rgba(0, 0, 0, 0.0287542),
+			0 4.02054px 25.0167px rgba(0, 0, 0, 0.0238443),
+			0 2.25388px 14.0241px rgba(0, 0, 0, 0.02),
+			0 1.19702px 7.44811px rgba(0, 0, 0, 0.0161557),
+			0 0.498106px 3.09933px rgba(0, 0, 0, 0.0112458);
 
 		.select2-results {
 			&__options {
