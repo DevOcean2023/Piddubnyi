@@ -1,6 +1,8 @@
 {
-    "google": [
-        "Raleway:300,400,500,600,700",
-        "Cormorant Garamond:500"
-    ]
+    "google": {
+        "families": [
+            "Raleway:300,400,500,600,700",
+            "Cormorant Garamond:500"
+        ]
+    }
 }
