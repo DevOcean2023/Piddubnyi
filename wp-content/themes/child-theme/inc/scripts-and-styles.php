@@ -10,6 +10,13 @@ DOV_Defer_Scripts::add( 'woo' );
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
 
 function theme_scripts() {
+	wp_enqueue_style(
+		'fonts',
+		get_stylesheet_directory_uri() . '/assets/fonts/fonts.css',
+		array(),
+		false,
+		false
+	);
 	wp_enqueue_script(
 		'marque',
 		'https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js',
