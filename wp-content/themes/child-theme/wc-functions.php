@@ -18,10 +18,10 @@ function remove_checkout_fields( $fields ) {
 	unset( $fields['billing']['billing_state'] );
 	$fields['order']['order_comments']['required'] = false;
 
-	$fields['billing']['billing_first_name']['placeholder'] = __( 'First name*', 'woocommerce' );
-	$fields['billing']['billing_last_name']['placeholder']  = __( 'Last name*', 'woocommerce' );
-	$fields['billing']['billing_phone']['placeholder']      = __( 'Phone*', 'woocommerce' );
-	$fields['billing']['billing_email']['placeholder']      = __( 'E mail', 'woocommerce' );
+	$fields['billing']['billing_first_name']['placeholder'] = __( 'Ім\'я*', 'woocommerce' );
+	$fields['billing']['billing_last_name']['placeholder']  = __( 'Прізвище*', 'woocommerce' );
+	$fields['billing']['billing_phone']['placeholder']      = __( 'Телефон*', 'woocommerce' );
+	$fields['billing']['billing_email']['placeholder']      = __( 'E-mail', 'woocommerce' );
 
 	return $fields;
 }
