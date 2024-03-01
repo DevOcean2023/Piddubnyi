@@ -17,6 +17,13 @@ function theme_scripts() {
 		'1.1',
 		false
 	);
+//	wp_enqueue_script(
+//		'tiny-slider',
+//		get_stylesheet_directory_uri() . '/assets/js/tiny-slider.js',
+//		array(),
+//		'1.0',
+//		false
+//	);
 	wp_enqueue_script(
 		'input-mask',
 		get_stylesheet_directory_uri() . '/assets/js/inputmask.min.js',
@@ -138,9 +145,6 @@ DOV_Enqueue_Styles::enqueue_blocks(
 	static function ( $css ) {
 		if ( is_404() ) {
 			$css .= DOV_Enqueue_Styles::get_css( 'section-404.css' );
-		}
-		if ( is_home() || is_front_page() ) {
-			$css .= DOV_Enqueue_Styles::get_css( 'home-products.css' );
 		}
 
 		return $css;
