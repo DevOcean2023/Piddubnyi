@@ -56,7 +56,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 					</p>
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 						<label for="account_phone"><?php esc_html_e( 'Телефон', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-						<input type="tel" class="woocommerce-Input woocommerce-Input--text input-text" name="account_phone" placeholder="<?php esc_attr_e( 'Телефон*', 'woocommerce' ); ?>" id="account_phone" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_phone', true ) ); ?>" />
+						<input type="tel" class="woocommerce-Input woocommerce-Input--text input-text deactive phone-field" name="account_phone" placeholder="<?php esc_attr_e( 'Телефон*', 'woocommerce' ); ?>" id="account_phone" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_phone', true ) ); ?>" oninput="formatPhoneNumber(this);" pattern="[0-9]*" maxlength="13" />
 					</p>
 
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
