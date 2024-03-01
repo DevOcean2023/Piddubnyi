@@ -46,7 +46,7 @@ function checkout_shipping_change_position() {
 add_action( 'woocommerce_before_checkout_billing_form', 'billing_header_modify', 100 );
 function billing_header_modify() {
 	if ( is_user_logged_in() ) :
-		echo '<div class="edit-link-holder"><a href="/my-account/edit-account">' . wp_kses_post( 'Change info', 'woocommerce' ) . '</a></div>';
+		echo '<div class="edit-link-holder"><a href="/my-account/edit-account">' . wp_kses_post( 'Змінити', 'woocommerce' ) . '</a></div>';
 	endif;
 }
 
