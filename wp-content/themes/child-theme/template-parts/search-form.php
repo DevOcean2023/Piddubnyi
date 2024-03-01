@@ -5,14 +5,14 @@
 			<?php dov_the( 'search_form_title', 'search-form__title' ); ?>
 			<form class="search-form__form" role="search" action="<?php echo esc_url( home_url() ); ?>">
 				<label class="search-form__label">
-					<span class="screen-reader-text"><?php esc_html_e( 'Пошук:', 'theme' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Пошук', 'theme' ); ?></span>
 					<input class="search-form__input"
 						   type="search"
 						   placeholder="<?php esc_attr_e( 'Напишіть Ваше запитання', 'theme' ); ?>"
 						   value=""
 						   name="s">
 				</label>
-				<input class="search-form__submit" type="submit" value="<?php esc_attr_e( 'Пошук:', 'theme' ); ?>">
+				<input class="search-form__submit" type="submit" value="<?php esc_attr_e( 'Пошук', 'theme' ); ?>">
 			</form>
 		</div>
 	</section>
