@@ -18,6 +18,13 @@ function theme_scripts() {
 		false
 	);
 	wp_enqueue_script(
+		'input-mask',
+		get_stylesheet_directory_uri() . '/assets/js/inputmask.min.js',
+		array(),
+		false,
+		false
+	);
+	wp_enqueue_script(
 		'dov',
 		get_stylesheet_directory_uri() . '/assets/js/dov.js',
 		array( 'jquery' ),
