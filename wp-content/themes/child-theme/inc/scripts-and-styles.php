@@ -8,6 +8,8 @@ DOV_Defer_Scripts::add( 'frontend.filters' );
 DOV_Defer_Scripts::add( 'woo' );
 
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
+wp_dequeue_script( 'theme-fonts-all-js' );
+wp_dequeue_script( 'theme-fonts-preloader-main-js' );
 
 function theme_scripts() {
 	wp_enqueue_style(
