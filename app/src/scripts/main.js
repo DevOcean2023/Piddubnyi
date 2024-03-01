@@ -21,14 +21,16 @@ function showMenu(container, button) {
 	if (container && button) {
 		container.style.display = 'block';
 		const buttonRect = button.getBoundingClientRect();
+		const containerRect = container.getBoundingClientRect();
 		container.style.position = 'absolute';
 
 		if (button.classList.contains('about-company')) {
-			container.style.right = window.innerWidth - buttonRect.right - 17 + 'px';
+			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
 		} else {
-			container.style.left = buttonRect.left + 'px';
+			container.style.left = `${buttonRect.left}px`;
 		}
-		container.style.top = buttonRect.bottom + 'px';
+
+		container.style.top = `${buttonRect.bottom}px`;
 		button.classList.add('active');
 		container.classList.add('active');
 	}
