@@ -10,13 +10,6 @@ DOV_Defer_Scripts::add( 'woo' );
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
 
 function theme_scripts() {
-	wp_enqueue_style(
-		'fonts',
-		get_stylesheet_directory_uri() . '/assets/fonts/fonts.css',
-		array(),
-		false,
-		false
-	);
 	wp_enqueue_script(
 		'marque',
 		'https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js',
@@ -66,18 +59,12 @@ DOV_Enqueue_Scripts::enqueue_blocks(
 
 DOV_Enqueue_Scripts::enqueue_blocks(
 	array(
-		'services'      => array(
+		'services' => array(
 			'faq-search.js',
 			'tabs.js',
 			'accordion.js' => array(
 				'jquery',
 			),
-		),
-		'products-top'  => array(
-			'tiny-slider.js',
-		),
-		'products-sale' => array(
-			'tiny-slider.js',
 		),
 	)
 );
@@ -151,9 +138,6 @@ DOV_Enqueue_Styles::enqueue_blocks(
 	static function ( $css ) {
 		if ( is_404() ) {
 			$css .= DOV_Enqueue_Styles::get_css( 'section-404.css' );
-		}
-		if ( is_home() || is_front_page() ) {
-			$css .= DOV_Enqueue_Styles::get_css( 'home-products.css' );
 		}
 
 		return $css;
