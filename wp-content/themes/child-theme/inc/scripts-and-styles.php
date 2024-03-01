@@ -139,6 +139,9 @@ DOV_Enqueue_Styles::enqueue_blocks(
 		if ( is_404() ) {
 			$css .= DOV_Enqueue_Styles::get_css( 'section-404.css' );
 		}
+		if ( is_home() || is_front_page() ) {
+			$css .= DOV_Enqueue_Styles::get_css( 'home-products.css' );
+		}
 
 		return $css;
 	}
