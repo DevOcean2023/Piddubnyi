@@ -243,6 +243,10 @@
 			padding: 40px 24px;
 		}
 
+		a:is(:hover, :focus, :focus-within) {
+			text-decoration: none !important;
+		}
+
 		.order-wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -258,7 +262,7 @@
 				font-weight: 500;
 				line-height: 18.2px;
 				letter-spacing: 0.28px;
-				text-decoration-line: underline;
+				text-decoration-line: none;
 				text-transform: uppercase;
 				background: transparent;
 			}
@@ -361,6 +365,10 @@
 			letter-spacing: 0.32px;
 			align-items: flex-start;
 
+			a:is(:hover, :focus, :focus-within) {
+				text-decoration: none !important;
+			}
+
 			[class*="woocommerce-Button"] {
 				width: 100%;
 				padding: 16px 24px;
@@ -385,6 +393,7 @@
 				&:hover {
 					color: #fff;
 					background: #171a19;
+					text-decoration: none !important;
 				}
 			}
 		}

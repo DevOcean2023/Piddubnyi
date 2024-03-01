@@ -71,6 +71,16 @@
 
 			.wc-backward {
 				@include btn;
+				border: 1px solid $black;
+				background: $white;
+				color: $black !important;
+				text-transform: uppercase;
+
+				&:--enter {
+					background: $black;
+					text-decoration: none;
+					color: $white !important;
+				}
 			}
 		}
 
