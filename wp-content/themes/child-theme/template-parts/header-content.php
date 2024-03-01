@@ -49,7 +49,7 @@
 								</a>
 							</li>
 							<li class="menu-header-second__item wish-list">
-								<a href="/wish-list"></a>
+								<?php echo do_shortcode( '[ti_wishlist_products_counter]' ); ?>
 							</li>
 							<li class="menu-header-second__item delivery">
 								<a class="menu-header-second__link" href="#"
