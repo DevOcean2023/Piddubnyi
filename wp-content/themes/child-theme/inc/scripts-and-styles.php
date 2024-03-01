@@ -59,12 +59,18 @@ DOV_Enqueue_Scripts::enqueue_blocks(
 
 DOV_Enqueue_Scripts::enqueue_blocks(
 	array(
-		'services' => array(
+		'services'      => array(
 			'faq-search.js',
 			'tabs.js',
 			'accordion.js' => array(
 				'jquery',
 			),
+		),
+		'products-top'  => array(
+			'tiny-slider.js',
+		),
+		'products-sale' => array(
+			'tiny-slider.js',
 		),
 	)
 );
