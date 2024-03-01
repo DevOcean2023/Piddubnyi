@@ -292,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initInputMask() {
 	let phoneInput = document.getElementById("account_phone");
+	if (!phoneInput) return;
 
 	let im = new Inputmask("+38(999)999-99-99");
 	im.mask(phoneInput);
