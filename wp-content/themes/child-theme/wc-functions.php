@@ -140,6 +140,7 @@ function customize_shipping_placeholders( $fields ) {
 	$fields['shipping_state']['placeholder']     = __( 'Введіть вашу область*', 'woocommerce' );
 	$fields['shipping_city']['placeholder']      = __( 'Введіть ваше місто*', 'woocommerce' );
 	$fields['shipping_postcode']['placeholder']  = __( 'Поштовий індекс*', 'woocommerce' );
+	$fields['shipping_postcode']['maxlength']    = 5;
 	$fields['shipping_address_1']['placeholder'] = __( 'Адреса доставки*', 'woocommerce' );
 
 	return $fields;
