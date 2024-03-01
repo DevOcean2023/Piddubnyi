@@ -870,12 +870,8 @@
 
 			.show-password-input {
 				position: relative;
-				opacity: 0.5;
+				opacity: 1;
 				top: -2.7em;
-
-				&.display-password {
-					opacity: 1;
-				}
 
 				&::before {
 					position: absolute;
@@ -885,6 +881,20 @@
 					height: 24px;
 					top: 0;
 					right: 9px;
+				}
+
+				&.display-password {
+					opacity: 1;
+
+					&::before {
+						position: absolute;
+						content: "";
+						background: url(../../images/eye.svg) no-repeat;
+						width: 24px;
+						height: 24px;
+						top: 0;
+						right: 9px;
+					}
 				}
 
 				&::after {
