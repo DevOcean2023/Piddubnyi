@@ -136,7 +136,7 @@ do_action( 'woocommerce_before_main_content' );
 		?>
 		<div class="recently-products">
 			<div class="inner">
-				<h2><?php esc_html_e( 'Recently viewed products', 'woocommerce' ); ?></h2>
+				<h2><?php esc_html_e( 'Недавно переглянуті товари', 'woocommerce' ); ?></h2>
 				<div class="slider-holder">
 					<div class="product-cards-slider" data-slider="product-cards-slider">
 						<?php foreach ( $viewed_products as $_id ) : ?>
