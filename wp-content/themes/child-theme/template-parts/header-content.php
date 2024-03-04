@@ -80,7 +80,7 @@
 						);
 
 						if ( $subcategories ) {
-							echo "<div class='face-category-menu-wrapper'>";
+							echo "<div class='face-category-menu-wrapper subcategory-holder'>";
 							echo "<div class='inner-category'>";
 
 							foreach ( $subcategories as $subcategory ) {
@@ -122,7 +122,7 @@
 						);
 
 						if ( $subcategories ) {
-							echo "<div class='hair-category-menu-wrapper'>";
+							echo "<div class='hair-category-menu-wrapper subcategory-holder'>";
 							echo "<div class='inner-category'>";
 
 							foreach ( $subcategories as $subcategory ) {
@@ -164,7 +164,7 @@
 						);
 
 						if ( $subcategories ) {
-							echo "<div class='body-category-menu-wrapper'>";
+							echo "<div class='body-category-menu-wrapper subcategory-holder'>";
 							echo "<div class='inner-category'>";
 
 							foreach ( $subcategories as $subcategory ) {
@@ -190,7 +190,7 @@
 					}
 					?>
 
-					<div class="about-company-menu-wrapper">
+					<div class="about-company-menu-wrapper subcategory-holder">
 						<?php while ( dov_loop( 'dov_header_about', '<div class="inner-category">' ) ) : ?>
 							<div class="item">
 								<div class="img">
