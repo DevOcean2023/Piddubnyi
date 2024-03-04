@@ -36,15 +36,15 @@ class DOV_Fix_GF_Multiple_IDs_Base {
 	}
 
 	public static function fix_upload_field() : void {
-//		wp_add_inline_script(
-//			'gform_gravityforms',
-//			'gform.addFilter( "gform_file_upload_markup", function ( html, file, up ) {
-//					const formId = up.settings.multipart_params.form_id;
-//					const randomFormId = document.querySelector( `[data-optimisation-gf-form-id="4"] [name="gform_random_id"]` ).value;
-//
-//					return html.replace( `gformDeleteUploadedFile(${formId},`, `gformDeleteUploadedFile(${randomFormId},` );
-//			} );'
-//		);
+		wp_add_inline_script(
+			'gform_gravityforms',
+			'gform.addFilter( "gform_file_upload_markup", function ( html, file, up ) {
+					const formId = up.settings.multipart_params.form_id;
+					const randomFormId = document.querySelector( `[data-optimisation-gf-form-id="4"] [name="gform_random_id"]` ).value;
+
+					return html.replace( `gformDeleteUploadedFile(${formId},`, `gformDeleteUploadedFile(${randomFormId},` );
+			} );'
+		);
 	}
 
 	public static function fix( $form_html_or_confirmation_or_scripts, $form ) {
