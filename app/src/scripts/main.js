@@ -8,40 +8,41 @@ import "./woo";
 
 /*menu*/
 
-var categoryMenus = document.querySelectorAll('.inner-category');
+var categoryMenus = document.querySelectorAll(".inner-category");
 categoryMenus.forEach(function (menu) {
 	var subMenu = menu;
 	if (subMenu && subMenu.children.length > 4) {
-		menu.parentElement.classList.add('big');
+		menu.parentElement.classList.add("big");
 	}
 });
 
 /*menu-header-category*/
 function showMenu(container, button) {
 	if (container && button) {
-		container.style.display = 'block';
+		container.style.display = "block";
 		const buttonRect = button.getBoundingClientRect();
 		const containerRect = container.getBoundingClientRect();
-		container.style.position = 'absolute';
 
-		if (button.classList.contains('about-company')) {
-			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
+		if (button.classList.contains("about-company")) {
+			container.style.left = `${Math.floor(buttonRect.left) + button.offsetWidth - Math.floor(container.offsetWidth)}px`;
 		} else {
 			container.style.left = `${buttonRect.left}px`;
 		}
 
 		container.style.top = `${buttonRect.bottom}px`;
-		button.classList.add('active');
-		container.classList.add('active');
+		button.classList.add("active");
+		container.classList.add("active");
 	}
 }
+
 function hideMenu(container, button) {
 	if (container) {
-		container.style.display = 'none';
-		button.classList.remove('active');
-		container.classList.remove('active');
+		container.style.display = "none";
+		button.classList.remove("active");
+		container.classList.remove("active");
 	}
 }
+
 function isChildOf(child, parent) {
 	let node = child.parentNode;
 	while (node != null) {
@@ -52,10 +53,11 @@ function isChildOf(child, parent) {
 	}
 	return false;
 }
-const buttons = [document.querySelector('.face-category'), document.querySelector('.hair-category'), document.querySelector('.body-category'), document.querySelector('.about-company')];
-const containers = [document.querySelector('.face-category-menu-wrapper'), document.querySelector('.hair-category-menu-wrapper'), document.querySelector('.body-category-menu-wrapper'), document.querySelector('.about-company-menu-wrapper')];
+
+const buttons = [document.querySelector(".face-category"), document.querySelector(".hair-category"), document.querySelector(".body-category"), document.querySelector(".about-company")];
+const containers = [document.querySelector(".face-category-menu-wrapper"), document.querySelector(".hair-category-menu-wrapper"), document.querySelector(".body-category-menu-wrapper"), document.querySelector(".about-company-menu-wrapper")];
 buttons.forEach((button, index) => {
-	button.addEventListener('mouseenter', () => {
+	button.addEventListener("mouseenter", () => {
 		containers.forEach((container, containerIndex) => {
 			if (containerIndex !== index) {
 				hideMenu(container, buttons[containerIndex]);
@@ -63,7 +65,7 @@ buttons.forEach((button, index) => {
 		});
 		showMenu(containers[index], button);
 	});
-	button.addEventListener('mouseleave', (event) => {
+	button.addEventListener("mouseleave", (event) => {
 		const relatedTarget = event.relatedTarget;
 		const isRelatedToContainerOrButton = containers.some((container, containerIndex) => {
 			return (
@@ -77,7 +79,7 @@ buttons.forEach((button, index) => {
 	});
 });
 
-document.addEventListener('mousemove', (event) => {
+document.addEventListener("mousemove", (event) => {
 	const isInsideAnyContainer = containers.some(container => container.contains(event.target));
 	const isInsideAnyButton = buttons.some(button => button.contains(event.target));
 
@@ -86,10 +88,10 @@ document.addEventListener('mousemove', (event) => {
 	}
 });
 containers.forEach((container, index) => {
-	container.addEventListener('mouseenter', () => {
+	container.addEventListener("mouseenter", () => {
 		showMenu(container, buttons[index]);
 	});
-	container.addEventListener('mouseleave', (event) => {
+	container.addEventListener("mouseleave", (event) => {
 		const relatedTarget = event.relatedTarget;
 		const isRelatedToButton = buttons.some((button, buttonIndex) => {
 			return (buttonIndex === index && isChildOf(relatedTarget, button));
@@ -120,13 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	if (searchLink) {
 		searchLink.addEventListener("click", function (event) {
-			searchForm.classList.add('active');
+			searchForm.classList.add("active");
 		});
 
 		const closeFormButton = searchForm.querySelector(".close-button");
 		if (closeFormButton) {
 			closeFormButton.addEventListener("click", function (event) {
-				searchForm.classList.remove('active');
+				searchForm.classList.remove("active");
 			});
 		}
 	}
