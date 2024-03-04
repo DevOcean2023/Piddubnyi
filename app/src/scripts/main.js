@@ -22,7 +22,6 @@ function showMenu(container, button) {
 		container.style.display = 'block';
 		const buttonRect = button.getBoundingClientRect();
 		const containerRect = container.getBoundingClientRect();
-		container.style.position = 'absolute';
 
 		if (button.classList.contains('about-company')) {
 			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
