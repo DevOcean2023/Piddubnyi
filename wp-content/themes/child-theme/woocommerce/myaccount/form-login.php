@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<?php dov_the( 'dov_login_background' ); ?>
 	<div class="container-form">
 		<div class="container-button">
-			<div class="registration-button form-login-login-button">
+			<div class="registration-button form-login-registration-button">
 				<button class="close-registration head"><?php esc_html_e( 'Вхід', 'woocommerce' ); ?></button>
 			</div>
 			<div class="login-button form-login-registration-button">
