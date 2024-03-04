@@ -301,8 +301,8 @@ function initInputMask() {
 
 function checkProductList() {
 	let products = document.querySelectorAll(".shop-page__products-holder .product");
-	if (!products.length) {
-		let sidebar = document.querySelector(".shop-page__sidebar");
+	let sidebar = document.querySelector(".shop-page__sidebar");
+	if (!products.length && sidebar) {
 		sidebar.classList.add("hidden");
 	}
 
