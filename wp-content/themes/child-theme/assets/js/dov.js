@@ -288,6 +288,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 	initInputMask();
+	checkProductList();
 });
 
 function initInputMask() {
@@ -296,6 +297,15 @@ function initInputMask() {
 
 	let im = new Inputmask("+38(999)999-99-99");
 	im.mask(phoneInput);
+}
+
+function checkProductList() {
+	let products = document.querySelectorAll(".shop-page__products-holder .product");
+	if (!products.length) {
+		let sidebar = document.querySelector(".shop-page__sidebar");
+		sidebar.classList.add("hidden");
+	}
+
 }
 
 ////////////////////////login-section
