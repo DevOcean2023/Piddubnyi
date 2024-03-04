@@ -17,88 +17,88 @@ categoryMenus.forEach(function (menu) {
 });
 
 /*menu-header-category*/
-function showMenu(container, button) {
-	if (container && button) {
-		container.style.display = 'block';
-		const buttonRect = button.getBoundingClientRect();
-		const containerRect = container.getBoundingClientRect();
-		container.style.position = 'absolute';
-
-		if (button.classList.contains('about-company')) {
-			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
-		} else {
-			container.style.left = `${buttonRect.left}px`;
-		}
-
-		container.style.top = `${buttonRect.bottom}px`;
-		button.classList.add('active');
-		container.classList.add('active');
-	}
-}
-function hideMenu(container, button) {
-	if (container) {
-		container.style.display = 'none';
-		button.classList.remove('active');
-		container.classList.remove('active');
-	}
-}
-function isChildOf(child, parent) {
-	let node = child.parentNode;
-	while (node != null) {
-		if (node == parent) {
-			return true;
-		}
-		node = node.parentNode;
-	}
-	return false;
-}
-const buttons = [document.querySelector('.face-category'), document.querySelector('.hair-category'), document.querySelector('.body-category'), document.querySelector('.about-company')];
-const containers = [document.querySelector('.face-category-menu-wrapper'), document.querySelector('.hair-category-menu-wrapper'), document.querySelector('.body-category-menu-wrapper'), document.querySelector('.about-company-menu-wrapper')];
-buttons.forEach((button, index) => {
-	button.addEventListener('mouseenter', () => {
-		containers.forEach((container, containerIndex) => {
-			if (containerIndex !== index) {
-				hideMenu(container, buttons[containerIndex]);
-			}
-		});
-		showMenu(containers[index], button);
-	});
-	button.addEventListener('mouseleave', (event) => {
-		const relatedTarget = event.relatedTarget;
-		const isRelatedToContainerOrButton = containers.some((container, containerIndex) => {
-			return (
-				(containerIndex === index && isChildOf(relatedTarget, button)) ||
-				(containerIndex !== index && isChildOf(relatedTarget, container))
-			);
-		});
-		if (!isRelatedToContainerOrButton) {
-			hideMenu(containers[index], button);
-		}
-	});
-});
-
-document.addEventListener('mousemove', (event) => {
-	const isInsideAnyContainer = containers.some(container => container.contains(event.target));
-	const isInsideAnyButton = buttons.some(button => button.contains(event.target));
-
-	if (!isInsideAnyContainer && !isInsideAnyButton) {
-		containers.forEach(container => hideMenu(container, buttons[containers.indexOf(container)]));
-	}
-});
-containers.forEach((container, index) => {
-	container.addEventListener('mouseenter', () => {
-		showMenu(container, buttons[index]);
-	});
-	container.addEventListener('mouseleave', (event) => {
-		const relatedTarget = event.relatedTarget;
-		const isRelatedToButton = buttons.some((button, buttonIndex) => {
-			return (buttonIndex === index && isChildOf(relatedTarget, button));
-		});
-		if (!isRelatedToButton) {
-			hideMenu(container, buttons[index]);
-		}
-	});
-});
+// function showMenu(container, button) {
+// 	if (container && button) {
+// 		container.style.display = 'block';
+// 		const buttonRect = button.getBoundingClientRect();
+// 		const containerRect = container.getBoundingClientRect();
+// 		container.style.position = 'absolute';
+//
+// 		if (button.classList.contains('about-company')) {
+// 			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
+// 		} else {
+// 			container.style.left = `${buttonRect.left}px`;
+// 		}
+//
+// 		container.style.top = `${buttonRect.bottom}px`;
+// 		button.classList.add('active');
+// 		container.classList.add('active');
+// 	}
+// }
+// function hideMenu(container, button) {
+// 	if (container) {
+// 		container.style.display = 'none';
+// 		button.classList.remove('active');
+// 		container.classList.remove('active');
+// 	}
+// }
+// function isChildOf(child, parent) {
+// 	let node = child.parentNode;
+// 	while (node != null) {
+// 		if (node == parent) {
+// 			return true;
+// 		}
+// 		node = node.parentNode;
+// 	}
+// 	return false;
+// }
+// const buttons = [document.querySelector('.face-category'), document.querySelector('.hair-category'), document.querySelector('.body-category'), document.querySelector('.about-company')];
+// const containers = [document.querySelector('.face-category-menu-wrapper'), document.querySelector('.hair-category-menu-wrapper'), document.querySelector('.body-category-menu-wrapper'), document.querySelector('.about-company-menu-wrapper')];
+// buttons.forEach((button, index) => {
+// 	button.addEventListener('mouseenter', () => {
+// 		containers.forEach((container, containerIndex) => {
+// 			if (containerIndex !== index) {
+// 				hideMenu(container, buttons[containerIndex]);
+// 			}
+// 		});
+// 		showMenu(containers[index], button);
+// 	});
+// 	button.addEventListener('mouseleave', (event) => {
+// 		const relatedTarget = event.relatedTarget;
+// 		const isRelatedToContainerOrButton = containers.some((container, containerIndex) => {
+// 			return (
+// 				(containerIndex === index && isChildOf(relatedTarget, button)) ||
+// 				(containerIndex !== index && isChildOf(relatedTarget, container))
+// 			);
+// 		});
+// 		if (!isRelatedToContainerOrButton) {
+// 			hideMenu(containers[index], button);
+// 		}
+// 	});
+// });
+//
+// document.addEventListener('mousemove', (event) => {
+// 	const isInsideAnyContainer = containers.some(container => container.contains(event.target));
+// 	const isInsideAnyButton = buttons.some(button => button.contains(event.target));
+//
+// 	if (!isInsideAnyContainer && !isInsideAnyButton) {
+// 		containers.forEach(container => hideMenu(container, buttons[containers.indexOf(container)]));
+// 	}
+// });
+// containers.forEach((container, index) => {
+// 	container.addEventListener('mouseenter', () => {
+// 		showMenu(container, buttons[index]);
+// 	});
+// 	container.addEventListener('mouseleave', (event) => {
+// 		const relatedTarget = event.relatedTarget;
+// 		const isRelatedToButton = buttons.some((button, buttonIndex) => {
+// 			return (buttonIndex === index && isChildOf(relatedTarget, button));
+// 		});
+// 		if (!isRelatedToButton) {
+// 			hideMenu(container, buttons[index]);
+// 		}
+// 	});
+// });
 
 ///
 defer(() => {
