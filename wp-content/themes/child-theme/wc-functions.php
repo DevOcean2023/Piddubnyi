@@ -68,7 +68,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 	$cls_mini_cart = ( WC()->cart->get_cart_contents_count() ) ? ' products-in-cart' : '';
 
-	$fragments['.page-header .menu-header-second__link_mini_cart'] = '<a href="#mini-cart" data-popup-id="mini-cart"
+	$fragments['.page-header .menu-header-second__link_mini_cart'] = '<a href="#popup-mini-cart"
 								   class="menu-header-second__link_mini_cart ' . esc_html( $cls_mini_cart ) . '">
 									<span class="menu-header-second__link_mini_cart_counter">
 										' . WC()->cart->get_cart_contents_count() . '
@@ -81,7 +81,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 	$mini_cart = ob_get_clean();
 
-	$fragments['dialog#mini-cart .popup__content .mini-cart'] = $mini_cart;
+	$fragments['dialog#popup-mini-cart .popup__content .mini-cart'] = $mini_cart;
 
 	return $fragments;
 

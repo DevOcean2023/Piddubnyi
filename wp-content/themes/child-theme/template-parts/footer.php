@@ -45,7 +45,7 @@
 
 
 
-<dialog id="mini-cart">
+<dialog id="popup-mini-cart">
 	<div class="popup">
 		<div class="popup__content">
 			<?php woocommerce_mini_cart(); ?>

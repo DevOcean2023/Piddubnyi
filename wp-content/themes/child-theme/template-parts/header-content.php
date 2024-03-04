@@ -41,7 +41,7 @@
 								global $woocommerce;
 								$cls_mini_cart = ( WC()->cart->get_cart_contents_count() ) ? ' products-in-cart' : '';
 								?>
-								<a href="#mini-cart" data-popup-id="mini-cart"
+								<a href="#popup-mini-cart"
 								   class="menu-header-second__link_mini_cart <?php echo esc_html( $cls_mini_cart ); ?>">
 									<span class="menu-header-second__link_mini_cart_counter">
 										<?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?>
