@@ -361,12 +361,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	if (loginShow) {
 		loginShow.addEventListener("click", function () {
-			loginClose.classList.add("show-login");
-			loginOpen.classList.add("hide-login");
-			saveDataToLocalStorage("loginState", "closed");
-			activateButton(loginButtonOpen);
-			deactivateButton(registerButtonOpen);
-			removeHeadClass(registerButtonOpen); // Додали цей рядок
+			loginOpen.classList.remove("hide-login");
+			loginClose.classList.remove("show-login");
+			saveDataToLocalStorage("loginState", "open");
+			activateButton(registerButtonOpen);
+			deactivateButton(loginButtonOpen);
+			removeHeadClass(registerButtonOpen);
 		});
 	}
 
