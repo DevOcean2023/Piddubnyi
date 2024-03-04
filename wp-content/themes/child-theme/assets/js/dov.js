@@ -508,6 +508,7 @@ jQuery(document).ready(function ($) {
 			$(".password-fields").toggle();
 		});
 		$("button[name=\"save_account_details\"]").click(function () {
+			console.log($(this));
 			$(this).hide();
 			$(".edit-fields-link").show();
 			$(".default-page__p").addClass("deactive");
