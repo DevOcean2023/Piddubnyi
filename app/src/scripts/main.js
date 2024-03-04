@@ -23,6 +23,8 @@ function showMenu(container, button) {
 		const buttonRect = button.getBoundingClientRect();
 		const containerRect = container.getBoundingClientRect();
 
+		console.log(buttonRect.left + button.offsetWidth - container.offsetWidth);
+		console.log(Math.round(buttonRect.left + button.offsetWidth - container.offsetWidth));
 		if (button.classList.contains('about-company')) {
 			container.style.left = `${buttonRect.left + button.offsetWidth - container.offsetWidth}px`;
 		} else {
