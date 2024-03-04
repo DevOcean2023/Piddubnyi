@@ -300,87 +300,87 @@ function initInputMask() {
 
 ////////////////////////login-section
 document.addEventListener("DOMContentLoaded", function () {
-	// const loginOpen = document.getElementById("u-column1");
-	// const loginClose = document.getElementById("u-column2");
-	// const loginButtonOpen = document.querySelector(".form-login-registration-button .close-login");
-	// const registerButtonOpen = document.querySelector(".form-login-registration-button .close-registration");
-	// const loginShow = document.querySelector(".showlogin");
-	//
-	// function saveDataToLocalStorage(key, value) {
-	// 	localStorage.setItem(key, value);
-	// }
-	//
-	// function getDataFromLocalStorage(key) {
-	// 	return localStorage.getItem(key);
-	// }
-	//
-	// function hideWooCommerceErrors() {
-	// 	const errorElements = document.querySelectorAll(".woocommerce-error");
-	// 	errorElements.forEach(function (errorElement) {
-	// 		errorElement.style.display = "none";
-	// 	});
-	// }
-	//
-	// function activateButton(button) {
-	// 	button.classList.add("active");
-	// }
-	//
-	// function deactivateButton(button) {
-	// 	button.classList.remove("active");
-	// }
-	//
-	// function addHeadClass(button) {
-	// 	button.classList.add("head");
-	// }
-	//
-	// function removeHeadClass(button) {
-	// 	button.classList.remove("head");
-	// }
-	//
-	// if (loginButtonOpen) {
-	// 	loginButtonOpen.addEventListener("click", function () {
-	// 		loginClose.classList.add("show-login");
-	// 		loginOpen.classList.add("hide-login");
-	// 		saveDataToLocalStorage("loginState", "closed");
-	// 		activateButton(loginButtonOpen);
-	// 		deactivateButton(registerButtonOpen);
-	// 		removeHeadClass(registerButtonOpen); // Додали цей рядок
-	// 	});
-	// }
-	//
-	// if (registerButtonOpen) {
-	// 	registerButtonOpen.addEventListener("click", function () {
-	// 		loginOpen.classList.remove("hide-login");
-	// 		loginClose.classList.remove("show-login");
-	// 		saveDataToLocalStorage("loginState", "open");
-	// 		activateButton(registerButtonOpen);
-	// 		deactivateButton(loginButtonOpen);
-	// 		removeHeadClass(registerButtonOpen);
-	// 	});
-	// }
-	//
-	// if (loginShow) {
-	// 	loginShow.addEventListener("click", function () {
-	// 		loginOpen.classList.remove("hide-login");
-	// 		loginClose.classList.remove("show-login");
-	// 		saveDataToLocalStorage("loginState", "open");
-	// 		hideWooCommerceErrors();
-	// 		activateButton(loginButtonOpen);
-	// 		deactivateButton(registerButtonOpen);
-	// 	});
-	// }
-	//
-	// const savedLoginState = getDataFromLocalStorage("loginState");
-	// if (savedLoginState === "closed") {
-	// 	loginClose.classList.add("show-login");
-	// 	loginOpen.classList.add("hide-login");
-	// 	activateButton(loginButtonOpen);
-	// 	deactivateButton(registerButtonOpen);
-	// 	removeHeadClass(registerButtonOpen);
-	// }
-	// if (savedLoginState === "open" && registerButtonOpen) {
-	// 	addHeadClass(registerButtonOpen);
-	// }
+	const loginOpen = document.getElementById("u-column1");
+	const loginClose = document.getElementById("u-column2");
+	const loginButtonOpen = document.querySelector(".form-login-registration-button .close-login");
+	const registerButtonOpen = document.querySelector(".form-login-registration-button .close-registration");
+	const loginShow = document.querySelector(".showlogin");
+
+	function saveDataToLocalStorage(key, value) {
+		localStorage.setItem(key, value);
+	}
+
+	function getDataFromLocalStorage(key) {
+		return localStorage.getItem(key);
+	}
+
+	function hideWooCommerceErrors() {
+		const errorElements = document.querySelectorAll(".woocommerce-error");
+		errorElements.forEach(function (errorElement) {
+			errorElement.style.display = "none";
+		});
+	}
+
+	function activateButton(button) {
+		button.classList.add("active");
+	}
+
+	function deactivateButton(button) {
+		button.classList.remove("active");
+	}
+
+	function addHeadClass(button) {
+		button.classList.add("head");
+	}
+
+	function removeHeadClass(button) {
+		button.classList.remove("head");
+	}
+
+	if (loginButtonOpen) {
+		loginButtonOpen.addEventListener("click", function () {
+			loginClose.classList.add("show-login");
+			loginOpen.classList.add("hide-login");
+			saveDataToLocalStorage("loginState", "closed");
+			activateButton(loginButtonOpen);
+			deactivateButton(registerButtonOpen);
+			removeHeadClass(registerButtonOpen); // Додали цей рядок
+		});
+	}
+
+	if (registerButtonOpen) {
+		registerButtonOpen.addEventListener("click", function () {
+			loginOpen.classList.remove("hide-login");
+			loginClose.classList.remove("show-login");
+			saveDataToLocalStorage("loginState", "open");
+			activateButton(registerButtonOpen);
+			deactivateButton(loginButtonOpen);
+			removeHeadClass(registerButtonOpen);
+		});
+	}
+
+	if (loginShow) {
+		loginShow.addEventListener("click", function () {
+			loginClose.classList.add("show-login");
+			loginOpen.classList.add("hide-login");
+			saveDataToLocalStorage("loginState", "closed");
+			activateButton(loginButtonOpen);
+			deactivateButton(registerButtonOpen);
+			removeHeadClass(registerButtonOpen); // Додали цей рядок
+		});
+	}
+
+	const savedLoginState = getDataFromLocalStorage("loginState");
+	if (savedLoginState === "closed") {
+		loginClose.classList.add("show-login");
+		loginOpen.classList.add("hide-login");
+		activateButton(loginButtonOpen);
+		deactivateButton(registerButtonOpen);
+		removeHeadClass(registerButtonOpen);
+	}
+	if (savedLoginState === "open" && registerButtonOpen) {
+		addHeadClass(registerButtonOpen);
+	}
 });
 
 /////////////add class to login-section
