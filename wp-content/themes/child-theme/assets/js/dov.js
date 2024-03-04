@@ -297,11 +297,13 @@ window.addEventListener("resize", function () {
 });
 
 function initInputMask() {
-	let phoneInput = document.getElementById("account_phone");
-	if (!phoneInput) return;
+	let accountPhone = document.getElementById("account_phone");
+	let billingPhone = document.getElementById("billing_phone");
+	if (!accountPhone && !billingPhone) return;
 
 	let im = new Inputmask("+38(999)999-99-99");
-	im.mask(phoneInput);
+	im.mask(accountPhone);
+	im.mask(billingPhone);
 }
 
 function checkProductList() {
