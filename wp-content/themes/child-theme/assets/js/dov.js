@@ -300,9 +300,11 @@ function initInputMask() {
 	let accountPhone = document.getElementById("account_phone");
 	let billingPhone = document.getElementById("billing_phone");
 
-	if (accountPhone || billingPhone) {
-		let im = new Inputmask("+38(999)999-99-99");
+	let im = new Inputmask("+38(999)999-99-99");
+	if (accountPhone) {
 		im.mask(accountPhone);
+	}
+	if (billingPhone) {
 		im.mask(billingPhone);
 	}
 }
