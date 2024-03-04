@@ -49,7 +49,7 @@
 								</a>
 							</li>
 							<li class="menu-header-second__item wish-list">
-								<a href="/wishlist"></a>
+								<a href="/wish-list"></a>
 							</li>
 							<li class="menu-header-second__item delivery">
 								<a class="menu-header-second__link" href="#"
