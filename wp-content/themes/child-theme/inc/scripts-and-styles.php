@@ -6,7 +6,6 @@ DOV_Defer_Scripts::add( 'tooltipster' );
 DOV_Defer_Scripts::add( 'frontend.filters' );
 
 DOV_Defer_Scripts::add( 'woo' );
-echo 'hello';
 
 //DOV_Enqueue_Scripts::enqueue_file( 'dov.js', array( 'deps' => array( 'jquery-core' ) ) );
 
