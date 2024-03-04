@@ -4,11 +4,6 @@ DOV_Defer_Scripts::add( 'jquery-core' );
 
 DOV_Defer_Scripts::add( 'tooltipster' );
 DOV_Defer_Scripts::add( 'frontend.filters' );
-DOV_Defer_Scripts::add( 'gform_gravityforms' );
-DOV_Defer_Scripts::add( 'gform_gravityforms_theme_vendors' );
-DOV_Defer_Scripts::add( 'gform_gravityforms_theme' );
-DOV_Defer_Scripts::add( 'gform_conditional_logic' );
-DOV_Defer_Scripts::add( 'gform_masked_input' );
 
 DOV_Defer_Scripts::add( 'woo' );
 
