@@ -29,7 +29,7 @@ DOV_CPT::add(
 	'services',
 	array(
 		'public'      => true,
-		'has_archive' => true,
+		'has_archive' => false,
 		'menu_icon'   => 'dashicons-media-document',
 		'supports'    => array( 'title', 'editor', 'thumbnail' ),
 	)
