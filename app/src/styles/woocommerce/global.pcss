@@ -296,10 +296,6 @@ body.filters-opened {
 				text-decoration: none;
 			}
 
-			.product-card-inner {
-				position: relative;
-			}
-
 			img {
 				width: 100%;
 				object-fit: cover;
@@ -344,9 +340,10 @@ body.filters-opened {
 				visibility: hidden;
 				position: absolute;
 				padding: 15px 24px 16px;
-				bottom: 0;
+				top: 57%;
 				left: 50%;
 				transform: translateX(-50%);
+				width: calc(100% - (var(--offset) * 2));
 			}
 		}
 	}

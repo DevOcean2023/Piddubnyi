@@ -289,6 +289,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 	initInputMask();
 	checkProductList();
+	addToCartButtonOffset();
+});
+
+window.addEventListener("resize", function () {
+	addToCartButtonOffset();
 });
 
 function initInputMask() {
@@ -305,7 +310,23 @@ function checkProductList() {
 	if (!products.length && sidebar) {
 		sidebar.classList.add("hidden");
 	}
+}
 
+function addToCartButtonOffset() {
+	let products = document.querySelectorAll(".products .product");
+	if (!products.length) return;
+
+	if (window.innerWidth > 991) {
+		products.forEach(el => {
+			let image = el.querySelector("img");
+			let btn = el.querySelector(".add_to_cart_button");
+			if (image) {
+				let offset = 16;
+				let height = image.offsetHeight;
+				btn.style.top = height - btn.offsetHeight + offset + "px";
+			}
+		});
+	}
 }
 
 ////////////////////////login-section
