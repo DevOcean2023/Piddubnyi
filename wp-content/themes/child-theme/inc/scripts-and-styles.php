@@ -4,6 +4,7 @@ DOV_Defer_Scripts::add( 'jquery-core' );
 
 DOV_Defer_Scripts::add( 'tooltipster' );
 DOV_Defer_Scripts::add( 'frontend.filters' );
+DOV_Defer_Scripts::add( 'gform_gravityforms-js' );
 
 DOV_Defer_Scripts::add( 'woo' );
 
