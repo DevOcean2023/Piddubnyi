@@ -254,12 +254,16 @@
 				flex-direction: column;
 				width: 100%;
 				position: relative;
-				padding: 12px;
+				padding: 12px 12px 78px 12px;
 				border-radius: 0;
 				background: #fff;
 				max-height: max-content;
 				border: 1px solid #fff;
 				transition: $transition;
+
+				@media (--md) {
+					padding: 12px;
+				}
 
 				&:hover {
 					border: 1px solid #015f45;
@@ -318,6 +322,7 @@
 						position: absolute;
 						top: 0;
 						left: 0;
+						max-width: unset;
 					}
 				}
 
@@ -439,21 +444,22 @@
 
 						--offset: 12px;
 						position: absolute;
-						opacity: 0;
-						visibility: hidden;
 						font-size: 16px;
 						font-weight: 500;
 						background: $woo-btn-color;
 						border-color: $woo-btn-color;
 						height: 53px;
 						line-height: 1.3;
-						bottom: 0;
+						bottom: var(--offset);
 						left: 50%;
 						transform: translateX(-50%);
 						width: calc(100% - (var(--offset) * 2));
 						transition: $transition;
 
 						@media (--lg) {
+							bottom: 0;
+							opacity: 0;
+							visibility: hidden;
 							width: 100%;
 						}
 
@@ -463,6 +469,7 @@
 							border: 1px solid $woo-btn-color;
 						}
 
+						i,
 						br {
 							display: none;
 						}
