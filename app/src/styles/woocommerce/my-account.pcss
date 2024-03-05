@@ -1741,21 +1741,21 @@
 			}
 		}
 
-
 		.tinv-wishlist {
 			table {
 				tbody {
-					display: grid;
-					grid-template-columns: 1fr;
+					display: flex;
+					flex-wrap: wrap;
 					gap: 16px;
 
-					@media (--sm) {
-						grid-template-columns: 1fr 1fr;
-					}
+					.wishlist {
+						&_item {
+							flex: 1 0 calc(50% - 16px);
 
-					@media (--md) {
-						gap: 32px 24px;
-						grid-template-columns: 1fr 1fr 1fr;
+							@media (--md) {
+								flex: 1 0 calc(100% / 3 - 24px);
+							}
+						}
 					}
 				}
 			}
