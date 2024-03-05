@@ -297,20 +297,21 @@ body.filters-opened {
 			}
 
 			.product-card-inner {
+				position: relative;
+				padding-bottom: 105%;
+
 				@media (--lg) {
 					position: relative;
 				}
 			}
 
 			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
 				width: 100%;
 				object-fit: cover;
-				min-height: 172px;
-
-				@media (--lg) {
-					min-height: unset;
-					object-fit: contain;
-				}
 			}
 		}
 
