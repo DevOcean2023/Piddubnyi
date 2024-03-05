@@ -3,31 +3,28 @@
 		<?php dov_the( 'title', 'home-products__title' ); ?>
 		<?php dov_the( 'subtitle', 'home-products__subtitle' ); ?>
 		<div class="products__slider_action" data-slider="slider-products">
+			<?php
+			global $product;
+			$args     = array(
+				'limit'    => - 1,
+				'status'   => 'publish',
+				'return'   => 'ids',
+				'category' => array( 'sale' ),
+			);
+			$products = wc_get_products( $args );
+			?>
+			<?php foreach ( $products as $_prod ) : ?>
+
 				<?php
-				global $product;
-				$args     = array(
-					'post_type'      => 'product',
-					'posts_per_page' => 10,
-					'tax_query'      => array(
-						array(
-							'taxonomy' => 'product_cat',
-							'field'    => 'slug',
-							'terms'    => 'sale',
-						),
-					),
-				);
-				$products = new WP_Query( $args );
+				$post_object = get_post( $_prod );
+
+				setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+
+				wc_get_template_part( 'content', 'product' );
 				?>
-				<?php if ( $products->have_posts() ) : ?>
-					<?php while ( $products->have_posts() ) : ?>
-						<?php $products->the_post(); ?>
-						<?php wc_get_template_part( 'content', 'product' ); ?>
-					<?php endwhile; ?>
-				<?php else : ?>
-					<?php echo 'Товари не найдено'; ?>
-				<?php endif; ?>
-				<?php wp_reset_postdata(); ?>
-			</div>
+
+			<?php endforeach; ?>
+		</div>
 		<div class="home-products__button">
 			<?php dov_the( 'button', 'btn' ); ?>
 		</div>
