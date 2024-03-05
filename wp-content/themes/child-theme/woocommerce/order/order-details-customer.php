@@ -96,13 +96,13 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 					<p>
 						<?php echo esc_html( 'Спосіб оплати :' ); ?>
 						<strong>
-							<?php echo $order->data['payment_method_title']; ?>
+							<?php echo wp_kses_post( $order->get_payment_method_title() ); ?>
 						</strong>
 					</p>
 					<p>
 						<?php echo esc_html( 'Статус :' ); ?>
 						<strong>
-							<?php echo $order->data['status']; ?>
+							<?php echo esc_html( wc_get_order_status_name( $order->get_status() ) ); ?>
 						</strong>
 					</p>
 
