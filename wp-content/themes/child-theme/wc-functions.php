@@ -472,7 +472,9 @@ function theme_render_product_item() {
 	echo '<div class="product-card-inner">';
 	$post_thumbnail_id = ( $product->get_image_id() ) ? $product->get_image_id() : get_option( 'woocommerce_placeholder_image', 0 );
 	$src               = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+	echo '<figure class="image-holder">';
 	echo '<img src="' . esc_url( $src[0] ) . '" alt="' . esc_html( $product->get_name() ) . '">';
+	echo '</figure>';
 	$cls_add_to_cart = array_filter(
 		array(
 			'button',

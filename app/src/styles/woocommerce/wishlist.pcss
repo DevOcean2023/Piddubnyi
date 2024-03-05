@@ -23,7 +23,7 @@
 
 	.default-page {
 		.inner {
-			padding: 0 35px;
+			padding: 0 16px;
 			max-width: 1440px;
 
 			@media (min-width: 1024px) {
@@ -43,9 +43,10 @@
 			width: 100%;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 32px 24px;
+			gap: 16px;
 
 			@media (--lg) {
+				gap: 32px 24px;
 				grid-template-columns: 1fr 1fr 1fr;
 			}
 
@@ -454,6 +455,10 @@
 						transform: translateX(-50%);
 						width: calc(100% - (var(--offset) * 2));
 						transition: $transition;
+
+						@media (--less-lg) {
+							padding: 16px 14px;
+						}
 
 						@media (--lg) {
 							bottom: 0;
