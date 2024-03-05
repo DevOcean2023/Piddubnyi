@@ -50,7 +50,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php
 				$order_number = $order->get_order_number();
 				/* translators: %s: order number */
-				printf( esc_html__( 'Your order %1$s has been successfully processed. The operator will contact you shortly to confirm the order.', 'woocommerce' ), '<span class="order-number">№' . esc_html( $order_number ) . '</span>' );
+				printf( esc_html__( 'Ваше замовлення %1$s успішно оброблено. Найближчим часом з Вами зв\'яжеться оператор для підтвердження замовлення.', 'woocommerce' ), '<span class="order-number">№' . esc_html( $order_number ) . '</span>' );
 				?>
 			</p>
 			<a href="/shop" class="btn">back to shopping</a>

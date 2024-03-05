@@ -462,6 +462,20 @@
 			@include decor-image;
 			background-image: url(../../images/basket.svg);
 		}
+
+		.btn {
+			border: 1px solid $black;
+			background: $white;
+			color: $black !important;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:--enter {
+				background: $black;
+				text-decoration: none;
+				color: $white !important;
+			}
+		}
 	}
 
 	.order-received-text {
