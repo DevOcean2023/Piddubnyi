@@ -153,9 +153,11 @@ do_action( 'woocommerce_before_main_content' );
 												get_option( 'woocommerce_placeholder_image', 0 );
 											$src               = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
 											?>
-											<img
-												src="<?php echo esc_url( $src[0] ); ?> "
-												alt=" <?php echo esc_attr( $_product->get_name() ); ?>">
+											<figure class="image-holder">
+												<img
+													src="<?php echo esc_url( $src[0] ); ?> "
+													alt=" <?php echo esc_attr( $_product->get_name() ); ?>">
+											</figure>
 											<?php
 											$cls_add_to_cart = array_filter(
 												array(
