@@ -389,9 +389,13 @@
 				.product-price {
 					display: flex;
 					flex-direction: row-reverse;
-					gap: 18px;
+					gap: 5px;
 					justify-content: center;
 					padding-bottom: 8px;
+
+					@media (--md) {
+						gap: 18px;
+					}
 
 					del {
 						color: #bcbcbc;
