@@ -22,10 +22,10 @@ class DOV_Fix_GF_Multiple_IDs_Base {
 			PHP_INT_MAX - 1,
 			2
 		);
-		add_filter(
-			'wp_enqueue_scripts',
-			array( static::class, 'fix_upload_field' ),
-		);
+//		add_filter(
+//			'wp_enqueue_scripts',
+//			array( static::class, 'fix_upload_field' ),
+//		);
 
 		add_action(
 			'init',
