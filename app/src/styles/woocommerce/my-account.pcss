@@ -1741,6 +1741,25 @@
 			}
 		}
 
+
+		.tinv-wishlist {
+			table {
+				tbody {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 16px;
+
+					@media (--sm) {
+						grid-template-columns: 1fr 1fr;
+					}
+
+					@media (--md) {
+						gap: 32px 24px;
+						grid-template-columns: 1fr 1fr 1fr;
+					}
+				}
+			}
+		}
 	}
 
 	.woocommerce {
