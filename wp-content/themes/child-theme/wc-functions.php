@@ -448,3 +448,42 @@ function track_product_view() {
 }
 
 add_filter( 'woocommerce_product_description_heading', '__return_null' );
+
+/**
+ * WooCommerce, content-product.php template
+ *
+ */
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+
+remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+
+add_action( 'woocommerce_before_shop_loop_item_title', 'theme_render_product_item', 10 );
+function theme_render_product_item() {
+	global $product;
+	echo '<a href="' . get_the_permalink( $product->get_id() ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">';
+	echo '<div class="product-card-inner">';
+	$post_thumbnail_id = ( $product->get_image_id() ) ? $product->get_image_id() : get_option( 'woocommerce_placeholder_image', 0 );
+	$src               = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+	echo '<img src="' . $src[0] . '" alt="' . $product->get_name() . '">';
+	$cls_add_to_cart = array_filter(
+		array(
+			'button',
+			'product_type_' . $product->get_type(),
+			$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+			$product->supports( 'ajax_add_to_cart' ) && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
+		)
+	);
+	woocommerce_template_loop_add_to_cart();
+	echo '</div>';
+	echo '<h2 class="woocommerce-loop-product__title">' . $product->get_name() . '</h2>';
+	echo '<span class="price">' . $product->get_price_html() . '</span>
+    </a>';
+}

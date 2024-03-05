@@ -289,11 +289,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 	initInputMask();
 	checkProductList();
-	addToCartButtonOffset();
+	// addToCartButtonOffset();
 });
 
 window.addEventListener("resize", function () {
-	addToCartButtonOffset();
+	// addToCartButtonOffset();
 });
 
 function initInputMask() {
@@ -326,9 +326,11 @@ function addToCartButtonOffset() {
 			let image = el.querySelector("img");
 			let btn = el.querySelector(".add_to_cart_button");
 			if (image) {
-				let offset = 16;
+				let style = window.getComputedStyle(el);
+				let paddingTop = parseInt(style.paddingTop);
+				let borderTopWidth = parseInt(style.borderTopWidth);
 				let height = image.offsetHeight;
-				btn.style.top = height - btn.offsetHeight + offset + "px";
+				btn.style.top = height - btn.offsetHeight + paddingTop + borderTopWidth + "px";
 			}
 		});
 	}
