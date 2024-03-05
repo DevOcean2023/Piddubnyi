@@ -45,7 +45,7 @@
 			grid-template-columns: 1fr 1fr;
 			gap: 16px;
 
-			@media (--lg) {
+			@media (--md) {
 				gap: 32px 24px;
 				grid-template-columns: 1fr 1fr 1fr;
 			}
@@ -237,6 +237,10 @@
 	}
 
 	.tinvwl-table-manage-list {
+		@media (--less-md) {
+			display: block;
+		}
+
 		thead {
 			display: none;
 
