@@ -102,7 +102,7 @@ wp_enqueue_script( 'tinvwl' );
 							if ( ! $product->is_visible() ) {
 								echo $thumbnail; // WPCS: xss ok.
 							} else {
-								printf( '<a href="%s">%s</a>', esc_url( $product_url ), $thumbnail ); // WPCS: xss ok.
+								printf( '<a href="%s" class="product-thumbnail__holder">%s</a>', esc_url( $product_url ), $thumbnail ); // WPCS: xss ok.
 							}
 							?>
 							<?php if ( isset( $wishlist_table_row['add_to_cart'] ) && $wishlist_table_row['add_to_cart'] ) { ?>
