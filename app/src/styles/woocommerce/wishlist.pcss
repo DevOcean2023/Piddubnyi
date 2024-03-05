@@ -43,6 +43,7 @@
 			width: 100%;
 			display: flex;
 			flex-wrap: wrap;
+			align-items: stretch;
 			gap: 24px;
 			max-width: 302px;
 			margin: 0 auto;
@@ -332,7 +333,11 @@
 
 					&__holder {
 						position: relative;
-						padding-bottom: 56.25%;
+						padding-bottom: 105%;
+
+						@media (--lg) {
+							padding-bottom: 105%;
+						}
 					}
 
 					a {
