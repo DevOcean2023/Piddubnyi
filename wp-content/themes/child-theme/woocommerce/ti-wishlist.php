@@ -32,12 +32,7 @@ wp_enqueue_script( 'tinvwl' );
 					</th>
 				<?php } ?>
 				<th class="product-remove"></th>
-				<th class="product-thumbnail">
-					&nbsp;
-					<?php if ( isset( $wishlist_table_row['add_to_cart'] ) && $wishlist_table_row['add_to_cart'] ) { ?>
-				<span class="product-action">&nbsp;</span>
-			<?php } ?>
-				</th>
+				<th class="product-thumbnail">&nbsp;</th>
 				<th class="product-name"><span
 						class="tinvwl-full"><?php esc_html_e( 'Product Name', 'ti-woocommerce-wishlist' ); ?></span><span
 						class="tinvwl-mobile"><?php esc_html_e( 'Product', 'ti-woocommerce-wishlist' ); ?></span>
@@ -51,7 +46,9 @@ wp_enqueue_script( 'tinvwl' );
 				<?php if ( isset( $wishlist_table_row['colm_stock'] ) && $wishlist_table_row['colm_stock'] ) { ?>
 					<th class="product-stock"><?php esc_html_e( 'Stock Status', 'ti-woocommerce-wishlist' ); ?></th>
 				<?php } ?>
-
+				<?php if ( isset( $wishlist_table_row['add_to_cart'] ) && $wishlist_table_row['add_to_cart'] ) { ?>
+					<th class="product-action">&nbsp;</th>
+				<?php } ?>
 			</tr>
 			</thead>
 			<tbody>
@@ -108,6 +105,23 @@ wp_enqueue_script( 'tinvwl' );
 								printf( '<a href="%s">%s</a>', esc_url( $product_url ), $thumbnail ); // WPCS: xss ok.
 							}
 							?>
+							<?php if ( isset( $wishlist_table_row['add_to_cart'] ) && $wishlist_table_row['add_to_cart'] ) { ?>
+								<span class="product-action">
+							<?php
+							if ( apply_filters( 'tinvwl_wishlist_item_action_add_to_cart', $wishlist_table_row['add_to_cart'], $wl_product, $product ) ) {
+								?>
+								<button class="button alt" name="tinvwl-add-to-cart"
+										value="<?php echo esc_attr( $wl_product['ID'] ); ?>"
+										title="<?php echo esc_html( apply_filters( 'tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product ) ); ?>">
+									<i
+										class="ftinvwl ftinvwl-shopping-cart"></i><span
+										class="tinvwl-txt"><?php echo wp_kses_post( apply_filters( 'tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product ) ); ?></span>
+								</button>
+							<?php } elseif ( apply_filters( 'tinvwl_wishlist_item_action_default_loop_button', $wishlist_table_row['add_to_cart'], $wl_product, $product ) ) {
+								woocommerce_template_loop_add_to_cart();
+							} ?>
+						</span>
+							<?php } ?>
 						</td>
 						<td class="product-name">
 							<?php
@@ -158,23 +172,7 @@ wp_enqueue_script( 'tinvwl' );
 								?>
 							</td>
 						<?php } ?>
-						<?php if ( isset( $wishlist_table_row['add_to_cart'] ) && $wishlist_table_row['add_to_cart'] ) { ?>
-							<td class="product-action">
-								<?php
-								if ( apply_filters( 'tinvwl_wishlist_item_action_add_to_cart', $wishlist_table_row['add_to_cart'], $wl_product, $product ) ) {
-									?>
-									<button class="button alt" name="tinvwl-add-to-cart"
-											value="<?php echo esc_attr( $wl_product['ID'] ); ?>"
-											title="<?php echo esc_html( apply_filters( 'tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product ) ); ?>">
-										<i
-											class="ftinvwl ftinvwl-shopping-cart"></i><span
-											class="tinvwl-txt"><?php echo wp_kses_post( apply_filters( 'tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product ) ); ?></span>
-									</button>
-								<?php } elseif ( apply_filters( 'tinvwl_wishlist_item_action_default_loop_button', $wishlist_table_row['add_to_cart'], $wl_product, $product ) ) {
-									woocommerce_template_loop_add_to_cart();
-								} ?>
-							</td>
-						<?php } ?>
+
 					</tr>
 					<?php
 					do_action( 'tinvwl_wishlist_row_after', $wl_product, $product );
