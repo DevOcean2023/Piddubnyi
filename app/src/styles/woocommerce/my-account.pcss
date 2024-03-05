@@ -1217,12 +1217,6 @@
 							width: 100%;
 							padding: 0 10px 20px 10px;
 							text-align: left;
-
-							@media (--less-xl) {
-								&:nth-child(1) {
-									padding-left: 0;
-								}
-							}
 						}
 
 						td {
@@ -1240,9 +1234,14 @@
 									max-width: 100%;
 									font-size: 16px;
 									color: #fff;
+									justify-content: flex-end;
 
 									@media (--md) {
 										max-width: max-content;
+									}
+
+									@media (--lg) {
+										max-width: unset;
 									}
 
 									.view {
@@ -1263,6 +1262,10 @@
 										min-height: 44px;
 										max-height: max-content;
 										padding: 14px;
+
+										@media (--md) {
+											width: auto;
+										}
 
 										@media (--xl) {
 											padding: 14px 24px;
