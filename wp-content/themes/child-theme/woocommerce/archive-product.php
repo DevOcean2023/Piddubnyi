@@ -142,12 +142,39 @@ do_action( 'woocommerce_before_main_content' );
 						<?php foreach ( $viewed_products as $_id ) : ?>
 							<div class="product-cards-slider__slide">
 								<?php
-								$post_object = get_post( $_id );
-
-								setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-
-								wc_get_template_part( 'content', 'product' );
+								$_product = wc_get_product( $_id );
 								?>
+								<div <?php wc_product_class( '', $_product ); ?>>
+									<a href="<?php echo esc_url( get_the_permalink( $_product->get_id() ) ); ?>"
+									   class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+										<div class="product-card-inner">
+											<?php
+											$post_thumbnail_id = ( $_product->get_image_id() ) ? $_product->get_image_id() :
+												get_option( 'woocommerce_placeholder_image', 0 );
+											$src               = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+											?>
+											<img
+												src="<?php echo esc_url( $src[0] ); ?> "
+												alt=" <?php echo esc_attr( $_product->get_name() ); ?>">
+											<?php
+											$cls_add_to_cart = array_filter(
+												array(
+													'button',
+													'product_type_' . $_product->get_type(),
+													$_product->is_purchasable() && $_product->is_in_stock() ? 'add_to_cart_button' :
+														'',
+													$_product->supports( 'ajax_add_to_cart' ) && $_product->is_purchasable() &&
+													$_product->is_in_stock() ? 'ajax_add_to_cart' : '',
+												)
+											);
+											woocommerce_template_loop_add_to_cart();
+											?>
+										</div>
+										<h2 class="woocommerce-loop-product__title"><?php echo esc_html( $_product->get_name() ); ?> </h2>
+										<span
+											class="price"><?php echo $_product->get_price_html(); ?></span>
+									</a>
+								</div>
 							</div>
 						<?php endforeach; ?>
 					</div>
