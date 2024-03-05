@@ -468,11 +468,11 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 add_action( 'woocommerce_before_shop_loop_item_title', 'theme_render_product_item', 10 );
 function theme_render_product_item() {
 	global $product;
-	echo '<a href="' . get_the_permalink( $product->get_id() ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">';
+	echo '<a href="' . esc_url( get_the_permalink( $product->get_id() ) ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">';
 	echo '<div class="product-card-inner">';
 	$post_thumbnail_id = ( $product->get_image_id() ) ? $product->get_image_id() : get_option( 'woocommerce_placeholder_image', 0 );
 	$src               = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
-	echo '<img src="' . $src[0] . '" alt="' . $product->get_name() . '">';
+	echo '<img src="' . esc_url( $src[0] ) . '" alt="' . esc_html( $product->get_name() ) . '">';
 	$cls_add_to_cart = array_filter(
 		array(
 			'button',
@@ -483,7 +483,7 @@ function theme_render_product_item() {
 	);
 	woocommerce_template_loop_add_to_cart();
 	echo '</div>';
-	echo '<h2 class="woocommerce-loop-product__title">' . $product->get_name() . '</h2>';
+	echo '<h2 class="woocommerce-loop-product__title">' . esc_html( $product->get_name() ) . '</h2>';
 	echo '<span class="price">' . $product->get_price_html() . '</span>
     </a>';
 }
