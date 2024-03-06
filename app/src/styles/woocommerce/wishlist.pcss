@@ -370,14 +370,16 @@
 					text-transform: capitalize;
 					width: unset !important;
 					margin-top: 0;
-					display: flex;
-					justify-content: center;
-					align-items: center;
+					display: block;
 					height: 100%;
 					min-height: 63px;
+					word-break: break-word;
+					max-width: 100%;
+					padding: 10px 0;
 
 					@media (--md) {
 						font-size: 16px;
+						padding: 16px 0;
 						width: 100%;
 					}
 
@@ -391,15 +393,15 @@
 				}
 
 				.product-price {
-					display: flex;
-					flex-direction: row-reverse;
-					gap: 5px;
-					justify-content: center;
+					display: block;
 					padding-bottom: 8px;
 					width: unset !important;
 
 					@media (--md) {
 						gap: 18px;
+						display: flex;
+						flex-direction: row-reverse;
+						justify-content: center;
 					}
 
 					del {
@@ -470,7 +472,7 @@
 						transition: $transition;
 
 						@media (--less-lg) {
-							padding: 16px 14px;
+							padding: 16px 10px;
 						}
 
 						@media (--lg) {
