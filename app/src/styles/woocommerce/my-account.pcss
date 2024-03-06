@@ -1744,16 +1744,20 @@
 		.tinv-wishlist {
 			table {
 				tbody {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
+					display: flex;
+					flex-wrap: wrap;
 					gap: 16px;
 
-					@media (--md) {
-						grid-template-columns: 1fr 1fr 1fr;
-					}
+					.wishlist {
+						&_item {
+							flex: 1 0 calc(50% - 8px);
+							max-width: calc(50% - 8px);
 
-					@media (--xl) {
-						grid-template-columns: 1fr 1fr 1fr 1fr;
+							@media (--md) {
+								flex: 1 0 calc(100% / 3 - 12px);
+								max-width: calc(100% / 3 - 12px);
+							}
+						}
 					}
 				}
 			}
