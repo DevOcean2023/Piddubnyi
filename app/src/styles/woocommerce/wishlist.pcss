@@ -41,13 +41,9 @@
 
 		tbody {
 			display: grid;
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
 			gap: 16px;
 			width: 100%;
-
-			@media (--sm) {
-				grid-template-columns: 1fr 1fr;
-			}
 
 			@media (--md) {
 				gap: 32px 24px;
@@ -393,15 +389,14 @@
 				}
 
 				.product-price {
-					display: block;
+					display: flex;
+					flex-direction: row-reverse;
+					justify-content: center;
 					padding-bottom: 8px;
 					width: unset !important;
 
 					@media (--md) {
 						gap: 18px;
-						display: flex;
-						flex-direction: row-reverse;
-						justify-content: center;
 					}
 
 					del {
@@ -412,6 +407,11 @@
 						font-style: normal;
 						font-weight: 400;
 						line-height: 20.8px;
+						margin: 0 0 0 10px;
+
+						@media (--md) {
+							margin: 0;
+						}
 
 						bdi {
 							color: #bcbcbc;
