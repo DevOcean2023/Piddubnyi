@@ -487,7 +487,11 @@ function theme_render_product_item() {
 	);
 	woocommerce_template_loop_add_to_cart();
 	echo '</div>';
-	echo '<h2 class="woocommerce-loop-product__title">' . esc_html( $product->get_name() ) . '</h2>';
+	echo '<h2 class="woocommerce-loop-product__title">';
+	echo '<a href="' . esc_url( get_the_permalink( $product->get_id() ) ) . '">';
+	echo esc_html( $product->get_name() );
+	echo '</a>';
+	echo '</h2>';
 	echo '<span class="price">' . $product->get_price_html() . '</span>
     </div>';
 }
