@@ -40,13 +40,22 @@
 		}
 
 		tbody {
-			display: flex;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: 1fr;
 			gap: 16px;
 			width: 100%;
 
+			@media (--sm) {
+				grid-template-columns: 1fr 1fr;
+			}
+
 			@media (--md) {
 				gap: 32px 24px;
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+
+			@media (--xl) {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
 			}
 		}
 
@@ -250,8 +259,9 @@
 
 		.wishlist {
 			&_item {
-				display: grid;
-				grid-template-columns: 1fr;
+				display: flex;
+				max-width: 100%;
+				flex-direction: column;
 				position: relative;
 				padding: 12px 12px 78px 12px;
 				border-radius: 0;
@@ -259,17 +269,7 @@
 				border: 1px solid #fff;
 				transition: $transition;
 
-				@media (--sm) {
-					grid-template-columns: 1fr 1fr;
-				}
-
-				@media (--md) {
-					gap: 32px 24px;
-					grid-template-columns: 1fr 1fr 1fr;
-				}
-
 				@media (--lg) {
-					grid-template-columns: 1fr 1fr 1fr 1fr;
 					padding: 12px;
 				}
 
