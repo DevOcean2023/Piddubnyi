@@ -250,10 +250,8 @@
 
 		.wishlist {
 			&_item {
-				display: flex;
-				flex: 1 0 calc(50% - 8px);
-				max-width: calc(50% - 8px);
-				flex-direction: column;
+				display: grid;
+				grid-template-columns: 1fr;
 				position: relative;
 				padding: 12px 12px 78px 12px;
 				border-radius: 0;
@@ -261,12 +259,17 @@
 				border: 1px solid #fff;
 				transition: $transition;
 
+				@media (--sm) {
+					grid-template-columns: 1fr 1fr;
+				}
+
 				@media (--md) {
-					flex: 1 0 calc(100% / 3 - 12px);
-					max-width: calc(100% / 3 - 12px);
+					gap: 32px 24px;
+					grid-template-columns: 1fr 1fr 1fr;
 				}
 
 				@media (--lg) {
+					grid-template-columns: 1fr 1fr 1fr 1fr;
 					padding: 12px;
 				}
 
