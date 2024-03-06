@@ -40,22 +40,13 @@
 		}
 
 		tbody {
-			width: 100%;
-			display: grid;
-			grid-template-columns: 1fr;
+			display: flex;
+			flex-wrap: wrap;
 			gap: 16px;
-
-			@media (--sm) {
-				grid-template-columns: 1fr 1fr;
-			}
+			width: 100%;
 
 			@media (--md) {
 				gap: 32px 24px;
-				grid-template-columns: 1fr 1fr 1fr;
-			}
-
-			@media (min-width: 1440px) {
-				grid-template-columns: 1fr 1fr 1fr 1fr;
 			}
 		}
 
@@ -260,14 +251,20 @@
 		.wishlist {
 			&_item {
 				display: flex;
+				flex: 1 0 calc(50% - 8px);
+				max-width: calc(50% - 8px);
 				flex-direction: column;
-				width: 100%;
 				position: relative;
 				padding: 12px 12px 78px 12px;
 				border-radius: 0;
 				background: #fff;
 				border: 1px solid #fff;
 				transition: $transition;
+
+				@media (--md) {
+					flex: 1 0 calc(100% / 3 - 12px);
+					max-width: calc(100% / 3 - 12px);
+				}
 
 				@media (--lg) {
 					padding: 12px;
