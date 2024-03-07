@@ -389,13 +389,15 @@
 				}
 
 				.product-price {
-					display: flex;
-					flex-direction: row-reverse;
-					justify-content: center;
+					display: block;
+					text-align: center;
 					padding-bottom: 8px;
 					width: unset !important;
 
 					@media (--md) {
+						display: flex;
+						flex-direction: row-reverse;
+						justify-content: center;
 						gap: 10px;
 					}
 
