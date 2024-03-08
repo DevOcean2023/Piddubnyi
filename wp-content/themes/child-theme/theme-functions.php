@@ -113,14 +113,16 @@ add_filter(
 	}
 );
 
-function custom_homepage_content() {
+function custom_homepage_content( $template ) {
 	$preloader_active = get_field( 'dov_preloader_active', 'options' );
 
-	if ( $preloader_active && ! is_admin() ) {
-		get_template_part( 'template-parts/preloader' );
-	} elseif ( ! is_admin()  ) {
-		get_template_part( 'index' );
+	if ( $preloader_active && ! is_admin() && ! is_user_logged_in() ) {
+		$template = locate_template( 'template-parts/preloader.php' );
+	} elseif ( ! is_admin() ) {
+		$template = locate_template( 'templates/tpl-flexible-content.php' );
 	}
+
+	return $template;
 }
 
-add_action( 'wp', 'custom_homepage_content' );
+add_filter( 'template_include', 'custom_homepage_content' );

@@ -28,7 +28,7 @@ echo '<a class="screen-reader-text" href="#page-main">' . esc_html__( 'Skip to c
 
 wp_body_open();
 $preloader_active = get_field( 'dov_preloader_active', 'options' );
-if ( ! $preloader_active ) {
+if ( ! $preloader_active || is_user_logged_in() ) {
 	get_template_part( 'template-parts/header' );
 	get_template_part( 'template-parts/breadcrumb' );
 }
