@@ -112,3 +112,15 @@ add_filter(
 		return $classes;
 	}
 );
+
+function custom_homepage_content() {
+	$preloader_active = get_field( 'dov_preloader_active', 'options' );
+
+	if ( $preloader_active && ! is_admin() ) {
+		get_template_part( 'template-parts/preloader' );
+	} elseif ( ! is_admin()  ) {
+		get_template_part( 'index' );
+	}
+}
+
+add_action( 'wp', 'custom_homepage_content' );
