@@ -116,9 +116,13 @@ add_filter(
 function custom_homepage_content( $template ) {
 	$preloader_active = get_field( 'dov_preloader_active', 'options' );
 
-	if ( ( is_home() || is_archive() ) || is_single() || is_search() || is_404() ) {
+	if ( ( ( is_home() || is_archive() ) || is_single() || is_search() || is_404() ) && is_user_logged_in() ) {
 		$template = locate_template( 'index.php' );
 	} elseif ( $preloader_active && ! is_admin() && ! is_user_logged_in() ) {
+		if ( ! is_front_page() ) {
+			wp_safe_redirect( home_url() );
+			exit;
+		}
 		$template = locate_template( 'template-parts/preloader.php' );
 	} elseif ( ! is_admin() && ! is_page( array( 'my-account', 'cart', 'checkout', 'wish-list' ) ) ) {
 		$template = locate_template( 'templates/tpl-flexible-content.php' );
