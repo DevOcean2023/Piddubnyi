@@ -118,7 +118,7 @@ function custom_homepage_content( $template ) {
 
 	if ( $preloader_active && ! is_admin() && ! is_user_logged_in() ) {
 		$template = locate_template( 'template-parts/preloader.php' );
-	} elseif ( ! is_admin() ) {
+	} elseif ( ! is_admin() && ! is_page( array( 'my-account', 'cart', 'checkout', 'wish-list' ) ) ) {
 		$template = locate_template( 'templates/tpl-flexible-content.php' );
 	}
 
