@@ -1,25 +1,21 @@
-
-name: Deploy to server
+name: Сloudways Deploy
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
-        script: |
-          cd /home/dbrwmqfw/piddubnyi.devocean.pro
-          git pull origin main
+      - name: Cloudways API Git Pull
+        uses: roelmagdaleno/cloudways-api-git-pull-action@stable
+        with:
+          email: ${{ secrets.CLOUDWAYS_EMAIL }}
+          api-key: ${{ secrets.CLOUDWAYS_API_KEY }}
+          server-id: ${{ secrets.CLOUDWAYS_SERVER_ID }}
+          app-id: ${{ secrets.CLOUDWAYS_APP_ID }}
+          branch-name: main
