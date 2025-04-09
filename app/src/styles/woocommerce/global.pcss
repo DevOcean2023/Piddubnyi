@@ -518,6 +518,12 @@ body.filters-opened {
 	border-bottom: 1px solid $woo-border-color;
 	margin: 0 0 24px !important;
 
+	ul:not([class*="wpfButtonsFilter"]) {
+		li {
+			position: relative;
+		}
+	}
+
 	&[data-radio="1"] {
 		[class*="wpfFilterVerScroll"] {
 			[class*="wpfCheckbox"] {
@@ -547,6 +553,23 @@ body.filters-opened {
 						border-radius: 50% !important;
 						border-color: $woo-main-color !important;
 						border-width: 2px !important;
+					}
+				}
+			}
+
+			ul {
+				display: none;
+
+				&.filter-display-on {
+					display: block !important;
+				}
+
+				li {
+					position: relative;
+
+					[class*="wpfFilterTaxNameWrapper"] {
+						font-size: 13px !important;
+						font-weight: 400 !important;
 					}
 				}
 			}
@@ -618,7 +641,7 @@ body.filters-opened {
 	}
 
 	li {
-		margin: 0 0 8px !important;
+		margin: 0 58px 8px 0 !important;
 	}
 
 	.ui-slider-horizontal {
@@ -650,6 +673,7 @@ body.filters-opened {
 
 [class*="wpfFilterContent"] {
 	margin: 0 0 4px !important;
+	margin-right: 40px !important;
 }
 
 [class*="wpfFilterButtons"] {
@@ -1002,4 +1026,20 @@ div.sale-banner {
 
 .woocommerce-terms-and-conditions-wrapper {
 	margin: 16px 0 0;
+}
+.filer-button-expand {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: -37px;
+	top: 0;
+	background: url(../../iamges/plus-filter-active.svg) no-repeat center;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_active-expand {
+		background: url(../../iamges/minus-filter-active.svg) no-repeat center;
+	}
 }

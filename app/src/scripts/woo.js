@@ -30,3 +30,42 @@ function initCustomSelects() {
 		minimumResultsForSearch: -1,
 	});
 }
+
+////filer-button-expand
+const liElements = document.querySelectorAll(".wpfFilterVerScroll li");
+
+liElements.forEach(function(li) {
+	const ulElement = li.querySelector("ul");
+
+	if (ulElement) {
+		const divElement = document.createElement("div");
+		divElement.className = "filer-button-expand";
+		li.insertBefore(divElement, li.querySelector('.wpfLiLabel'));
+	}
+});
+
+const expandButtons = document.querySelectorAll(".filer-button-expand");
+
+expandButtons.forEach(function(button) {
+	button.addEventListener("click", function() {
+		// Шукаємо найближчий bатьківський li елемент
+		const liElement = button.closest('li');
+		const ulElement = liElement.querySelector('ul'); // Знаходимо перший вкладений ul
+
+		if (ulElement) {
+			// Перемикаємо клас видимості для ul
+			ulElement.classList.toggle("filter-display-on");
+
+			// Перемикаємо клас активності для кнопки
+			button.classList.toggle("filer-button-expand_active-expand");
+
+			// Якщо є інші вкладені ul, вони повинні бути приховані
+			const siblingUls = liElement.querySelectorAll('ul');
+			siblingUls.forEach(function(ul) {
+				if (ul !== ulElement) {
+					ul.classList.remove("filter-display-on");
+				}
+			});
+		}
+	});
+});

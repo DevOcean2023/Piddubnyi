@@ -133,3 +133,30 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
+
+
+////filer-button-expand
+const labels = document.querySelectorAll(
+	".wpfFilterVerScroll > li > .wpfLiLabel"
+);
+labels.forEach(function (label) {
+	if (
+		label.nextElementSibling &&
+		label.nextElementSibling.tagName === "UL"
+	) {
+		const divElement = document.createElement("div");
+		divElement.className = "filer-button-expand";
+		label.parentNode.insertBefore(divElement, label);
+	}
+});
+
+const expandButtons = document.querySelectorAll(".filer-button-expand");
+
+expandButtons.forEach(function (button) {
+	button.addEventListener("click", function () {
+		const ulElement = button.nextElementSibling.nextElementSibling;
+		ulElement.classList.toggle("filter-display-on");
+
+		button.classList.toggle("filer-button-expand_active-expand");
+	});
+});
