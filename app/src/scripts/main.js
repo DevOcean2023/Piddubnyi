@@ -54,8 +54,8 @@ function isChildOf(child, parent) {
 	return false;
 }
 
-const buttons = [document.querySelector(".face-category"), document.querySelector(".hair-category"), document.querySelector(".body-category"), document.querySelector(".about-company")];
-const containers = [document.querySelector(".face-category-menu-wrapper"), document.querySelector(".hair-category-menu-wrapper"), document.querySelector(".body-category-menu-wrapper"), document.querySelector(".about-company-menu-wrapper")];
+const buttons = [document.querySelector(".face-category"), document.querySelector(".set-category"), document.querySelector(".body-category"), document.querySelector(".about-company")];
+const containers = [document.querySelector(".face-category-menu-wrapper"), document.querySelector(".set-category-menu-wrapper"), document.querySelector(".body-category-menu-wrapper"), document.querySelector(".about-company-menu-wrapper")];
 buttons.forEach((button, index) => {
 	button.addEventListener("mouseenter", () => {
 		containers.forEach((container, containerIndex) => {

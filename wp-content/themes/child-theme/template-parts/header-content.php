@@ -122,7 +122,7 @@
 						);
 
 						if ( $subcategories ) {
-							echo "<div class='hair-category-menu-wrapper subcategory-holder'>";
+							echo "<div class='set-category-menu-wrapper subcategory-holder'>";
 							echo "<div class='inner-category'>";
 
 							foreach ( $subcategories as $subcategory ) {
