@@ -71,4 +71,51 @@
 			color: #000;
 		}
 	}
+	/* stylelint-disable */
+	.gform_fields {
+		display: flex !important;
+
+		.gfield,
+		.ginput_product_price_wrapper {
+
+			.gfield_label,
+			label {
+				font-family: $font-family-raleway !important;
+				font-size: 12px !important;
+				font-weight: 400 !important;
+				line-height: 21px !important;
+				color: #639b8b !important;
+				position: absolute !important;
+				left: 0 !important;
+				top: 11px !important;
+				transition: 0.3s !important;
+				cursor: pointer !important;
+
+				@media (--sm) {
+					font-size: 16px !important;
+				}
+			}
+
+			&_in-focus-or-has-value {
+				.gfield_label,
+				label {
+					top: -9px !important;
+					font-size: 10px !important;
+					line-height: 10px !important;
+				}
+			}
+
+			&_textarea.gfield_in-focus-or-has-value {
+				.gfield_label,
+				label {
+					width: calc(100%) !important;
+					background: $woo-btn-color !important;
+					padding-top: 8px !important;
+					padding-bottom: 1px !important;
+					top: -13px !important;
+				}
+			}
+		}
+	}
+	/* stylelint-enable */
 }
