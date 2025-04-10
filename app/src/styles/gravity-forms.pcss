@@ -597,27 +597,30 @@ $row-gap: 20px;
 
 	.gform_ajax_spinner {
 		position: absolute !important;
-		content: "";
+		content: "" !important;
 		display: inline-block !important;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 50% !important;
+		transform: translateY(-50%) !important;
 		z-index: 3;
 		left: unset !important;
-		right: 10px !important;
+		right: 0 !important;
 		min-width: 16px !important;
 		width: 16px !important;
 		height: 16px !important;
+		background: url(../images/spinner.svg) center / 100% auto no-repeat !important;
 	}
 
 	.gform-loader {
-		content: " ";
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: 10px;
-		width: 16px;
-		height: 16px;
-		background: url(../images/spinner.svg) center / 100% auto no-repeat;
+		content: " " !important;
+		position: absolute !important;
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+		left: unset !important;
+		right: 0 !important;
+		min-width: 16px !important;
+		width: 16px !important;
+		height: 16px !important;
+		background: url(../images/spinner.svg) center / 100% auto no-repeat !important;
 		z-index: 3;
 	}
 }
