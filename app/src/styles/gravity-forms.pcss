@@ -568,7 +568,8 @@ $row-gap: 20px;
 	margin: 0 auto !important;
 
 	@media (--sm) {
-		max-width: max-content;
+		max-width: 302px;
+		min-width: 302px;
 	}
 
 	input[type="submit"] {
@@ -597,6 +598,7 @@ $row-gap: 20px;
 	.gform_ajax_spinner {
 		position: absolute !important;
 		content: "";
+		display: inline-block !important;
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 3;
