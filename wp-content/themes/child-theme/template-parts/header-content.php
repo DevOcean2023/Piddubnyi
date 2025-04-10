@@ -20,7 +20,7 @@
 							<form class="search-form__form" role="search" method="get" action="/">
 								<label class="search-form__label">
 									<span
-										class="screen-reader-text"><?php esc_attr_e( 'Search for:', 'theme' ); ?></span>
+											class="screen-reader-text"><?php esc_attr_e( 'Search for:', 'theme' ); ?></span>
 									<input class="search-form__input" type="search" placeholder="Шукати" value=""
 										   name="s">
 								</label>
@@ -65,10 +65,15 @@
 					</div>
 
 					<?php
-					$parent_category_slug = 'face-category';
-					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
+					$category_slugs = array( 'face-category', 'hair-category', 'set-category', 'body-category' );
 
-					if ( $parent_category ) {
+					foreach ( $category_slugs as $slug ) {
+						$parent_category = get_term_by( 'slug', $slug, 'product_cat' );
+
+						if ( ! $parent_category ) {
+							continue;
+						}
+
 						$parent_category_id = $parent_category->term_id;
 
 						$subcategories = get_categories(
@@ -80,113 +85,26 @@
 						);
 
 						if ( $subcategories ) {
-							echo "<div class='face-category-menu-wrapper subcategory-holder'>";
+							echo "<div class='{$slug}-menu-wrapper subcategory-holder'>";
 							echo "<div class='inner-category'>";
 
 							foreach ( $subcategories as $subcategory ) {
 								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
 
-								echo "
-                <div class='item'>
-                    <div class='img'>";
+								echo "<div class='item'>";
+								echo "<div class='img'>";
 
 								if ( $thumbnail_id ) {
 									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
 								}
 
-								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
+								echo '</div>';
+								echo "<a href='" . esc_url( get_term_link( $subcategory ) ) . "'>" . esc_html( $subcategory->name ) . '</a>';
+								echo '</div>';
 							}
 
 							echo '</div></div>';
-						} else {
-							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
 						}
-					} else {
-						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
-					}
-					?>
-
-					<?php
-					$parent_category_slug = 'set-category';
-					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
-
-					if ( $parent_category ) {
-						$parent_category_id = $parent_category->term_id;
-
-						$subcategories = get_categories(
-							array(
-								'parent'     => $parent_category_id,
-								'taxonomy'   => 'product_cat',
-								'hide_empty' => false,
-							)
-						);
-
-						if ( $subcategories ) {
-							echo "<div class='set-category-menu-wrapper subcategory-holder'>";
-							echo "<div class='inner-category'>";
-
-							foreach ( $subcategories as $subcategory ) {
-								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
-
-								echo "
-                <div class='item'>
-                    <div class='img'>";
-
-								if ( $thumbnail_id ) {
-									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
-								}
-
-								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
-							}
-
-							echo '</div></div>';
-						} else {
-							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
-						}
-					} else {
-						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
-					}
-					?>
-
-					<?php
-					$parent_category_slug = 'body-category';
-					$parent_category      = get_term_by( 'slug', $parent_category_slug, 'product_cat' );
-
-					if ( $parent_category ) {
-						$parent_category_id = $parent_category->term_id;
-
-						$subcategories = get_categories(
-							array(
-								'parent'     => $parent_category_id,
-								'taxonomy'   => 'product_cat',
-								'hide_empty' => false,
-							)
-						);
-
-						if ( $subcategories ) {
-							echo "<div class='body-category-menu-wrapper subcategory-holder'>";
-							echo "<div class='inner-category'>";
-
-							foreach ( $subcategories as $subcategory ) {
-								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
-
-								echo "
-                <div class='item'>
-                    <div class='img'>";
-
-								if ( $thumbnail_id ) {
-									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
-								}
-
-								echo "</div><a href='" . get_term_link( $subcategory ) . "'>" . $subcategory->name . '</a></div>';
-							}
-
-							echo '</div></div>';
-						} else {
-							echo "Немає доступних підкатегорій для категорії зі slug '" . $parent_category_slug . "'";
-						}
-					} else {
-						echo "Категорія зі slug '" . $parent_category_slug . "' не знайдена";
 					}
 					?>
 
@@ -203,23 +121,6 @@
 				</div>
 			</div>
 		</div>
-
-		<dialog id="popup-menu">
-			<div class="popup">
-				<div class="popup__content">
-					<div class="popup__item">
-						<?php dov_the( 'dov_title_form', 'popup__item_title-popup' ); ?>
-
-						<!-- assets/css/gravity-forms.css -->
-						<?php dov_the( 'dov_forms_popup' ); ?>
-					</div>
-				</div>
-				<button class="popup__close-btn" type="button" autofocus>
-					<span class="popup__close-text"><?php esc_attr_e( 'Close', 'theme' ); ?></span>
-				</button>
-			</div>
-		</dialog>
-
 		<div class="button-mobile-menu">
 			<button class="open-mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false">
 				<span class='open-mobile-menu-button__item open-mobile-menu-button__item_style-1'></span>
@@ -230,3 +131,18 @@
 		</div>
 	</div>
 </header>
+<dialog id="popup-menu">
+	<div class="popup">
+		<div class="popup__content">
+			<div class="popup__item">
+				<?php dov_the( 'dov_title_form', 'popup__item_title-popup' ); ?>
+
+				<!-- assets/css/gravity-forms.css -->
+				<?php dov_the( 'dov_forms_popup' ); ?>
+			</div>
+		</div>
+		<button class="popup__close-btn" type="button" autofocus>
+			<span class="popup__close-text"><?php esc_attr_e( 'Close', 'theme' ); ?></span>
+		</button>
+	</div>
+</dialog>

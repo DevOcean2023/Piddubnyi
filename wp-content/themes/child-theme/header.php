@@ -27,9 +27,6 @@ echo '<body class="' . esc_attr( implode( ' ', get_body_class() ) ) . '">';
 echo '<a class="screen-reader-text" href="#page-main">' . esc_html__( 'Skip to content', 'theme' ) . '</a>';
 
 wp_body_open();
-$preloader_active = get_field( 'dov_preloader_active', 'options' );
-if ( ! $preloader_active || is_user_logged_in() ) {
-	get_template_part( 'template-parts/header' );
-	get_template_part( 'template-parts/breadcrumb' );
-}
+get_template_part( 'template-parts/header' );
+get_template_part( 'template-parts/breadcrumb' );
 echo '<main class="page-main" id="page-main">';

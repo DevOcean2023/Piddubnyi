@@ -8,101 +8,117 @@ import "./woo";
 
 /*menu*/
 
-var categoryMenus = document.querySelectorAll(".inner-category");
-categoryMenus.forEach(function (menu) {
-	var subMenu = menu;
-	if (subMenu && subMenu.children.length > 4) {
-		menu.parentElement.classList.add("big");
-	}
+document.addEventListener("DOMContentLoaded", function () {
+	var categoryMenus = document.querySelectorAll(".inner-category");
+	categoryMenus.forEach(function (menu) {
+		var subMenu = menu;
+		if (subMenu && subMenu.children.length > 4) {
+			menu.parentElement.classList.add("big");
+		}
+	});
 });
 
-/*menu-header-category*/
-function showMenu(container, button) {
-	if (container && button) {
-		container.style.display = "block";
-		const buttonRect = button.getBoundingClientRect();
-		const containerRect = container.getBoundingClientRect();
+document.addEventListener("DOMContentLoaded", function () {
+	/*menu-header-category*/
+	const categorySlugs = [
+		"face-category",
+		"set-category",
+		"hair-category",
+		"body-category",
+		"about-company"
+	];
 
-		if (button.classList.contains("about-company")) {
-			container.style.left = `${Math.floor(buttonRect.left) + button.offsetWidth - Math.floor(container.offsetWidth)}px`;
-		} else {
-			container.style.left = `${buttonRect.left}px`;
+	const buttonContainerPairs = categorySlugs
+		.map(slug => {
+			const button = document.querySelector(`.${slug}`);
+			const container = document.querySelector(`.${slug}-menu-wrapper`);
+
+			if (!button) {
+				console.warn(`Категорія зі slug '${slug}' не знайдена, пропускаємо`);
+				return null;
+			}
+			if (!container) {
+				console.warn(`Контейнер для slug '${slug}' не знайдений, пропускаємо`);
+				return null;
+			}
+			return { button, container, slug };
+		})
+		.filter(pair => pair !== null);
+
+	if (buttonContainerPairs.length === 0) {
+		console.warn("Жодна активна пара не знайдена. Меню не ініціалізовано.");
+	} else {
+		function showMenu(container, button) {
+			container.style.display = "block";
+			const buttonRect = button.getBoundingClientRect();
+			if (button.classList.contains("about-company")) {
+				container.style.left = `${Math.floor(buttonRect.left) + button.offsetWidth - Math.floor(container.offsetWidth)}px`;
+			} else {
+				container.style.left = `${buttonRect.left}px`;
+			}
+			container.style.top = `${buttonRect.bottom}px`;
+			button.classList.add("active");
+			container.classList.add("active");
 		}
 
-		container.style.top = `${buttonRect.bottom}px`;
-		button.classList.add("active");
-		container.classList.add("active");
-	}
-}
-
-function hideMenu(container, button) {
-	if (container) {
-		container.style.display = "none";
-		button.classList.remove("active");
-		container.classList.remove("active");
-	}
-}
-
-function isChildOf(child, parent) {
-	let node = child.parentNode;
-	while (node != null) {
-		if (node == parent) {
-			return true;
+		function hideMenu(container, button) {
+			container.style.display = "none";
+			button.classList.remove("active");
+			container.classList.remove("active");
 		}
-		node = node.parentNode;
-	}
-	return false;
-}
 
-const buttons = [document.querySelector(".face-category"), document.querySelector(".set-category"), document.querySelector(".body-category"), document.querySelector(".about-company")];
-const containers = [document.querySelector(".face-category-menu-wrapper"), document.querySelector(".set-category-menu-wrapper"), document.querySelector(".body-category-menu-wrapper"), document.querySelector(".about-company-menu-wrapper")];
-buttons.forEach((button, index) => {
-	button.addEventListener("mouseenter", () => {
-		containers.forEach((container, containerIndex) => {
-			if (containerIndex !== index) {
-				hideMenu(container, buttons[containerIndex]);
+		function isChildOf(child, parent) {
+			let node = child?.parentNode;
+			while (node) {
+				if (node === parent) return true;
+				node = node.parentNode;
+			}
+			return false;
+		}
+
+		buttonContainerPairs.forEach(({ button, container }, index) => {
+			button.addEventListener("mouseenter", () => {
+				buttonContainerPairs.forEach(({ container: otherContainer, button: otherButton }, otherIndex) => {
+					if (otherIndex !== index) {
+						hideMenu(otherContainer, otherButton);
+					}
+				});
+				showMenu(container, button);
+			});
+
+			button.addEventListener("mouseleave", (event) => {
+				const relatedTarget = event.relatedTarget;
+				const isRelated = isChildOf(relatedTarget, button) || isChildOf(relatedTarget, container);
+				if (!isRelated) {
+					hideMenu(container, button);
+				}
+			});
+
+			container.addEventListener("mouseenter", () => {
+				showMenu(container, button);
+			});
+
+			container.addEventListener("mouseleave", (event) => {
+				const relatedTarget = event.relatedTarget;
+				if (!isChildOf(relatedTarget, button)) {
+					hideMenu(container, button);
+				}
+			});
+		});
+
+		document.addEventListener("mousemove", (event) => {
+			const isInsideAny = buttonContainerPairs.some(({ button, container }) =>
+				button.contains(event.target) || container.contains(event.target)
+			);
+			if (!isInsideAny) {
+				buttonContainerPairs.forEach(({ button, container }) => {
+					hideMenu(container, button);
+				});
 			}
 		});
-		showMenu(containers[index], button);
-	});
-	button.addEventListener("mouseleave", (event) => {
-		const relatedTarget = event.relatedTarget;
-		const isRelatedToContainerOrButton = containers.some((container, containerIndex) => {
-			return (
-				(containerIndex === index && isChildOf(relatedTarget, button)) ||
-				(containerIndex !== index && isChildOf(relatedTarget, container))
-			);
-		});
-		if (!isRelatedToContainerOrButton) {
-			hideMenu(containers[index], button);
-		}
-	});
-});
-
-document.addEventListener("mousemove", (event) => {
-	const isInsideAnyContainer = containers.some(container => container.contains(event.target));
-	const isInsideAnyButton = buttons.some(button => button.contains(event.target));
-
-	if (!isInsideAnyContainer && !isInsideAnyButton) {
-		containers.forEach(container => hideMenu(container, buttons[containers.indexOf(container)]));
 	}
 });
-containers.forEach((container, index) => {
-	container.addEventListener("mouseenter", () => {
-		showMenu(container, buttons[index]);
-	});
-	container.addEventListener("mouseleave", (event) => {
-		const relatedTarget = event.relatedTarget;
-		const isRelatedToButton = buttons.some((button, buttonIndex) => {
-			return (buttonIndex === index && isChildOf(relatedTarget, button));
-		});
-		if (!isRelatedToButton) {
-			hideMenu(container, buttons[index]);
-		}
-	});
-});
-
-///
+///marquee
 defer(() => {
 	$(function () {
 		$(".marquee").marquee({
@@ -120,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const searchLink = document.querySelector(".button__search");
 	const searchForm = document.querySelector(".wrap-search");
 
-	if (searchLink) {
+	if (searchLink && searchForm) {
 		searchLink.addEventListener("click", function (event) {
 			searchForm.classList.add("active");
 		});
@@ -136,27 +152,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 ////filer-button-expand
-const labels = document.querySelectorAll(
-	".wpfFilterVerScroll > li > .wpfLiLabel"
-);
-labels.forEach(function (label) {
-	if (
-		label.nextElementSibling &&
-		label.nextElementSibling.tagName === "UL"
-	) {
-		const divElement = document.createElement("div");
-		divElement.className = "filer-button-expand";
-		label.parentNode.insertBefore(divElement, label);
+document.addEventListener("DOMContentLoaded", function () {
+	if (document.body.classList.contains("shop-page")) {
+		const labels = document.querySelectorAll(
+			".wpfFilterVerScroll > li > .wpfLiLabel"
+		);
+		labels.forEach(function (label) {
+			if (
+				label.nextElementSibling &&
+				label.nextElementSibling.tagName === "UL"
+			) {
+				const divElement = document.createElement("div");
+				divElement.className = "filer-button-expand";
+				label.parentNode.insertBefore(divElement, label);
+			}
+		});
+
+		const expandButtons = document.querySelectorAll(".filer-button-expand");
+
+		expandButtons.forEach(function (button) {
+			button.addEventListener("click", function () {
+				const ulElement = button.nextElementSibling.nextElementSibling;
+				ulElement.classList.toggle("filter-display-on");
+
+				button.classList.toggle("filer-button-expand_active-expand");
+			});
+		});
 	}
-});
-
-const expandButtons = document.querySelectorAll(".filer-button-expand");
-
-expandButtons.forEach(function (button) {
-	button.addEventListener("click", function () {
-		const ulElement = button.nextElementSibling.nextElementSibling;
-		ulElement.classList.toggle("filter-display-on");
-
-		button.classList.toggle("filer-button-expand_active-expand");
-	});
 });
