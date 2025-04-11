@@ -61,62 +61,7 @@
 			<div class="page-header__bottom">
 				<div class="inner">
 					<div class="nav-menu">
-						<?php dov_the_nav( 'Header Main' ); ?>
-					</div>
-
-					<?php
-					$category_slugs = array( 'face-category', 'hair-category', 'set-category', 'body-category' );
-
-					foreach ( $category_slugs as $slug ) {
-						$parent_category = get_term_by( 'slug', $slug, 'product_cat' );
-
-						if ( ! $parent_category ) {
-							continue;
-						}
-
-						$parent_category_id = $parent_category->term_id;
-
-						$subcategories = get_categories(
-							array(
-								'parent'     => $parent_category_id,
-								'taxonomy'   => 'product_cat',
-								'hide_empty' => false,
-							)
-						);
-
-						if ( $subcategories ) {
-							echo "<div class='{$slug}-menu-wrapper subcategory-holder'>";
-							echo "<div class='inner-category'>";
-
-							foreach ( $subcategories as $subcategory ) {
-								$thumbnail_id = get_term_meta( $subcategory->term_id, 'thumbnail_id', true );
-
-								echo "<div class='item'>";
-								echo "<div class='img'>";
-
-								if ( $thumbnail_id ) {
-									echo wp_get_attachment_image( $thumbnail_id, 'thumbnail' );
-								}
-
-								echo '</div>';
-								echo "<a href='" . esc_url( get_term_link( $subcategory ) ) . "'>" . esc_html( $subcategory->name ) . '</a>';
-								echo '</div>';
-							}
-
-							echo '</div></div>';
-						}
-					}
-					?>
-
-					<div class="about-company-menu-wrapper subcategory-holder">
-						<?php while ( dov_loop( 'dov_header_about', '<div class="inner-category">' ) ) : ?>
-							<div class="item">
-								<div class="img">
-									<?php dov_the( 'header_image_menu', '32x0' ); ?>
-								</div>
-								<?php dov_the( 'header_link_menu' ); ?>
-							</div>
-						<?php endwhile; ?>
+						<?php get_template_part( 'template-parts/desktop-main-menu', wp_is_mobile(), 'menu-header-main' ); ?>
 					</div>
 				</div>
 			</div>
