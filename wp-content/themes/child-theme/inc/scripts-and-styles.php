@@ -48,7 +48,6 @@ DOV_Enqueue_Scripts::enqueue_blocks(
 DOV_Enqueue_Scripts::enqueue_blocks(
 	array(
 		'faq' => array(
-			'faq-search.js',
 			'tabs.js',
 			'accordion.js' => array(
 				'jquery',
