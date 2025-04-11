@@ -151,11 +151,8 @@ $row-gap: 20px;
 		}
 
 		&.gfield--width-half {
-			max-width: 100% !important;
-
 			@media (--md) {
-				width: 100%;
-				max-width: 100% !important;
+				width: calc(50% - $column-gap * 0.5);
 			}
 		}
 
