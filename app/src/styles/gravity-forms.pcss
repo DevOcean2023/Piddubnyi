@@ -151,7 +151,10 @@ $row-gap: 20px;
 		}
 
 		&.gfield--width-half {
-			@media (--md) {
+			width: 100%;
+			max-width: 100%;
+
+			@media (--lg) {
 				width: calc(50% - $column-gap * 0.5);
 			}
 		}
