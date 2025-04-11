@@ -84,7 +84,6 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['dialog#popup-mini-cart .popup__content .mini-cart'] = $mini_cart;
 
 	return $fragments;
-
 }
 
 // Update mini cart
@@ -100,7 +99,6 @@ function theme_update_mini_cart() {
 	$fragment = get_refreshed_fragments_in_variable();
 	wp_send_json( $fragment );
 	wp_die();
-
 }
 
 add_action( 'wp_ajax_nopriv_theme_update_mini_cart', 'theme_update_mini_cart' );
@@ -163,9 +161,12 @@ $updated_columns = array(
 	'order-total'   => esc_html__( 'Сума', 'woocommerce' ),
 	'order-actions' => '&nbsp;',
 );
-add_filter( 'woocommerce_account_orders_columns', function () use ( $updated_columns ) {
-	return $updated_columns;
-} );
+add_filter(
+	'woocommerce_account_orders_columns',
+	function () use ( $updated_columns ) {
+		return $updated_columns;
+	}
+);
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );

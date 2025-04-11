@@ -115,7 +115,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 								   placeholder="<?php esc_attr_e( 'Підтвердження паролю*', 'woocommerce' ); ?>"
 								   autocomplete="new-password"><span
 									class="show-password-input"></span>
-               			 </span>
+							</span>
 					</p>
 				<?php else : ?>
 
@@ -139,4 +139,3 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
-

@@ -8,9 +8,14 @@
 	</div>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="search-result__thumbnail">
-			<?php the_post_thumbnail( '200x200', array(
-				'class' => 'search-result__image'
-			) ); ?>
+			<?php
+			the_post_thumbnail(
+				'200x200',
+				array(
+					'class' => 'search-result__image',
+				)
+			);
+			?>
 		</div>
 	<?php endif; ?>
 </article>

@@ -3,7 +3,7 @@
 	<div class="inner">
 		<div class="content-holder">
 			<?php dov_the( 'dov_404_image', '<figure class="img-holder">' ); ?>
-			<?php dov_the( 'dov_404_title'); ?>
+			<?php dov_the( 'dov_404_title' ); ?>
 			<?php dov_the( 'dov_404_text', '<div class="text-holder">' ); ?>
 			<?php dov_the( 'dov_404_button' ); ?>
 

@@ -56,27 +56,10 @@ $get_addresses = apply_filters(
 				$state_code = $address['state'] ?? '';
 				$state_name = ! empty( $state_code ) ? WC()->countries->get_states( 'UA' )[ $state_code ] : '';
 
-				$args          = array(
+				$args = array(
 					'customer_id' => $customer_id,
 					'limit'       => - 1, // to retrieve _all_ orders by this user
 				);
-//				$orders        = wc_get_orders( $args );
-//				$orders_length = count( $orders );
-//				$np_city       = '';
-//				$np_state      = '';
-//				$np_postcode   = '';
-//				$np_address    = '';
-//				if ( $orders ) {
-//					for ( $i = 0; $i < $orders_length; $i++ ) {
-//						if ( ! $i ) {
-//							$np_city     = $orders[ $i ]->get_shipping_city();
-//							$np_state    = $orders[ $i ]->get_shipping_state();
-//							$np_postcode = $orders[ $i ]->get_shipping_postcode();
-//							$np_address  = $orders[ $i ]->get_shipping_address_1();
-//						}
-//					}
-//				}
-
 				?>
 				<div class="container-address">
 					<?php if ( empty( $address['country'] ) && empty( $address['state'] ) && empty( $address['city'] ) && empty( $address['postcode'] ) && empty( $address['address_1'] ) ) : ?>

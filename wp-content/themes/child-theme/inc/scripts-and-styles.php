@@ -190,5 +190,3 @@ DOV_Preload::set_scripts(
 		return $scripts;
 	}
 );
-
-

@@ -24,21 +24,26 @@ if ( ! $order ) {
 }
 
 $order_items           = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
-$show_purchase_note    = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array(
-		'completed',
-		'processing'
-) ) );
+$show_purchase_note    = $order->has_status(
+	apply_filters(
+		'woocommerce_purchase_note_order_statuses',
+		array(
+			'completed',
+			'processing',
+		)
+	)
+);
 $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
 $downloads             = $order->get_downloadable_items();
 $show_downloads        = $order->has_downloadable_item() && $order->is_download_permitted();
 
 if ( $show_downloads ) {
 	wc_get_template(
-			'order/order-downloads.php',
-			array(
-					'downloads'  => $downloads,
-					'show_title' => true,
-			)
+		'order/order-downloads.php',
+		array(
+			'downloads'  => $downloads,
+			'show_title' => true,
+		)
 	);
 }
 ?>
@@ -65,15 +70,15 @@ if ( $show_downloads ) {
 				$product = $item->get_product();
 
 				wc_get_template(
-						'order/order-details-item.php',
-						array(
-								'order'              => $order,
-								'item_id'            => $item_id,
-								'item'               => $item,
-								'show_purchase_note' => $show_purchase_note,
-								'purchase_note'      => $product ? $product->get_purchase_note() : '',
-								'product'            => $product,
-						)
+					'order/order-details-item.php',
+					array(
+						'order'              => $order,
+						'item_id'            => $item_id,
+						'item'               => $item,
+						'show_purchase_note' => $show_purchase_note,
+						'purchase_note'      => $product ? $product->get_purchase_note() : '',
+						'product'            => $product,
+					)
 				);
 			}
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );

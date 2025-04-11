@@ -74,12 +74,12 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 								if ( ! $_product->is_sold_individually() ) {
 									$product_quantity = woocommerce_quantity_input(
 										array(
-											'input_name'    => "cart[{$cart_item_key}][qty]",
-											'input_value'   => $cart_item['quantity'],
-											'max_value'     => $_product->get_max_purchase_quantity(),
+											'input_name'   => "cart[{$cart_item_key}][qty]",
+											'input_value'  => $cart_item['quantity'],
+											'max_value'    => $_product->get_max_purchase_quantity(),
 											'cart_item_key' => $cart_item_key,
-											'min_value'     => '0',
-											'product_name'  => $_product->get_name(),
+											'min_value'    => '0',
+											'product_name' => $_product->get_name(),
 										),
 										$_product,
 										false

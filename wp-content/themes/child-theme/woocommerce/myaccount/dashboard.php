@@ -15,10 +15,10 @@
  */
 
 // Exit if accessed directly.
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // Redirect to the Orders page.
-wp_safe_redirect(wc_get_account_endpoint_url('orders'));
+wp_safe_redirect( wc_get_account_endpoint_url( 'orders' ) );
 exit;
