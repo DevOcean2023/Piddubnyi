@@ -207,36 +207,46 @@
 
 	dov.countQuantityInput = function () {
 		const inputWrapper = document.querySelectorAll(".quantity");
-		if (inputWrapper) {
+
+		if (inputWrapper.length) {
 			inputWrapper.forEach(item => {
 				if (!$(item).hasClass("activated")) {
 					let input = item.querySelector(".qty");
 					let minus = item.querySelector(".minus");
 					let plus = item.querySelector(".plus");
-					if (input.value <= 1) {
+
+					if (!input || !minus || !plus) return;
+
+					if (parseInt(input.value) <= 1) {
 						minus.classList.add("disabled");
 					}
+
 					minus.addEventListener("click", function (event) {
 						event.preventDefault();
-						let inputValue = input.value;
-						inputValue > 0 ? inputValue-- : 0;
-						input.value = inputValue;
-						if (input.value <= 1) {
-							minus.classList.add("disabled");
+						let inputValue = parseInt(input.value);
+						if (inputValue > 1) {
+							inputValue--;
+							input.value = inputValue;
+							if (inputValue <= 1) {
+								minus.classList.add("disabled");
+							}
+							$(input).trigger("change");
 						}
-						$(input).trigger("change");
 					});
 
 					plus.addEventListener("click", function (event) {
 						event.preventDefault();
-						let inputValue = input.value;
-						let max = (input.getAttribute("max")) ? parseInt(input.getAttribute("max")) : 999;
-						inputValue <= max ? inputValue++ : max;
-						input.value = inputValue;
-						if (input.value > 1) {
-							minus.classList.remove("disabled");
+						let inputValue = parseInt(input.value);
+						let max = input.getAttribute("max") ? parseInt(input.getAttribute("max")) : 999;
+
+						if (inputValue < max) {
+							inputValue++;
+							input.value = inputValue;
+							if (inputValue > 1) {
+								minus.classList.remove("disabled");
+							}
+							$(input).trigger("change");
 						}
-						$(input).trigger("change");
 					});
 
 					$(item).addClass("activated");
