@@ -141,15 +141,6 @@
 				}
 			});
 		});
-
-
-		// $(document.body).on("added_to_cart", function (fragments) {
-		// 	if (!fragments) {
-		// 		window.location.reload();
-		// 	} else {
-		// 		$("body").addClass("mini-cart-opened");
-		// 	}
-		// });
 	};
 
 	dov.checkoutProductList = function () {
@@ -289,11 +280,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	initInputMask();
 	checkProductList();
-	// addToCartButtonOffset();
-});
-
-window.addEventListener("resize", function () {
-	// addToCartButtonOffset();
 });
 
 function initInputMask() {
@@ -314,25 +300,6 @@ function checkProductList() {
 	let sidebar = document.querySelector(".shop-page__sidebar");
 	if (!products.length && sidebar) {
 		sidebar.classList.add("hidden");
-	}
-}
-
-function addToCartButtonOffset() {
-	let products = document.querySelectorAll(".products .product");
-	if (!products.length) return;
-
-	if (window.innerWidth > 991) {
-		products.forEach(el => {
-			let image = el.querySelector("img");
-			let btn = el.querySelector(".add_to_cart_button");
-			if (image) {
-				let style = window.getComputedStyle(el);
-				let paddingTop = parseInt(style.paddingTop);
-				let borderTopWidth = parseInt(style.borderTopWidth);
-				let height = image.offsetHeight;
-				btn.style.top = height - btn.offsetHeight + paddingTop + borderTopWidth + "px";
-			}
-		});
 	}
 }
 
@@ -595,7 +562,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 	// Отримати айді поста з sessionStorage
 	var selectedServiceId = sessionStorage.getItem("selectedServiceId");
-	console.log("Selected Service ID from sessionStorage:", selectedServiceId);
 
 	var accordions = document.querySelectorAll(".accordion");
 
@@ -635,11 +601,9 @@ homeServiceLinks.forEach(function (link) {
 
 function saveServiceIdToSessionStorage(serviceId) {
 	sessionStorage.setItem("selectedServiceId", serviceId);
-	console.log("Saved Service ID to sessionStorage:", serviceId);
 }
 
 function openAccordion(serviceId) {
-	console.log("Opening Accordion for Service ID:", serviceId);
 
 	var targetAccordion = document.getElementById("accordion-" + serviceId);
 

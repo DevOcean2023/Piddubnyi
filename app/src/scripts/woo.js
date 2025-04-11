@@ -49,18 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	expandButtons.forEach(function (button) {
 		button.addEventListener("click", function () {
-			// Шукаємо найближчий bатьківський li елемент
 			const liElement = button.closest('li');
-			const ulElement = liElement.querySelector('ul'); // Знаходимо перший вкладений ul
+			const ulElement = liElement.querySelector('ul');
 
 			if (ulElement) {
-				// Перемикаємо клас видимості для ul
 				ulElement.classList.toggle("filter-display-on");
-
-				// Перемикаємо клас активності для кнопки
 				button.classList.toggle("filer-button-expand_active-expand");
-
-				// Якщо є інші вкладені ul, вони повинні бути приховані
 				const siblingUls = liElement.querySelectorAll('ul');
 				siblingUls.forEach(function (ul) {
 					if (ul !== ulElement) {
