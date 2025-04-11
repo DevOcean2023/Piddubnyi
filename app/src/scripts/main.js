@@ -6,19 +6,6 @@ import "../../base/defaults/scripts/libs/accessibility-accordion";
 import defer from "../../base/defaults/scripts/jquery/libs/jquery-defer";
 import "./woo";
 
-/*menu*/
-
-document.addEventListener("DOMContentLoaded", function () {
-	var categoryMenus = document.querySelectorAll(".inner-category");
-	categoryMenus.forEach(function (menu) {
-		var subMenu = menu;
-		if (subMenu && subMenu.children.length > 4) {
-			menu.parentElement.classList.add("big");
-		}
-	});
-});
-
-
 ///marquee
 defer(() => {
 	$(function () {
